@@ -8,6 +8,8 @@ Project goals:
 - Improve quality of codebase
 - Improve quality of maps (mostly AI stuff)
 
+## Examples
+
 Improved vs original AI barriers on Coruscant:
 
 ![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
