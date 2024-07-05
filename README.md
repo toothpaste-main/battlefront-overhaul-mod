@@ -8,6 +8,6 @@ Project goals:
 - Improve quality of codebase
 - Improve quality of maps (mostly AI stuff)
 
-![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/hallway_barriers.PNG?raw=true)
+![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/cor1_barriers.jpg?raw=true)
 
-![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/myg1_map.tga?raw=true)
+![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/myg1_map.jpg?raw=true)
