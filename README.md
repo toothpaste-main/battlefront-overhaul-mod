@@ -10,8 +10,8 @@ Project goals:
 
 Improved vs original AI barriers on Coruscant:
 
-![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/cor1_barriers.jpg?raw=true)
+![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
 
 Restructured Mygeeto and updated the minimap:
 
-![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/myg1_map.jpg?raw=true)
+![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
