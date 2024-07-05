@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_wrist_blaster_ord"
+		"com_weap_inf_equip_med"
+	}
+}

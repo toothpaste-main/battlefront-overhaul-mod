@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default"
+		"cis_weap_inf_rifle"
+		"cis_weap_inf_rocket_launcher"
+		"cis_weap_inf_thermaldetonator"
+		"cis_weap_award_rifle"
+	}
+}

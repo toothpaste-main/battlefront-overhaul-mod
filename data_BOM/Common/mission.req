@@ -20,19 +20,124 @@ ucft
         "ObjectiveConquest" 
         "ObjectiveTDM"
         "ObjectiveOneFlagCTF"
-	"SoundEvent_ctf"
+		"SoundEvent_ctf"
         "ObjectiveGoto"        
         "LinkedShields"
         "LinkedDestroyables"
         "LinkedTurrets"
         "Ambush"
         "PlayMovieWithTransition"
+		
+		"bom_cmn"
+		
+		"bom_cw_ep3"
+		"bom_cw_ep3_felucia"
+		"bom_cw_ep3_marine"
+		"bom_cw_ep3_marine_pilot"
+		"bom_cw_ep3_shiny"
+		
+		"bom_g_desert"
+		"bom_g_fleet"
+		"bom_g_fleetp"
+		"bom_g_jungle"
+		"bom_g_jungleg"
+		"bom_g_snow"
+		"bom_g_snowp"
+		"bom_g_urban"
+		"bom_g_urbanfleet"
+		"bom_g_urbanp"
     }
 
     REQN
     {
         "lvl"
-        "BOMg_con"
-        "BOMc_con"
+        "bes2c_con"
+		"bes2c_ctf"
+		
+		"cor1c_c"
+		"cor1c_con"
+		"cor1c_ctf"
+		"cor1g_con"
+		
+		"dag1c_con"
+		"dag1c_ctf"
+		"dag1g_con"
+		
+		"dea1c_con"
+		"dea1c_1flag"
+		"dea1g_con"
+		
+		"end1g_con"
+		
+		"fel1c_c"
+		"fel1c_con"
+		"fel1c_1flag"
+		"fel1g_con"
+		
+		"geo1c_c"
+		"geo1c_con"
+		"geo1c_ctf"
+		
+		"hot1g_con"
+		
+		"kam1c_con"
+		"kam1c_1flag"
+		"kam1g_con"
+		
+		"kas2c_c"
+		"kas2c_hunt"
+		"kas2c_con"
+		"kas2c_ctf"
+		"kas2g_con"
+		
+		"mus1c_con"
+		"mus1c_ctf"
+		"mus1g_con"
+		
+		"myg1c_c"
+		"myg1c_con"
+		"myg1c_ctf"
+		"myg1g_con"
+		"myg1g_ctf"
+		
+		"nab2c_hunt"
+		"nab2c_con"
+		"nab2c_ctf"
+		"nab2g_con"
+		
+		"pol1c_con"
+		"pol1c_ctf"
+		"pol1g_con"
+		
+		"spa3c_ass"
+		"spa3c_1flag"
+		
+		"spa6c_cmn"
+		"spa6c_ass"
+		"spa6c_1flag"
+		
+		"spa7c_cmn"
+		"spa7c_ass"
+		"spa7c_1flag"
+		
+		"tan1c_con"
+		"tan1c_1flag"
+		"tan1g_con"
+		
+		"tat2c_con"
+		"tat2g_con"
+
+		"tat3c_con"
+		"tat3c_1flag"
+		"tat3g_con"
+		
+		"uta1c_c"
+		"uta1c_con"
+		"uta1c_1flag"
+		"uta1g_con"
+		
+		"yav1c_con"
+		"yav1c_1flag"
+		"yav1g_con"
     }
 }

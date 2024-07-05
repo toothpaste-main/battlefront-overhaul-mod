@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_award_sniper_rifle"
+		"all_weap_award_sniper_rifle_ord"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_sniperrifle"
+		"all_1st_weap_inf_sniperrifle"
+	}
+}

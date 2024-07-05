@@ -1,0 +1,76 @@
+
+Hint("HintNode1131", "1")
+{
+	Position(-45.038452, 0.500000, -244.263214);
+	Rotation(0.991561, -0.000000, -0.129639, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+	CommandPost("CP1_CON");
+}
+
+Hint("HintNode1132", "1")
+{
+	Position(-81.105957, 0.500004, -240.646973);
+	Rotation(0.924904, -0.000000, 0.380202, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+	CommandPost("CP1_CON");
+}
+
+Hint("HintNode1133", "1")
+{
+	Position(-170.800308, 1.037576, 138.351715);
+	Rotation(-0.324948, -0.000000, -0.945732, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+	CommandPost("CP2_CON");
+}
+
+Hint("HintNode1134", "1")
+{
+	Position(-183.006577, 1.035668, 129.501923);
+	Rotation(-0.324948, -0.000000, -0.945732, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+	CommandPost("CP2_CON");
+}
+
+Hint("HintNode1255", "3")
+{
+	Position(-145.480927, 0.500000, -48.464821);
+	Rotation(0.958266, -0.000000, 0.285878, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1256", "3")
+{
+	Position(-147.257828, 0.500000, -50.287388);
+	Rotation(0.059024, -0.000000, -0.998256, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1257", "8")
+{
+	Position(-147.864883, 0.499996, -53.904171);
+	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1258", "2")
+{
+	Position(-140.254669, 0.500004, -48.637760);
+	Rotation(0.872721, -0.000000, -0.488220, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(0);
+}

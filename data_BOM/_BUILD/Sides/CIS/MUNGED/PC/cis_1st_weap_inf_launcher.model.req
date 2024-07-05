@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_1st_cockpit_fx"
+		"cis_1st_weap_inf_launcher"
+		"cis_1st_weap_inf_launcher_bump"
+	}
+}

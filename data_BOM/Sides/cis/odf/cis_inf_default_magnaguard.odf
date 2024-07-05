@@ -1,0 +1,30 @@
+[GameObjectClass]
+ClassParent     	= "cis_inf_default"
+
+
+[Properties]
+PointsToUnlock          = 8
+
+ExplosionName       	= "cis_inf_droid_exp"
+UnitType            	= "support"
+
+WEAPONSECTION = 1
+WeaponName     	= "cis_weap_inf_bulldog"
+WeaponAmmo     	= 6
+
+WEAPONSECTION = 2
+WeaponName     	= "cis_weap_inf_mortar_launcher"
+WeaponAmmo     	= 3
+
+WEAPONSECTION = 3
+WeaponName     	= "cis_weap_inf_thermaldetonator"
+WeaponAmmo     	= 2
+WeaponChannel  	= 1
+
+WEAPONSECTION = 4
+WeaponName     	= "cis_weap_inf_debuff_poison"
+WeaponAmmo     	= 1
+WeaponChannel  	= 1
+
+// the foot height where footstep sounds are played
+MinFootHeight = 0.3

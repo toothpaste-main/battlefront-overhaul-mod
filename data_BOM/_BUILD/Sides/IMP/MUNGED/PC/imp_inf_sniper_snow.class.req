@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_sniper"
+		"imp_inf_snowtrooper_skirt"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_snowtrooper"
+		"imp_inf_snowtrooper_low1"
+	}
+}

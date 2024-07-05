@@ -1,0 +1,10 @@
+[GameObjectClass]
+ClassParent         	= "cis_inf_default_droideka"
+GeometryName            = "cis_walk_droideka.msh"
+
+[Properties]
+GeometryName            = "cis_walk_droideka"
+UprightLowResModel      = "cis_droideka_idle_low1"
+BallLowResModel         = "cis_droideka_roll_low1"
+FirstPerson             = "CIS\cisdrde;cis_1st_droideka"
+

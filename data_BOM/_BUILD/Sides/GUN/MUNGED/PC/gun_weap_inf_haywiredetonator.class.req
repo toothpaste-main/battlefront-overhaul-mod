@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_detonator_icon"
+		"hud_weap_bounce"
+		"reticule_00"
+	}
+	REQN
+	{
+		"model"
+		"gun_weap_inf_grenadethermal"
+	}
+	REQN
+	{
+		"class"
+		"gun_weap_inf_haywiredetonator_ord"
+	}
+}

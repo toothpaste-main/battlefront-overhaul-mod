@@ -1,0 +1,23 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_thermaldetonator_ord"
+		"gun_weap_inf_thermaldetonator_exp"
+		"thermal_detonator"
+	}
+	REQN
+	{
+		"model"
+		"gun_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_grenade_blue"
+		"com_sfx_explosion_lg"
+		"com_sfx_watersplash_sm"
+	}
+}

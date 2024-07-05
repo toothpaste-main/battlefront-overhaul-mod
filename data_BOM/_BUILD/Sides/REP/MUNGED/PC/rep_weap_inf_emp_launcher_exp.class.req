@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_rocket_launcher_exp"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_emp_exp_sm"
+	}
+}

@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_sm"
+		"com_sfx_explosion_lg"
+		"com_sfx_weap_grenade_red"
+	}
+}

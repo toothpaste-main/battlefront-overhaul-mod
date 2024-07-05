@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_rocket_launcher"
+		"all_weap_inf_rocket_launcher_ord"
+		"com_weap_inf_equip_lg"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_launcher"
+		"all_1st_weap_inf_launcher"
+	}
+}

@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_rocketeer"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_atatcommander"
+		"imp_inf_atatcommander_low1"
+	}
+}

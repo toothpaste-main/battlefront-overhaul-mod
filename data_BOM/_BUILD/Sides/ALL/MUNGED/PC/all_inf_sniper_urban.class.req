@@ -1,0 +1,26 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_inf_markspersonurban"
+	}
+	REQN
+	{
+		"animbank"
+		"marksperson"
+		"leialz"
+	}
+	REQN
+	{
+		"class"
+		"all_inf_default_sniper"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_marksperson"
+		"all_inf_marksperson_low1"
+	}
+}

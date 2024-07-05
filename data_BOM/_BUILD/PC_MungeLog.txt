@@ -1,0 +1,7 @@
+soundflmunge.exe : Warning : Files line 2 and 3 reference the same source file c:\windows\media\chord.wav.  wpn_rep_pistol_fire will alias wpn_energyDepleted
+  - while munging C:\BF2_ModTools\data_BOM\Sound\worlds\bom\bomcw.sfx
+soundflmunge.exe : Warning : Files line 2 and 6 reference the same source file c:\windows\media\chord.wav.  wpn_rep_pistol_fire will alias wpn_drdFghtr_blaster_fire
+  - while munging C:\BF2_ModTools\data_BOM\Sound\worlds\bom\bomcw.sfx
+soundflmunge.exe : Error : Unable to open file C:\BF2_ModTools\data_BOM\Sound\shell\effects\whooshl3.wav  - while munging C:\BF2_ModTools\data_BOM\Sound\shell\shell.sfx
+soundflmunge.exe : Error : Unable to open file C:\BF2_ModTools\data_BOM\Sound\shell\effects\whooshl3.wav, format may be invalid  - while munging C:\BF2_ModTools\data_BOM\Sound\shell\shell.sfx
+soundflmunge.exe : Error : Unable to read file list C:\BF2_ModTools\data_BOM\Sound\shell\shell.sfx  - while munging C:\BF2_ModTools\data_BOM\Sound\shell\shell.sfx

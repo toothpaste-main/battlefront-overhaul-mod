@@ -1,0 +1,10 @@
+[GameObjectClass]
+ClassParent         = "rep_inf_default_rocketeer"
+
+
+[Properties]
+GeometryName       	= "rep_inf_ep3shiny___backpack"
+GeometryLowRes     	= "rep_inf_ep3shiny___backpack_low1"
+FirstPerson         = "REP\reptroop;rep_1st_trooper"
+
+OverrideTexture    	= "rep_inf_ep3trooper"

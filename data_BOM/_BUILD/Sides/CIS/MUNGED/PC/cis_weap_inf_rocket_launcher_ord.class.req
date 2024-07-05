@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_rocket_launcher_ord"
+		"cis_weap_inf_rocket_launcher_exp"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_missile"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_rockettrail_purple"
+	}
+}

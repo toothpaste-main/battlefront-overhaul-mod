@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_1st_weap_inf_rifle"
+		"rep_cockpit_fx"
+		"rep_1st_weap_inf_rifle_bump"
+	}
+}

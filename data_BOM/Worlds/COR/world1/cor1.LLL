@@ -1,0 +1,62 @@
+Version(1);
+NextID(1);
+
+Group("Last Loaded")
+{
+	Layer("1Flag");
+	Layer("Campaign");
+	Layer("CommonDesign");
+	Layer("Conquest");
+	Layer("CTF");
+	Layer("gunship");
+	Layer("hunt");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("tdm");
+	Layer("Temple01");
+	Layer("1Flag");
+	Layer("Campaign");
+	Layer("CommonDesign");
+	Layer("Conquest");
+	Layer("CTF");
+	Layer("gunship");
+	Layer("hunt");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("tdm");
+	Layer("Temple01");
+	Layer("1Flag");
+	Layer("Campaign");
+	Layer("CommonDesign");
+	Layer("Conquest");
+	Layer("CTF");
+	Layer("gunship");
+	Layer("hunt");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("tdm");
+	Layer("Temple01");
+	Layer("1Flag");
+	Layer("Campaign");
+	Layer("CommonDesign");
+	Layer("Conquest");
+	Layer("CTF");
+	Layer("gunship");
+	Layer("hunt");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("tdm");
+	Layer("Temple01");
+	Layer("1Flag");
+	Layer("Campaign");
+	Layer("CommonDesign");
+	Layer("Conquest");
+	Layer("CTF");
+	Layer("gunship");
+	Layer("hunt");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("tdm");
+	Layer("Temple01");
+}
+

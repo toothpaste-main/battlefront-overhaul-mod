@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_engineer"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_pilot"
+		"imp_inf_pilot_low1"
+	}
+}

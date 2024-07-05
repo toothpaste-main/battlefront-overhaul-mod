@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_award_shotgun_tracer"
+	}
+}

@@ -1,0 +1,14 @@
+[OrdnanceClass]
+ClassParent     	= "com_weap_inf_rifle_ord"
+
+[Properties]
+MaxDamage           	= "140.0"
+DamageTransitionDelay   = "0.2"     //How long in seconds before the damage change begins.
+DamageTransitionPeriod  = "0.4"     //How long in seconds the damage change lasts.
+DamageFinalDamage       = "50.0"    //What the damage would be at the end of the transition period.  A negative value means that no change is applied.
+
+LaserTexture		= "com_sfx_laser_blue"
+LaserGlowColor		= "92 136 250 100"
+LightColor          = "92 136 250 100"
+
+

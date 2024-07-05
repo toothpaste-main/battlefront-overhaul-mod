@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_inf_default_rifleman"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_snowtrooper1"
+		"all_inf_snowtrooper1_low1"
+	}
+}

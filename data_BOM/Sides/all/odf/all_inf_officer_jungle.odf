@@ -1,0 +1,10 @@
+[GameObjectClass]
+ClassParent         = "all_inf_default_officer"
+
+
+[Properties]
+GeometryName        = "all_inf_vanguard"
+GeometryLowRes      = "all_inf_vanguard_low1"
+FirstPerson         = "all\alltroop;all_1st_trooper"
+
+OverrideTexture	    = "all_inf_vanguardjungle"

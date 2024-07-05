@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default_engineer"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_ep3armoredpilot"
+		"rep_inf_ep3armoredpilot_low1"
+	}
+}

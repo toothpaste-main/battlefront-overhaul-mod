@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default"
+		"rep_weap_inf_rocket_launcher"
+		"rep_weap_inf_pistol"
+		"rep_weap_inf_thermaldetonator"
+		"rep_weap_inf_mine_dispenser"
+		"rep_weap_award_pistol"
+		"rep_weap_award_rocket_launcher"
+	}
+}

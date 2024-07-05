@@ -1,0 +1,26 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_inf_battledroid_camo"
+	}
+	REQN
+	{
+		"animbank"
+		"bdroid"
+		"bdroidlz"
+	}
+	REQN
+	{
+		"class"
+		"cis_inf_default_sniper"
+	}
+	REQN
+	{
+		"model"
+		"cis_inf_bdroid"
+		"cis_inf_bdroid_low1"
+	}
+}

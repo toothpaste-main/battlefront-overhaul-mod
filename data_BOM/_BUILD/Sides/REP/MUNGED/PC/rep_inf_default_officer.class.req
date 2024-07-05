@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default"
+		"rep_weap_inf_commander_rifle"
+		"rep_weap_inf_pistol"
+		"rep_weap_inf_thermaldetonator"
+		"rep_weap_inf_buff_defense"
+		"rep_weap_award_pistol"
+	}
+}

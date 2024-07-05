@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_darktrooper"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_darktrooper"
+		"imp_inf_darktrooper_low1"
+	}
+}

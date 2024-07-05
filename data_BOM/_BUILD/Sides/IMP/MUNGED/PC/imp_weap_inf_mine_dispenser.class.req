@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_mine_dispenser"
+		"com_weap_inf_landmine"
+		"com_weap_inf_equip_med"
+	}
+}

@@ -1,0 +1,27 @@
+[GameObjectClass]
+ClassParent     	= "cis_inf_default"
+
+
+[Properties]
+UnitType            = "trooper"
+
+WEAPONSECTION = 1
+WeaponName     	= "cis_weap_inf_rifle"
+WeaponAmmo     	= 5
+
+WEAPONSECTION = 2
+WeaponName     	= "cis_weap_inf_pistol"
+WeaponAmmo     	= 0
+
+WEAPONSECTION = 3
+WeaponName     = "cis_weap_inf_thermaldetonator"
+WeaponAmmo     = 4
+WeaponChannel  = 1
+
+WEAPONSECTION = 4
+WeaponName     	= "cis_weap_award_rifle"
+WeaponAmmo     	= 4
+
+WEAPONSECTION = 5
+WeaponName     	= "cis_weap_award_pistol"
+WeaponAmmo     	= 6

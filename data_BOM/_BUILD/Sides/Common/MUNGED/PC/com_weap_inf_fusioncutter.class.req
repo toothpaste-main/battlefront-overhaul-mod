@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_tool"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_repair"
+	}
+}

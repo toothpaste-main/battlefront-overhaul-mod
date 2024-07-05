@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal"
+		"com_1st_weap_inf_grenadethermal"
+	}
+}

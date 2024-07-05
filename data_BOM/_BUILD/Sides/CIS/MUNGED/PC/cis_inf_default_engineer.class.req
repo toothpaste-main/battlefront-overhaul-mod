@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default"
+		"cis_weap_inf_shotgun"
+		"cis_weap_inf_fusioncutter"
+		"cis_weap_inf_detpack"
+		"cis_weap_inf_powerup_dispenser"
+		"cis_weap_award_shotgun"
+	}
+}

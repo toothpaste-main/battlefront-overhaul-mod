@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_chargeup"
+	}
+}

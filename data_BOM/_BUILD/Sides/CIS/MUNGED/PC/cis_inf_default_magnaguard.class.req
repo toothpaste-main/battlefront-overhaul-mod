@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default"
+		"cis_inf_droid_exp"
+		"cis_weap_inf_bulldog"
+		"cis_weap_inf_mortar_launcher"
+		"cis_weap_inf_thermaldetonator"
+		"cis_weap_inf_debuff_poison"
+	}
+}

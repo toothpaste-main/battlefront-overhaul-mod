@@ -1,0 +1,258 @@
+Logging LevelPack
+02:22:5507/05/24
+
+=== imp_inf_darktrooper.lvl ===
+Missing file force_lightning_impact.class
+    Reqd by ..\common\munged\pc\com_weap_inf_arccaster_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_arccaster.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_darktrooper_hunt.lvl ===
+Missing file force_lightning_impact.class
+    Reqd by ..\common\munged\pc\com_weap_inf_arccaster_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_arccaster.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_engineer_grunt.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_shotgun_ord.class.req
+            ..\common\munged\pc\com_weap_award_shotgun_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_shotgun.class.req
+            munged\pc\imp_weap_inf_fusioncutter.class.req
+            munged\pc\imp_weap_inf_detpack.class.req
+            munged\pc\imp_weap_inf_powerup_dispenser.class.req
+            munged\pc\imp_weap_award_shotgun.class.req
+Missing file imp_1st_cockpit_fx.texture
+    Reqd by munged\pc\imp_1st_weap_inf_fusioncutter.model.req
+
+=== imp_inf_engineer_gunner.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_shotgun_ord.class.req
+            ..\common\munged\pc\com_weap_award_shotgun_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_shotgun.class.req
+            munged\pc\imp_weap_inf_fusioncutter.class.req
+            munged\pc\imp_weap_inf_detpack.class.req
+            munged\pc\imp_weap_inf_powerup_dispenser.class.req
+            munged\pc\imp_weap_award_shotgun.class.req
+Missing file imp_1st_cockpit_fx.texture
+    Reqd by munged\pc\imp_1st_weap_inf_fusioncutter.model.req
+
+=== imp_inf_engineer_pilot.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_shotgun_ord.class.req
+            ..\common\munged\pc\com_weap_award_shotgun_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_shotgun.class.req
+            munged\pc\imp_weap_inf_fusioncutter.class.req
+            munged\pc\imp_weap_inf_detpack.class.req
+            munged\pc\imp_weap_inf_powerup_dispenser.class.req
+            munged\pc\imp_weap_award_shotgun.class.req
+Missing file imp_1st_cockpit_fx.texture
+    Reqd by munged\pc\imp_1st_weap_inf_fusioncutter.model.req
+
+=== imp_inf_engineer_snow.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_shotgun_ord.class.req
+            ..\common\munged\pc\com_weap_award_shotgun_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_shotgun.class.req
+            munged\pc\imp_weap_inf_fusioncutter.class.req
+            munged\pc\imp_weap_inf_detpack.class.req
+            munged\pc\imp_weap_inf_powerup_dispenser.class.req
+            munged\pc\imp_weap_award_shotgun.class.req
+Missing file imp_1st_cockpit_fx.texture
+    Reqd by munged\pc\imp_1st_weap_inf_fusioncutter.model.req
+
+=== imp_inf_officer.lvl ===
+Missing file geo_sfx_weap_blunderbuss_ord.config
+    Reqd by ..\common\munged\pc\com_weap_inf_sonic_blaster_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\imp_weap_inf_mortar_launcher.class.req
+
+=== imp_inf_officer_commander.lvl ===
+Missing file geo_sfx_weap_blunderbuss_ord.config
+    Reqd by ..\common\munged\pc\com_weap_inf_sonic_blaster_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\imp_weap_inf_mortar_launcher.class.req
+
+=== imp_inf_rifleman.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_rifle.class.req
+            munged\pc\imp_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_rifleman_grunt.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_rifle.class.req
+            munged\pc\imp_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_rifleman_snow.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_rifle.class.req
+            munged\pc\imp_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_rocketeer.lvl ===
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rocket_launcher_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\imp_weap_inf_rocket_launcher.class.req
+            munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_mine_dispenser.class.req
+Missing file bazooka.zafbin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file bazooka.zaabin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file hud_com_probedroid_health_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket.class.req
+Missing file x-wing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file hud_all_xwing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file reticule_rifle.texture
+    Reqd by ..\common\munged\pc\com_weap_null.class.req
+
+=== imp_inf_rocketeer_grunt.lvl ===
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rocket_launcher_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\imp_weap_inf_rocket_launcher.class.req
+            munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_mine_dispenser.class.req
+Missing file bazooka.zafbin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file bazooka.zaabin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file hud_com_probedroid_health_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket.class.req
+Missing file x-wing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file hud_all_xwing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file reticule_rifle.texture
+    Reqd by ..\common\munged\pc\com_weap_null.class.req
+
+=== imp_inf_rocketeer_snow.lvl ===
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rocket_launcher_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\imp_weap_inf_rocket_launcher.class.req
+            munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_mine_dispenser.class.req
+Missing file bazooka.zafbin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file bazooka.zaabin
+    Reqd by munged\pc\imp_weap_award_rocket_launcher.class.req
+Missing file hud_com_probedroid_health_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket.class.req
+Missing file x-wing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file hud_all_xwing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file reticule_rifle.texture
+    Reqd by ..\common\munged\pc\com_weap_null.class.req
+
+=== imp_inf_sniper.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_inf_autoturret_ord.class.req
+            ..\common\munged\pc\com_weap_award_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_sniper_rifle.class.req
+            munged\pc\imp_weap_inf_autoturret_dispenser.class.req
+            munged\pc\imp_weap_award_sniper_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+
+=== imp_inf_sniper_snow.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_inf_autoturret_ord.class.req
+            ..\common\munged\pc\com_weap_award_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\imp_weap_inf_sniper_rifle.class.req
+            munged\pc\imp_weap_inf_autoturret_dispenser.class.req
+            munged\pc\imp_weap_award_sniper_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\imp_weap_inf_pistol.class.req
+            munged\pc\imp_weap_inf_thermaldetonator.class.req
+            munged\pc\imp_weap_award_pistol.class.req
+   0 Errors    0 Warnings
+

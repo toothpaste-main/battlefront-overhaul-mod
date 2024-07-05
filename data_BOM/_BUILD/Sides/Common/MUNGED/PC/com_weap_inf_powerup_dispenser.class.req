@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_powerup_icon"
+		"hud_weap_health"
+		"reticule_00"
+	}
+	REQN
+	{
+		"class"
+		"com_item_powerup_dual"
+	}
+}

@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_sm"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_seismic_mine"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_seismic_mine_exp"
+	}
+}

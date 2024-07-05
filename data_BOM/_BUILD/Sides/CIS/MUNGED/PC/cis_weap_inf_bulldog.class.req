@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_bulldog"
+		"cis_weap_inf_bulldog_ord"
+		"com_weap_inf_equip_lg"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_rifle"
+		"cis_1st_weap_inf_rifle"
+	}
+}

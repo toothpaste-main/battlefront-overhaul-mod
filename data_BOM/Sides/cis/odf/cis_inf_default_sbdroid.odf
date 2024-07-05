@@ -1,0 +1,87 @@
+[GameObjectClass]
+ClassParent     	= "cis_inf_default"
+
+
+[Properties]
+PointsToUnlock      = 8
+
+UnitType            = "support"
+
+MaxHealth           = 650.0
+
+MaxSpeed            = 6.0
+MaxStrafeSpeed      = 4.5
+
+WEAPONSECTION = 1
+WeaponName     	= "cis_weap_inf_wrist_blaster"
+WeaponAmmo     	= 3
+
+WEAPONSECTION = 2
+WeaponName     	= "cis_weap_inf_wrist_trishot"
+WeaponAmmo     	= 0
+
+WEAPONSECTION = 3
+WeaponName     	= "cis_weap_inf_wrist_rocket"
+WeaponAmmo     	= 3
+WeaponChannel  	= 1
+
+//WEAPONSECTION = 4
+//WeaponName     	= "cis_weap_award_wrist_blaster"
+//WeaponAmmo     	= 4
+
+
+//******************************************************
+//***************   Droid Explosion   ****************
+//******************************************************
+
+ChunkFrequency              = 0.6
+
+CHUNKSECTION                = "CHUNK1"
+ChunkGeometryName           = "sbdroid_chunk1"
+ChunkNodeName               = "bone_neck"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect          = "dirtspray"
+ChunkTrailEffect            = "com_sfx_chunksmolder"
+ChunkPhysics                = "FULL"
+ChunkOmega                  = "4.0 4.0 4.0"
+ChunkSpeed                  = 8.0
+
+CHUNKSECTION                = "CHUNK2"
+ChunkGeometryName           = "sbdroid_chunk2"
+ChunkNodeName               = "bone_l_upperarm"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect          = "dirtspray"
+ChunkTrailEffect            = "com_sfx_chunksmolder"
+ChunkPhysics                = "FULL"
+ChunkOmega                  = "4.0 4.0 4.0"
+ChunkSpeed                  = 8.0
+
+CHUNKSECTION                = "CHUNK3"
+ChunkGeometryName           = "sbdroid_chunk3"
+ChunkNodeName               = "bone_l_calf"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect          = "dirtspray"
+ChunkTrailEffect            = "com_sfx_chunksmolder"
+ChunkPhysics                = "FULL"
+ChunkOmega                  = "4.0 4.0 4.0"
+ChunkSpeed                  = 8.0
+
+CHUNKSECTION                = "CHUNK4"
+ChunkGeometryName           = "sbdroid_chunk4"
+ChunkNodeName               = "bone_r_thigh"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect          = "dirtspray"
+ChunkTrailEffect            = "com_sfx_chunksmolder"
+ChunkPhysics                = "FULL"
+ChunkOmega                  = "4.0 4.0 4.0"
+ChunkSpeed                  = 8.0
+
+CHUNKSECTION                = "CHUNK5"
+ChunkGeometryName           = "sbdroid_chunk5"
+ChunkNodeName               = "bone_a_spine"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect          = "dirtspray"
+ChunkTrailEffect            = "com_sfx_chunksmolder"
+ChunkPhysics                = "FULL"
+ChunkOmega                  = "4.0 4.0 4.0"
+ChunkSpeed                  = 8.0

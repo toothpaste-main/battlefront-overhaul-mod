@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_pistol"
+		"rep_weap_inf_pistol_ord"
+		"com_weap_inf_equip_sm"
+	}
+	REQN
+	{
+		"model"
+		"rep_weap_inf_pistol"
+		"rep_1st_weap_inf_pistol"
+	}
+}

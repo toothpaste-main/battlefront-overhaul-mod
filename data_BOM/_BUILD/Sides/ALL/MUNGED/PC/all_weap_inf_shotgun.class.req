@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_shotgun"
+		"all_weap_inf_shotgun_ord"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_seeker"
+		"all_1st_weap_inf_seeker"
+	}
+}

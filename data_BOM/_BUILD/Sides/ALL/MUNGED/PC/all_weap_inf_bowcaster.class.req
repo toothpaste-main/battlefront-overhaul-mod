@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_bowcaster"
+		"all_weap_inf_bowcaster_ord"
+		"all_weap_inf_bowcaster_ord_high"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_bowcaster"
+		"all_1st_weap_inf_bowcaster"
+	}
+}

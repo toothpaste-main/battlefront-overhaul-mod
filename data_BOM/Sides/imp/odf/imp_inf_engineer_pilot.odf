@@ -1,0 +1,8 @@
+[GameObjectClass]
+ClassParent         = "imp_inf_default_engineer"
+
+
+[Properties]
+GeometryName        = "imp_inf_pilot"
+GeometryLowRes      = "imp_inf_pilot_low1"
+FirstPerson         = "IMP\imppilot;imp_1st_pilot"

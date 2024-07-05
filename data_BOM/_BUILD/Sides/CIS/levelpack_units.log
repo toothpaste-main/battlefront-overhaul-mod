@@ -1,0 +1,233 @@
+Logging LevelPack
+02:22:4707/05/24
+
+=== cis_inf_bdroid.lvl ===
+Missing file bdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_bdroid.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\cis_weap_inf_rifle.class.req
+            munged\pc\cis_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_pistol.class.req
+            munged\pc\cis_weap_inf_thermaldetonator.class.req
+            munged\pc\cis_weap_award_pistol.class.req
+
+=== cis_inf_droideka.lvl ===
+Missing file hud_cis_droideka_icon.texture
+    Reqd by munged\pc\cis_inf_default_droideka.class.req
+Missing file deathdustcloud_brown.config
+    Reqd by munged\pc\cis_inf_default_droideka.class.req
+Missing file hailfire_wake.config
+    Reqd by munged\pc\cis_inf_default_droideka.class.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default_droideka.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droideka_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droideka_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droideka_explosion.config.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by munged\pc\cis_weap_inf_repeater_ord.class.req
+
+=== cis_inf_engineer.lvl ===
+Missing file bdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_engineer.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_shotgun_ord.class.req
+            ..\common\munged\pc\com_weap_award_shotgun_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\cis_weap_inf_shotgun.class.req
+            munged\pc\cis_weap_inf_fusioncutter.class.req
+            munged\pc\cis_weap_award_shotgun.class.req
+Missing file hud_powerup_icon.texture
+    Reqd by munged\pc\cis_weap_inf_powerup_dispenser.class.req
+Missing file hud_weap_health.texture
+    Reqd by munged\pc\cis_weap_inf_powerup_dispenser.class.req
+Missing file reticule_00.texture
+    Reqd by munged\pc\cis_weap_inf_powerup_dispenser.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_powerup_dispenser.class.req
+
+=== cis_inf_magnaguard.lvl ===
+Missing file magnaguardlz.zaabin
+    Reqd by munged\pc\cis_inf_magnaguard.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file cis_weap_inf_bulldog_ordnance.class
+    Reqd by ..\common\munged\pc\com_weap_inf_bulldog_ord.class.req
+            munged\pc\cis_weap_inf_bulldog_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\cis_weap_inf_bulldog.class.req
+            munged\pc\cis_weap_inf_mortar_launcher.class.req
+Missing file cis_weap_inf_mortar_launcher_ord_hum.class
+    Reqd by munged\pc\cis_weap_inf_mortar_launcher_ord.class.req
+            munged\pc\cis_weap_inf_mortar_launcher_ord1.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_thermaldetonator.class.req
+
+=== cis_inf_magnaguard_hunt.lvl ===
+Missing file magnaguardlz.zaabin
+    Reqd by munged\pc\cis_inf_magnaguard_hunt.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file cis_weap_inf_bulldog_ordnance.class
+    Reqd by ..\common\munged\pc\com_weap_inf_bulldog_ord.class.req
+            munged\pc\cis_weap_inf_bulldog_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\cis_weap_inf_bulldog.class.req
+            munged\pc\cis_weap_inf_mortar_launcher.class.req
+Missing file cis_weap_inf_mortar_launcher_ord_hum.class
+    Reqd by munged\pc\cis_weap_inf_mortar_launcher_ord.class.req
+            munged\pc\cis_weap_inf_mortar_launcher_ord1.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_thermaldetonator.class.req
+
+=== cis_inf_marine.lvl ===
+Missing file bdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_marine.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\cis_weap_inf_rifle.class.req
+            munged\pc\cis_weap_award_rifle.class.req
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rocket_launcher_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\cis_weap_inf_rocket_launcher.class.req
+Missing file cis_weap_inf_launcher.texture
+    Reqd by munged\pc\cis_weap_inf_launcher.model.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_thermaldetonator.class.req
+
+=== cis_inf_rocketeer.lvl ===
+Missing file bdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_rocketeer.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rocket_launcher_ord.class.req
+Missing file com_weap_inf_equip_lg.class
+    Reqd by munged\pc\cis_weap_inf_rocket_launcher.class.req
+            munged\pc\cis_weap_award_rocket_launcher.class.req
+Missing file cis_weap_inf_launcher.texture
+    Reqd by munged\pc\cis_weap_inf_launcher.model.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_pistol.class.req
+            munged\pc\cis_weap_inf_thermaldetonator.class.req
+            munged\pc\cis_weap_inf_mine_dispenser.class.req
+            munged\pc\cis_weap_award_pistol.class.req
+Missing file bazooka.zafbin
+    Reqd by munged\pc\cis_weap_award_rocket_launcher.class.req
+Missing file bazooka.zaabin
+    Reqd by munged\pc\cis_weap_award_rocket_launcher.class.req
+Missing file hud_com_probedroid_health_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket.class.req
+Missing file x-wing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file hud_all_xwing_icon.texture
+    Reqd by ..\common\munged\pc\com_weap_veh_guided_rocket_ord.class.req
+            ..\common\munged\pc\com_weap_award_rocket_launcher_ord.class.req
+Missing file reticule_rifle.texture
+    Reqd by ..\common\munged\pc\com_weap_null.class.req
+
+=== cis_inf_sbdroid.lvl ===
+Missing file sbdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_sbdroid.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+            munged\pc\cis_inf_default_sbdroid.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\cis_weap_inf_wrist_blaster.class.req
+            munged\pc\cis_weap_inf_wrist_trishot.class.req
+            munged\pc\cis_weap_inf_wrist_rocket.class.req
+Missing file com_weap_inf_ord_hum_rocket.class
+    Reqd by ..\common\munged\pc\com_weap_inf_wrist_rocket_ord.class.req
+
+=== cis_inf_sniper.lvl ===
+Missing file bdroidlz.zaabin
+    Reqd by munged\pc\cis_inf_sniper.class.req
+Missing file cis_sfx_metaljunk.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file boom4.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file thicksmoke3.texture
+    Reqd by munged\pc\cis_sfx_droid_explosion.config.req
+Missing file dirtspray.config
+    Reqd by munged\pc\cis_inf_default.class.req
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_inf_autoturret_ord.class.req
+            ..\common\munged\pc\com_weap_award_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\cis_weap_inf_sniper_rifle.class.req
+            munged\pc\cis_weap_inf_autoturret_dispenser.class.req
+            munged\pc\cis_weap_award_sniper_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\cis_weap_inf_pistol.class.req
+            munged\pc\cis_weap_inf_thermaldetonator.class.req
+            munged\pc\cis_weap_award_pistol.class.req
+   0 Errors    0 Warnings
+

@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_buff"
+		"cis_weap_inf_debuff_poison_ord"
+	}
+}

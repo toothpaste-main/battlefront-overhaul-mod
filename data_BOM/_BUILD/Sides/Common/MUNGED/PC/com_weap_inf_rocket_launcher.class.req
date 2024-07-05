@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"weapon_scope2"
+	}
+	REQN
+	{
+		"animset"
+		"human_bazooka"
+	}
+}

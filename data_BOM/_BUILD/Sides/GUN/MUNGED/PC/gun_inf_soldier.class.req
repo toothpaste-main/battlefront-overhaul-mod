@@ -1,0 +1,27 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"gungan"
+	}
+	REQN
+	{
+		"animbank"
+		"gungan"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_default"
+		"gun_weap_inf_fusioncutter"
+		"gun_weap_inf_thermaldetonator"
+	}
+	REQN
+	{
+		"model"
+		"nab_inf_gungan"
+		"nab_inf_gungan_low1"
+	}
+}

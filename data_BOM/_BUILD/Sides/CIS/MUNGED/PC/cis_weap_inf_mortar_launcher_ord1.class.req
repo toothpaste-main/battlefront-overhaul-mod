@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_mortar_launcher_ord1"
+		"cis_weap_inf_mortar_launcher_exp"
+		"cis_weap_inf_mortar_launcher_ord_hum"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_grenade_green"
+	}
+}

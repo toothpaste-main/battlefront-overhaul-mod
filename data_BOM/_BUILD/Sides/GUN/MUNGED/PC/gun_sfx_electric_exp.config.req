@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"dirt"
+		"flare1"
+		"flare4"
+		"redlaser"
+	}
+	REQN
+	{
+		"model"
+		"lightning1"
+		"lightning2"
+	}
+}

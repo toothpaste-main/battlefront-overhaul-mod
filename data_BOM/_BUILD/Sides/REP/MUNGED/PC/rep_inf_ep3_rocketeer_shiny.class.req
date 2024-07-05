@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default_rocketeer"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_ep3shiny___backpack"
+		"rep_inf_ep3shiny___backpack_low1"
+	}
+}
