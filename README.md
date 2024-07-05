@@ -15,3 +15,9 @@ Improved vs original AI barriers on Coruscant:
 Restructured Mygeeto and updated the minimap:
 
 ![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
+
+## Acknowledgements
+
+[Bulldog Rocket Launcher REAL by MDPtoaster](https://www.moddb.com/games/star-wars-battlefront-ii/addons/bulldog-rocket-launcher-real)
+
+[Clone Trooper Backpack by WhiskyTangoFoxX[(http://www.gametoast.com/viewtopic.php?f=64&t=34240&p=537223&hilit=custom+skin#p537223) (also using white clone skin from mod)
