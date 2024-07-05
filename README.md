@@ -22,4 +22,4 @@ Restructured Mygeeto and updated the minimap:
 
 [Bulldog Rocket Launcher REAL by MDPtoaster](https://www.moddb.com/games/star-wars-battlefront-ii/addons/bulldog-rocket-launcher-real)
 
-[Clone Trooper Backpack by WhiskyTangoFoxX](http://www.gametoast.com/viewtopic.php?f=64&t=34240&sid=0c447f05685aa54007c80ea8b547b48a) (also using white clone skin from mod)
+[Clone Trooper Backpack by WhiskyTangoFoxX](http://www.gametoast.com/viewtopic.php?f=64&t=34240&sid=0c447f05685aa54007c80ea8b547b48a) (also using white clone texture in download)
