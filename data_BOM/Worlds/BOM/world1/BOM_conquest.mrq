@@ -1,0 +1,13 @@
+ucft
+{
+	REQN
+	{
+		"congraph"
+		"BOM_conquest"
+	}
+	REQN
+	{
+		"world"
+		"BOM_conquest"
+	}
+}

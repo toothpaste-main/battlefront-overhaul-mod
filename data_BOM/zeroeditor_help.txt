@@ -1,0 +1,59 @@
+The "Runtime Error" should be fixed with the latest update
+If ZeroEditor gives you a Runtime Error try just running it again. Another thing that might work is moving the BF2_ModTools folder into a SWBF2_ModTools folder.
+
+Shortcut keys
+e - eyedrop. Not sure of it's use.
+r - toggles rotate snap
+u - 'view from object' moves the camera to the center point of the object selected. Useful for seeing if your objects are floating.
+i - moves the camera to the object selected
+o - similar to 'i' but zoomed much farther out
+p - gives the coordinates of the selected object, and allows numeric input for position (the vector field) and scale/rotation (the Quat field). The scale is only a visual representation, doesn't show up that size in-game, but position (vector) works.
+g - shortcut key to ground an object
+h - toggles 'place' off
+j - shortcut key for the place button. To place another of the object selected.
+n - moves to the next object on the object list
+m - shortcut key for multiselect
+shift - in multiselect mode, it makes a white selection cube that selects everything inside of it
+b - finds the next ungrounded object. Seems to work intermittantly.
+1 & 2 - if you have multiple objects selected, 1 does a copy of that group, and 2 will place a copy of that group. Although, it annoyingly resets the camera.
+[ - Toggles the camera to orthographic view
+] - Toggles the camera to perspective view.
+alt+f - Toggles FPS among other scene stats on/off
+
+crtl+` will open the console 
+in the console you can use commands such as Editor.gridsize to change the grid size from default 8 to a more detailed 4
+(keep in mind this will make the map smaller so you should also increase the terrain size)
+
+
+ZeroEditor resolution modification
+Another thing I found nice when messing around one night was editiing the config.ini file in the same directory as ZE. ZE defaults to 1024x768, but if you have a higher or lower resolution, you can adjust for that in this file.
+- open config.ini in notepad
+- set these two lines to your resolution
+windowWidth = 1024
+windowHeight = 768
+
+or, alternatively, you can set this line to 1
+maximizeWindow = 0
+
+
+
+thanks to Squipple on gametoast.com for the tips
+
+Wavefront *.obj export
+While in Object Edit Mode click on Multi Select, then select an object and click Save As OBJ located at the bottom of the left panel. In the popup dialog give the *.obj a name and save destination then click Open (which is actually "Save").
+The new *.obj can be opened in any 3d package that can import *.obj files, but all parts of the object including collision etc will be merged into one and there will be no UVs or material information.
+
+
+
+Export terrain as Wavefront *.obj
+You can save your terrain as a high-poly *.obj file by going to File>Save and in the File name input of the Save Terrain or World window simply change the .wld extension to .obj then click Save. When the ZeroEditor warning window comes up just click Yes. The *.obj file will be saved in your world1 folder unless you changed the save destination.
+
+
+
+Save *.OBG (OBject Group) files for easy placement
+ZeroEditor gives you the ability to save multiple objects to a single file for easy placement.
+Lets say you carefully placed all sections of a capital ship in ZeroEditor and you want to create a new map with those same objects placed exactly the same without the hassle of placing them again.
+To save an object group in Object Edit Mode you would click Multi Select then select the objects that you want to place simultaneously in the new map, then click on Save Group on the left panel and give it a name and save destination then click Open (which is actually "Save").
+
+To load this new group into your new map just go into Object Edit Mode and click on Multi Select then click on Load Group (beneath "Save Group") and browse to and select it then press Open and place it like you would any ODF.
+This *.obg file can be used as much as you need though the objects that this group file contains must be accompanied by their respective odf, msh and textures located in their corresponding folders.
