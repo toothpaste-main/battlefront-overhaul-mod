@@ -3,6 +3,12 @@ ucft
     REQN
     {
         "lvl"
+		"rep_inf_ep3_engineer"
+		"rep_inf_ep3_engineer_pilot"
+		"rep_inf_ep3_jettrooper"
+		"rep_inf_ep3_marine"
+		"rep_inf_ep3_officer"
+		"rep_inf_ep3_pilot"		
 		"rep_inf_ep3_rifleman"
 		"rep_inf_ep3_rifleman_marine"
 		"rep_inf_ep3_rifleman_shiny"
@@ -12,11 +18,5 @@ ucft
 		"rep_inf_ep3_sniper"
 		"rep_inf_ep3_sniper_shiny"
 		"rep_inf_ep3_sniper_felucia"
-		"rep_inf_ep3_engineer"
-		"rep_inf_ep3_engineer_pilot"
-		"rep_inf_ep3_officer"
-		"rep_inf_ep3_jettrooper"
-		"rep_inf_ep3_pilot"
-		"rep_inf_ep3_marine"
     }
 }

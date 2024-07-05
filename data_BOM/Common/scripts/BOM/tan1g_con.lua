@@ -8,8 +8,8 @@ ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("setup_teams") 
 
 -- load BBP constants
-ScriptCB_DoFile("bbp_cmn")
-ScriptCB_DoFile("bbp_g_fleet")
+ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_g_fleet")
 
 --  These variables do not change
 ATT = 1
@@ -135,7 +135,7 @@ function ScriptInit()
 	------------   DLC SOUNDS   --------------------
 	------------------------------------------------
 	
-	
+	ReadDataFile("dc:sound\\bom.lvl;bomgcw")
 	
 	
 	------------------------------------------------

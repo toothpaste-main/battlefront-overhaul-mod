@@ -30,10 +30,6 @@ mp_missionselect_listbox_contents[mp_n+1] = sp_missionselect_listbox_contents[sp
 -- second arg: mission script name
 -- third arg: level memory modifier.  the arg to LuaScript.cpp: DEFAULT_MODEL_MEMORY_PLUS(x)
 
--- bes
-AddDownloadableContent("bes2","bes2c_con",4)
-AddDownloadableContent("bes2","bes2c_ctf",4)
-
 -- cor
 AddDownloadableContent("cor1","cor1c_c",4)
 AddDownloadableContent("cor1","cor1c_con",4)
