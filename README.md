@@ -1,2 +1,2 @@
-# battlefront_overhaul
+# battlefront-overhaul-mod
 Overhaul mod for Star Wars: Battlefront II (2005)
