@@ -1,4 +1,6 @@
-# battlefront-overhaul-mod
+# Battlefront Overhaul Mod
+
+## Overview
 
 Overhaul mod for Star Wars: Battlefront II (2005)
 
@@ -7,6 +9,11 @@ Project goals:
 - Balance units across factions
 - Improve quality of codebase
 - Improve quality of maps (mostly AI stuff)
+
+Planned releases:
+- 6 July 2024: Open Alpha 
+- 12 July 2024: Open Alpha 
+- September 2024: v1.0 
 
 ## Examples
 
