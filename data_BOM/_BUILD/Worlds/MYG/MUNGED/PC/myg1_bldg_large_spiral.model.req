@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_large_spiral01"
+		"myg1_bldg_large_spiral02_lowrez"
+		"myg1_bldg_large_spiral01_lowrez"
+		"myg1_bldg_med_spiral01"
+		"myg1_bldg_large_spiral02"
+	}
+}

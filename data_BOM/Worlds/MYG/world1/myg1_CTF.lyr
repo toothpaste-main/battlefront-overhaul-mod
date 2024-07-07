@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.734, 0.519, -0.358, 0.253);
-	Position(8.935, 44.565, 25.376);
+	Rotation(0.947, 0.315, -0.054, 0.018);
+	Position(-141.459, 35.581, 67.138);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(2000.000);
@@ -306,10 +306,10 @@ Object("com_item_vehicle_spawn37", "com_item_vehicle_spawn", 1696121885)
 	ExpireTimeField("40.0");
 	DecayTime("10.0");
 	ClassNeutral("");
-	ClassAllATK("all_hover_combatspeeder");
+	ClassAllATK("");
 	ClassCISATK("");
 	ClassImpATK("");
-	ClassRepATK("rep_hover_fightertank");
+	ClassRepATK("");
 	ClassLocATK("");
 	ClassHisATK("");
 	ClassAllDEF("");
@@ -343,7 +343,7 @@ Object("com_item_vehicle_spawn29", "com_item_vehicle_spawn", 2074534351)
 	ClassLocATK("");
 	ClassHisATK("");
 	ClassAllDEF("");
-	ClassCISDEF("cis_hover_aat");
+	ClassCISDEF("");
 	ClassImpDEF("");
 	ClassRepDEF("");
 	ClassLocDEF("");
@@ -366,10 +366,10 @@ Object("com_item_vehicle_spawn32", "com_item_vehicle_spawn", 2140627540)
 	ExpireTimeField("40.0");
 	DecayTime("10.0");
 	ClassNeutral("");
-	ClassAllATK("all_hover_combatspeeder");
+	ClassAllATK("");
 	ClassCISATK("");
 	ClassImpATK("");
-	ClassRepATK("rep_hover_fightertank");
+	ClassRepATK("");
 	ClassLocATK("");
 	ClassHisATK("");
 	ClassAllDEF("");
@@ -390,7 +390,7 @@ Object("com_item_vehicle_spawn39", "com_item_vehicle_spawn", -1909607592)
 	NetworkId(-1);
 	Layer(7);
 	ControlZone("CP4_CTF");
-	SpawnCount("1");
+	SpawnCount("0");
 	SpawnTime("45.0");
 	ExpireTimeEnemy("20.0");
 	ExpireTimeField("40.0");
@@ -403,7 +403,7 @@ Object("com_item_vehicle_spawn39", "com_item_vehicle_spawn", -1909607592)
 	ClassLocATK("");
 	ClassHisATK("");
 	ClassAllDEF("");
-	ClassCISDEF("rep_hover_barcspeeder");
+	ClassCISDEF("cis_hover_stap");
 	ClassImpDEF("imp_hover_speederbike");
 	ClassRepDEF("");
 	ClassLocDEF("");
@@ -442,7 +442,7 @@ Object("com_item_vehicle_spawn34", "com_item_vehicle_spawn", -1232343022)
 	NetworkId(-1);
 	Layer(7);
 	ControlZone("CP1_CTF");
-	SpawnCount("1");
+	SpawnCount("0");
 	SpawnTime("45.0");
 	ExpireTimeEnemy("20.0");
 	ExpireTimeField("40.0");
@@ -496,7 +496,7 @@ Object("com_item_vehicle_spawn42", "com_item_vehicle_spawn", -408290330)
 	ClassLocATK("");
 	ClassHisATK("");
 	ClassAllDEF("");
-	ClassCISDEF("cis_hover_aat");
+	ClassCISDEF("");
 	ClassImpDEF("");
 	ClassRepDEF("");
 	ClassLocDEF("");

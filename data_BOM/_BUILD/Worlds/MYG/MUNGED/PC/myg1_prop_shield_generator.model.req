@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_shield_generator"
+		"myg1_bldg_lowrez"
+	}
+}

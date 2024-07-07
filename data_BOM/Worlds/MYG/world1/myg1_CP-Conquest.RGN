@@ -10,13 +10,13 @@ Region("cp3_capture", 0)
 	Name("cp3_capture");
 }
 
-Region("CP2CAPTURE", 2)
+Region("cp6_capture", 2)
 {
 	Layer(10);
 	Position(-176.506805, -0.934925, 133.869797);
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
 	Size(0.958368, 10.000000, 9.292854);
-	Name("CP2CAPTURE");
+	Name("cp6_capture");
 }
 
 Region("cp5_capture", 2)

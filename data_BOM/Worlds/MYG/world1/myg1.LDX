@@ -26,7 +26,7 @@ Layer("Rubble", 4, 0)
 	Description("");
 }
 
-Layer("Turrets", 5, 0)
+Layer("Turrets", 5, 2)
 {
 	Description("");
 }
@@ -61,7 +61,7 @@ Layer("flags", 15, 2)
 	Description("");
 }
 
-Layer("Shields", 6, 2)
+Layer("Shields", 6, 0)
 {
 	Description("");
 }

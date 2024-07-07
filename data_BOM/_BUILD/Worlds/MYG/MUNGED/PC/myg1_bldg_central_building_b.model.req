@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_lowrez"
+		"myg1_bldg_central_tower03"
+		"myg1_bldg_central_tower06"
+		"myg1_bldg_central_tower07"
+	}
+}

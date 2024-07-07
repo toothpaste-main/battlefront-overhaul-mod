@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"precipitation"
+		"hdr"
+	}
+	REQN
+	{
+		"texture"
+		"fx_silt"
+	}
+}

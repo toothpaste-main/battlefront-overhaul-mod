@@ -1475,7 +1475,7 @@ Connection("Connection149")
 	Start("Hub122");
 	End("Hub182");
 	Flag(3);
-	Jump();
+	OneWay();
 }
 
 Connection("Connection150")

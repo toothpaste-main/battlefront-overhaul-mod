@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.734, 0.519, -0.358, 0.253);
-	Position(8.935, 44.565, 25.376);
+	Rotation(0.947, 0.315, -0.054, 0.018);
+	Position(-141.459, 35.581, 67.138);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(2000.000);
@@ -33,8 +33,8 @@ NextSequence(-1447548);
 
 Object("CP2", "com_bldg_controlzone", -65610651)
 {
-	ChildRotation(0.990, 0.000, 0.139, 0.000);
-	ChildPosition(-158.048, 2.079, -28.944);
+	ChildRotation(0.991, -0.000, 0.135, -0.000);
+	ChildPosition(30.587, 4.985, 40.760);
 	SeqNo(-65610651);
 	Team(2);
 	NetworkId(-1);
@@ -453,16 +453,16 @@ Object("norun", "com_bldg_controlzone", 1515260578)
 
 Object("CP4", "com_bldg_controlzone", 1383005208)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(12.000, 5.000, 24.000);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-158.000, 1.985, -29.000);
 	SeqNo(1383005208);
 	Team(2);
 	NetworkId(-1);
 	Label("CP4");
 	Layer(8);
-	CaptureRegion("cp4capture");
-	ControlRegion("CP4CONTROL");
-	SpawnPath("enemyspawn2");
+	CaptureRegion("distraction");
+	ControlRegion("");
+	SpawnPath("CP4SpawnPath");
 	TurretPath("");
 	AllyPath("");
 	AllyCount("65536");
@@ -599,8 +599,8 @@ Object("repveh3", "com_item_vehicle_spawn", 34334106)
 
 Object("com_item_vehicle_spawn3", "com_item_vehicle_spawn", 350111127)
 {
-	ChildRotation(0.886, 0.000, 0.464, 0.000);
-	ChildPosition(-126.277, 3.216, -68.989);
+	ChildRotation(0.759, -0.000, -0.651, -0.000);
+	ChildPosition(-26.000, 6.000, 57.000);
 	SeqNo(350111127);
 	Team(0);
 	NetworkId(-1);
@@ -629,8 +629,8 @@ Object("com_item_vehicle_spawn3", "com_item_vehicle_spawn", 350111127)
 
 Object("autoturret4", "tur_bldg_recoilless_myg_auto", 736477358)
 {
-	ChildRotation(-0.218, 0.000, -0.976, 0.000);
-	ChildPosition(-69.840, 0.867, 69.506);
+	ChildRotation(-0.259, -0.000, -0.966, -0.000);
+	ChildPosition(-81.000, 1.000, 71.000);
 	SeqNo(736477358);
 	Team(2);
 	NetworkId(-1);
@@ -979,8 +979,8 @@ Object("cforce_shield_06", "myg1_prop_energy_collector_shield", -2134972447)
 
 Object("com_item_vehicle_spawn10", "com_item_vehicle_spawn", -2002676001)
 {
-	ChildRotation(-0.003, 0.000, -1.000, 0.000);
-	ChildPosition(4.000, 4.000, -24.000);
+	ChildRotation(-0.135, -0.000, -0.991, -0.000);
+	ChildPosition(3.000, 4.000, -16.000);
 	SeqNo(-2002676001);
 	Team(0);
 	NetworkId(-1);
@@ -1215,8 +1215,8 @@ Object("core", "myg1_bldg_energy_collector_core", -707473229)
 
 Object("autoturret3", "tur_bldg_recoilless_myg_auto", -513321877)
 {
-	ChildRotation(0.079, 0.000, -0.997, 0.000);
-	ChildPosition(-88.750, 0.867, 66.946);
+	ChildRotation(0.247, -0.000, -0.969, -0.000);
+	ChildPosition(-99.000, 1.000, 65.000);
 	SeqNo(-513321877);
 	Team(2);
 	NetworkId(-1);

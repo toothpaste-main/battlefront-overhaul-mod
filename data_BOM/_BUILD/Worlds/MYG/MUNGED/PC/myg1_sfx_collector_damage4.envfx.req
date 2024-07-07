@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_smoke2"
+		"com_sfx_flashball3"
+		"com_sfx_laser_orange"
+		"com_sfx_flames1"
+		"com_sfx_explosion4"
+		"com_sfx_explosion2"
+		"com_sfx_explosion1"
+	}
+	REQN
+	{
+		"model"
+		"myg_sfx_collectorray"
+		"myg_sfx_collectorray2"
+		"com_sfx_lightningball1"
+		"com_sfx_lightningball2"
+		"com_sfx_lightningball3"
+	}
+}

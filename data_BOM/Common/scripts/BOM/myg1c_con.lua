@@ -6,14 +6,14 @@
 ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("setup_teams") 
 
--- load BBP constants
+-- load BOM constants
 ScriptCB_DoFile("bom_cmn") 
 ScriptCB_DoFile("bom_cw_ep3_marine") 
 	
---  These variables do not change
+-- these variables do not change
 ATT = 1
 DEF = 2
---  REP Attacking (attacker is always #1)
+-- REP attacking (attacker is always #1)
 REP = ATT
 CIS = DEF
     
@@ -28,22 +28,25 @@ function ScriptPostLoad()
 	AddDeathRegion("deathregion")
 	
 	-- remove AI barriers
+	DisableBarriers("corebar1")
+	DisableBarriers("corebar2")
+	DisableBarriers("corebar3")
+	DisableBarriers("corebar4")
+	DisableBarriers("coresh1")
+	DisableBarriers("ctf")
+    DisableBarriers("ctf1")
+    DisableBarriers("ctf2")
+    DisableBarriers("ctf3")
     DisableBarriers("dropship")
     DisableBarriers("shield_03")
     DisableBarriers("shield_02")
     DisableBarriers("shield_01")
-    DisableBarriers("ctf")
-    DisableBarriers("ctf1")
-    DisableBarriers("ctf2")
-    DisableBarriers("ctf3")
-    DisableBarriers("coresh1")
-
-    
+	
 	------------------------------------------------
 	------------   INITIALIZE COMMAND POSTS   ------
 	------------------------------------------------
 	
-	--This defines the CPs.  These need to happen first
+	-- define CPs
     cp1 = CommandPost:New{name = "CP1"}
     cp2 = CommandPost:New{name = "CP2"}
     cp3 = CommandPost:New{name = "CP3"}
@@ -52,13 +55,13 @@ function ScriptPostLoad()
 	cp6 = CommandPost:New{name = "CP6"}
 
     
-	--This sets up the actual objective.  This needs to happen after cp's are defined
+	-- create objective
     conquest = ObjectiveConquest:New{teamATT = ATT, teamDEF = DEF, 
 									 textATT = "game.modes.con", 
 									 textDEF = "game.modes.con2", 
 									 multiplayerRules = true}
     
-	--This adds the CPs to the objective.  This needs to happen after the objective is set up
+	-- add CPs to objective
     conquest:AddCommandPost(cp1)
     conquest:AddCommandPost(cp2)
     conquest:AddCommandPost(cp3)
@@ -66,12 +69,10 @@ function ScriptPostLoad()
     conquest:AddCommandPost(cp5)
     conquest:AddCommandPost(cp6)
     
+	-- start objective
     conquest:Start()
 	
-	SetUberMode(UBER_MODE)
-	
 	EnableSPHeroRules()
-    
 end
  
  
@@ -121,8 +122,7 @@ function ScriptInit()
 	ReadDataFile("SIDE\\rep.lvl",
 				 REP_HERO,
 				 "rep_fly_gunship_dome",
-				 "rep_hover_fightertank",
-				 "rep_walk_oneman_atst")
+				 "rep_hover_fightertank")
 	
 	-- cis
     ReadDataFile("SIDE\\cis.lvl",
@@ -206,16 +206,17 @@ function ScriptInit()
     local weaponCnt = 230
     SetMemoryPoolSize("Aimer", 60)
     SetMemoryPoolSize("AmmoCounter", weaponCnt)
-    SetMemoryPoolSize("BaseHint", 250)
+    SetMemoryPoolSize("BaseHint", 1290)
     SetMemoryPoolSize("EnergyBar", weaponCnt)
 	SetMemoryPoolSize("EntityCloth", 19)
-    SetMemoryPoolSize("EntityHover", 7)
+    SetMemoryPoolSize("EntityHover", 4)
     SetMemoryPoolSize("EntityFlyer", 6)
     SetMemoryPoolSize("EntitySoundStream", 1)
     SetMemoryPoolSize("EntitySoundStatic", 76)
     SetMemoryPoolSize("MountedTurret", 16)
     SetMemoryPoolSize("Navigator", 50)
-    SetMemoryPoolSize("Obstacle", 500)
+    SetMemoryPoolSize("Obstacle", 910)
+	SetMemoryPoolSize("SoldierAnimation", 500)
     SetMemoryPoolSize("PathNode", 256)
     SetMemoryPoolSize("TreeGridStack", 275)
     SetMemoryPoolSize("UnitAgent", 50)
@@ -259,8 +260,8 @@ function ScriptInit()
     
 	-- winning/losing announcement
     SetBleedingVoiceOver(REP, REP, "rep_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing", 1)
+    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing", 1)
     SetBleedingVoiceOver(CIS, CIS, "cis_off_com_report_us_overwhelmed", 1)
     
 	-- low reinforcement warning
@@ -284,12 +285,12 @@ function ScriptInit()
     OpenAudioStream("sound\\myg.lvl",  "myg1")
 	
 	-- music
-    SetAmbientMusic(REP, 1.0, "rep_myg_amb_start",  0,1)
+    SetAmbientMusic(REP, 1.0, "rep_myg_amb_start", 0,1)
     SetAmbientMusic(REP, 0.8, "rep_myg_amb_middle", 1,1)
-    SetAmbientMusic(REP, 0.2, "rep_myg_amb_end",    2,1)
-    SetAmbientMusic(CIS, 1.0, "cis_myg_amb_start",  0,1)
+    SetAmbientMusic(REP, 0.2, "rep_myg_amb_end", 2,1)
+    SetAmbientMusic(CIS, 1.0, "cis_myg_amb_start", 0,1)
     SetAmbientMusic(CIS, 0.8, "cis_myg_amb_middle", 1,1)
-    SetAmbientMusic(CIS, 0.2, "cis_myg_amb_end",    2,1)
+    SetAmbientMusic(CIS, 0.2, "cis_myg_amb_end", 2,1)
 
 	-- game over song
     SetVictoryMusic(REP, "rep_myg_amb_victory")
@@ -319,5 +320,4 @@ function ScriptInit()
 	AddCameraShot(0.141407, -0.012274, -0.986168, -0.085598, -77.743042, 8.067328, 42.336128)
 	AddCameraShot(0.797017, 0.029661, 0.602810, -0.022434, -45.726467, 7.754435, -47.544712)
 	AddCameraShot(0.998764, 0.044818, -0.021459, 0.000963, -71.276566, 4.417432, 221.054550)
-
 end

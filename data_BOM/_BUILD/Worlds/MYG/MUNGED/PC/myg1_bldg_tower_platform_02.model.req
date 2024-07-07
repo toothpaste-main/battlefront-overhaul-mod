@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_energy_collector07"
+		"myg1_bldg_energy_collector01"
+		"myg1_bldg_spiral_small01"
+		"myg1_bldg_energy_outpost02"
+		"myg1_bldg_energy_collector02"
+		"myg1_bldg_energy_outpost01"
+	}
+}

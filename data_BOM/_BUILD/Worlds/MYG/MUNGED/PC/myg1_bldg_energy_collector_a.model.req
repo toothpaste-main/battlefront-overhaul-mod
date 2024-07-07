@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_lowrez"
+		"myg1_bldg_energy_collector03"
+		"myg1_bldg_energy_collector05"
+		"myg1_bldg_energy_collector01"
+		"myg1_bldg_energy_collector02"
+		"myg1_bldg_energy_collector04"
+	}
+}

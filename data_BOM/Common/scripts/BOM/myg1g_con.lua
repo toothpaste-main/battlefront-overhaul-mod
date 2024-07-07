@@ -17,7 +17,6 @@ DEF = 2
 ALL = ATT
 IMP = DEF
 
- 
 function ScriptPostLoad()
  
 	------------------------------------------------
@@ -28,22 +27,25 @@ function ScriptPostLoad()
 	AddDeathRegion("deathregion")
 	
 	-- remove AI barriers
+	DisableBarriers("corebar1")
+	DisableBarriers("corebar2")
+	DisableBarriers("corebar3")
+	DisableBarriers("corebar4")
+	DisableBarriers("coresh1")
+	DisableBarriers("ctf")
+    DisableBarriers("ctf1")
+    DisableBarriers("ctf2")
+    DisableBarriers("ctf3")
     DisableBarriers("dropship")
     DisableBarriers("shield_03")
     DisableBarriers("shield_02")
     DisableBarriers("shield_01")
-    DisableBarriers("ctf")
-    DisableBarriers("ctf1")
-    DisableBarriers("ctf2")
-    DisableBarriers("ctf3")
-    DisableBarriers("coresh1")
-
-    
+	
 	------------------------------------------------
 	------------   INITIALIZE COMMAND POSTS   ------
 	------------------------------------------------
 	
-	--This defines the CPs.  These need to happen first
+	-- define CPs
     cp1 = CommandPost:New{name = "CP1"}
     cp2 = CommandPost:New{name = "CP2"}
     cp3 = CommandPost:New{name = "CP3"}
@@ -52,13 +54,13 @@ function ScriptPostLoad()
 	cp6 = CommandPost:New{name = "CP6"}
 
     
-	--This sets up the actual objective.  This needs to happen after cp's are defined
+	-- create objective
     conquest = ObjectiveConquest:New{teamATT = ATT, teamDEF = DEF, 
 									 textATT = "game.modes.con", 
 									 textDEF = "game.modes.con2", 
 									 multiplayerRules = true}
     
-	--This adds the CPs to the objective.  This needs to happen after the objective is set up
+	-- add CPs to objective
     conquest:AddCommandPost(cp1)
     conquest:AddCommandPost(cp2)
     conquest:AddCommandPost(cp3)
@@ -66,10 +68,10 @@ function ScriptPostLoad()
     conquest:AddCommandPost(cp5)
     conquest:AddCommandPost(cp6)
     
+	-- start objective
     conquest:Start()
 	
 	EnableSPHeroRules()
-    
 end
 
 
@@ -116,12 +118,13 @@ function ScriptInit()
     
 	-- rebels
     ReadDataFile("SIDE\\all.lvl",
-				 ALL_HERO)
+				 ALL_HERO,
+				 "all_hover_combatspeeder")
                 
 	-- empire
 	ReadDataFile("SIDE\\imp.lvl",
 				 IMP_HERO,
-				 imp_hover_fightertank)
+				 "imp_hover_fightertank")
 				 
 	-- turrets
     ReadDataFile("SIDE\\tur.lvl", 
@@ -247,13 +250,13 @@ function ScriptInit()
     AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
 	
 	-- announcer quick
-	voiceQuick = OpenAudioStream("sound\\global.lvl",  "all_unit_vo_quick")
-    AudioStreamAppendSegments("sound\\global.lvl",  "imp_unit_vo_quick", voiceQuick)
+	voiceQuick = OpenAudioStream("sound\\global.lvl", "all_unit_vo_quick")
+    AudioStreamAppendSegments("sound\\global.lvl", "imp_unit_vo_quick", voiceQuick)
 	
 	-- winning/losing announcement
 	SetBleedingVoiceOver(ALL, ALL, "all_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing", 1)
+    SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing", 1)
     SetBleedingVoiceOver(IMP, IMP, "imp_off_com_report_us_overwhelmed", 1)
 
 	-- low reinforcement warning
@@ -277,12 +280,12 @@ function ScriptInit()
 	OpenAudioStream("sound\\myg.lvl",  "myg1")
 	
 	-- music
-	SetAmbientMusic(ALL, 1.0, "all_myg_amb_start",  0,1)
+	SetAmbientMusic(ALL, 1.0, "all_myg_amb_start", 0,1)
 	SetAmbientMusic(ALL, 0.8, "all_myg_amb_middle", 1,1)
-	SetAmbientMusic(ALL, 0.2, "all_myg_amb_end",    2,1)
-	SetAmbientMusic(IMP, 1.0, "imp_myg_amb_start",  0,1)
+	SetAmbientMusic(ALL, 0.2, "all_myg_amb_end", 2,1)
+	SetAmbientMusic(IMP, 1.0, "imp_myg_amb_start", 0,1)
 	SetAmbientMusic(IMP, 0.8, "imp_myg_amb_middle", 1,1)
-	SetAmbientMusic(IMP, 0.2, "imp_myg_amb_end",    2,1)
+	SetAmbientMusic(IMP, 0.2, "imp_myg_amb_end", 2,1)
 
 	-- game over song
 	SetVictoryMusic(ALL, "all_myg_amb_victory")
@@ -291,13 +294,13 @@ function ScriptInit()
 	SetDefeatMusic (IMP, "imp_myg_amb_defeat")
 
 	-- misc sounds effects
-	SetSoundEffect("ScopeDisplayZoomIn",  "binocularzoomin")
+	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
 	SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
-	SetSoundEffect("SpawnDisplayUnitChange",       "shell_select_unit")
-	SetSoundEffect("SpawnDisplayUnitAccept",       "shell_menu_enter")
+	SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
+	SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
 	SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
 	SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
-	SetSoundEffect("SpawnDisplayBack",             "shell_menu_exit")
+	SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
 
 
 	------------------------------------------------

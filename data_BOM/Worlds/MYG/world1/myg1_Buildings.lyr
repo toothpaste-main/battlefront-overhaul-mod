@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.734, 0.519, -0.358, 0.253);
-	Position(8.935, 44.565, 25.376);
+	Rotation(0.947, 0.315, -0.054, 0.018);
+	Position(-141.459, 35.581, 67.138);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(2000.000);
@@ -1123,8 +1123,8 @@ Object("myg1_bldg_med_spiral_ruin", "myg1_bldg_med_spiral_ruin", -1081409253)
 
 Object("myg1_bldg_tower_platform_03", "myg1_bldg_tower_platform_03", -1078998997)
 {
-	ChildRotation(0.709, 0.000, -0.705, 0.000);
-	ChildPosition(-155.000, 0.000, -38.000);
+	ChildRotation(0.711, 0.000, -0.704, 0.000);
+	ChildPosition(-155.004, 0.000, -38.271);
 	SeqNo(-1078998997);
 	Team(0);
 	NetworkId(-1);

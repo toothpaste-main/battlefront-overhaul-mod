@@ -12,9 +12,6 @@ function AddNewGameModes(missionList, mapName, newFlags)
 	end
 end
 
-
-
-
 --insert totally new maps here:
 local sp_n = 0
 local mp_n = 0

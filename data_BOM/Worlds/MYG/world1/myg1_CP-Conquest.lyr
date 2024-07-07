@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.734, 0.519, -0.358, 0.253);
-	Position(8.935, 44.565, 25.376);
+	Rotation(0.947, 0.315, -0.054, 0.018);
+	Position(-141.459, 35.581, 67.138);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(2000.000);
@@ -533,36 +533,6 @@ Object("CP1", "com_bldg_controlzone", 2035872363)
 	AISpawnWeight("");
 	HUDIndex("1");
 	HUDIndexDisplay("1");
-}
-
-Object("cp4_veh1", "com_item_vehicle_spawn", 127787035)
-{
-	ChildRotation(-0.049, -0.000, -0.999, -0.000);
-	ChildPosition(-3.028, 5.000, 35.214);
-	SeqNo(127787035);
-	Team(0);
-	NetworkId(-1);
-	Layer(10);
-	ControlZone("CP4");
-	SpawnCount("1");
-	SpawnTime("45.0");
-	ExpireTimeEnemy("20.0");
-	ExpireTimeField("40.0");
-	DecayTime("10.0");
-	ClassNeutral("");
-	ClassAllATK("all_hover_combatspeeder");
-	ClassCISATK("");
-	ClassImpATK("");
-	ClassRepATK("rep_hover_fightertank");
-	ClassLocATK("");
-	ClassHisATK("");
-	ClassAllDEF("");
-	ClassCISDEF("cis_hover_aat");
-	ClassImpDEF("imp_hover_fightertank");
-	ClassRepDEF("");
-	ClassLocDEF("");
-	ClassHisDEF("");
-	ClassLocals("");
 }
 
 Object("cp6_veh1", "com_item_vehicle_spawn", 208825565)
