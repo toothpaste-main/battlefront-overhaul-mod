@@ -1072,6 +1072,10 @@ function ScriptInit()
 	------------   DLC SOUNDS   --------------------
 	------------------------------------------------
 
+	-- global
+	ReadDataFile("dc:sound\\bom.lvl;bom_cmn")
+
+	-- era
 	ReadDataFile("dc:sound\\bom.lvl;bomcw")
 	
 

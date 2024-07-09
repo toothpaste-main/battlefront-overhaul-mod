@@ -41,24 +41,6 @@ function ScriptPostLoad()
 	DisableBarriers("shield_02")
 	DisableBarriers("shield_03")
 	
-	
-	------------------------------------------------
-	------------   SHIELD FUNCTIONALITY   ----------
-	------------------------------------------------
-	
-	OnObjectRespawnName(Revived, "generator_01")
-    OnObjectKillName(ShieldDied, "force_shield_01")
-    OnObjectKillName(ShieldDied, "generator_01")
-    
-
-    OnObjectRespawnName(Revived, "generator_02")
-    OnObjectKillName(ShieldDied, "force_shield_02")
-    OnObjectKillName(ShieldDied, "generator_02")
-   
-    OnObjectRespawnName(Revived, "generator_03")
-    OnObjectKillName(ShieldDied, "force_shield_03")
-    OnObjectKillName(ShieldDied, "generator_03")
-	
 
     ------------------------------------------------
 	------------   INITIALIZE FLAGS   --------------
@@ -92,74 +74,6 @@ function ScriptPostLoad()
     
     EnableSPHeroRules()
 end
-    
-	
-------------------------------------------------
-------------   SHIELD LOGIC  -------------------
-------------------------------------------------
-
--- initialize shield
-function Init(numberStr)
-	shieldName = "force_shield_" .. numberStr
-	genName = "generator_" .. numberStr
-	upAnim = "shield_up_" .. numberStr
-	downAnim = "shield_down_" .. numberStr
-
-	PlayShieldUp(shieldName, genName, upAnim, downAnim)
-
-	BlockPlanningGraphArcs("shield_" .. numberStr)
-	EnableBarriers("shield_" .. numberStr)
-end
-
--- upon shield life
-function Revived(actor)
-	fullName = GetEntityName(actor)
-	numberStr = string.sub(fullName, -2, -1)
-
-	shieldName = "force_shield_" .. numberStr
-	genName = "generator_" .. numberStr
-	upAnim = "shield_up_" .. numberStr
-	downAnim = "shield_down_" .. numberStr
-
-	PlayShieldUp(shieldName, genName, upAnim, downAnim)
-	BlockPlanningGraphArcs("shield_" .. numberStr)
-	EnableBarriers("shield_" .. numberStr)
-end
-
--- upon shield death
-function ShieldDied(actor)
-	fullName = GetEntityName(actor)
-	numberStr = string.sub(fullName, -2, -1)
-
-	shieldName = "force_shield_" .. numberStr
-	genName = "generator_" .. numberStr
-	upAnim = "shield_up_" .. numberStr
-	downAnim = "shield_down_" .. numberStr
-
-	PlayShieldDown(shieldName, genName, upAnim, downAnim)
-
-	UnblockPlanningGraphArcs("shield_" .. numberStr)
-	DisableBarriers("shield_" .. numberStr)
-end
-
--- raise shield
-function PlayShieldUp(shieldObj, genObj, upAnim, downAnim)
-      RespawnObject(shieldObj)
-      RespawnObject(genObj)
-      PauseAnimation(downAnim)
-      RewindAnimation(upAnim)
-      PlayAnimation(upAnim)
-end
-
--- lower shield
-function PlayShieldDown(shieldObj, genObj, upAnim, downAnim)
-      RespawnObject(shieldObj)
-      KillObject(genObj)
-      PauseAnimation(upAnim)
-      RewindAnimation(downAnim)
-      PlayAnimation(downAnim)
-    
-end
 
 
 ---------------------------------------------------------------------------
@@ -179,6 +93,10 @@ function ScriptInit()
 	------------   DLC SOUNDS   --------------------
 	------------------------------------------------
 	
+	-- global
+	ReadDataFile("dc:sound\\bom.lvl;bom_cmn")
+
+	-- era
 	ReadDataFile("dc:sound\\bom.lvl;bomcw")
 	
 

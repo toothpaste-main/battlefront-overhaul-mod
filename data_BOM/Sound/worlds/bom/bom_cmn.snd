@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Level Global -----
+// flyer sfx
+// turbulence
+SoundProperties()
+{
+    Name("bom_com_weap_inf_rocketlauncher_hum");
+    Group("weapons");
+    Inherit("ordnance_template");
+	PitchDev(0.05);
+	MinDistance(30.0);
+    MuteDistance(800.0);
+    MaxDistance(800.0);
+    SampleList()
+    {
+		Sample("com_weap_rocketlauncher_hum2", 0.33);
+		Sample("com_weap_rocketlauncher_hum3", 0.33);
+		Sample("com_weap_rocketlauncher_hum4", 0.33);
+    }
+}

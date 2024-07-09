@@ -7,12 +7,6 @@ ucft
 		"bomgcw"
 		"bomgcw_stock"
 	}
-		REQN
-	{
-		"str"
-		"align=2048"
-		"bomgcw"
-	}
 	REQN
 	{
 		"config"
