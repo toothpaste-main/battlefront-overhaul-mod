@@ -57,7 +57,13 @@ function ScriptPostLoad ()
 	
 	-- start objective
 	
+	
+	------------------------------------------------
+	------------   MISC   --------------------------
+	------------------------------------------------
+	
 	EnableSPHeroRules()
+	--SetUberMode(0) -- 0 or 1
 end
 
 
@@ -93,22 +99,45 @@ function ScriptInit()
 	--
 	
 	-- constants
+	local NUM_AIMER = 96		-- it's easier this way
+	local NUM_CLOTH = 0	
+	local NUM_FLAGS = 0
+	local NUM_FLYER = 6
+	local NUM_HINTS = 1024
+	local NUM_HOVER = 0
 	local NUM_JEDI = 2
-	local NUM_UNITS = 64
-	local NUM_WEAPONS = 4*NUM_UNITS
+	local NUM_MINE = 24			-- 4 mines * 8 rocketeers
+	local NUM_TENT = 0
+	local NUM_TUR = 0
+	local NUM_UNITS = 96		-- it's easier this way
+	local NUM_WEAPONS = 256		-- more if locals and vehicles!
+	local WALKER0 = 0
+	local WALKER1 = 0
+	local WALKER2 = 0
+	local WALKER3 = 0
 	
-    SetMemoryPoolSize("Aimer", 20)
+	-- walkers
+	ClearWalkers()
+	AddWalkerType(0, WALKER0)	-- droidekas (special case: 0 leg pairs)
+	AddWalkerType(1, WALKER1)	-- 1x2 (1 pair of legs)
+	AddWalkerType(2, WALKER2)	-- 2x2 (2 pairs of legs)
+	AddWalkerType(3, WALKER3)	-- 3x2 (3 pairs of legs)
+	
+	-- memory pool
+    SetMemoryPoolSize("Aimer", NUM_AIMER)
     SetMemoryPoolSize("AmmoCounter", NUM_WEAPONS)
-	SetMemoryPoolSize("BaseHint", 1024)							-- number of hint nodes
+	SetMemoryPoolSize("BaseHint", NUM_HINTS)					-- number of hint nodes
+	SetMemoryPoolSize("CommandFlyer", 0)						-- number of gunships
+	SetMemoryPoolSize("CommandWalker", 0)						-- number of ATTEs or ATATs
     SetMemoryPoolSize("EnergyBar", NUM_WEAPONS)
-    SetMemoryPoolSize("EntityCloth", 0)							-- 1 per clone marine
-	SetMemoryPoolSize("EntityFlyer", 6) 						-- to account for rocket upgrade (incrase for ATST)
-    SetMemoryPoolSize("EntityHover", 0)							-- hover tanks/speeders
+    SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
+    SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
     --SetMemoryPoolSize("EntityLight", 128)						-- for dark maps
-	SetMemoryPoolSize("EntityMine", 24)							-- 4 mines * 8 rocketeers
-    SetMemoryPoolSize("EntitySoundStream", 2)
-    SetMemoryPoolSize("EntitySoundStatic", 1)
-    SetMemoryPoolSize("FlagItem", 0)
+	SetMemoryPoolSize("EntityMine", NUM_MINE)							
+    --SetMemoryPoolSize("EntitySoundStream", 0)
+    --SetMemoryPoolSize("EntitySoundStatic", 0)
+    SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
     SetMemoryPoolSize("MountedTurret", 0)
     --SetMemoryPoolSize("Music", 32)							-- applicable to campaigns
     SetMemoryPoolSize("Navigator", NUM_UNITS)
@@ -117,12 +146,11 @@ function ScriptInit()
     SetMemoryPoolSize("PathNode", 256)
 	SetMemoryPoolSize("SoldierAnimation", 512)
     --SetMemoryPoolSize("SoundSpaceRegion", 0)					-- for maps using lots of sound spaces
-    SetMemoryPoolSize("TentacleSimulator", 0)					-- 4 per wookiee
+    SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
     SetMemoryPoolSize("TreeGridStack", 256)
 	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
 	SetMemoryPoolSize("UnitController", NUM_UNITS)
     SetMemoryPoolSize("Weapon", NUM_WEAPONS)
-	
 	
 	-- jedi
 	SetMemoryPoolSize("Combo", 2*NUM_JEDI)						-- should be ~ 2x number of jedi classes
@@ -163,7 +191,7 @@ function ScriptInit()
 	
 	-- cis
 	local CIS_HERO = ""
-		
+	
 	
 	------------------------------------------------
 	------------   LOAD VANILLA ASSETS   -----------
@@ -173,7 +201,7 @@ function ScriptInit()
 	
 	-- cis
 	
-	-- wookies
+	-- local
     
 	-- turrets
     
@@ -182,9 +210,9 @@ function ScriptInit()
 	------------   LOAD DLC ASSETS   ---------------
 	------------------------------------------------
 	
-	-- republic
+	-- republic/rebels
 	
-	-- cis
+	-- cis/empire
     
     
 	------------------------------------------------
@@ -194,50 +222,53 @@ function ScriptInit()
     -- setup teams
 	
 	-- heroes
-	--SetHeroClass(TEAM, HERO)
+	--SetHeroClass(TEAM_NUM, HERO)
     
-	-- setup wookies
+	-- setup locals
 	
-	-- establish good relations with the wookies
+	-- establish good relations with the locals
 	
-	-- walkers
-	Clear Walkers()
-	AddWalkerType(0, 0)				-- droidekas (special case: 0 leg pairs)
-	AddWalkerType(1, 0)				-- 1x2 (1 pair of legs)
-	AddWalkerType(2, 0)				-- 2x2 (2 pairs of legs)
-	AddWalkerType(3, 0)				-- 3x2 (3 pairs of legs)
     
     ------------------------------------------------
 	------------   LEVEL PROPERTIES   --------------
 	------------------------------------------------
 	
 	-- constants
-	local MAX_FLY_HEIGHT = 20
-	local MIN_FLY_HEIGHT = 0
-	local NUM_BIRD_TYPES = 0		-- 0-2
+	local MAP_CEILING = 32
+	local MAP_CEILING_AI = MAP_CEILING
+	local MAP_FLOOR = 0
+	local MAP_FLOOR_AI = MAP_FLOOR
+	local MIN_FLOCK_HEIGHT = 90.0
+	local NUM_BIRD_TYPES = 0		-- -1 dragons, 1 to 2 birds
 	local NUM_FISH_TYPES = 0		-- 0-1
 	
 	
 	-- load gamemode
-	ReadDataFile("cor\\cor1.lvl","cor1_campaign")
+	
 	
 	-- flight properties
 	SetGroundFlyerMap(0)					-- if flyers (i.e. Hoth)
-	SetMaxFlyHeight(MAX_FLY_HEIGHT)			-- AI
-	SetMaxPlayerFlyHeight(MAX_FLY_HEIGHT)	-- player
-	SetMinFlyHeight(MIN_FLY_HEIGHT)			-- AI
+	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
+	SetMaxPlayerFlyHeight(MAP_CEILING)		-- player
+	SetMinFlyHeight(MAP_FLOOR_AI)			-- AI
+	--SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
 	
 	-- birdies
+	--SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT)
     SetNumBirdTypes(NUM_BIRD_TYPES)
+	if NUM_BIRD_TYPES < 0 then SetBirdType(0.0,10.0,"dragon") end
 	if NUM_BIRD_TYPES >= 1 then SetBirdType(0,1.0,"bird") end
 	if NUM_BIRD_TYPES >= 2 then SetBirdType(1,1.5,"bird2") end
+	
+    
 
     -- fishies
     SetNumFishTypes(NUM_FISH_TYPES)
     if NUM_FISH_TYPES >= 1 then SetFishType(0,0.8,"fish") end
 	
 	-- misc
-	--SetMapNorthAngle(0)
+	--SetMapNorthAngle(0.0)
+	--SetWorldExtents(0.0)
 	
 	
 	------------------------------------------------
@@ -245,23 +276,32 @@ function ScriptInit()
 	------------------------------------------------
 	
 	-- constants
-	local AI_VIEW_MULT = -1			-- -1 for default
+	local VIEW_MULTIPLIER = -1	-- -1 for default
 	local DENSE_ENV = "False"
 	local SNIPE_DIST = 196
 	local URBAN_ENV = "False"
 	
+	-- difficulty
+	--DisableAIAutoBalance()
+	--SetPlayerTeamDifficulty(DIFF_PLAYER)	-- 1 (dumbest) and 20 (smartest)
+	--SetEnemyTeamDifficulty(DIFF_ENEMY) 	-- 1 (dumbest) and 20 (smartest)
+	
+	-- behavior
+	--SetTeamAggressiveness(TEAM_NUM, 1.0) -- 0 to 1
+	
 	-- spawn delay
 	SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
-	--SetSpawnDelayTeam(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED, TEAM_NUMBER)
+	--SetSpawnDelayTeam(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED, TEAM_NUM)
 	
 	-- dense environment
 	-- IF TRUE: decrease AI engagement distance
 	-- IF FALSE: default AI engagement distance
 	SetDenseEnvironment(DENSE_ENV)
-	if AI_VIEW_MULT > 0 then SetAIViewMultiplier(AI_VIEW_MULT) end
+	if VIEW_MULTIPLIER > 0 then SetAIViewMultiplier(VIEW_MULTIPLIER) end
 	
 	-- sniping distance
 	AISnipeSuitabilityDist(SNIPE_DIST)
+	--SetAttackerSnipeRange(196)
 	--SetDefenderSnipeRange(196)
 	
 	-- urban environtment
@@ -270,7 +310,9 @@ function ScriptInit()
 	SetUrbanEnvironment(URBAN_ENV)
 	
 	-- misc
-	--SetAllowBlindJetJumps(0)
+	--SetAllowBlindJetJumps(0) 		-- 0 or 1
+	--SetAttackingTeam(ATT)
+	--SetStayInTurrets(0) 			-- 0 or 1
 
 
 	------------------------------------------------
@@ -312,5 +354,5 @@ function ScriptInit()
 	------------   CAMERA SHOTS   ------------------
 	------------------------------------------------
 	
-	-- AddCameraShot(0, 0, 0, 0, 0, 0, 0,)
+	--AddCameraShot(0, 0, 0, 0, 0, 0, 0,)
 end
