@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"dag1_prop_grass"
+		"dag1_prop_hellbush"
+		"dag1_prop_hellbush_2"
+		"yav_prop_treebillboard"
+	}
+	REQN
+	{
+		"model"
+		"editor_grasspatch"
+	}
+}

@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_councilchamber01"
+		"cor1_bldg_wall"
+		"cor1_bldg_templefloor_c"
+		"cor1_bldg_carpet"
+	}
+}

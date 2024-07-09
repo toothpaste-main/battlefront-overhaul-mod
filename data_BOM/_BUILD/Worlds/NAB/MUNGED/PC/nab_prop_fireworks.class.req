@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"nab_prop_shrub1"
+	}
+	REQN
+	{
+		"class"
+		"nab_prop_fireworks_exp"
+	}
+}

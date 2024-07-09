@@ -1,0 +1,28 @@
+[OrdnanceClass]
+ClassParent 		= "com_weap_inf_chaingun_tracer"
+
+
+[Properties]
+// same laser settings as default rep_weap_inf_rifle.odf
+LaserTexture		= "com_sfx_laser_blue"
+LaserGlowColor		= "92 136 250 100"
+LightColor          = "92 136 250 100"
+LightRadius         = "4.0"
+
+LaserLength         = "1.0"
+LaserWidth          = "0.1"
+GlowLength          = "3"
+BlurLength          = "5"
+
+LifeSpan            = "0.80"
+Velocity            = "300.0"
+Gravity             = "1.0"
+Rebound             = "0.0"
+
+MaxDamage           	= "0.0"
+DamageTransitionDelay   = "0.0"     //How long in seconds before the damage change begins.
+DamageTransitionPeriod  = "0.0"     //How long in seconds the damage change lasts.
+DamageFinalDamage       = "0.0"     //What the damage would be at the end of the transition period.  A negative value means that no change is applied.
+FadeLightColor          = "0"       //Whether or not the color on the light should be faded along with the damage.
+EndLaserGlowColor       = "0 0 0 0" //What color the laser glow will be by the end of the transition. Varies over DamageTransitionPeriod. (only for lasers.)
+EndLightColor           = "0 0 0 0" //What color light will be applied by the end of the transition.  Varies over DamageTransitionPeriod.

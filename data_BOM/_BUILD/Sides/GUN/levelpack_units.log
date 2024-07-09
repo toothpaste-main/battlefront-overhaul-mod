@@ -1,16 +1,4 @@
 Logging LevelPack
-19:56:2007/06/24
-
-=== gun_inf_defender.lvl ===
-Missing file gungan.zaabin
-    Reqd by munged\pc\gun_inf_defender.class.req
-Missing file thermal_detonator.class
-    Reqd by munged\pc\gun_weap_inf_thermaldetonator_ord.class.req
-
-=== gun_inf_soldier.lvl ===
-Missing file gungan.zaabin
-    Reqd by munged\pc\gun_inf_soldier.class.req
-Missing file thermal_detonator.class
-    Reqd by munged\pc\gun_weap_inf_thermaldetonator_ord.class.req
+19:07:4707/08/24
    0 Errors    0 Warnings
 

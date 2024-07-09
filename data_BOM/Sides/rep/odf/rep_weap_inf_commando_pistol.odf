@@ -66,7 +66,7 @@ FlashLightRadius    = "2.0"
 FlashLightDuration  = "0.25"              
 Discharge           = "small_smoke_effect"
 
-FireSound           = "cis_weap_fly_droidfighter_cannon_fire"
+FireSound           = "bom_rep_weap_commandopistol_fire"
 FireEmptySound      = "com_weap_inf_ammo_empty"
 FireLoopSound       = ""
 ReloadSound         = ""

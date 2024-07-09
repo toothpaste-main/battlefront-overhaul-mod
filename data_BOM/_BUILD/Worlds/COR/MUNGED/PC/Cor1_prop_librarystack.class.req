@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"cor1_prop_librarystack"
+		"cor1_prop_librarystack_dest"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_rechargedroid_exp"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_vehiclespark"
+		"com_sfx_vehiclesmoke"
+		"com_sfx_vehicleflame"
+	}
+}

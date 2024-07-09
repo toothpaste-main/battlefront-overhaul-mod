@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"dag1_prop_effectvine_1"
+	}
+	REQN
+	{
+		"config"
+		"fireflies"
+	}
+}

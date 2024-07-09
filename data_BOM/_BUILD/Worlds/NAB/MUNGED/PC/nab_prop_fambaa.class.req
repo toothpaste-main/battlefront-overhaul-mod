@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_dest_icon"
+	}
+	REQN
+	{
+		"model"
+		"nab1_walk_fambaa"
+	}
+}

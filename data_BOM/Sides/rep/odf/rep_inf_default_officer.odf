@@ -16,8 +16,8 @@ ScanningRange       = 30.0
 TransmitRange       = 300.0
 
 WEAPONSECTION = 1
-WeaponName			= "rep_weap_inf_commander_rifle"
-WeaponAmmo       	= 6
+WeaponName			= "rep_weap_inf_chaingun"
+WeaponAmmo       	= -1
 
 WEAPONSECTION = 2
 WeaponName        	= "rep_weap_inf_pistol"

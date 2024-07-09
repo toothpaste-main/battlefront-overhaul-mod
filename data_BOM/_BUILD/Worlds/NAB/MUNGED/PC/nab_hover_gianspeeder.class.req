@@ -1,0 +1,40 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"combatspeeder_icon"
+		"hud_combat_speeder_icon"
+	}
+	REQN
+	{
+		"anim"
+		"human_drive"
+	}
+	REQN
+	{
+		"model"
+		"rep_hover_gian_speeder"
+		"rep_hover_gianspeeder_chunk1"
+		"rep_hover_gianspeeder_chunk2"
+		"rep_hover_gianspeeder_chunk3"
+		"rep_hover_gianspeeder_chunk4"
+	}
+	REQN
+	{
+		"class"
+		"nab_hover_gianspeeder_exp"
+		"nab_weap_hover_gianspeeder_cannon1"
+		"nab_weap_hover_gianspeeder_cannon"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_vehiclespark"
+		"com_sfx_vehiclesmoke"
+		"dirtspray"
+		"com_sfx_chunktrail_sm"
+		"com_sfx_smokeplume"
+	}
+}

@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"yavin1_layer000"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+}

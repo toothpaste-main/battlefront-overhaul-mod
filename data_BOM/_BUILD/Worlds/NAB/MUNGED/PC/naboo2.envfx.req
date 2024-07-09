@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"water"
+		"hdr"
+	}
+	REQN
+	{
+		"texture"
+		"nab2_water"
+		"water_normalmap_"
+		"water_bumpmap_"
+		"water_specularmask_"
+	}
+}

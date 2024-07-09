@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"naboo2_main_4"
+		"nab2_bldg_detail03"
+		"naboo2_main_4_lowrez"
+		"nab2_bldg_detail03_lowrez"
+		"nab2_bldg_arch1_lowres"
+		"nab2_bldg_arch1"
+	}
+}

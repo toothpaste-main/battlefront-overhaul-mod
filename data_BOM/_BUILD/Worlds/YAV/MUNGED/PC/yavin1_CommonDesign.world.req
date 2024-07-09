@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"yavin1_commondesign"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_item_healthrecharge"
+		"tur_bldg_tower"
+		"com_item_weaponrecharge"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"tapestry"
+	}
+	REQN
+	{
+		"model"
+		"cor1_prop_tapestry"
+	}
+}

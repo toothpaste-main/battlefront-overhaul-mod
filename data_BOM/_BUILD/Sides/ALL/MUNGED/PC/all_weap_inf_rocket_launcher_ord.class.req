@@ -5,6 +5,7 @@ ucft
 	{
 		"class"
 		"com_weap_inf_rocket_launcher_ord"
+		"bom_com_weap_inf_rocketlauncher_hum"
 		"all_weap_inf_rocket_launcher_exp"
 	}
 	REQN

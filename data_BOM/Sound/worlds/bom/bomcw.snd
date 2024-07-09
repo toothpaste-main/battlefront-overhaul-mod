@@ -1,7 +1,25 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- Level Global -----
 // flyer sfx
 // turbulence
+SoundProperties()
+{
+    Name("bom_com_weap_inf_rocketlauncher_hum");
+    Group("weapons");
+    Inherit("ordnance_template");
+	PitchDev(0.05);
+	MinDistance(30.0);
+    MuteDistance(800.0);
+    MaxDistance(800.0);
+    SampleList()
+    {
+		Sample("com_weap_rocketlauncher_hum2", 0.33);
+		Sample("com_weap_rocketlauncher_hum3", 0.33);
+		Sample("com_weap_rocketlauncher_hum4", 0.33);
+    }
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- CIS Foley -----
 // cis_inf_droid foley
 // soldier movement stone
@@ -10,32 +28,88 @@
 // binoculars
 // wade is none
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- CIS Units -----
-// cis_inf_battledroid
-// torpedo launcher, pistol
+// cis_inf_bdroid
+// rifle, pistol, thermal
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("cis_weap_rifle_fire0", 0.5);
+		Sample("cis_weap_rifle_fire1", 0.5);
+    }
+}
 
-// cis_inf_super_battledroid
-// wrist blaster, wrist rocket
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0); // this sfx is quiet
+    SampleList()
+    {
+        Sample("cis_weap_pistol_fire0", 0.5);
+		Sample("cis_weap_pistol_fire1", 0.5);
+    }
+}
 
-// cis_inf_pilotdroid
-// pistol, haywire, fusioncutter
+// cis_inf_rocketeer
+// torpedo, pistol, mine dispenser
 
 // cis_inf_tacticaldroid
-// sonic blaster, pistol, powerup dispenser
+// shotgun, pistol, fusioncutter, powerup dispenser
 
 // cis_inf_droideka
 // roll, walk, shield, repeater
 
 // cis_inf_assassindroid
 // sniper, pistol, thermal
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+        Sample("cis_weap_sniperrifle_fire0", 0.5);
+		Sample("cis_weap_sniperrifle_fire1", 0.5);
+    }
+}
+
+// cis_inf_sbdroid
+// wrist blaster, wrist rocket
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_wristblaster_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("cis_weap_wristblaster_fire0", 0.5);
+		Sample("cis_weap_wristblaster_fire1", 0.5);
+    }
+}
 
 // cis_inf_dooku
 // lightsaber, lightsaber deflects
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- CIS Vehicles -----
 // cis_fly_droidfighter
 // weapons, engine, power, explosion
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- REP Foley -----
 // rep_inf_soldiier foley
 // trooper movement stone
@@ -45,9 +119,34 @@
 // binoculars
 // No wade
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- Rep Units -----
 // rep_inf_clone_trooper
 // rifle, pistol, thermal
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("rep_weap_rifle_fire", 1.0);
+    }
+}
+
+
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("rep_weap_pistol_fire0", 0.5);
+		Sample("rep_weap_pistol_fire1", 0.5);
+    }
+}
 
 // Pistol sounds because it is missing in space
 SoundProperties()
@@ -61,10 +160,57 @@ SoundProperties()
     }
 }
 
+// rep_inf_rocketeer
+// torpedo, pistol, mine dispenser
+
+// rep_inf_clone_sharpshooter
+// sniperrifle, pistol, thermal
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+        Sample("rep_weap_sniperrifle_fire0_a", 1.0);
+    }
+}
+
+// rep_inf_clone_pilot
+// pistol, haywire, fusioncutter
+
+// rep_inf_clone_commander
+// launcher, remote droid, power up dispenser
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_chaingun");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+		Sample("rep_weap_chaingun_fire0", 0.5);
+		Sample("rep_weap_chaingun_fire1", 0.5);
+    }
+}
+
+// rep_inf_macewindu
+// lightsaber, lightsaber deflect, force push
+
+// rep_inf_jet_trooper
+// jet pack
+// arccaster, pistol, thermal
 // Droid fighter sounds for Clone Commando Pistol
 SoundProperties()
 {
-    Name("cis_weap_fly_droidfighter_cannon_fire");
+    Name("bom_rep_weap_commandopistol_fire");
     Group("weapons");
     Inherit("weapon_template");
     SampleList()
@@ -73,42 +219,8 @@ SoundProperties()
     }
 }
 
-// Thermal Detonator Explosion
-SoundProperties()
-{
-    Name("com_weap_thermalImploader_exp");
-    Group("Explosion");
-    Inherit("explosion_template");
-    MinDistance(40.0)
-    RollOff(6.0)
-    SpaceDistance(15);
-    SampleList()
-    {
-      Sample("exp_ord_thermalImploader", 1.0);
-    }
-}
 
-
-
-// rep_inf_clone_pilot
-// pistol, haywire, fusioncutter
-
-// rep_inf_arc_trooper
-// torpedo, pistol, mine dispenser
-
-// rep_inf_clone_sharpshooter
-// sniperrifle, pistol, thermal
-
-// rep_inf_clone_commander
-// launcher, remote droid, power up dispenser
-
-// rep_inf_macewindu
-// lightsaber, lightsaber deflect, force push
-
-// rep_inf_jet_trooper
-// jet pack
-// arccaster, pistol, thermal
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ----- Rep Vehicles -----
 // rep_fly_jedifighter
 // weapons, engine, power, explosion

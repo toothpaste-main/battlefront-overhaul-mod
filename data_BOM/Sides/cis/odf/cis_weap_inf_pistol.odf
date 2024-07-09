@@ -13,7 +13,8 @@ OrdnanceName        = "cis_weap_inf_pistol_ord"
 //***************   SOUND   ****************
 //******************************************************
 
-FireSound           = "cis_weap_inf_pistol_fire"
+//FireSound           = "cis_weap_inf_pistol_fire"
+FireSound			= "bom_cis_weap_inf_pistol_fire"
 FireEmptySound      = "com_weap_inf_ammo_empty"
 FireLoopSound       = ""
 ReloadSound         = ""
@@ -29,8 +30,3 @@ RollSound           = "com_weap_inf_pistol_mvt_roll"
 //ProneSound          = "com_weap_inf_pistol_mvt_lie"
 SquatSound          = "com_weap_inf_pistol_mvt_squat"
 //StandSound          = "com_weap_inf_pistol_mvt_getup"
-
-
-
-
-

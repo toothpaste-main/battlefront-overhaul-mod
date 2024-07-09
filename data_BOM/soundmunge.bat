@@ -8,6 +8,7 @@
 @call soundmungedir _BUILD\sound\global\%MUNGE_DIR% sound\global sound\global\%MUNGE_PLATFORM% %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound global nolevelfile
 @call soundmungedir _BUILD\sound\shell\%MUNGE_DIR%  sound\shell  sound\shell\%MUNGE_PLATFORM%  %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound shell
 @rem Munge world specific sound data
+@call soundmungedir _BUILD\sound\worlds\bom\%MUNGE_DIR% sound\worlds\bom sound\worlds\bom\%MUNGE_PLATFORM% %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound bom
 @call soundmungedir _BUILD\sound\worlds\cor\%MUNGE_DIR% sound\worlds\cor sound\worlds\cor\%MUNGE_PLATFORM% %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound cor
 @call soundmungedir _BUILD\sound\worlds\dag\%MUNGE_DIR% sound\worlds\dag sound\worlds\dag\%MUNGE_PLATFORM% %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound dag
 @call soundmungedir _BUILD\sound\worlds\dea\%MUNGE_DIR% sound\worlds\dea sound\worlds\dea\%MUNGE_PLATFORM% %MUNGE_PLATFORM% _BUILD _LVL_%MUNGE_PLATFORM%\sound _BUILD\sound dea

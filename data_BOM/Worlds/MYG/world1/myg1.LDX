@@ -31,12 +31,12 @@ Layer("Turrets", 5, 2)
 	Description("");
 }
 
-Layer("CTF", 7, 2)
+Layer("CTF", 7, 0)
 {
 	Description("");
 }
 
-Layer("CP-Assault", 8, 2)
+Layer("CP-Assault", 8, 0)
 {
 	Description("");
 }

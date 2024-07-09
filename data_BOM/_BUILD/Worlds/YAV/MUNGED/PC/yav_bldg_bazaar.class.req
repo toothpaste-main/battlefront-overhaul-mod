@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"yav_bldg_bazaar"
+	}
+	REQN
+	{
+		"config"
+		"bazarre_sprays"
+	}
+}

@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"naboo2_collision"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_inv_col_64"
+		"com_inv_col_32"
+		"com_inv_col_16"
+	}
+}

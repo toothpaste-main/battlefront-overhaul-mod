@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_security_roomdoor"
+		"cor1_temple_floor"
+		"jed_temple_library_05"
+		"jed_temple_library_07"
+		"cor1_prop_tapistry_01"
+		"cor1_bldg_wall_3"
+		"cor1_bldg_pillar"
+		"cor1_bldg_wall_2"
+		"cor1_bldg_minorhall01"
+		"cor1_bldg_wall"
+		"cor1_temple_floor_2"
+		"cor1_bldg_templefloor_b"
+		"cor1_bldg_templefloor_a"
+		"cor1_bldg_carpet"
+	}
+}

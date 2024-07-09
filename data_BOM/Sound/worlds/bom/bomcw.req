@@ -5,8 +5,14 @@ ucft
 		"bnk"
 		"align=2048"
 		"bomcw"
+		"bomcw_stock"
 	}
-
+	REQN
+	{
+		"str"
+		"align=2048"
+		"bomcw"
+	}
 	REQN
 	{
 		"config"

@@ -458,13 +458,14 @@ SoundStreamProperties()
 
 SoundStreamProperties()
 {
-    Name("MYG_obj_29");
+    //Name("MYG_obj_29");
+	Name("turret_obj_property");
     Group("objective_vo");
     Inherit("vo_template");
-    Stream("myg_objective_vo_slow");
+    Stream("myg1");
     SegmentList()
     {
-        Segment("ROMYG0029", 1.0, 0.0, 0.0); //  Alright, now take out the second set of AA guns protecting the Collector
+        Segment("turret_obj", 1.0, 0.0, 0.0); //  Alright, now take out the second set of AA guns protecting the Collector
         }
 }
 

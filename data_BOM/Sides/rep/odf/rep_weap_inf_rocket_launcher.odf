@@ -2,6 +2,7 @@
 ClassParent         = "com_weap_inf_rocket_launcher"
 GeometryName        = "rep_weap_inf_launcher.msh"
 
+
 [Properties]
 GeometryName        = "rep_weap_inf_launcher"
 HighResGeometry     = "rep_1st_weap_inf_launcher"

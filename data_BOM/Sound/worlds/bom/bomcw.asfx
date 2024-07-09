@@ -1,0 +1,53 @@
+// Common Start ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+// rocketeer
+effects\com_weap_rocketlauncher_hum2.wav
+effects\com_weap_rocketlauncher_hum3.wav	
+effects\com_weap_rocketlauncher_hum4.wav		
+
+// Common End /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// CIS Units Start ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// general
+effects\cis_weap_pistol_fire0.wav
+effects\cis_weap_pistol_fire1.wav
+
+// cis_inf_bdroid
+effects\cis_weap_rifle_fire0.wav
+effects\cis_weap_rifle_fire1.wav
+
+// cis_inf_rocketeer
+
+// cis_inf_sniper
+effects\cis_weap_sniperrifle_fire0.wav
+effects\cis_weap_sniperrifle_fire1.wav
+
+// cis_inf_sbdroid
+effects\cis_weap_wristblaster_fire0.wav
+effects\cis_weap_wristblaster_fire1.wav
+
+// End CIS Units //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Start Republic Units ///////////////////////////////////////////////////////////////////////////////////////////////
+
+// general
+effects\rep_weap_pistol_fire0.wav
+effects\rep_weap_pistol_fire1.wav
+
+// rep_inf_rifleman
+effects\rep_weap_rifle_fire.wav
+
+// rep_inf_rocketeer
+
+
+// rep_inf_sniper
+effects\rep_weap_sniperrifle_fire0_a.wav
+
+// rep_inf_officer
+effects\rep_weap_chaingun_fire0.wav
+effects\rep_weap_chaingun_fire1.wav
+
+// End Republic Units /////////////////////////////////////////////////////////////////////////////////////////////////

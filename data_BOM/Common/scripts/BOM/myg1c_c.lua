@@ -173,7 +173,7 @@ CIS2 		= 7
 				OnTimerElapse(
 					function(timer)
 						StartObjectives()
-						ScriptCB_EnableCommandPostVO(0)			
+						ScriptCB_EnableCommandPostVO(0)		
 						ScriptCB_SndPlaySound("MYG_obj_01")
 						ScriptCB_SndPlaySound("MYG_obj_02")
 						DestroyTimer(timer)
@@ -550,7 +550,8 @@ CIS2 		= 7
 		if self.winningTeam == DEF then
 				ScriptCB_SndPlaySound("MYG_obj_15")
 			else
-				ScriptCB_SndPlaySound("MYG_obj_29")
+				--ScriptCB_SndPlaySound("MYG_obj_29")
+				ScriptCB_SndPlaySound("turret_obj")
 	    end
 		
 		-- remove AI goal
@@ -1068,17 +1069,17 @@ function ScriptInit()
     ReadDataFile("ingame.lvl")
 
 	------------------------------------------------
-	------------   VANILLA SOUNDS   ----------------
-	------------------------------------------------
-
-    ReadDataFile("sound\\myg.lvl;myg1cw")
-	
-	
-	------------------------------------------------
 	------------   DLC SOUNDS   --------------------
 	------------------------------------------------
 
 	ReadDataFile("dc:sound\\bom.lvl;bomcw")
+	
+
+	------------------------------------------------
+	------------   VANILLA SOUNDS   ----------------
+	------------------------------------------------
+
+	ReadDataFile("sound\\myg.lvl;myg1cw")
 	
 	
 	------------------------------------------------
@@ -1238,22 +1239,23 @@ function ScriptInit()
     local weaponCnt= 240
     SetMemoryPoolSize("Aimer", 70)
     SetMemoryPoolSize("AmmoCounter", weaponCnt)
-    SetMemoryPoolSize("BaseHint", 230)
+    SetMemoryPoolSize("BaseHint", 1500)
     SetMemoryPoolSize("EnergyBar", weaponCnt)
     SetMemoryPoolSize("EntityCloth", 24)
     SetMemoryPoolSize("EntityFlyer", 3)
     SetMemoryPoolSize("EntityHover", 6)
-    SetMemoryPoolSize("EntitySoundStream", 1)
+    SetMemoryPoolSize("EntitySoundStream", 10) --1
     SetMemoryPoolSize("EntitySoundStatic", 76)
     SetMemoryPoolSize("FlagItem", 1)
     SetMemoryPoolSize("EntityFlyer", 6)
     SetMemoryPoolSize("MountedTurret", 16)
 	SetMemoryPoolSize("Navigator", 45)
-    SetMemoryPoolSize("Obstacle", 500)
+    SetMemoryPoolSize("Obstacle", 1000)
     SetMemoryPoolSize("PathFollower", 45)
     SetMemoryPoolSize("PathNode", 256)
     SetMemoryPoolSize("TentacleSimulator", 0)
-    SetMemoryPoolSize("TreeGridStack", 300)
+    SetMemoryPoolSize("TreeGridStack", 500)
+	SetMemoryPoolSize("SoldierAnimation", 500)
     SetMemoryPoolSize("UnitAgent", 60)
     SetMemoryPoolSize("UnitController", 60)
     SetMemoryPoolSize("Weapon", weaponCnt)
@@ -1282,7 +1284,7 @@ function ScriptInit()
     ------------------------------------------------
 	------------   LEVEL ANNOUNCER   ---------------
 	------------------------------------------------
-    
+	
 	-- announcer slow
     voiceSlow = OpenAudioStream("sound\\global.lvl", "myg_objective_vo_slow")
     AudioStreamAppendSegments("sound\\global.lvl", "rep_unit_vo_slow", voiceSlow)

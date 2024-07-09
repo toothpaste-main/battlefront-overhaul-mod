@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"nab2_prop_glow"
+		"nab2_bldg_arch06"
+		"nab2_bldg_arch1_brick_tile"
+		"nab2_bldg_brick06"
+		"nab2_bldg_arch1"
+		"nab2_bldg_window03"
+	}
+}

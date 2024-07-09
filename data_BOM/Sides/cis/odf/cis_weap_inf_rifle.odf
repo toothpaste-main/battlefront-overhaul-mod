@@ -16,7 +16,8 @@ ShotDelay           = "0.25"
 //***************   SOUND   ****************
 //******************************************************
 
-FireSound           = "cis_weap_inf_rifle_fire"
+//FireSound           = "cis_weap_inf_rifle_fire"
+FireSound           = "bom_cis_weap_inf_rifle_fire"
 ReloadSound         = "com_weap_inf_reload_med"
 ChangeModeSound     = "com_weap_inf_equip_med"
 FireEmptySound      = "com_weap_inf_ammo_empty"
