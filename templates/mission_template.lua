@@ -14,7 +14,7 @@ ScriptCB_DoFile("")
 -- these variables do not change
 local ATT = 1
 local DEF = 2
--- REP attacking (attacker is always #1)
+-- republic attacking (attacker is always #1)
 local REP = ATT
 local CIS = DEF
 
@@ -83,6 +83,7 @@ function ScriptInit()
 	
 	-- walkers
 	ClearWalkers()
+	SetMemoryPoolSize("EntityWalker", -NUM_CMD_WLK)
 	AddWalkerType(0, WALKER0)	-- droidekas (special case: 0 leg pairs)
 	AddWalkerType(1, WALKER1)	-- 1x2 (1 pair of legs)
 	AddWalkerType(2, WALKER2)	-- 2x2 (2 pairs of legs)
@@ -205,7 +206,7 @@ function ScriptInit()
 	local MAP_CEILING_AI = MAP_CEILING
 	local MAP_FLOOR = 0
 	local MAP_FLOOR_AI = MAP_FLOOR
-	local MIN_FLOCK_HEIGHT = 90.0
+	local MIN_FLOCK_HEIGHT = -1
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
@@ -216,10 +217,10 @@ function ScriptInit()
 	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
 	SetMaxPlayerFlyHeight(MAP_CEILING)		-- player
 	SetMinFlyHeight(MAP_FLOOR_AI)			-- AI
-	--SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
+	SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
 	
 	-- birdies
-	--SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT)
+	if MIN_FLOCK_HEIGHT > 0 then SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT) end
     SetNumBirdTypes(NUM_BIRD_TYPES)
 	if NUM_BIRD_TYPES < 0 then SetBirdType(0.0, 10.0, "dragon") end
 	if NUM_BIRD_TYPES >= 1 then SetBirdType(0, 1.0, "bird") end
@@ -340,19 +341,20 @@ function ScriptPostLoad ()
 	
 	
 	------------------------------------------------
-	------------   AI RULES   ----------------------
+	------------   MAP SETUP   ---------------------
 	------------------------------------------------
-	
-	
-	------------------------------------------------
-	------------   MOVIES  -------------------------
-	------------------------------------------------
-	
 	
 	------------------------------------------------
 	------------   MAP INTERACTION   ---------------
 	------------------------------------------------
 	
+	------------------------------------------------
+	------------   AI RULES   ----------------------
+	------------------------------------------------
+	
+	------------------------------------------------
+	------------   MOVIES  -------------------------
+	------------------------------------------------
 	
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
@@ -362,7 +364,7 @@ function ScriptPostLoad ()
 	
 	-- create objective
 	
-	-- add CPs/flags to the objective
+	-- add CPs to the objective / add flags to the objective
 	
 	-- start objective
 	
