@@ -14,7 +14,7 @@ ScriptCB_SetGameRules("campaign")
 
 -- load BOM constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bom_cw_ep3_marine") 
+ScriptCB_DoFile("bomcw_ep3_marine") 
 
 -- these variables do not change
 ATT = 1

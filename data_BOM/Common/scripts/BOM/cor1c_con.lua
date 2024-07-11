@@ -8,7 +8,7 @@ ScriptCB_DoFile("setup_teams")
 
 -- load BBP constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bom_cw_ep3") 
+ScriptCB_DoFile("bomcw_ep3") 
 
 -- these variables do not change
 local ATT = 1
@@ -245,7 +245,7 @@ function ScriptInit()
 	local MAP_CEILING_AI = MAP_CEILING
 	local MAP_FLOOR = 0
 	local MAP_FLOOR_AI = MAP_FLOOR
-	local MIN_FLOCK_HEIGHT = 90.0
+	local MIN_FLOCK_HEIGHT = 0
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
@@ -350,8 +350,8 @@ function ScriptInit()
     SetLowReinforcementsVoiceOver(CIS, REP, "cis_off_victory_im", .1, 1)    
 
 	-- out of bounds warning
-    SetOutOfBoundsVoiceOver(REP, "Repleaving")
-    SetOutOfBoundsVoiceOver(CIS, "Cisleaving")
+    SetOutOfBoundsVoiceOver(REP, "repleaving")
+    SetOutOfBoundsVoiceOver(CIS, "cisleaving")
 	
 	
 	------------------------------------------------
@@ -414,6 +414,31 @@ end
 function ScriptPostLoad()
 
 	------------------------------------------------
+	------------   OUT OF BOUNDS  ------------------
+	------------------------------------------------
+	
+	-- death regions
+	AddDeathRegion("death")
+	AddDeathRegion("death1")
+	AddDeathRegion("death2")
+	AddDeathRegion("death3")
+	AddDeathRegion("death4")
+	AddDeathRegion("DeathRegion1")
+
+	-- remove AI barriers	
+	DisableBarriers("ComputerRoomDoor1")
+	DisableBarriers("MainLibraryDoors")
+	DisableBarriers("SideDoor1")
+	DisableBarriers("SideDoor2")
+	DisableBarriers("SIdeDoor3")
+	DisableBarriers("StarChamberDoor1")
+	DisableBarriers("StarChamberDoor2")
+	DisableBarriers("WarRoomDoor1")
+	DisableBarriers("WarRoomDoor2")
+	DisableBarriers("WarRoomDoor3") 
+	
+
+	------------------------------------------------
 	------------   INITIALIZE LIBRARY   ------------
 	------------------------------------------------
 
@@ -453,31 +478,6 @@ function ScriptPostLoad()
 	PlayAnimation("DoorOpen01")
 	PlayAnimation("DoorOpen02")
 
-	------------------------------------------------
-	------------   OUT OF BOUNDS  ------------------
-	------------------------------------------------
-	
-	-- death regions
-	AddDeathRegion("death")
-	AddDeathRegion("death1")
-	AddDeathRegion("death2")
-	AddDeathRegion("death3")
-	AddDeathRegion("death4")
-	AddDeathRegion("DeathRegion1")
-
-	-- remove AI barriers	
-	DisableBarriers("ComputerRoomDoor1")
-	DisableBarriers("MainLibraryDoors")
-	DisableBarriers("SideDoor1")
-	DisableBarriers("SideDoor2")
-	DisableBarriers("SIdeDoor3")
-	DisableBarriers("StarChamberDoor1")
-	DisableBarriers("StarChamberDoor2")
-	DisableBarriers("WarRoomDoor1")
-	DisableBarriers("WarRoomDoor2")
-	DisableBarriers("WarRoomDoor3") 
- 
-	
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------

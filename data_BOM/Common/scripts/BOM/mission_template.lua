@@ -108,7 +108,7 @@ function ScriptInit()
     SetMemoryPoolSize("MountedTurret", NUM_TUR)
     SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
     SetMemoryPoolSize("Navigator", NUM_UNITS)
-    SetMemoryPoolSize("Obstacle", NUM_OBST)
+    SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
     SetMemoryPoolSize("PathFollower", NUM_UNITS)
     SetMemoryPoolSize("PathNode", 256)
 	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
@@ -372,6 +372,10 @@ function ScriptPostLoad ()
 	-- add CPs to the objective / add flags to the objective
 	
 	-- set AI goal
+	hunt.OnStart = function(self)
+    	AddAIGoal(ATT, "Deathmatch", 1000)
+    	AddAIGoal(DEF, "Deathmatch", 1000)
+    end
 	
 	-- start objective
 	

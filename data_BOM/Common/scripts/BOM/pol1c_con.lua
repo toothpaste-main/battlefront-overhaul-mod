@@ -8,7 +8,7 @@ ScriptCB_DoFile("setup_teams")
 
 -- load BBP constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bom_cw_ep3_marine_pilot") 
+ScriptCB_DoFile("bomcw_ep3_marine_pilot") 
 
 --  These variables do not change
 ATT = 1

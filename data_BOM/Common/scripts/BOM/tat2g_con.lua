@@ -10,10 +10,10 @@ ScriptCB_DoFile("setup_teams")
 ScriptCB_DoFile("bom_cmn") 
 ScriptCB_DoFile("bom_g_jungle")
 
---  These variables do not change
+-- these variables do not change
 local ATT = 1
 local DEF = 2
---  Empire Attacking (attacker is always #1)
+-- empire attacking (attacker is always #1)
 local ALL = DEF
 local IMP = ATT
 

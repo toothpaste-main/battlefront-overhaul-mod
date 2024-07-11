@@ -1,13 +1,4 @@
 
-Hint("HintNode2", "2")
-{
-	Position(-63.913910, 5.898260, -255.611252);
-	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
-	Mode(0);
-}
-
 Hint("HintNode3", "2")
 {
 	Position(-81.138107, 3.306749, -256.460510);
@@ -53,21 +44,12 @@ Hint("HintNode9", "2")
 	Mode(0);
 }
 
-Hint("HintNode11", "2")
-{
-	Position(-49.532207, 5.898275, -273.593964);
-	Rotation(0.994956, 0.000000, 0.100308, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
-	Mode(0);
-}
-
 Hint("HintNode12", "2")
 {
 	Position(-66.777298, 5.898291, -269.750702);
 	Rotation(0.917290, 0.000000, -0.398216, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -75,8 +57,8 @@ Hint("HintNode13", "2")
 {
 	Position(-79.091553, 4.049330, -286.163910);
 	Rotation(0.952373, 0.000000, -0.304929, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -84,8 +66,8 @@ Hint("HintNode14", "2")
 {
 	Position(-48.567497, 5.895437, -279.835693);
 	Rotation(0.960959, 0.000000, 0.276677, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -107,21 +89,12 @@ Hint("HintNode16", "2")
 	Mode(0);
 }
 
-Hint("HintNode17", "2")
-{
-	Position(-34.091434, 3.303911, -286.473846);
-	Rotation(0.983967, 0.000000, -0.178456, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(16);
-	Mode(0);
-}
-
 Hint("HintNode18", "2")
 {
 	Position(-57.265549, 5.895437, -273.016418);
 	Rotation(0.996812, 0.000000, 0.080133, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -129,8 +102,8 @@ Hint("HintNode19", "2")
 {
 	Position(-77.824509, 5.898275, -274.316345);
 	Rotation(0.985620, 0.000000, -0.169005, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(1);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -138,8 +111,8 @@ Hint("HintNode23", "2")
 {
 	Position(-70.941071, 8.178383, -273.918732);
 	Rotation(0.990186, 0.000000, -0.139828, 0.000000);
-	PrimaryStance(2);
-	SecondaryStance(25);
+	PrimaryStance(1);
+	SecondaryStance(24);
 	Mode(0);
 }
 
@@ -1046,30 +1019,6 @@ Hint("HintNode252", "2")
 	Mode(0);
 }
 
-Hint("HintNode259", "0")
-{
-	Position(-63.168182, 4.500557, -255.272079);
-	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	PrimaryStance(3);
-	Mode(0);
-}
-
-Hint("HintNode260", "0")
-{
-	Position(-47.447327, 4.489967, -274.696686);
-	Rotation(0.977998, -0.000000, 0.208612, -0.000000);
-	PrimaryStance(3);
-	Mode(0);
-}
-
-Hint("HintNode261", "0")
-{
-	Position(-77.864449, 4.490154, -273.387878);
-	Rotation(0.939328, -0.000000, -0.343021, -0.000000);
-	PrimaryStance(3);
-	Mode(0);
-}
-
 Hint("HintNode263", "0")
 {
 	Position(-43.136101, 4.963682, -172.625229);
@@ -1197,24 +1146,6 @@ Hint("HintNode279", "2")
 	Mode(0);
 }
 
-Hint("HintNode287", "5")
-{
-	Position(-133.844757, 0.499992, -32.957573);
-	Rotation(0.973556, -0.000000, 0.228447, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode289", "5")
-{
-	Position(-132.176178, 0.500000, -25.521988);
-	Rotation(0.632651, 0.006797, -0.074830, -0.770785);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
 Hint("HintNode291", "5")
 {
 	Position(-127.686722, 0.499992, -43.095707);
@@ -1224,28 +1155,10 @@ Hint("HintNode291", "5")
 	Mode(0);
 }
 
-Hint("HintNode292", "5")
-{
-	Position(-122.344093, 0.500000, -44.303585);
-	Rotation(0.991561, -0.000000, -0.129639, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
 Hint("HintNode293", "5")
 {
 	Position(-136.247482, 0.500000, -40.289261);
 	Rotation(0.852560, -0.000000, 0.522629, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode294", "5")
-{
-	Position(-134.204987, 0.500008, -47.409058);
-	Rotation(0.993949, -0.000000, 0.109841, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1263,7 +1176,7 @@ Hint("HintNode299", "5")
 Hint("HintNode302", "5")
 {
 	Position(-125.209312, 0.500000, -51.311554);
-	Rotation(0.523283, -0.000000, 0.852158, -0.000000);
+	Rotation(0.932301, -0.000000, -0.361683, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1460,8 +1373,8 @@ Hint("HintNode357", "5")
 
 Hint("HintNode364", "5")
 {
-	Position(-122.960876, 0.506054, 51.741299);
-	Rotation(-0.294685, -0.000000, -0.955594, -0.000000);
+	Position(-119.286598, 0.506054, 51.439369);
+	Rotation(-0.416080, -0.000000, -0.909327, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1469,7 +1382,7 @@ Hint("HintNode364", "5")
 
 Hint("HintNode365", "5")
 {
-	Position(-119.401283, 0.510273, 55.946865);
+	Position(-139.431442, 0.510273, 78.495041);
 	Rotation(-0.294685, -0.000000, -0.955594, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -1478,8 +1391,8 @@ Hint("HintNode365", "5")
 
 Hint("HintNode366", "5")
 {
-	Position(-110.574379, 0.514015, 48.450222);
-	Rotation(0.730562, -0.000000, 0.682845, -0.000000);
+	Position(-109.790672, 0.514015, 52.879841);
+	Rotation(-0.478819, -0.000000, -0.877913, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1487,8 +1400,8 @@ Hint("HintNode366", "5")
 
 Hint("HintNode367", "5")
 {
-	Position(-114.211342, 0.509342, 56.828346);
-	Rotation(-0.294685, -0.000000, -0.955594, -0.000000);
+	Position(-118.671730, 0.509342, 61.302925);
+	Rotation(-0.138759, -0.000000, -0.990326, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1496,8 +1409,8 @@ Hint("HintNode367", "5")
 
 Hint("HintNode372", "5")
 {
-	Position(-115.001442, 0.500000, 41.909115);
-	Rotation(0.716801, -0.000000, 0.697278, -0.000000);
+	Position(-115.995399, 0.500000, 39.872456);
+	Rotation(0.538880, -0.000000, 0.842383, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1505,7 +1418,7 @@ Hint("HintNode372", "5")
 
 Hint("HintNode373", "5")
 {
-	Position(-118.977234, 0.500000, 46.628342);
+	Position(-101.525833, 0.500000, 46.628342);
 	Rotation(0.871970, -0.000000, 0.489558, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -1514,8 +1427,8 @@ Hint("HintNode373", "5")
 
 Hint("HintNode374", "5")
 {
-	Position(-115.134308, 0.500015, 32.480289);
-	Rotation(0.955820, -0.000000, -0.293952, -0.000000);
+	Position(-109.376221, 0.500015, 32.480289);
+	Rotation(-0.227325, -0.000000, -0.973819, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -1559,44 +1472,8 @@ Hint("HintNode382", "5")
 
 Hint("HintNode386", "5")
 {
-	Position(-77.182892, 2.449562, -101.941895);
-	Rotation(0.696727, -0.000000, 0.717336, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode387", "5")
-{
-	Position(-71.467789, 0.500008, -117.479111);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode388", "5")
-{
-	Position(-60.708145, 0.500008, -118.560112);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode389", "5")
-{
-	Position(-53.845951, 0.500008, -108.468704);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode390", "5")
-{
-	Position(-57.274567, 0.500008, -102.246376);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
+	Position(-76.107857, 2.449562, -103.871750);
+	Rotation(0.945981, -0.000000, -0.324221, -0.000000);
 	PrimaryStance(1);
 	SecondaryStance(24);
 	Mode(0);
@@ -1605,16 +1482,7 @@ Hint("HintNode390", "5")
 Hint("HintNode391", "5")
 {
 	Position(-65.965378, 0.500000, -105.130745);
-	Rotation(0.968903, -0.000000, 0.247442, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode394", "5")
-{
-	Position(-91.865677, 0.500000, -84.921623);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
+	Rotation(0.896137, -0.000000, -0.443779, -0.000000);
 	PrimaryStance(1);
 	SecondaryStance(24);
 	Mode(0);
@@ -1641,7 +1509,7 @@ Hint("HintNode396", "5")
 Hint("HintNode397", "5")
 {
 	Position(-48.905918, 0.500000, -98.661995);
-	Rotation(1.000000, -0.000000, -0.000000, -0.000000);
+	Rotation(0.935861, -0.000000, 0.352370, -0.000000);
 	PrimaryStance(1);
 	SecondaryStance(24);
 	Mode(0);
@@ -4806,15 +4674,6 @@ Hint("HintNode835", "2")
 	Mode(0);
 }
 
-Hint("HintNode836", "5")
-{
-	Position(-137.537109, 0.499996, -20.959749);
-	Rotation(-0.371673, -0.000000, -0.928364, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
 Hint("HintNode837", "5")
 {
 	Position(-137.538757, 0.500004, -12.424059);
@@ -4851,15 +4710,6 @@ Hint("HintNode841", "5")
 	Mode(0);
 }
 
-Hint("HintNode838", "5")
-{
-	Position(-131.062881, 0.500000, -6.658870);
-	Rotation(0.813814, -0.000000, 0.581126, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
 Hint("HintNode843", "2")
 {
 	Position(-131.599411, 0.500002, -68.664764);
@@ -4869,28 +4719,10 @@ Hint("HintNode843", "2")
 	Mode(0);
 }
 
-Hint("HintNode844", "5")
-{
-	Position(-122.245071, 0.500008, -63.576298);
-	Rotation(0.955368, -0.000000, 0.295418, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
 Hint("HintNode845", "5")
 {
-	Position(-99.383759, 0.500000, -74.483017);
+	Position(-93.230156, 0.500000, -80.015656);
 	Rotation(0.896136, -0.000000, -0.443778, -0.000000);
-	PrimaryStance(3);
-	SecondaryStance(24);
-	Mode(0);
-}
-
-Hint("HintNode846", "5")
-{
-	Position(-111.796089, 0.500004, -67.557266);
-	Rotation(0.629340, -0.000000, 0.777130, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
 	Mode(0);
@@ -9065,7 +8897,7 @@ Hint("HintNode1277", "2")
 
 Hint("HintNode1278", "2")
 {
-	Position(-142.026138, 0.500002, -9.037720);
+	Position(-141.999496, 0.500002, -7.606313);
 	Rotation(0.738370, -0.000000, -0.674396, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -9074,7 +8906,7 @@ Hint("HintNode1278", "2")
 
 Hint("HintNode1279", "2")
 {
-	Position(-141.254822, 0.499998, -7.968629);
+	Position(-141.228180, 0.499998, -6.537222);
 	Rotation(0.900517, -0.000000, -0.434821, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -9083,7 +8915,7 @@ Hint("HintNode1279", "2")
 
 Hint("HintNode1280", "2")
 {
-	Position(-140.372253, 0.500004, -6.667127);
+	Position(-140.345612, 0.500004, -5.235720);
 	Rotation(0.928648, -0.000000, -0.370961, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -9092,7 +8924,7 @@ Hint("HintNode1280", "2")
 
 Hint("HintNode1281", "7")
 {
-	Position(-143.862335, 0.499998, -6.325079);
+	Position(-143.169235, 0.499998, -5.019802);
 	Rotation(0.514761, -0.000000, 0.857333, -0.000000);
 	PrimaryStance(3);
 	SecondaryStance(24);
@@ -11570,4 +11402,85 @@ Hint("HintNode1590", "5")
 	Position(-2.231969, 4.500145, 24.222145);
 	Rotation(0.605816, -0.000000, 0.795604, -0.000000);
 	Mode(0);
+}
+
+Hint("HintNode1433", "7")
+{
+	Position(-49.450470, 4.489983, -273.644470);
+	Rotation(0.992805, -0.000000, 0.119746, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1434", "7")
+{
+	Position(-76.377747, 4.490166, -273.348480);
+	Rotation(0.999553, -0.000000, 0.029908, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1435", "2")
+{
+	Position(-39.134605, 1.484339, -288.378754);
+	Rotation(0.955368, -0.000000, 0.295418, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1436", "2")
+{
+	Position(-80.600510, 2.517891, -287.789062);
+	Rotation(0.689541, -0.000000, -0.724247, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1437", "2")
+{
+	Position(-87.648750, 1.485479, -288.075562);
+	Rotation(0.836548, -0.000000, -0.547893, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1438", "2")
+{
+	Position(-88.881790, 1.485451, -293.255402);
+	Rotation(0.660115, -0.000000, -0.751165, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1439", "2")
+{
+	Position(-49.320873, 2.516296, -292.041779);
+	Rotation(0.783843, -0.000000, 0.620960, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1440", "2")
+{
+	Position(-47.979771, 2.516407, -285.993256);
+	Rotation(0.841972, -0.000000, 0.539524, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(0);
+}
+
+Hint("HintNode1581", "0")
+{
+	Position(-63.045464, 4.500565, -255.548157);
+	Rotation(0.998761, -0.000000, 0.049830, -0.000000);
+	PrimaryStance(1);
+	SecondaryStance(24);
+	Mode(2);
 }

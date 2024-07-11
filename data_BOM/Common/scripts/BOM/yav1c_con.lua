@@ -8,74 +8,14 @@ ScriptCB_DoFile("setup_teams")
 
 -- load BBP constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bom_cw_ep3") 
-	
---  These variables do not change
-ATT = 1
-DEF = 2
---  CIS Attacking (attacker is always #1)
-REP = DEF
-CIS = ATT
+ScriptCB_DoFile("bomcw_ep3") 
 
- 
-function ScriptPostLoad()
-	
-	------------------------------------------------
-	------------   OUT OF BOUNDS   -----------------
-	------------------------------------------------
-	
-	-- death regions
-	AddDeathRegion("death1")
-	AddDeathRegion("death2")
-	AddDeathRegion("death3")
-	AddDeathRegion("death4")
-	AddDeathRegion("death5")
-	AddDeathRegion("death6")
-	AddDeathRegion("death7")
-	AddDeathRegion("death8") 
-	
-	
-	------------------------------------------------
-	------------   RESET CAMPAIGN RESTRICTIONS  ----
-	------------------------------------------------
-	
-	-- blow out blast door
-	KillObject ("TempleBlastDoor")
-	
-	
-	------------------------------------------------
-	------------   INITIALIZE COMMAND POSTS   ------
-	------------------------------------------------
-	
-	--This defines the CPs.  These need to happen first
-    cp1 = CommandPost:New{name = "Bazaar"}
-    cp2 = CommandPost:New{name = "CP1"}
-    cp3 = CommandPost:New{name = "LandingZone"}
-    cp4 = CommandPost:New{name = "ReflectingPool"}
-    cp5 = CommandPost:New{name = "Temple"}
-    cp6 = CommandPost:New{name = "Tflank"}
-    cp7 = CommandPost:New{name = "ViaDuct"}
-    
-    --This sets up the actual objective.  This needs to happen after cp's are defined
-    conquest = ObjectiveConquest:New{teamATT = ATT, teamDEF = DEF, 
-                                     textATT = "game.modes.con", 
-                                     textDEF = "game.modes.con2",
-                                     multiplayerRules = true}
-                                         
-    --This adds the CPs to the objective.  This needs to happen after the objective is set up
-    conquest:AddCommandPost(cp1)
-    conquest:AddCommandPost(cp2)
-    conquest:AddCommandPost(cp3)
-    conquest:AddCommandPost(cp4)
-    conquest:AddCommandPost(cp5)
-    conquest:AddCommandPost(cp6)
-    conquest:AddCommandPost(cp7)
-    
-    conquest:Start()
-	
-    EnableSPHeroRules()
-    
- end
+-- these variables do not change
+local ATT = 1
+local DEF = 2
+-- cis attacking (attacker is always #1)
+local REP = DEF
+local CIS = ATT
 
 
 ---------------------------------------------------------------------------
@@ -87,11 +27,122 @@ function ScriptPostLoad()
 --              mission script must contain a version of this function, as
 --              it is called from C to start the mission.
 ---------------------------------------------------------------------------
-function ScriptInit()
-	ReadDataFile("ingame.lvl")
+function ScriptInit()   
 
+	------------------------------------------------
+	-- Designers, these two lines *MUST* be first.--
+	------------------------------------------------
 
-    ------------------------------------------------
+	-- allocate PS2 memory
+	if(ScriptCB_GetPlatform() == "PS2") then
+        StealArtistHeap(1024*1024)	-- steal 1MB from art heap
+    end
+	SetPS2ModelMemory(PS2_MEMORY)
+
+    ReadDataFile("ingame.lvl")
+	
+	
+	------------------------------------------------
+	------------   MEMORY POOL   -------------------
+	------------------------------------------------
+	--
+	-- This happens first and foremost to avoid
+	-- crashes when loading.
+	--
+	
+	-- constants
+	local NUM_AIMER = 96		-- it's easier this way
+	local NUM_ANIM = 512
+	local NUM_CLOTH = 32		-- it's easier this way
+	local NUM_CMD_FLY = 0
+	local NUM_CMD_WLK = 0
+	local NUM_FLAGS = 0
+	local NUM_FLYER = 12		-- to account for rocket upgrade
+	local NUM_HINTS = 1024
+	local NUM_HOVER = 0
+	local NUM_JEDI = 2
+	local NUM_LGHT = 64
+	local NUM_MINE = 32			-- 4 mines * 8 rocketeers
+	local NUM_MUSC = 0
+	local NUM_OBST = 1024
+	local NUM_SND_SPA = 0
+	local NUM_SND_STC = 20
+	local NUM_SND_STM = 4
+	local NUM_TENT = 0
+	local NUM_TUR = 19
+	local NUM_UNITS = 96		-- it's easier this way
+	local NUM_WEAP = 256		-- more if locals and vehicles!
+	local WALKER0 = MAX_SPECIAL
+	local WALKER1 = 0
+	local WALKER2 = 0
+	local WALKER3 = 0
+	
+	-- walkers
+	ClearWalkers()
+	SetMemoryPoolSize("EntityWalker", -NUM_CMD_WLK)
+	AddWalkerType(0, WALKER0)	-- droidekas (special case: 0 leg pairs)
+	AddWalkerType(1, WALKER1)	-- 1x2 (1 pair of legs)
+	AddWalkerType(2, WALKER2)	-- 2x2 (2 pairs of legs)
+	AddWalkerType(3, WALKER3)	-- 3x2 (3 pairs of legs)
+	
+	-- memory pool
+    SetMemoryPoolSize("Aimer", NUM_AIMER)
+    SetMemoryPoolSize("AmmoCounter", NUM_WEAP)
+	SetMemoryPoolSize("BaseHint", NUM_HINTS)					-- number of hint nodes
+	SetMemoryPoolSize("CommandFlyer", NUM_CMD_FLY)				-- number of gunships
+	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
+    SetMemoryPoolSize("EnergyBar", NUM_WEAP)
+    SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
+    SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
+    SetMemoryPoolSize("EntityLight", NUM_LGHT)
+	SetMemoryPoolSize("EntityMine", NUM_MINE)		
+	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
+    SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
+    SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
+    SetMemoryPoolSize("MountedTurret", NUM_TUR)
+    SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
+    SetMemoryPoolSize("Navigator", NUM_UNITS)
+    SetMemoryPoolSize("Obstacle", NUM_OBST)
+    SetMemoryPoolSize("PathFollower", NUM_UNITS)
+    SetMemoryPoolSize("PathNode", 256)
+	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
+    SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
+    SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
+    SetMemoryPoolSize("TreeGridStack", 256)
+	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
+	SetMemoryPoolSize("UnitController", NUM_UNITS)
+    SetMemoryPoolSize("Weapon", NUM_WEAP)
+	
+	-- jedi
+	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
+    SetMemoryPoolSize("Combo::State", NUM_JEDI*4*12)			-- should be ~12x #Combo
+    SetMemoryPoolSize("Combo::Transition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
+    SetMemoryPoolSize("Combo::Condition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
+    SetMemoryPoolSize("Combo::Attack", NUM_JEDI*4*12)			-- should be ~8-12x #Combo
+    SetMemoryPoolSize("Combo::DamageSample", NUM_JEDI*4*12*12)	-- should be ~8-12x #Combo::Attack
+    SetMemoryPoolSize("Combo::Deflect", NUM_JEDI*4) 			-- should be ~1x #combo
+	
+	-- misc
+	--SetMemoryPoolSize("ConnectivityGraphFollower", 64)
+	
+	
+	------------------------------------------------
+	------------   DLC SOUNDS   --------------------
+	------------------------------------------------
+	--
+	-- This happens first to avoid conflicts with 
+	-- vanilla sounds.
+	--
+	
+	-- global
+	ReadDataFile("dc:sound\\bom.lvl;bom_cmn")
+
+	-- era
+	ReadDataFile("dc:sound\\bom.lvl;bomcw")
+    
+	
+	------------------------------------------------
 	------------   VANILLA SOUNDS   ----------------
 	------------------------------------------------
 	
@@ -99,21 +150,14 @@ function ScriptInit()
 	
 	
 	------------------------------------------------
-	------------   DLC SOUNDS   --------------------
-	------------------------------------------------
-
-	ReadDataFile("dc:sound\\bom.lvl;bomcw")
-
-	
-	------------------------------------------------
 	------------   UNIT TYPES   --------------------
 	------------------------------------------------	
 	
 	-- republic
-	REP_HERO				= "rep_hero_macewindu"
+	local REP_HERO = "rep_hero_macewindu"
 	
 	-- cis
-	CIS_HERO				= "cis_hero_darthmaul"
+	local CIS_HERO = "cis_hero_darthmaul"
 	
 	
 	------------------------------------------------
@@ -195,124 +239,143 @@ function ScriptInit()
 	-- heroes
     SetHeroClass(REP, REP_HERO)
 	SetHeroClass(CIS, CIS_HERO)
-    
-	-- walkers
-    ClearWalkers()
-    AddWalkerType(0, MAX_SPECIAL)	-- droidekas
-
-
+	
+	
 	------------------------------------------------
-	------------   LEVEL STATS   -------------------
+	------------   LEVEL PROPERTIES   --------------
 	------------------------------------------------
-  
-    -- memory pool
-    local weaponCnt = 220
-    SetMemoryPoolSize("Aimer", 70)
-    SetMemoryPoolSize("AmmoCounter", weaponCnt)
-    SetMemoryPoolSize("BaseHint", 975)
-	SetMemoryPoolSize("ConnectivityGraphFollower", 47)
-    SetMemoryPoolSize("EnergyBar", weaponCnt)
-    SetMemoryPoolSize("EntityCloth", 17)
-    SetMemoryPoolSize("EntityHover", 8)
-	SetMemoryPoolSize("EntityLight", 36)
-    SetMemoryPoolSize("EntitySoundStream", 4)
-    SetMemoryPoolSize("EntitySoundStatic", 20)
-    SetMemoryPoolSize("MountedTurret", 19)
-    SetMemoryPoolSize("Navigator", 47)
-    SetMemoryPoolSize("Obstacle", 760)
-	SetMemoryPoolSize("PathFollower", 47)
-	SetMemoryPoolSize("PathNode", 217)
-    SetMemoryPoolSize("SoundSpaceRegion", 30)
-    SetMemoryPoolSize("TentacleSimulator", 0)
-    SetMemoryPoolSize("TreeGridStack", 490)
-    SetMemoryPoolSize("UnitAgent", 47)
-    SetMemoryPoolSize("UnitController", 47)
-    SetMemoryPoolSize("Weapon", weaponCnt)
-	SetMemoryPoolSize("EntityFlyer", 6)   
-
+	
+	-- constants
+	local MAP_CEILING = 25
+	local MAP_CEILING_AI = MAP_CEILING
+	local MAP_FLOOR = 0
+	local MAP_FLOOR_AI = MAP_FLOOR
+	local MIN_FLOCK_HEIGHT = 0
+	local NUM_BIRD_TYPES = 2		-- 1 to 2 birds, -1 dragons
+	local NUM_FISH_TYPES = 1		-- 1 fish
+	
 	-- load gamemode
 	ReadDataFile("YAV\\yav1.lvl","yavin1_Conquest")
-
-	-- world height
-	MAX_FLY_HEIGHT = 14
-	SetMaxFlyHeight(MAX_FLY_HEIGHT)			-- AI
-    SetMaxPlayerFlyHeight(MAX_FLY_HEIGHT)	-- player
-
-    -- birdies
-    SetNumBirdTypes(2)
-    SetBirdType(0,1.0,"bird")
-    SetBirdType(1,1.5,"bird2")
+	
+	-- ceiling and floor limit
+	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
+	SetMaxPlayerFlyHeight(MAP_CEILING)		-- player
+	SetMinFlyHeight(MAP_FLOOR_AI)			-- AI
+	SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
+	
+	-- birdies
+	if MIN_FLOCK_HEIGHT > 0 then SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT) end
+    SetNumBirdTypes(NUM_BIRD_TYPES)
+	if NUM_BIRD_TYPES < 0 then SetBirdType(0.0, 10.0, "dragon") end
+	if NUM_BIRD_TYPES >= 1 then SetBirdType(0, 1.0, "bird") end
+	if NUM_BIRD_TYPES >= 2 then SetBirdType(0, 1.5, "bird2") end
 
     -- fishies
-    SetNumFishTypes(1)
-    SetFishType(0,0.8,"fish")
+    SetNumFishTypes(NUM_FISH_TYPES)
+    if NUM_FISH_TYPES >= 1 then SetFishType(0, 0.8, "fish") end
 	
 	-- misc
-	SetAttackingTeam(ATT)
+	SetMapNorthAngle(180, 1)
+	--SetWorldExtents(0.0)
 	
 	
 	------------------------------------------------
 	------------   AI RULES   ----------------------
 	------------------------------------------------
 	
+	-- constants
+	local AUTO_BLNC = false		-- redistributes more AI onto losing team
+	local BLND_JET = 1			-- allow AI to jet jump outside of hints
+	local DENSE_ENV = "true"
+	local DIFF_PLAYER = 0		-- default = 0, +/- to change skill of player's team
+	local DIFF_ENEMY = 0		-- default = 0, +/- to change skill of enemy's team
+	local GRND_FLYER = 0		-- make AI flyers aware of the ground
+	local SNIPE_ATT = 196		-- snipe distance from "attack" hints
+	local SNIPE_DEF = 196		-- snipe distance from "defend" hints
+	local SNIPE_DIST = 128		-- snipe distance when on foot
+	local STAY_TUR = 0			-- force AI to stay in turrets
+	local URBAN_ENV = "false"
+	local VIEW_MULTIPLIER = -1	-- -1 for default
+	
+	-- difficulty
+	if AUTO_BLNC then EnableAIAutoBalance() end 
+	SetAIDifficulty(DIFF_PLAYER, DIFF_ENEMY)
+	
+	-- behavior
+	--SetTeamAggressiveness(TEAM_NUM, 1.0)
+	
 	-- spawn delay
-    SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
+	SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
 	
 	-- dense environment
 	-- IF TRUE: decrease AI engagement distance
 	-- IF FALSE: default AI engagement distance
-	SetDenseEnvironment("false")
-
-
-    ------------------------------------------------
+	SetDenseEnvironment(DENSE_ENV)
+	if VIEW_MULTIPLIER > 0 then SetAIViewMultiplier(VIEW_MULTIPLIER) end
+	
+	-- urban environtment
+	-- IF TRUE: AI vehicles strafe less
+	-- IF FALSE: AI vehicles strafe
+	SetUrbanEnvironment(URBAN_ENV)
+	
+	-- sniping distance
+	AISnipeSuitabilityDist(SNIPE_DIST)
+	SetAttackerSnipeRange(SNIPE_ATT)
+	SetDefenderSnipeRange(SNIPE_DEF)
+	
+	-- misc
+	SetAllowBlindJetJumps(BLND_JET)
+	SetGroundFlyerMap(GRND_FLYER)
+	SetStayInTurrets(STAY_TUR)
+	
+	
+	------------------------------------------------
 	------------   LEVEL ANNOUNCER   ---------------
 	------------------------------------------------
     
 	-- announcer slow
     voiceSlow = OpenAudioStream("sound\\global.lvl", "rep_unit_vo_slow")
     AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_slow", voiceSlow)
-    AudioStreamAppendSegments("sound\\global.lvl", "wok_unit_vo_slow", voiceSlow)
     AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
     
 	-- announcer quick
     voiceQuick = OpenAudioStream("sound\\global.lvl", "rep_unit_vo_quick")
-    AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_quick", voiceQuick)   
-    AudioStreamAppendSegments("sound\\global.lvl", "wok_unit_vo_quick", voiceQuick) 
-
+    AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_quick", voiceQuick)
+    
 	-- winning/losing announcement
     SetBleedingVoiceOver(REP, REP, "rep_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing", 1)
+    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing", 1)
     SetBleedingVoiceOver(CIS, CIS, "cis_off_com_report_us_overwhelmed", 1)
+    
+	-- low reinforcement warning
+    SetLowReinforcementsVoiceOver(REP, REP, "rep_off_defeat_im", .1, 1)
+    SetLowReinforcementsVoiceOver(REP, CIS, "rep_off_victory_im", .1, 1)
+    SetLowReinforcementsVoiceOver(CIS, CIS, "cis_off_defeat_im", .1, 1)
+    SetLowReinforcementsVoiceOver(CIS, REP, "cis_off_victory_im", .1, 1)    
 
-	-- winning/losing announcement
-    SetBleedingVoiceOver(REP, REP, "rep_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(CIS, CIS, "cis_off_com_report_us_overwhelmed", 1)
-	
 	-- out of bounds warning
-	SetOutOfBoundsVoiceOver(REP, "repleaving")
+    SetOutOfBoundsVoiceOver(REP, "repleaving")
     SetOutOfBoundsVoiceOver(CIS, "cisleaving")
-
-
+	
+	
 	------------------------------------------------
 	------------   LEVEL SOUNDS   ------------------
 	------------------------------------------------
     
-	-- ambience
-    OpenAudioStream("sound\\global.lvl",  "cw_music")
-    OpenAudioStream("sound\\yav.lvl",  "yav1")
-    OpenAudioStream("sound\\yav.lvl",  "yav1")
-    OpenAudioStream("sound\\yav.lvl",  "yav1_emt")
+	-- open ambient streams
+    OpenAudioStream("sound\\global.lvl", "cw_music")
+    OpenAudioStream("sound\\yav.lvl", "yav1")
+    OpenAudioStream("sound\\yav.lvl", "yav1")
+    OpenAudioStream("sound\\yav.lvl", "yav1_emt")
 
 	-- music
-    SetAmbientMusic(REP, 1.0, "rep_yav_amb_start",  0,1)
+    SetAmbientMusic(REP, 1.0, "rep_yav_amb_start", 0,1)
     SetAmbientMusic(REP, 0.8, "rep_yav_amb_middle", 1,1)
-    SetAmbientMusic(REP, 0.2, "rep_yav_amb_end",    2,1)
-    SetAmbientMusic(CIS, 1.0, "cis_yav_amb_start",  0,1)
+    SetAmbientMusic(REP, 0.2, "rep_yav_amb_end", 2,1)
+    SetAmbientMusic(CIS, 1.0, "cis_yav_amb_start", 0,1)
     SetAmbientMusic(CIS, 0.8, "cis_yav_amb_middle", 1,1)
-    SetAmbientMusic(CIS, 0.2, "cis_yav_amb_end",    2,1)
+    SetAmbientMusic(CIS, 0.2, "cis_yav_amb_end", 2,1)
 
 	-- game over song
     SetVictoryMusic(REP, "rep_yav_amb_victory")
@@ -320,23 +383,21 @@ function ScriptInit()
     SetVictoryMusic(CIS, "cis_yav_amb_victory")
     SetDefeatMusic (CIS, "cis_yav_amb_defeat")
 
-    -- misc sounds effects
-	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
-    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
-	SetSoundEffect("BirdScatter",             "birdsFlySeq1")
-    SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
-    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
+    -- misc sound effects
+	if NUM_BIRD_TYPE >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
-    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
+	SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
+    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
+	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
+    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
 
     
 	------------------------------------------------
 	------------   CAMERA STATS   ------------------
 	------------------------------------------------
 
-    --Yav 1 - Temple
-    --Fountain
 	AddCameraShot(0.660400, -0.059877, -0.745465, -0.067590, 143.734436, -55.725388, 7.761997)
 	AddCameraShot(0.830733, -0.144385, 0.529679, 0.092061, 111.796799, -42.959831, 75.199142)
 	AddCameraShot(0.475676, -0.064657, -0.869247, -0.118154, 13.451733, -47.769894, 13.242496)
@@ -359,5 +420,70 @@ function ScriptInit()
 	AddCameraShot(0.592731, -0.182571, -0.749678, -0.230913, 99.326836, -13.029744, -414.846191)
 	AddCameraShot(0.865750, -0.184352, 0.455084, 0.096905, 137.221359, -19.694859, -436.057556)
 	AddCameraShot(0.026915, -0.002609, -0.994969, -0.096461, 128.397949, -30.249140, -428.447418)
+end
 
+
+-- PostLoad, this is all done after all loading, etc.
+function ScriptPostLoad()
+	
+	------------------------------------------------
+	------------   OUT OF BOUNDS   -----------------
+	------------------------------------------------
+	
+	-- death regions
+	AddDeathRegion("death1")
+	AddDeathRegion("death2")
+	AddDeathRegion("death3")
+	AddDeathRegion("death4")
+	AddDeathRegion("death5")
+	AddDeathRegion("death6")
+	AddDeathRegion("death7")
+	AddDeathRegion("death8") 
+	
+	
+	------------------------------------------------
+	------------   MAP SETUP   ---------------------
+	------------------------------------------------
+	
+	-- blow out blast door
+	KillObject ("TempleBlastDoor")
+	
+	
+	------------------------------------------------
+	------------   INITIALIZE OBJECTIVE   ----------
+	------------------------------------------------
+	
+	-- define CPs
+    cp1 = CommandPost:New{name = "Bazaar"}
+    cp2 = CommandPost:New{name = "CP1"}
+    cp3 = CommandPost:New{name = "LandingZone"}
+    cp4 = CommandPost:New{name = "ReflectingPool"}
+    cp5 = CommandPost:New{name = "Temple"}
+    cp6 = CommandPost:New{name = "Tflank"}
+    cp7 = CommandPost:New{name = "ViaDuct"}
+    
+    -- create objective
+    conquest = ObjectiveConquest:New{teamATT = ATT, teamDEF = DEF, 
+                                     textATT = "game.modes.con", 
+                                     textDEF = "game.modes.con2",
+                                     multiplayerRules = true}
+                                         
+    -- add CPs to the objective
+    conquest:AddCommandPost(cp1)
+    conquest:AddCommandPost(cp2)
+    conquest:AddCommandPost(cp3)
+    conquest:AddCommandPost(cp4)
+    conquest:AddCommandPost(cp5)
+    conquest:AddCommandPost(cp6)
+    conquest:AddCommandPost(cp7)
+    
+	-- start objective
+    conquest:Start()
+	
+	
+	------------------------------------------------
+	------------   MISC   --------------------------
+	------------------------------------------------
+	
+    EnableSPHeroRules()
 end

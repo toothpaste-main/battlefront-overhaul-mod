@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.037, 0.013, -0.947, 0.317);
-	Position(-12.769, 78.904, -191.493);
+	Rotation(0.817, 0.571, -0.066, 0.046);
+	Position(-53.346, 143.698, -134.801);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(2000.000);
@@ -353,8 +353,8 @@ Object("myg1_bldg_collector_ribs5", "myg1_bldg_collector_ribs", 1053299089)
 
 Object("myg1_prop_tbuster1604", "myg1_prop_tbuster", 1064037168)
 {
-	ChildRotation(0.868, -0.000, -0.496, -0.000);
-	ChildPosition(-143.000, 0.000, -7.000);
+	ChildRotation(0.918, -0.000, -0.397, -0.000);
+	ChildPosition(-142.464, 0.000, -5.491);
 	SeqNo(1064037168);
 	Team(0);
 	NetworkId(-1);
