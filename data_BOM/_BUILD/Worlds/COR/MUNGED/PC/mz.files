@@ -197,6 +197,12 @@ ucft
 		"flyerspray.config"
 		"hailfire_wake.config"
 		"dustwake.config"
+		"cor1_ctf.lvl"
+		"cor1_conquest.lvl"
+		"cor1_campaign.lvl"
+		"cor1_tdm.lvl"
+		"cor1_1flag.lvl"
+		"cor1_hunt.lvl"
 		"cor1.povs"
 	}
 }

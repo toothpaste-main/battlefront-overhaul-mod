@@ -2,6 +2,7 @@
 -- Battlefront Balance Patch
 --
 
+PS2_MEMORY = 4000000 -- 4MB
 
 ------------------------------------------------
 ------------   TEAM DISTRIBUTION   -------------

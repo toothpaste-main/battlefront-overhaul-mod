@@ -1,7 +1,9 @@
 Logging LevelPack
-20:02:0507/08/24
+01:10:3407/11/24
 
 === mission.lvl ===
+Missing file dea1c_c.lvl
+    Reqd by ..\..\common\mission.req
 Missing file spa6c_cmn.lvl
     Reqd by ..\..\common\mission.req
 Missing file spa7c_cmn.lvl

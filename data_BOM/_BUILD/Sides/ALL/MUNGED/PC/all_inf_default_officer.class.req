@@ -5,7 +5,7 @@ ucft
 	{
 		"class"
 		"all_inf_default"
-		"all_weap_inf_rifle"
+		"all_weap_inf_incinerator"
 		"all_weap_inf_pistol"
 		"all_weap_inf_timebomb"
 		"all_weap_inf_buff_health"

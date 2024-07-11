@@ -3,7 +3,7 @@ ClassParent         = "imp_inf_default"
 
 
 [Properties]
-PointsToUnlock      = 0//8
+PointsToUnlock      = 8
 
 UnitType            = "support"
 

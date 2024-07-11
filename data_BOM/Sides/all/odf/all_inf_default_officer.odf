@@ -11,7 +11,7 @@ ScanningRange       = 30.0
 TransmitRange       = 300.0
 
 WEAPONSECTION = 1
-WeaponName     = "all_weap_inf_rifle"
+WeaponName     = "all_weap_inf_incinerator"
 WeaponAmmo     = 6
 
 WEAPONSECTION = 2

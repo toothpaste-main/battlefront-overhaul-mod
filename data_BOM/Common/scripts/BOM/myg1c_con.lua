@@ -235,7 +235,6 @@ function ScriptInit()
 	SetMaxFlyHeight(MAX_FLY_HEIGHT)			-- AI
     SetMaxPlayerFlyHeight(MAX_FLY_HEIGHT)	-- player
 
-
 	------------------------------------------------
 	------------   AI RULES   ----------------------
 	------------------------------------------------
@@ -275,8 +274,8 @@ function ScriptInit()
     SetLowReinforcementsVoiceOver(CIS, REP, "cis_off_victory_im", .1, 1)    
 
 	-- out of bounds warning
-    SetOutOfBoundsVoiceOver(1, "Repleaving")
-    SetOutOfBoundsVoiceOver(2, "Cisleaving")
+    SetOutOfBoundsVoiceOver(1, "repleaving")
+    SetOutOfBoundsVoiceOver(2, "cisleaving")
 
 	
 	------------------------------------------------

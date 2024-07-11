@@ -173,7 +173,7 @@ function ScriptInit()
         rep = {
             team = REP,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier		= {REP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault		= {REP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
 			sniper		= {REP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
@@ -185,7 +185,7 @@ function ScriptInit()
         cis = {
             team = CIS,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier		= {CIS_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault		= {CIS_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
 			sniper		= {CIS_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},

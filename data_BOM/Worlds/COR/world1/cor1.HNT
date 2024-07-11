@@ -10050,3 +10050,11 @@ Hint("HintNode1377", "7")
 	SecondaryStance(24);
 	Mode(1);
 }
+
+Hint("HintNode1347", "0")
+{
+	Position(3.453946, 3.500170, 153.659912);
+	Rotation(0.029141, -0.000000, -0.999575, -0.000000);
+	PrimaryStance(3);
+	Mode(2);
+}

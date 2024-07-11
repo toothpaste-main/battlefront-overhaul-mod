@@ -4,11 +4,11 @@
 
 -- load the gametype script
 ScriptCB_DoFile("setup_teams")
-ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("ObjectiveAssault")
+ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("ObjectiveCTF")
-ScriptCB_DoFile("ObjectiveTDM") 
-ScriptCB_DoFile("MultiObjectiveContainer")
+ScriptCB_DoFile("ObjectiveTDM")
+ScriptCB_DoFile("MultiObjectiveContainer") 
 ScriptCB_DoFile("Ambush")
 ScriptCB_SetGameRules("campaign")
 
@@ -54,7 +54,6 @@ CIS2 		= 7
 	DisableBarriers("dropship")
 	
  	
- 
 	------------------------------------------------
 	------------   AI RULES   ----------------------
 	------------------------------------------------
@@ -1068,6 +1067,36 @@ end
 function ScriptInit()
     ReadDataFile("ingame.lvl")
 
+	
+	------------------------------------------------
+	------------   MEMORY POOL   -------------------
+	------------------------------------------------
+
+    local weaponCnt= 256
+    SetMemoryPoolSize("Aimer", 70)
+    SetMemoryPoolSize("AmmoCounter", weaponCnt)
+    SetMemoryPoolSize("BaseHint", 1500)
+    SetMemoryPoolSize("EnergyBar", weaponCnt)
+    SetMemoryPoolSize("EntityCloth", 24)
+    SetMemoryPoolSize("EntityFlyer", 3)
+    SetMemoryPoolSize("EntityHover", 6)
+    SetMemoryPoolSize("EntitySoundStream", 1)
+    SetMemoryPoolSize("EntitySoundStatic", 76)
+    SetMemoryPoolSize("FlagItem", 1)
+    SetMemoryPoolSize("EntityFlyer", 6)
+    SetMemoryPoolSize("MountedTurret", 16)
+	SetMemoryPoolSize("Navigator", 45)
+    SetMemoryPoolSize("Obstacle", 1000)
+    SetMemoryPoolSize("PathFollower", 45)
+    SetMemoryPoolSize("PathNode", 256)
+    SetMemoryPoolSize("TentacleSimulator", 0)
+    SetMemoryPoolSize("TreeGridStack", 500)
+	SetMemoryPoolSize("SoldierAnimation", 500)
+    SetMemoryPoolSize("UnitAgent", 60)
+    SetMemoryPoolSize("UnitController", 60)
+    SetMemoryPoolSize("Weapon", weaponCnt)
+
+
 	------------------------------------------------
 	------------   DLC SOUNDS   --------------------
 	------------------------------------------------
@@ -1236,33 +1265,8 @@ function ScriptInit()
 	
 	
 	------------------------------------------------
-	------------   LEVEL STATS   -------------------
+	------------   LEVEL PROPERTIES   --------------
 	------------------------------------------------
-	
-	-- memory pool
-    local weaponCnt= 240
-    SetMemoryPoolSize("Aimer", 70)
-    SetMemoryPoolSize("AmmoCounter", weaponCnt)
-    SetMemoryPoolSize("BaseHint", 1500)
-    SetMemoryPoolSize("EnergyBar", weaponCnt)
-    SetMemoryPoolSize("EntityCloth", 24)
-    SetMemoryPoolSize("EntityFlyer", 3)
-    SetMemoryPoolSize("EntityHover", 6)
-    SetMemoryPoolSize("EntitySoundStream", 10) --1
-    SetMemoryPoolSize("EntitySoundStatic", 76)
-    SetMemoryPoolSize("FlagItem", 1)
-    SetMemoryPoolSize("EntityFlyer", 6)
-    SetMemoryPoolSize("MountedTurret", 16)
-	SetMemoryPoolSize("Navigator", 45)
-    SetMemoryPoolSize("Obstacle", 1000)
-    SetMemoryPoolSize("PathFollower", 45)
-    SetMemoryPoolSize("PathNode", 256)
-    SetMemoryPoolSize("TentacleSimulator", 0)
-    SetMemoryPoolSize("TreeGridStack", 500)
-	SetMemoryPoolSize("SoldierAnimation", 500)
-    SetMemoryPoolSize("UnitAgent", 60)
-    SetMemoryPoolSize("UnitController", 60)
-    SetMemoryPoolSize("Weapon", weaponCnt)
   
 	-- load gamemode
 	ReadDataFile("myg\\myg1.lvl", "myg1_assult")

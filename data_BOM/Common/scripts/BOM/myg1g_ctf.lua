@@ -169,7 +169,7 @@ function ScriptInit()
 		all = {
             team = ALL,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier		= {ALL_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault		= {ALL_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
             sniper		= {ALL_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
@@ -181,7 +181,7 @@ function ScriptInit()
         imp = {
             team = IMP,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier  	= {IMP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault  	= {IMP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
             sniper   	= {IMP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
