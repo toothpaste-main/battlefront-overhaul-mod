@@ -22,6 +22,7 @@ local CIS = DEF
 local EWK = 3
 local EWK_COUNT = 6
 
+
 ---------------------------------------------------------------------------
 -- FUNCTION:    ScriptInit
 -- PURPOSE:     This function is only run once
@@ -119,13 +120,13 @@ function ScriptInit()
     SetMemoryPoolSize("Weapon", NUM_WEAP)
 	
 	-- jedi
-	SetMemoryPoolSize("Combo", NUM_JEDI*2)						-- should be ~ 2x number of jedi classes
-    SetMemoryPoolSize("Combo::State", NUM_JEDI*2*12)			-- should be ~12x #Combo
-    SetMemoryPoolSize("Combo::Transition", NUM_JEDI*2*12*2)		-- should be a bit bigger than #Combo::State
-    SetMemoryPoolSize("Combo::Condition", NUM_JEDI*2*12*2)		-- should be a bit bigger than #Combo::State
-    SetMemoryPoolSize("Combo::Attack", NUM_JEDI*2*12)			-- should be ~8-12x #Combo
-    SetMemoryPoolSize("Combo::DamageSample", NUM_JEDI*2*12*12)	-- should be ~8-12x #Combo::Attack
-    SetMemoryPoolSize("Combo::Deflect", NUM_JEDI*2) 			-- should be ~1x #combo
+	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
+    SetMemoryPoolSize("Combo::State", NUM_JEDI*4*12)			-- should be ~12x #Combo
+    SetMemoryPoolSize("Combo::Transition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
+    SetMemoryPoolSize("Combo::Condition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
+    SetMemoryPoolSize("Combo::Attack", NUM_JEDI*4*12)			-- should be ~8-12x #Combo
+    SetMemoryPoolSize("Combo::DamageSample", NUM_JEDI*4*12*12)	-- should be ~8-12x #Combo::Attack
+    SetMemoryPoolSize("Combo::Deflect", NUM_JEDI*4) 			-- should be ~1x #combo
 	
 	-- misc
 	
@@ -360,15 +361,20 @@ function ScriptPostLoad ()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
 	
+	-- reassign command posts to teams
+	
+	-- assign CP spawnpaths
+	
 	-- define CPs / define flag geometry
 	
 	-- create objective
 	
 	-- add CPs to the objective / add flags to the objective
 	
+	-- set AI goal
+	
 	-- start objective
 	
-	-- set AI goal
 	
 	------------------------------------------------
 	------------   MISC   --------------------------
