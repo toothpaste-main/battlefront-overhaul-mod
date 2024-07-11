@@ -12,9 +12,10 @@ Project goals:
 - Improve sound effects
 
 Planned releases:
-- 6 July 2024: Open Alpha 
-- 12 July 2024: Open Alpha 
-- September 2024: v1.0 
+- 6 July 2024: v1.0-alpha
+- 12 July 2024: v2.0-alpha
+- 23 August 2024: v0.1.0 Open Beta
+- October 2024: v1.0 
 
 ## Examples
 
