@@ -9,6 +9,7 @@ Project goals:
 - Balance units across factions
 - Improve quality of codebase
 - Improve quality of maps (mostly AI stuff)
+- Improve sound effects
 
 Planned releases:
 - 6 July 2024: Open Alpha 
