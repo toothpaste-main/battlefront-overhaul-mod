@@ -4,7 +4,7 @@ ClassParent 		= "com_weap_inf_thermaldetonator_exp"
 [Properties]
 WaterEffect 	= "com_sfx_watersplash_ord"
 
-Damage 			= "300.0"
+Damage 			= "400.0"
 DamageRadius 	= "5.0"
 Shake 			= "0.05"
 ShakeRadius 	= "2.0"
@@ -18,6 +18,6 @@ LightDuration 	= "1.0"
 VehicleScale        = "2.0"
 PersonScale         = "0.1"
 DroidScale          = "1.0"
-ShieldScale			= "5.0" // Dev note: Added this but might not do anything (old BF1 variable
+ShieldScale			= "1.0"
 
 //SoundProperty       = "force_lightning_impact"

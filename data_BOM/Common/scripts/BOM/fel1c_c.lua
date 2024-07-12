@@ -408,7 +408,7 @@ function ScriptInit()
     SetDefeatMusic (IMP, "imp_fel_amb_defeat")
    
     -- misc sound effects
-	if NUM_BIRD_TYPE >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
     SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")

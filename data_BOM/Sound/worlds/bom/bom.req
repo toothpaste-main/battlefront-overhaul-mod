@@ -4,12 +4,17 @@ ucft
 	{
 		"str"
 		"align=2048"
+		"bomcw"
+		"bomgcw"
 	}
 	REQN
 	{
 		"lvl"
 		"bom_cmn"
+		
 		"bomcw"
 		"bomgcw"
+		
+		"bom_hunt"
 	}	
  }

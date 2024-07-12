@@ -1,4 +1,12 @@
 Logging LevelPack
-00:48:1007/11/24
+13:23:4107/12/24
+
+=== gar_inf_soldier_light.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\gar_weap_inf_pistol.class.req
+            munged\pc\gar_weap_award_pistol.class.req
    0 Errors    0 Warnings
 

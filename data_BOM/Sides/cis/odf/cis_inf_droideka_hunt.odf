@@ -1,0 +1,57 @@
+[GameObjectClass]
+ClassParent         	= "cis_inf_default_droideka"
+GeometryName            = "cis_walk_droideka.msh"
+
+[Properties]
+GeometryName            = "cis_walk_droideka"
+UprightLowResModel      = "cis_droideka_idle_low1"
+BallLowResModel         = "cis_droideka_roll_low1"
+FirstPerson             = "CIS\cisdrde;cis_1st_droideka"
+
+PointsToUnlock		= 0
+
+MaxHealth           = "300.0"
+
+// movement
+MaxTurnSpeed        = "1.25"
+PCMaxTurnSpeed      = "20.0"
+
+// transformer timing
+UnrollTime          = "1.8"
+RollTime            = "1.0"
+
+// ball movement
+BallMoveSpeed       = "6.0"
+BallAcceleration    = "100.0"
+BallRollingFriction = "50.0"
+BallStoppedTurnSpeed= "3.5"
+BallTurnSpeed       = "3.0"
+BallSprintTurnSpeed = "1.5"
+BallSlippage        = "1.0"
+BallMaxLean         = "15.0"
+MaxBallAngle        = "45.0"
+
+// energy
+EnergyRestoreIdle   = "25.0"
+EnergyDrainSprint   = "10.0"
+EnergyCostBowling   = "80.0"
+
+// weapons
+WEAPONSECTION           = "1"
+WeaponName          = "cis_weap_inf_repeater_hunt"
+WeaponAmmo          = "0"
+PitchLimits         = "-25.0 25.0"
+YawLimits           = "-40.0 40.0"
+AimerYawLimits          = "-40.0 40.0"
+AimerPitchLimits        = "-25 25"
+AimerNodeName           = "hp_gun_1"
+FireOutsideLimits       = "1"
+NextAimer           = "-"
+AimerYawLimits          = "-40.0 40.0"
+AimerPitchLimits        = "-25 25"
+AimerNodeName           = "hp_gun_2"
+FireOutsideLimits       = "1"
+
+WEAPONSECTION           = "2"
+WeaponName          = "cis_weap_walk_droideka_shield_hunt"
+WeaponAmmo          = "0"

@@ -14,7 +14,8 @@ FirePointName       = "hp_fire"
 //***************   SOUND       ****************
 //******************************************************
 
-FireSound           = "imp_weap_inf_rifle_fire"
+//FireSound           = "imp_weap_inf_rifle_fire"
+FireSound           = "bom_imp_weap_award_rifle_fire"
 FireEmptySound      = "com_weap_inf_ammo_empty"
 FireLoopSound       = ""
 ReloadSound         = "com_weap_inf_reload_med"

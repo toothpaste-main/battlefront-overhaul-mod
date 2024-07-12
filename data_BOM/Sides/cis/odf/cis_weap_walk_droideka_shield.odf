@@ -1,6 +1,6 @@
 [WeaponClass]
-
 ClassLabel          = "shield"
+
 
 [Properties]
 HUDTag     = "hud_droideka_shield"

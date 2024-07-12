@@ -3,3 +3,4 @@ ClassParent 		= "com_weap_inf_rifle_ord"
 
 
 [Properties]
+MaxDamage           	= "80.0"

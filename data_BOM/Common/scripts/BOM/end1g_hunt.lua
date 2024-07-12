@@ -7,7 +7,7 @@ ScriptCB_DoFile("ObjectiveTDM")
 
 -- load BOM constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bomgcw_imp")
+ScriptCB_DoFile("bom_hunt")
 
 -- these variables do not change
 local ATT = 1
@@ -68,7 +68,9 @@ function ScriptInit()
 	local NUM_SND_STC = 95
 	local NUM_SND_STM = 4
 	local NUM_TENT = 0
+	local NUM_TREE = 768
 	local NUM_TUR = 3
+	local NUM_TUR_PORT = SNIPER_TURRETS * MAX_SNIPER
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
 	local WALKER0 = 0
@@ -92,26 +94,28 @@ function ScriptInit()
 	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
     SetMemoryPoolSize("EnergyBar", NUM_WEAP)
     SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityDroideka", WALKER0)
 	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
     SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
     SetMemoryPoolSize("EntityLight", NUM_LGHT)
-	SetMemoryPoolSize("EntityMine", NUM_MINE)		
+	SetMemoryPoolSize("EntityMine", NUM_MINE)
+	SetMemoryPoolSize("EntityPortableTurret", NUM_TUR_PORT)
 	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
     SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
     SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
     SetMemoryPoolSize("MountedTurret", NUM_TUR)
     SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
     SetMemoryPoolSize("Navigator", NUM_UNITS)
-    SetMemoryPoolSize("Obstacle", NUM_OBST)
+    SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
     SetMemoryPoolSize("PathFollower", NUM_UNITS)
-    SetMemoryPoolSize("PathNode", 256)
+    SetMemoryPoolSize("PathNode", 256)							-- supposedly hard coded
 	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
     SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
     SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
-    SetMemoryPoolSize("TreeGridStack", 256)
+    SetMemoryPoolSize("TreeGridStack", NUM_TREE)				-- related to collisions
 	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
 	SetMemoryPoolSize("UnitController", NUM_UNITS)
-    SetMemoryPoolSize("Weapon", NUM_WEAP)
+    SetMemoryPoolSize("Weapon", NUM_WEAP)						-- total weapon (units, vehicles, etc.)
 	
 	-- jedi
 	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
@@ -162,7 +166,7 @@ function ScriptInit()
 	------------------------------------------------
 	
 	-- empire
-	ReadDataFile("SIDE\\imp.lvl",
+	ReadDataFile("dc:SIDE\\imp.lvl",
 				 IMP_SNIPER_CLASS)
 
 
@@ -173,17 +177,20 @@ function ScriptInit()
     -- empire
 	SetTeamName(IMP, "Empire")
 	SetTeamIcon(IMP, "imp_icon")
-	SetUnitCount(IMP, 32)
+	SetUnitCount(IMP, END1_MAX_IMP_UNITS)
 	SetReinforcementCount(IMP, -1)
-	AddUnitClass(IMP, "imp_inf_sniper")
+	AddUnitClass(IMP, IMP_SNIPER_CLASS)
 	
 	-- ewoks
 	SetTeamName(ALL, "Ewoks")
 	SetTeamIcon(ALL, "all_icon")
-	SetUnitCount(ALL, 32)
+	SetUnitCount(ALL, END1_MAX_EWK_UNITS)
 	SetReinforcementCount(ALL, -1)
-	AddUnitClass(ALL, "ewk_inf_trooper")
-	AddUnitClass(ALL, "ewk_inf_scout")	
+	AddUnitClass(ALL, EWK_SOLDIER_CLASS)
+	
+	-- relations broke down with the locals
+	SetTeamAsEnemy(ALL, IMP)
+	SetTeamAsEnemy(IMP, ALL)
 	
 	
 	------------------------------------------------
@@ -313,7 +320,7 @@ function ScriptInit()
 	SetDefeatMusic(IMP, "imp_end_amb_defeat")
 
 	-- misc sound effects
-	if NUM_BIRD_TYPE >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
     SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
@@ -342,6 +349,55 @@ function ScriptPostLoad()
 	
 	-- death regions
 	AddDeathRegion("deathregion")
+	
+	
+	------------------------------------------------
+	------------   UNIT PROPERTIES  ----------------
+	------------------------------------------------
+	
+	-- make ewoks one-shot to pistols
+	SetClassProperty(EWK_SOLDIER_CLASS, "MaxHealth", EWK_HEALTH)
+	
+	-- This is code for cycling rifleman models
+	-- Author: KinetosImpetus
+	-- Edited: ToothpasteMain
+
+	-- constants
+	local INTERVAL = 3--AI_WAVE_SPAWN_DELAY
+	local MAX_SKIN = 2
+	
+	-- create timer
+	skintimer = CreateTimer("timeout")
+	SetTimerValue(skintimer , INTERVAL)
+	
+	-- cycler
+	local skin = 0
+	OnTimerElapse(
+		function(timer)
+			-- asign skin
+			if skin == 0 then
+				SetClassProperty(EWK_SOLDIER_CLASS, "GeometryName", "ewk_inf")
+				SetClassProperty(EWK_SOLDIER_CLASS, "SkeletonName", "ewok")
+			elseif skin == 1 then
+				SetClassProperty(EWK_SOLDIER_CLASS, "GeometryName", "ewk_inf2")
+				SetClassProperty(EWK_SOLDIER_CLASS, "SkeletonName", "ewok")
+			end
+			
+			-- cycle skin
+			skin = skin + 1
+			if skin >= MAX_SKIN then
+				skin = 0
+			end
+			
+			-- reset timer
+			SetTimerValue(skintimer , INTERVAL)
+			StartTimer(skintimer)
+		end,
+		skintimer
+	)
+
+	-- start timer for first time
+	StartTimer(skintimer)
 
 
 	------------------------------------------------
@@ -350,7 +406,7 @@ function ScriptPostLoad()
 
 	-- create objective
 	hunt = ObjectiveTDM:New{teamATT = ATT, teamDEF = DEF,
-						pointsPerKillATT = 1, pointsPerKillDEF = 1,
+						pointsPerKillATT = END1_PPK_ATT, pointsPerKillDEF = END1_PPK_DEF,
 						textATT = "level.end1.objectives.hunt", textDEF = "game.modes.hunt2", 
 						multiplayerRules = true}	
 	

@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default_droideka"
+		"cis_weap_inf_repeater_hunt"
+		"cis_weap_walk_droideka_shield_hunt"
+	}
+	REQN
+	{
+		"model"
+		"cis_walk_droideka"
+		"cis_droideka_idle_low1"
+		"cis_droideka_roll_low1"
+	}
+}

@@ -29,6 +29,7 @@ ucft
         "PlayMovieWithTransition"
 		
 		"bom_cmn"
+		"bom_hunt"
 		
 		"bomcw_ep3"
 		"bomcw_ep3_jungle"
@@ -37,6 +38,7 @@ ucft
 		"bomcw_ep3_marinejungle"
 		"bomcw_ep3_shiny"
 		
+		"bomgcw_all_desert"
 		"bomgcw_all_fleet"
 		"bomgcw_all_fleet_pilot"
 		"bomgcw_all_fleeturban"
@@ -48,12 +50,13 @@ ucft
 		"bomgcw_all_urban_pilot"
 		
 		"bomgcw_imp"
-		"bomgcw_imp_atat"
-		"bomgcw_imp_atat_snow"
-		"bomgcw_imp_atst"
-		"bomgcw_imp_fleet"
 		"bomgcw_imp_army"
 		"bomgcw_imp_army_pilot"
+		"bomgcw_imp_atat"
+		"bomgcw_imp_atat_snow"
+		"bomgcw_imp_atst"	
+		"bomgcw_imp_fleet"
+		"bomgcw_imp_pilot"
     }
 
     REQN
@@ -86,21 +89,28 @@ ucft
 		"fel1g_con"
 		"fel1g_1flag"
 		
+		"geo1c_c"
+		"geo1c_con"
+		"geo1c_ctf"
+
 		"hot1g_con"
 		"hot1g_1flag"
 		"hot1g_hunt"
 		
+		"kam1c_c"
 		"kam1c_con"
 		"kam1c_1flag"
 		"kam1g_con"
 		"kam1g_1flag"
 		
+		"kas2c_c"
 		"kas2c_con"
 		"kas2c_ctf"
 		"kas2c_hunt"
 		"kas2g_con"
 		"kas2g_ctf"
 		
+		"mus1c_c"
 		"mus1c_con"
 		"mus1c_ctf"
 		"mus1g_con"
@@ -112,44 +122,73 @@ ucft
 		"myg1g_con"
 		"myg1g_ctf"
 		
-		"nab2c_hunt"
 		"nab2c_con"
 		"nab2c_ctf"
+		"nab2c_hunt"
 		"nab2g_con"
+		"nab2g_ctf"
 		
+		"pol1c_c"
 		"pol1c_con"
 		"pol1c_ctf"
 		"pol1g_con"
+		"pol1g_ctf"
+		
+		"spa1g_1flag"
+		"spa1g_ass"
+		"spa1g_c"
+		
+		"spa2g_c"
 		
 		"spa3c_ass"
 		"spa3c_1flag"
 		
-		"spa6c_cmn"
-		"spa6c_ass"
-		"spa6c_1flag"
+		"spa4g_c"
 		
-		"spa7c_cmn"
-		"spa7c_ass"
+		"spa6c_1flag"
+		"spa6c_ass"
+		"spa6c_cmn"
+		
 		"spa7c_1flag"
+		"spa7c_ass"
+		"spa7c_cmn"
+		
+		"spa8g_1flag"
+		"spa8g_ass"
+		"spa8g_cmn"
+		
+		"spa9g_1flag"
+		"spa9g_ass"
+		"spa9g_cmn"
 		
 		"tan1c_con"
 		"tan1c_1flag"
+		"tan1g_c"
 		"tan1g_con"
+		"tan1g_1flag"
 		
 		"tat2c_con"
+		"tat2c_ctf"
 		"tat2g_con"
+		"tat2g_ctf"
+		"tat2g_hunt"
 
 		"tat3c_con"
 		"tat3c_1flag"
 		"tat3g_con"
+		"tat3g_1flag"
+		"tat3g_hunt"
 		
 		"uta1c_c"
 		"uta1c_con"
 		"uta1c_1flag"
 		"uta1g_con"
+		"uta1g_1flag"
 		
 		"yav1c_con"
 		"yav1c_1flag"
+		"yav1g_c"
 		"yav1g_con"
+		"yav1g_1flag"
     }
 }

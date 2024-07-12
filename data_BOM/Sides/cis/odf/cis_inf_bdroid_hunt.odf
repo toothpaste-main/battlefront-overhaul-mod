@@ -1,0 +1,18 @@
+[GameObjectClass]
+ClassParent     	= "cis_inf_default"
+
+
+[Properties]
+GeometryName            = "cis_inf_bdroid"
+GeometryLowRes          = "cis_inf_bdroid_low1"
+SkeletonName            = "bdroid"
+SkeletonLowRes          = "bdroidlz"
+FirstPerson             = "CIS\cisbdrd;cis_1st_bdroid"
+
+UnitType            = "trooper"
+
+MaxHealth		= "300.0"
+
+WEAPONSECTION = 1
+WeaponName     	= "cis_weap_inf_rifle_heat"
+WeaponAmmo     	= 0

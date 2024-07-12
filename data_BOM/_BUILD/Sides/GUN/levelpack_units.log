@@ -1,4 +1,22 @@
 Logging LevelPack
-00:48:1007/11/24
+13:23:4207/12/24
+
+=== gun_inf_defender.lvl ===
+Missing file gungan.zaabin
+    Reqd by munged\pc\gun_inf_defender.class.req
+Missing file hud_powerup_icon.texture
+    Reqd by munged\pc\gun_weap_inf_powerup_dispenser.class.req
+Missing file hud_weap_ammo.texture
+    Reqd by munged\pc\gun_weap_inf_powerup_dispenser.class.req
+Missing file reticule_00.texture
+    Reqd by munged\pc\gun_weap_inf_powerup_dispenser.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\gun_weap_inf_powerup_dispenser.class.req
+
+=== gun_inf_soldier.lvl ===
+Missing file gungan.zaabin
+    Reqd by munged\pc\gun_inf_soldier.class.req
+Missing file thermal_detonator.class
+    Reqd by munged\pc\gun_weap_inf_thermaldetonator_ord.class.req
    0 Errors    0 Warnings
 

@@ -9,14 +9,16 @@ HighResGeometry     = "imp_1st_weap_inf_rifle"
 OrdnanceName        = "imp_weap_inf_rifle_ord"
 FirePointName       = "hp_fire"
 
-ShotDelay           = "0.166"
+ShotDelay           = "0.25"
+
 
 
 //******************************************************
 //***************   SOUND       ****************
 //******************************************************
 
-FireSound           = "imp_weap_inf_rifle_fire"
+//FireSound           = "imp_weap_inf_rifle_fire"
+FireSound           = "bom_imp_weap_inf_rifle_fire"
 FireEmptySound      = "com_weap_inf_ammo_empty"
 FireLoopSound       = ""
 ReloadSound         = "com_weap_inf_reload_med"

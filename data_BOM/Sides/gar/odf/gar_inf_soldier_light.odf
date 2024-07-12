@@ -1,0 +1,22 @@
+[GameObjectClass]
+ClassParent         = "gar_inf_default_soldier"
+GeometryName        = "gar_inf_nabooguard_blue.msh"
+
+
+[Properties]
+// possible msh that can be used for cycling mid-game
+GeometryName        = "gar_inf_nabooguard_yellow"
+GeometryName        = "gar_inf_nabooguard_red"
+GeometryName        = "gar_inf_nabooguard_blue"	// default skin
+
+GeometryLowRes      = "gar_inf_nabooguard_low1"
+FirstPerson         = "all\alltroop;all_1st_trooper"
+
+WEAPONSECTION = 1
+WeaponName     	= "gar_weap_inf_pistol"
+WeaponAmmo     	= 0
+
+// TODO: can't swap to this after unlocking it (ToothpasteMain 7/12/2024)
+WEAPONSECTION = 2
+WeaponName     = "gar_weap_award_pistol"
+WeaponAmmo     = 6

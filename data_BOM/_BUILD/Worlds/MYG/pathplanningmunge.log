@@ -1,23 +1,4 @@
 Logging PathPlanningMunge
-04:21:3407/11/24
-Group 0: 1 arcs
-Group 1: 1 arcs
-Group 2: 1 arcs
-Group 3: 4 arcs
-Group 4: 0 arcs
-Group 5: 0 arcs
-Group 6: 0 arcs
-Group 7: 0 arcs
-Group 1:
-  Shield_01
-Group 2:
-  shield_02
-Group 3:
-  shield_03
-Group 4:
-  Connection129
-  Connection130
-  Connection131
-  incore
+14:15:4807/12/24
    0 Errors    0 Warnings
 

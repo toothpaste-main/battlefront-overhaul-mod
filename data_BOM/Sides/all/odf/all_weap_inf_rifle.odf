@@ -9,11 +9,15 @@ GeometryName        = "all_weap_inf_rifle"
 HighResGeometry     = "all_1st_weap_inf_rifle"
 OrdnanceName        = "all_weap_inf_rifle_ord"
 
+ShotDelay           = "0.22"
+
+
 //******************************************************
 //***************   SOUND       ****************
 //******************************************************
 
-FireSound               = "all_weap_inf_rifle_fire"
+//FireSound               = "all_weap_inf_rifle_fire"
+FireSound               = "bom_all_weap_inf_rifle_fire"
 ReloadSound             = "com_weap_inf_reload_med"
 ChangeModeSound         = "com_weap_inf_equip_med"
 FireEmptySound          = "com_weap_inf_ammo_empty"

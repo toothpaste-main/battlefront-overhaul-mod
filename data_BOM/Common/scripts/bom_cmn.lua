@@ -1,6 +1,7 @@
 --
--- Battlefront Balance Patch
---
+-- Battlefront Overhaul Mod
+-- 
+ 
 
 PS2_MEMORY = 4000000 -- 4MB
 
@@ -94,3 +95,14 @@ UBER_MIN_SPECIAL = 1
 -- SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
 AI_WAVE_SPAWN_DELAY = 10.0		-- wave spawn delay for AI
 PERCENTAGE_AI_RESPAWNED = 0.25	-- percentage of AI respawned with each wave
+
+
+------------------------------------------------
+------------   META   -------------
+------------------------------------------------
+
+-- assault
+ASSAULT_MINES = 4
+
+-- sniper
+SNIPER_TURRETS = 1

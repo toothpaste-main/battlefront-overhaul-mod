@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Level Global -----
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Tusken Raiders -----
+
+// rifleman
+SoundProperties()
+{
+    Name("bom_tat_weap_tusken_fire");
+    Group("weapons");
+    Inherit("ordnance_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+		Sample("bf2_2017_cycler-rifle_0", 0.66);
+		Sample("bf2_2017_cycler-rifle_1", 0.33);
+    }
+}

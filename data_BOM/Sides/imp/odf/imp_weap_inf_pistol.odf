@@ -13,7 +13,8 @@ OrdnanceName        = "imp_weap_inf_pistol_ord"
 //***************   SOUND       ****************
 //******************************************************
 
-FireSound           = "imp_weap_inf_pistol_fire"
+//FireSound           = "imp_weap_inf_pistol_fire"
+FireSound           = "bom_imp_weap_inf_pistol_fire"
 FireEmptySound      = "com_weap_inf_weapon_empty"
 FireLoopSound       = ""
 ReloadSound         = ""

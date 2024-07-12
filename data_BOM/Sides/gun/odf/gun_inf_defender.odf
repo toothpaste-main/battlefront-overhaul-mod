@@ -20,14 +20,14 @@ TentacleCollType    = "0"
 //this keeps the player from entering first person with this char
 forcemode                       = 1
 
-MaxHealth       = 250.0
+MaxHealth       = "400.0"
 
 WEAPONSECTION = 1
 WeaponName         = "gun_weap_inf_fusioncutter"
 WeaponAmmo         = 0
 
 WEAPONSECTION = 2
-WeaponName         = "gun_weap_inf_thermaldetonator"
+WeaponName         = "gun_weap_inf_powerup_dispenser"
 WeaponAmmo         = 20
 WeaponChannel      = 1
 

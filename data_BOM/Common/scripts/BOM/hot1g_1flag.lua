@@ -63,14 +63,16 @@ function ScriptInit()
 	local NUM_HOVER = 0
 	local NUM_JEDI = 2
 	local NUM_LGHT = 256
-	local NUM_MINE = 32			-- 4 mines * 8 rocketeers
+	local NUM_MINE = 2 * ASSAULT_MINES * MAX_ASSAULT
 	local NUM_MUSC = 0
 	local NUM_OBST = 1024
-	local NUM_SND_SPA = 0
+	local NUM_SND_SPA = 11
 	local NUM_SND_STC = 13
 	local NUM_SND_STM = 5
 	local NUM_TENT = 4*MAX_SPECIAL
+	local NUM_TREE = 256
 	local NUM_TUR = 30
+	local NUM_TUR_PORT = 2 * SNIPER_TURRETS * MAX_SNIPER
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
 	local WALKER0 = 0
@@ -94,26 +96,28 @@ function ScriptInit()
 	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
     SetMemoryPoolSize("EnergyBar", NUM_WEAP)
     SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityDroideka", WALKER0)
 	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
     SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
     SetMemoryPoolSize("EntityLight", NUM_LGHT)
-	SetMemoryPoolSize("EntityMine", NUM_MINE)		
+	SetMemoryPoolSize("EntityMine", NUM_MINE)
+	SetMemoryPoolSize("EntityPortableTurret", NUM_TUR_PORT)
 	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
     SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
     SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
     SetMemoryPoolSize("MountedTurret", NUM_TUR)
     SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
     SetMemoryPoolSize("Navigator", NUM_UNITS)
-    SetMemoryPoolSize("Obstacle", NUM_OBST)
+    SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
     SetMemoryPoolSize("PathFollower", NUM_UNITS)
-    SetMemoryPoolSize("PathNode", 256)
+    SetMemoryPoolSize("PathNode", 256)							-- supposedly hard coded
 	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
     SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
     SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
-    SetMemoryPoolSize("TreeGridStack", 256)
+    SetMemoryPoolSize("TreeGridStack", NUM_TREE)				-- related to collisions
 	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
 	SetMemoryPoolSize("UnitController", NUM_UNITS)
-    SetMemoryPoolSize("Weapon", NUM_WEAP)
+    SetMemoryPoolSize("Weapon", NUM_WEAP)						-- total weapon (units, vehicles, etc.)
 	
 	-- jedi
 	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
@@ -126,7 +130,7 @@ function ScriptInit()
 	
 	-- misc
 	--SetMemoryPoolSize("FLEffectObject::OffsetMatrix", 90)
-	--SetMemoryPoolSize("RedOmniLight", 250)
+	SetMemoryPoolSize("RedOmniLight", 256)
 	
 	------------------------------------------------
 	------------   DLC SOUNDS   --------------------
@@ -154,7 +158,7 @@ function ScriptInit()
 	------------   UNIT TYPES   --------------------
 	------------------------------------------------
 	
-	-- rebels
+	-- alliance
 	local ALL_HERO = "all_hero_luke_pilot"
 	
 	-- empire
@@ -165,9 +169,11 @@ function ScriptInit()
 	------------   LOAD VANILLA ASSETS   -----------
 	------------------------------------------------
 	
+	-- alliance
     ReadDataFile("SIDE\\all.lvl",
 				 ALL_HERO)
-				 
+				
+	-- empire
     ReadDataFile("SIDE\\imp.lvl",
                  IMP_HERO)
 	
@@ -183,7 +189,7 @@ function ScriptInit()
 	------------   LOAD DLC ASSETS   ---------------
 	------------------------------------------------
 
-	-- rebels
+	-- alliance
 	ReadDataFile("dc:SIDE\\all.lvl",
 				 ALL_SOLDIER_CLASS,
 				 ALL_ASSAULT_CLASS,
@@ -207,11 +213,11 @@ function ScriptInit()
 	------------------------------------------------
 
     SetupTeams{
-		-- rebels
+		-- alliance
 		all = {
             team = ALL,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier		= {ALL_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault		= {ALL_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
             sniper		= {ALL_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
@@ -223,7 +229,7 @@ function ScriptInit()
         imp = {
             team = IMP,
             units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
+            reinforcements = -1,
             soldier  	= {IMP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
             assault  	= {IMP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
             sniper   	= {IMP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},

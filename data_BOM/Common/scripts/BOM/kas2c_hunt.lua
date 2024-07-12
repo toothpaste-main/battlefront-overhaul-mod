@@ -8,14 +8,14 @@ ScriptCB_DoFile("setup_teams")
 
 -- load BOM constants
 ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bomcw_ep3_jungle") 
+ScriptCB_DoFile("bom_hunt")
 
 -- these variables do not change
 local ATT = 1
 local DEF = 2
--- republic attacking (attacker is always #1)
-local REP = ATT
-local CIS = DEF
+-- cis attacking (attacker is always #1)
+local REP = DEF
+local CIS = ATT
 
 
 ---------------------------------------------------------------------------
@@ -69,7 +69,9 @@ function ScriptInit()
 	local NUM_SND_STC = 0
 	local NUM_SND_STM = 0
 	local NUM_TENT = 4*MAX_UNITS
+	local NUM_TREE = 256
 	local NUM_TUR = 20
+	local NUM_TUR_PORT = 0
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
 	local WALKER0 = 0
@@ -93,26 +95,28 @@ function ScriptInit()
 	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
     SetMemoryPoolSize("EnergyBar", NUM_WEAP)
     SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityDroideka", WALKER0)
 	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
     SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
     SetMemoryPoolSize("EntityLight", NUM_LGHT)
-	SetMemoryPoolSize("EntityMine", NUM_MINE)		
+	SetMemoryPoolSize("EntityMine", NUM_MINE)
+	SetMemoryPoolSize("EntityPortableTurret", NUM_TUR_PORT)
 	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
     SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
     SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
     SetMemoryPoolSize("MountedTurret", NUM_TUR)
     SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
     SetMemoryPoolSize("Navigator", NUM_UNITS)
-    SetMemoryPoolSize("Obstacle", NUM_OBST)
+    SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
     SetMemoryPoolSize("PathFollower", NUM_UNITS)
-    SetMemoryPoolSize("PathNode", 256)
+    SetMemoryPoolSize("PathNode", 256)							-- supposedly hard coded
 	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
     SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
     SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
-    SetMemoryPoolSize("TreeGridStack", 256)
+    SetMemoryPoolSize("TreeGridStack", NUM_TREE)				-- related to collisions
 	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
 	SetMemoryPoolSize("UnitController", NUM_UNITS)
-    SetMemoryPoolSize("Weapon", NUM_WEAP)
+    SetMemoryPoolSize("Weapon", NUM_WEAP)						-- total weapon (units, vehicles, etc.)
 	
 	-- jedi
 	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
@@ -160,8 +164,6 @@ function ScriptInit()
     
 	-- wookiees
 	ReadDataFile("SIDE\\wok.lvl",
-				 --"wok_inf_mechanic",
-				 --"wok_inf_rocketeer",
 				 "wok_inf_basic")
 		
 	-- turrets
@@ -175,30 +177,30 @@ function ScriptInit()
 
 	-- cis
 	ReadDataFile("dc:SIDE\\cis.lvl",
-		"cis_inf_magnaguard_hunt")
+				 CIS_OFFICER_CLASS)
     
 	
+	------------------------------------------------
+	------------   SETUP TEAMS   -------------------
+	------------------------------------------------
 
-    SetupTeams{
-             
-        rep = {
-            team = REP,
-            units = MAX_UNITS,
-            reinforcements = -1,
-			soldier		= {"cis_inf_magnaguard_hunt"},
-        },
-        cis = {
-            team = CIS,
-            units = MAX_UNITS,
-            reinforcements = -1,
-			soldier 	= {"wok_inf_warrior"},
-			--assasult	= {"wok_inf_rocketeer"},
-			--engineer	= {"wok_inf_mechanic"},              
-        }
-     }
-      
+    -- wookiees
 	SetTeamName(REP, "Wookiees")
+	--SetTeamIcon(REP, "rep_icon")
+	SetUnitCount(REP, KAS2_MAX_WOK_UNITS)
+	SetReinforcementCount(REP, -1)
+	AddUnitClass(REP, WOK_SOLDIER_CLASS)
+
+	-- cis
 	SetTeamName(CIS, "CIS")
+	--SetTeamIcon(CIS, "cis_icon")
+	SetUnitCount(CIS, KAS2_MAX_WOK_UNITS)
+	SetReinforcementCount(CIS, -1)
+	AddUnitClass(CIS, CIS_OFFICER_CLASS)
+	
+	-- relations broke down with the locals
+	SetTeamAsEnemy(REP, CIS)
+	SetTeamAsEnemy(CIS, REP)
     
 	
 	------------------------------------------------
@@ -329,7 +331,7 @@ function ScriptInit()
     OpenAudioStream("sound\\kas.lvl", "kas")
 
     -- misc sound effects
-	if NUM_BIRD_TYPE >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
     SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
@@ -390,7 +392,6 @@ function ScriptPostLoad()
 	SetProperty("woodc", "CurHealth", 15000)
 	SetProperty("gatepanel", "CurHealth", 1000)
     
-    
 	-- events for wall destruction and repair
 	OnObjectKillName(PlayAnimDown, "gatepanel")
 	OnObjectRespawnName(PlayAnimUp, "gatepanel")
@@ -408,7 +409,7 @@ function ScriptPostLoad()
 
 	-- create objective
     hunt = ObjectiveTDM:New{teamATT = ATT, teamDEF = DEF, 
-							pointsPerKillATT = 2, pointsPerKillDEF = 1, 
+							pointsPerKillATT = HOT1_PPK_ATT, pointsPerKillDEF = HOT1_PPK_DEF, 
 							textATT = "level.kas2.hunt.ATT", textDEF = "level.kas2.hunt.DEF", 
 							multiplayerRules = true}
     

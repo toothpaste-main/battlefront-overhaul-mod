@@ -236,5 +236,11 @@ ucft
 		"naboo2.prop"
 		"naboo2.boundary"
 		"hailfire_wake.config"
+		"naboo2_conquest.lvl"
+		"naboo2_campaign.lvl"
+		"naboo2_ctf.lvl"
+		"naboo2_tdm.lvl"
+		"naboo2_1flag.lvl"
+		"naboo2_hunt.lvl"
 	}
 }

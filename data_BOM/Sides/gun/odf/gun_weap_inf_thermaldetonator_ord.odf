@@ -13,6 +13,8 @@ LightRadius             = "5.0"
 
 ImpactEffectWater 	= "com_sfx_watersplash_sm"
 
+StickDroid          = 1
+
 LifeSpan 			= "0.9"
 Velocity 			= "25.0"
 Gravity				= "1.5"

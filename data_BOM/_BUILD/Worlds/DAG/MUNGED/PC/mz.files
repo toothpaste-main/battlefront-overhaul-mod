@@ -156,5 +156,10 @@ ucft
 		"editor_grasspatch.model"
 		"dag1.prop"
 		"dag1.boundary"
+		"dag1_ctf.lvl"
+		"dag1_conquest.lvl"
+		"dag1_cw.lvl"
+		"dag1_gcw.lvl"
+		"dag1_1flag.lvl"
 	}
 }

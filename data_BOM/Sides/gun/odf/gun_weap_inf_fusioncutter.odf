@@ -4,6 +4,9 @@ ClassParent 		= "com_weap_inf_fusioncutter"
 [Properties]
 GeometryName 		= "gun_weap_inf_fusioncutter"
 
+TargetDroid             = "1"
+DroidHealth             = -80
+
 FireLoopSound           = "com_weap_inf_fusioncutter_fire"
 ChargeSound             = ""
 WeaponChangeSound       = ""

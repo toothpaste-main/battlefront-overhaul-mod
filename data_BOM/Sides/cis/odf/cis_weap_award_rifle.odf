@@ -4,7 +4,7 @@ GeometryName        = "cis_weap_inf_rifle.msh"
 
 [Properties]
 GeometryName        = "cis_weap_inf_rifle"
-HighResGeometry         = "cis_1st_weap_inf_rifle"
+HighResGeometry     = "cis_1st_weap_inf_rifle"
 OrdnanceName        = "cis_weap_award_rifle_ord"
 FirePointName       = "hp_fire"
 

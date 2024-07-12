@@ -78,9 +78,9 @@ function ScriptInit()
 	local NUM_OBST = 512
 	local NUM_SND_SPA = 50
 	local NUM_SND_STC = 30
-	local NUM_SND_STM = 0
+	local NUM_SND_STM = 8
 	local NUM_TENT = 4*MAX_SPECIAL
-	local NUM_TUR = 0
+	local NUM_TUR = 1
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
 	local WALKER0 = 0
@@ -395,7 +395,7 @@ function ScriptInit()
     SetDefeatMusic (IMP, "imp_dea_amb_defeat")
 	
 	-- misc sound effects
-	if NUM_BIRD_TYPE >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
     SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")

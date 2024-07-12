@@ -2,7 +2,7 @@
 ClassLabel              = "repair"
 
 [Properties]
-ScoreForMedalsType = 3
+//ScoreForMedalsType = 3
 
 MuzzleFlashEffect       = "com_sfx_repair"
 Discharge               = "small_smoke_effect"

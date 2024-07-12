@@ -62,14 +62,16 @@ function ScriptInit()
 	local NUM_HOVER = 4
 	local NUM_JEDI = 2
 	local NUM_LGHT = 0
-	local NUM_MINE = 32			-- 4 mines * 8 rocketeers
+	local NUM_MINE = 2 * ASSAULT_MINES * MAX_ASSAULT
 	local NUM_MUSC = 0
 	local NUM_OBST = 1024
 	local NUM_SND_SPA = 0
 	local NUM_SND_STC = 96
 	local NUM_SND_STM = 1
 	local NUM_TENT = 0
+	local NUM_TREE = 256
 	local NUM_TUR = 9
+	local NUM_TUR_PORT = 2 * SNIPER_TURRETS * MAX_SNIPER
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
 	local WALKER0 = MAX_SPECIAL
@@ -93,10 +95,12 @@ function ScriptInit()
 	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
     SetMemoryPoolSize("EnergyBar", NUM_WEAP)
     SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
+	SetMemoryPoolSize("EntityDroideka", WALKER0)
 	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
     SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
     SetMemoryPoolSize("EntityLight", NUM_LGHT)
-	SetMemoryPoolSize("EntityMine", NUM_MINE)		
+	SetMemoryPoolSize("EntityMine", NUM_MINE)
+	SetMemoryPoolSize("EntityPortableTurret", NUM_TUR_PORT)
 	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
     SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
     SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
@@ -105,14 +109,14 @@ function ScriptInit()
     SetMemoryPoolSize("Navigator", NUM_UNITS)
     SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
     SetMemoryPoolSize("PathFollower", NUM_UNITS)
-    SetMemoryPoolSize("PathNode", 256)
+    SetMemoryPoolSize("PathNode", 256)							-- supposedly hard coded
 	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
     SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
     SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
-    SetMemoryPoolSize("TreeGridStack", 256)
+    SetMemoryPoolSize("TreeGridStack", NUM_TREE)				-- related to collisions
 	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
 	SetMemoryPoolSize("UnitController", NUM_UNITS)
-    SetMemoryPoolSize("Weapon", NUM_WEAP)
+    SetMemoryPoolSize("Weapon", NUM_WEAP)						-- total weapon (units, vehicles, etc.)
 	
 	-- jedi
 	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
@@ -326,7 +330,7 @@ function ScriptInit()
 
 
 	------------------------------------------------
-	------------   LEVEL SOUNDS   ------------------
+	------------   LEVEL ANNOUNCER   ---------------
 	------------------------------------------------
 
 	-- open ambient streams
@@ -378,14 +382,15 @@ function ScriptInit()
     SetVictoryMusic(CIS, "cis_myg_amb_victory")
     SetDefeatMusic (CIS, "cis_myg_amb_defeat")
 
-    -- misc sounds effects
-	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
-    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
-    SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
-    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
+	-- misc sound effects
+	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
+    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
-    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
+	SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
+    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
+	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
+    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
 
 
 	------------------------------------------------

@@ -16,7 +16,7 @@ ucft
 		"class"
 		"com_inf_default"
 		"gun_weap_inf_fusioncutter"
-		"gun_weap_inf_thermaldetonator"
+		"gun_weap_inf_powerup_dispenser"
 	}
 	REQN
 	{
