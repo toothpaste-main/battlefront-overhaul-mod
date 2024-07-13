@@ -1,5 +1,5 @@
 --
--- Battlefront Balance Patch
+-- Battlefront Overhaul Mod
 --
 
 

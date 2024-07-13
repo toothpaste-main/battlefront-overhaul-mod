@@ -1,9 +1,13 @@
 --
 -- Battlefront Overhaul Mod
 -- 
- 
+--
+-- Common constants across all maps, modes, and 
+-- eras.
+--
 
 PS2_MEMORY = 4000000 -- 4MB
+
 
 ------------------------------------------------
 ------------   TEAM DISTRIBUTION   -------------

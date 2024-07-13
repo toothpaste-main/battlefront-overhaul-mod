@@ -1,5 +1,8 @@
 --
--- Battlefront Balance Patch
+-- Battlefront Overhaul Mod
+--
+--
+-- Constants related to the hunt game mode.
 --
 
 ------------------------------------------------

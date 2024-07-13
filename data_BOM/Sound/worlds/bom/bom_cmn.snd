@@ -7,6 +7,7 @@ SoundProperties()
     Name("bom_com_weap_inf_rocketlauncher_hum");
     Group("weapons");
     Inherit("ordnance_template");
+	Gain(0.8);
 	PitchDev(0.05);
 	MinDistance(30.0);
     MuteDistance(800.0);

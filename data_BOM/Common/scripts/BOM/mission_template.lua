@@ -368,7 +368,7 @@ function ScriptPostLoad ()
 	------------------------------------------------
 	
 	SoundEvent_SetupTeams(REP, 'rep', CIS, 'cis')
-	SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
+	SoundEvent_SetupTeams(ALL, 'all', REP, 'REP')
 	
 	-- reassign command posts to teams
 	

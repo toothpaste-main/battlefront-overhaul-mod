@@ -1,5 +1,5 @@
 --
--- Battlefront Balance Patch
+-- Battlefront Overhaul Mod
 --
 
 
@@ -7,6 +7,7 @@
 ------------   UNIT TYPES   --------------------
 ------------------------------------------------
 
+-- alliance
 ALL_SOLDIER_CLASS		= "all_inf_rifleman_fleet"
 ALL_ASSAULT_CLASS		= "all_inf_rocketeer_fleet"
 ALL_SNIPER_CLASS		= "all_inf_sniper_fleet"
