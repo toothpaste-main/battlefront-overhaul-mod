@@ -4,12 +4,12 @@ The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creati
 
 ### 1-Flag CTF Simplicity
 
-- 17 parameters set -> 4 parameter set
+- 19 parameters set -> 6 parameter set
 
 ### 2-Flag CTF Simplicity
 
 - 9 function calls -> 2 function calls
-- 35 parameters set -> 6 parameters set
+- 37 parameters set -> 8 parameters set
 
 > [!NOTE]
 > Logging is implemented for when functions complete successfully. If required variables are missing, errors will be thrown that inform you of what was missed.
