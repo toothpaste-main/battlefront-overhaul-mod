@@ -22,11 +22,16 @@ Planned releases:
 
 Improved vs original AI barriers on Coruscant:
 
-![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
+
+Reskinned units
+
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_snow.jpg)  |  ![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/imp_inf_armytrooper.jpg)
+:-------------------------:|:-------------------------:
 
 Restructured Mygeeto and updated the minimap:
 
-![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
 
 ## Acknowledgements
 
