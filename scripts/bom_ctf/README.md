@@ -31,3 +31,4 @@ The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creati
 > [!IMPORTANT]
 > Remember to call `ScriptCB_DoFile("bom_ctf")` near the top of your mission script!
 
+For questions or comments, email toothpaste.main@gmail.com or message on Twitter @ToothpasteMain
