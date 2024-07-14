@@ -29,6 +29,7 @@ Restructured Mygeeto and updated the minimap:
 
 ## Acknowledgements
 
-[Bulldog Rocket Launcher REAL by MDPtoaster](https://www.moddb.com/games/star-wars-battlefront-ii/addons/bulldog-rocket-launcher-real)
-
-[Clone Trooper Backpack by WhiskyTangoFoxX](http://www.gametoast.com/viewtopic.php?f=64&t=34240&sid=0c447f05685aa54007c80ea8b547b48a) (also using white clone texture in download)
+- [WhiskeyTangoFoxX](http://www.gametoast.com/viewtopic.php?f=64&t=34240&p=537223&hilit=custom+skin#p537223) for the clone backpack and white trooper skin
+- [Star Wars SFX Archive](https://www.youtube.com/watch?v=rT4Fk8e7Z9I) for access to the Star Wars: Battlefront 2 (2017) blaster sound effects
+- [KinetosImpetus](http://www.gametoast.com/viewtopic.php?p=390689#p390689) for the skin randomizer script
+- ryanhank for detailed information on memory pools
