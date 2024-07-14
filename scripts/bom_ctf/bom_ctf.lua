@@ -58,7 +58,7 @@ local HIDE_CPS_CTF = true
 local MULTIPLAYER_RULES_CTF = true
 
 -- there are two flags in CTF (used in error checking)
-NUM_FLAGS_CTF = 2
+local NUM_FLAGS_CTF = 2
 
 
 ------------------------------------------------
