@@ -24,7 +24,7 @@ Improved vs original AI barriers on Coruscant:
 
 ![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
 
-Reskinned units
+Reskinned units in some maps and modes:
 
 ![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_snow.jpg)  |  ![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/imp_inf_armytrooper.jpg)
 :-------------------------:|:-------------------------:
