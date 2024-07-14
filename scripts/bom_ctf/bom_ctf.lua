@@ -165,10 +165,10 @@ end
 local homeRegions = {}
 function setHomeRegions(params)
 	-- alliance, cis, empire, republic
-	if params.allHomeRegion then captureRegions.allHomeRegion = params.allHomeRegion end
-	if params.cisHomeRegion then captureRegions.cisHomeRegion = params.cisHomeRegion end
-	if params.impHomeRegion then captureRegions.impHomeRegion = params.impHomeRegion end
-	if params.repHomeRegion then captureRegions.repHomeRegion = params.repHomeRegion end
+	if params.allHomeRegion then homeRegions.allHomeRegion = params.allHomeRegion end
+	if params.cisHomeRegion then homeRegions.cisHomeRegion = params.cisHomeRegion end
+	if params.impHomeRegion then homeRegions.impHomeRegion = params.impHomeRegion end
+	if params.repHomeRegion then homeRegions.repHomeRegion = params.repHomeRegion end
 	
 	-- check for enough names
 	do			
@@ -290,7 +290,7 @@ function createCTFObjective(params)
 							     captureLimit = CAP_LIMIT_CTF, 
 								 hideCPs = HIDE_CPS_CTF, 
 								 multiplayerRules = MULTIPLAYER_RULES_CTF}
-	
+	print("Created: ObjectiveCTF")
 	
 	------------------------------------------------
 	------------   ADD FLAGS TO OBJECTIVE   --------
@@ -378,6 +378,7 @@ function createOneFlagObjective(params)
 							      captureLimit = CAP_LIMIT_1FLAG,
 							      hideCPs = HIDE_CPS_1FLAG,
 								  multiplayerRules = MULTIPLAYER_RULES_1FLAG}
+	print("Created: ObjectiveOneFlagCTF")
 	
 	return ctf
 end
