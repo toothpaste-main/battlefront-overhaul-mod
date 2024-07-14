@@ -1,6 +1,8 @@
 --
 -- Battlefront Overhaul Mod
+-- Author: ToothpasteMain
 --
+print("Loading bomcw_ep3_marinejungle.lua...")
 
 
 ------------------------------------------------

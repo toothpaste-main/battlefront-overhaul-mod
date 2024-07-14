@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_fleeturban")
 ScriptCB_DoFile("bomgcw_imp_pilot")
 
@@ -247,7 +248,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("KAM\\kam1.lvl", "KAMINO1_1ctf")
 	
 	-- ceiling and floor limit
@@ -391,7 +392,7 @@ function ScriptInit()
 end
 
 
- --PostLoad, this is all done after all loading, etc.
+-- PostLoad, this is all done after all loading, etc.
 function ScriptPostLoad()
 
 	------------------------------------------------
@@ -415,8 +416,24 @@ function ScriptPostLoad()
 	
 	
 	------------------------------------------------
-	------------   RESET CAMPAIGN RESTRICTIONS   ---
+	------------   MAP INTERACTION   ---------------
 	------------------------------------------------
+
+	-- kill uncessary CPs
+	KillObject("cp2")
+	KillObject("cp1")
+	SetProperty("cp11", "IsVisible", "1")
+	SetProperty("cp11", "Team", "2")
+	SetProperty("cp22", "Team", "1")		
+	SetProperty("cp22", "SpawnPath", "NEW")
+	SetProperty("cp22", "captureregion", "death")
+	SetProperty("cp11", "captureregion", "death")
+	SetProperty("CP4", "HUDIndexDisplay", 0)
+	KillObject("cp3")
+	KillObject("CP4")
+	KillObject("CP5")
+	--SetProperty("FDL-2", "IsLocked", 1)
+	--SetProperty("cp4", "IsVisible", 0)
 
 	SetAIDamageThreshold("Comp1", 0 )
     SetAIDamageThreshold("Comp2", 0 )
@@ -472,27 +489,11 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
     
-	SoundEvent_SetupTeams(ALL, 'all', IMP,  'imp')
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "all", teamDEFName = "imp",
+								 flagName = "flag", homeRegion = "flag_home",
+							     attCaptureRegion = "lag_capture2", defCaptureRegion = "lag_capture1"}
 	
-	-- define flag geometry
-	SetProperty("flag1", "GeometryName", "com_icon_alliance")
-	SetProperty("flag1", "CarriedGeometryName", "com_icon_alliance")
-	SetProperty("flag2", "GeometryName", "com_icon_imperial")
-	SetProperty("flag2", "CarriedGeometryName", "com_icon_imperial")
-	SetClassProperty("com_item_flag", "DroppedColorize", 1)
-
-    -- create objective
-    ctf = ObjectiveOneFlagCTF:New{teamATT = 1, teamDEF = 2,
-								  textATT = "game.modes.1flag", textDEF = "game.modes.1flag2", 
-								  captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-								  flagIconScale = 3.0, homeRegion = "flag_home",
-								  captureRegionATT = "lag_capture2", captureRegionDEF = "lag_capture1",
-								  capRegionMarkerATT = "hud_objective_icon_circle", 
-								  capRegionMarkerDEF = "hud_objective_icon_circle",
-								  capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, 
-								  hideCPs = true, 
-								  multiplayerRules = true}
-								  
 	-- start objective
     ctf:Start()
 

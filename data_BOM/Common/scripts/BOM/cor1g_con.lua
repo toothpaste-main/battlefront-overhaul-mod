@@ -59,13 +59,13 @@ function ScriptInit()
 	local NUM_CMD_WLK = 0
 	local NUM_FLAGS = 0
 	local NUM_FLYER = 6			-- to account for rocket upgrade
-	local NUM_HINTS = 1024
+	local NUM_HINTS = 1280
 	local NUM_HOVER = 0
 	local NUM_JEDI = 2
 	local NUM_LGHT = 128
 	local NUM_MINE = 2 * ASSAULT_MINES * MAX_ASSAULT
 	local NUM_MUSC = 33
-	local NUM_OBST = 512
+	local NUM_OBST = 768
 	local NUM_SND_SPA = 38
 	local NUM_SND_STC = 0
 	local NUM_SND_STM = 10

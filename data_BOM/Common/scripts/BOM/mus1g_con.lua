@@ -346,7 +346,7 @@ function ScriptInit()
 	
 	-- out of bounds warning
 	SetOutOfBoundsVoiceOver(ALL, "allleaving")
-	SetOutOfBoundsVoiceOver(ALL, "impleaving")
+	SetOutOfBoundsVoiceOver(IMP, "impleaving")
 
 	------------------------------------------------
 	------------   LEVEL SOUNDS   ------------------

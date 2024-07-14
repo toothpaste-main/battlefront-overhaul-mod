@@ -374,8 +374,8 @@ function ScriptInit()
     SetLowReinforcementsVoiceOver(CIS, CIS, "cis_off_victory_im", .1, 1)  
 
 	-- out of bounds warning
-    SetOutOfBoundsVoiceOver(REP, "Repleaving")
-    SetOutOfBoundsVoiceOver(CIS, "Cisleaving")
+    SetOutOfBoundsVoiceOver(REP, "repleaving")
+    SetOutOfBoundsVoiceOver(CIS, "cisleaving")
 
 	
 	------------------------------------------------

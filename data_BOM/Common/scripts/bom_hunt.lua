@@ -1,9 +1,11 @@
 --
 -- Battlefront Overhaul Mod
---
+-- Author: ToothpasteMaine
 --
 -- Constants related to the hunt game mode.
 --
+print("Loading bom_hunt.lua...")
+
 
 ------------------------------------------------
 ------------   POINTS PER KILL  ----------------

@@ -1,6 +1,8 @@
 --
 -- Battlefront Overhaul Mod
+-- Author: ToothpasteMain
 --
+print("Loading bomgcw_all_snow.lua...")
 
 
 ------------------------------------------------
@@ -11,7 +13,7 @@
 ALL_SOLDIER_CLASS		= "all_inf_rifleman_snow"
 ALL_ASSAULT_CLASS		= "all_inf_rocketeer_snow"
 ALL_SNIPER_CLASS		= "all_inf_sniper_snow"
-ALL_ENGINEER_CLASS		= "all_inf_engineer_bothan"
+ALL_ENGINEER_CLASS	= "all_inf_engineer_bothan"
 ALL_OFFICER_CLASS		= "all_inf_officer_snow"
 ALL_SPECIAL_CLASS		= "all_inf_wookiee_snow"
 ALL_HERO				= "all_hero_luke_jedi"

@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams") 
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_snow")
 ScriptCB_DoFile("bomgcw_imp_atat_snow")
 
@@ -59,19 +60,19 @@ function ScriptInit()
 	local NUM_CMD_WLK = 0
 	local NUM_FLAGS = 2
 	local NUM_FLYER = 6			-- to account for rocket upgrade
-	local NUM_HINTS = 1024
+	local NUM_HINTS = 1280
 	local NUM_HOVER = 4
 	local NUM_JEDI = 2
 	local NUM_LGHT = 0
 	local NUM_MINE = 2 * ASSAULT_MINES * MAX_ASSAULT
 	local NUM_MUSC = 0
 	local NUM_OBST = 1024
-	local NUM_SND_SPA = 0
+	local NUM_SND_SPA = 13
 	local NUM_SND_STC = 96
 	local NUM_SND_STM = 1
 	local NUM_TENT = 4*MAX_SPECIAL
-	local NUM_TREE = 256
-	local NUM_TUR = 9
+	local NUM_TREE = 512
+	local NUM_TUR = 13
 	local NUM_TUR_PORT = 2 * SNIPER_TURRETS * MAX_SNIPER
 	local NUM_UNITS = 96		-- it's easier this way
 	local NUM_WEAP = 256		-- more if locals and vehicles!
@@ -253,7 +254,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("myg\\myg1.lvl", "myg1_ctf")
 	
 	-- ceiling and floor limit
@@ -418,33 +419,16 @@ function ScriptPostLoad()
 	
 
     ------------------------------------------------
-	------------   INITIALIZE FLAGS   --------------
+	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
-	
-	SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
-	
-    -- define flag geometry
-	SetProperty("flag1", "GeometryName", "com_icon_alliance_flag")
-	SetProperty("flag2", "GeometryName", "com_icon_empire_flag")
-	SetProperty("flag1", "CarriedGeometryName", "com_icon_alliance_flag_carried")
-	SetProperty("flag2", "CarriedGeometryName", "com_icon_empire_flag_carried")
-	SetClassProperty("com_item_flag", "DroppedColorize", 1)
+
+	-- define flag geometry
+	setFlagGeometry{allFlagName = "flag1", impFlagName = "flag2"}
 
 	-- create objective
-    ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
-						   captureLimit = 5, 
-						   textATT = "game.modes.CTF", 
-						   textDEF = "game.modes.CTF2", 
-						   hideCPs = true, 
-						   multiplayerRules = true}
-    
-	-- add flags to objective
-	ctf:AddFlag{name = "flag1", homeRegion = "flag1_home", captureRegion = "flag2_home",
-                capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-    ctf:AddFlag{name = "flag2", homeRegion = "flag2_home", captureRegion = "flag1_home",
-                capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
+	ctf = createCTFObjective{teamATTName = "all", teamDEFName = "imp",
+							 allHomeRegion = "flag1_home", allCaptureRegion = "flag2_home",
+							 impHomeRegion = "flag2_home", impCaptureRegion = "flag1_home"}
 				
 	-- start objective
     ctf:Start()

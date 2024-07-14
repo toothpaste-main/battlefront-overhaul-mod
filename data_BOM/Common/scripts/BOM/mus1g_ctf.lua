@@ -6,8 +6,9 @@
 ScriptCB_DoFile("objectivectf")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BBP assets
 ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_urban")
 ScriptCB_DoFile("bomgcw_imp")
 
@@ -244,7 +245,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("mus\\mus1.lvl", "mus1_ctf")
 	
 	-- ceiling and floor limit
@@ -334,7 +335,7 @@ function ScriptInit()
 	
 	-- out of bounds warning
 	SetOutOfBoundsVoiceOver(ALL, "allleaving")
-	SetOutOfBoundsVoiceOver(ALL, "impleaving")
+	SetOutOfBoundsVoiceOver(IMP, "impleaving")
 
 	------------------------------------------------
 	------------   LEVEL SOUNDS   ------------------
@@ -424,33 +425,16 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
    
-	SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
-	
 	-- define flag geometry
-	SetProperty("FLAG1", "GeometryName", "com_icon_alliance_flag")
-	SetProperty("FLAG1", "CarriedGeometryName", "com_icon_alliance_flag_carried")
-	SetProperty("FLAG2", "GeometryName", "com_icon_empire_flag")
-	SetProperty("FLAG2", "CarriedGeometryName", "com_icon_empire_flag_carried")
-	SetClassProperty("com_item_flag", "DroppedColorize", 1)
-	
+	setFlagGeometry{allFlagName = "FLAG1", impFlagName = "FLAG2"}
+
 	-- create objective
-	ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
-						   textATT = "game.modes.ctf", 
-						   textDEF = "game.modes.ctf2",  
-						   captureLimit = 5,
-						   hideCPs = true,
-						   multiplayerRules = true}
-	
-	-- add flags to the objective
-	ctf:AddFlag{name = "FLAG1", homeRegion = "FLAG1_HOME", captureRegion = "FLAG2_HOME",
-				capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-				icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-	ctf:AddFlag{name = "FLAG2", homeRegion = "FLAG2_HOME", captureRegion = "FLAG1_HOME",
-				capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-				icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-	
+	ctf = createCTFObjective{teamATTName = "imp", teamDEFName = "all",
+							 allHomeRegion = "FLAG1_HOME", allCaptureRegion = "FLAG2_HOME",
+							 impHomeRegion = "FLAG2_HOME", impCaptureRegion = "FLAG1_HOME"}
+				
 	-- start objective
-	ctf:Start()
+    ctf:Start()
 	
 	
 	------------------------------------------------

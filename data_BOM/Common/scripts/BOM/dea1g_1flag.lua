@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_fleet")
 ScriptCB_DoFile("bomgcw_imp_fleet")
 
@@ -249,7 +250,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("dea\\dea1.lvl", "dea1_CTF-SingleFlag")
 	
 	-- ceiling and floor limit
@@ -334,13 +335,13 @@ function ScriptInit()
     AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
     
 	-- announcer quick
-    voiceQuick = OpenAudioStream("sound\\global.lvl",  "all_unit_vo_quick")
-    AudioStreamAppendSegments("sound\\global.lvl",  "imp_unit_vo_quick", voiceQuick)
+    voiceQuick = OpenAudioStream("sound\\global.lvl", "all_unit_vo_quick")
+    AudioStreamAppendSegments("sound\\global.lvl", "imp_unit_vo_quick", voiceQuick)
     
 	-- winning/losing announcement
 	SetBleedingVoiceOver(ALL, ALL, "all_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing",   1)
-    SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing", 1)
+    SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing", 1)
     SetBleedingVoiceOver(IMP, IMP, "imp_off_com_report_us_overwhelmed", 1)
 	
 	-- out of bounds warning
@@ -441,17 +442,11 @@ function ScriptPostLoad()
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
-    
-    SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
-  
-	-- create objective
-    ctf = ObjectiveOneFlagCTF:New{teamATT = ATT, teamDEF = DEF,
-           textATT = "game.modes.1flag", textDEF = "game.modes.1flag2",
-           captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-           flagIconScale = 3.0, homeRegion = "Flag_Home",
-           captureRegionATT = "Team2Cap", captureRegionDEF = "Team1Cap",
-           capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
-           capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, multiplayerRules = true, hideCPs = true}
+    	
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "all", teamDEFName = "imp",
+								 flagName = "flag", homeRegion = "Flag_Home",
+							     attCaptureRegion = "Team2Cap", defCaptureRegion = "Team1Cap"}
 	
 	-- start objective
     ctf:Start()

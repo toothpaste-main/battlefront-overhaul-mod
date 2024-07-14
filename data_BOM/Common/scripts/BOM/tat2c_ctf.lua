@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
-ScriptCB_DoFile("bom_cmn") 
+-- load BBP assets
+ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomcw_ep3") 
 
 -- these variables do not change
@@ -273,7 +274,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("TAT\\tat2.lvl", "tat2_ctf")
 	
 	-- ceiling and floor limit
@@ -447,28 +448,13 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
 	
-	SoundEvent_SetupTeams(REP, 'rep', CIS, 'cis')
-	
 	-- define flag geometry
-    SetProperty("ctf_flag1", "GeometryName", "com_icon_cis_flag")
-    SetProperty("ctf_flag1", "CarriedGeometryName", "com_icon_cis_flag_carried")
-    SetProperty("ctf_flag2", "GeometryName", "com_icon_republic_flag")
-    SetProperty("ctf_flag2", "CarriedGeometryName", "com_icon_republic_flag_carried")
-	
+	setFlagGeometry{repFlagName = "ctf_flag2", cisFlagName = "ctf_flag1"}
+
 	-- create objective
-	ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
-						   textATT = "game.modes.CTF", textDEF = "game.modes.CTF2", 
-						   captureLimit = 5,
-						   hideCPs = true,
-						   multiplayerRules = true}
-						   
-	-- add flags to the objective
-	ctf:AddFlag{name = "ctf_flag1", homeRegion = "flag1_home", captureRegion = "flag2_home",
-			capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-			icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-	ctf:AddFlag{name = "ctf_flag2", homeRegion = "flag2_home", captureRegion = "flag1_home",
-			capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-			icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
+	ctf = createCTFObjective{teamATTName = "cis", teamDEFName = "rep",
+							 repHomeRegion = "flag2_home", repCaptureRegion = "flag1_home",
+							 cisHomeRegion = "flag1_home", cisCaptureRegion = "flag2_home"}
 
 	-- start objective
 	ctf:Start()

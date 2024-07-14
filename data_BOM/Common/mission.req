@@ -50,14 +50,14 @@ ucft
 		"bomgcw_all_urban"
 		"bomgcw_all_urban_pilot"
 		
-		"bomgcw_REP"
-		"bomgcw_REP_army"
-		"bomgcw_REP_army_pilot"
-		"bomgcw_REP_atat"
-		"bomgcw_REP_atat_snow"
-		"bomgcw_REP_atst"	
-		"bomgcw_REP_fleet"
-		"bomgcw_REP_pilot"
+		"bomgcw_imp"
+		"bomgcw_imp_army"
+		"bomgcw_imp_army_pilot"
+		"bomgcw_imp_atat"
+		"bomgcw_imp_atat_snow"
+		"bomgcw_imp_atst"	
+		"bomgcw_imp_fleet"
+		"bomgcw_imp_pilot"
     }
 
     REQN

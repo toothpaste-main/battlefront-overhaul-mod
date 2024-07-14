@@ -1,6 +1,8 @@
 --
 -- Battlefront Overhaul Mod
+-- Author: ToothpasteMain
 --
+print("Loading bomgcw_imp_fleet.lua...")
 
 
 ------------------------------------------------

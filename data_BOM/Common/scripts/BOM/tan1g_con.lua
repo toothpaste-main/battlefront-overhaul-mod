@@ -346,8 +346,8 @@ function ScriptInit()
 	SetLowReinforcementsVoiceOver(IMP, ALL, "imp_off_victory_im", .1, 1)
 	
 	-- out of bounds warning
-	SetOutOfBoundsVoiceOver(all, "allleaving")
-	SetOutOfBoundsVoiceOver(imp, "impleaving")
+	SetOutOfBoundsVoiceOver(ALL, "allleaving")
+	SetOutOfBoundsVoiceOver(IMP, "impleaving")
 	
 	
 	------------------------------------------------

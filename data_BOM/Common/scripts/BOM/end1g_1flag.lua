@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn") 
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_jungle")
 ScriptCB_DoFile("bomgcw_imp")
 
@@ -277,7 +278,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 1		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("end\\end1.lvl", "end1_1flag")
 	
 	-- ceiling and floor limit
@@ -366,8 +367,8 @@ function ScriptInit()
 
 	-- winning/losing announcement
 	SetBleedingVoiceOver(ALL, ALL, "all_off_com_report_us_overwhelmed", 1)
-	SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing",	1)
-	SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing",	1)
+	SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing", 1)
+	SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing", 1)
 	SetBleedingVoiceOver(IMP, IMP, "imp_off_com_report_us_overwhelmed", 1)
 
 	-- out of bounds warning
@@ -431,25 +432,19 @@ function ScriptPostLoad()
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
+		
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "all", teamDEFName = "imp",
+								 flagName = "flag", homeRegion = "team1_capture",
+							     attCaptureRegion = "team1_capture", defCaptureRegion = "team2_capture"}
 	
-	SoundEvent_SetupTeams( ALL, 'all', IMP, 'imp')
-	
-	-- create objective
-	ctf = ObjectiveOneFlagCTF:New{teamATT = ATT, teamDEF = DEF,
-							textATT = "game.modes.1flag", textDEF = "game.modes.1flag2",
-							captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-							flagIconScale = 3.0, homeRegion = "team1_capture",
-							capRegionWorldATT = "com_bldg_ctfbase", capRegionWorldDEF = "com_bldg_ctfbase1",
-							captureRegionATT = "team1_capture", captureRegionDEF = "team2_capture",
-							capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
-							capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, multiplayerRules = true, hideCPs = true}
-	
+	-- set AI goals
+	AddAIGoal(EWK, "deathmatch", 100)
 	
 	-- start objective
 	ctf:Start()
 	
-	-- set AI goals
-	AddAIGoal(EWK, "deathmatch", 100)
+	
 	
 	------------------------------------------------
 	------------   MISC   --------------------------

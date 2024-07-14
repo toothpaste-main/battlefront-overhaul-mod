@@ -5,6 +5,8 @@
 -- Common constants across all maps, modes, and 
 -- eras.
 --
+print("Loading bom_cmn.lua...")
+
 
 PS2_MEMORY = 4000000 -- 4MB
 

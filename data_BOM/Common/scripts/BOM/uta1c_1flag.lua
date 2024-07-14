@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn") 
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomcw_ep3")
 
 -- these variables do not change
@@ -246,7 +247,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("uta\\uta1.lvl", "uta1_1flag")
 	
 	-- ceiling and floor limit
@@ -404,19 +405,11 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
 
-    SoundEvent_SetupTeams(REP, 'rep', CIS, 'cis')
-
-	-- create objective
-    ctf = ObjectiveOneFlagCTF:New{teamATT = ATT, teamDEF = DEF,
-								  textATT = "game.modes.1flag", textDEF = "game.modes.1flag2",
-								  captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-								  flagIconScale = 3.0, homeRegion = "flag_home",
-								  captureRegionATT = "Flag_capture1", captureRegionDEF = "Flag_capture2",
-								  capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
-								  capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, 
-								  hideCPs = true,
-								  multiplayerRules = true}
-    
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "rep", teamDEFName = "cis",
+								 flagName = "flag", homeRegion = "flag_home",
+							     attCaptureRegion = "Flag_capture1", defCaptureRegion = "Flag_capture2"}
+	
 	-- start objective
 	ctf:Start()
 	

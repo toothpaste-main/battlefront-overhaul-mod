@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn") 
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomcw_ep3_shiny") 
 
 -- these variables do not change
@@ -249,7 +250,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("KAM\\kam1.lvl", "kamino1_1CTF")
 	
 	-- ceiling and floor limit
@@ -401,112 +402,116 @@ function ScriptInit()
 
 end
 
+
+-- PostLoad, this is all done after all loading, etc.
 function ScriptPostLoad()
-KillObject("cp2")
-KillObject("cp1")
 
-    SetProperty("cp11", "Team", "2")
-    SetProperty("cp22", "Team", "1")        
-    SetProperty("cp22", "SpawnPath", "NEW")
-    SetProperty("cp22", "captureregion", "death")
-    SetProperty("cp11", "captureregion", "death")
-    SetProperty("CP4", "HUDIndexDisplay", 0)
-    KillObject("cp3")
-    KillObject("CP4")
-    KillObject("CP5")
-    --SetProperty("FDL-2", "IsLocked", 1)
-    --SetProperty("cp4", "IsVisible", 0)
-   
-    SetProperty("cp6", "Team", "2")
-    SetProperty("cp7", "Team", "1")
+	------------------------------------------------
+	------------   OUT OF BOUNDS   -----------------
+	------------------------------------------------
+	
+	-- death regions
+	AddDeathRegion("deathregion")
+	
+	-- remove AI barriers	
+	DisableBarriers("frog")
+	DisableBarriers("close")
+	DisableBarriers("camp")
+    DisableBarriers("open")
+	DisableBarriers("FRONTDOOR2-3")
+    DisableBarriers("FRONTDOOR2-1")  
+    DisableBarriers("FRONTDOOR2-2")
+	DisableBarriers("FRONTDOOR1-3")
+    DisableBarriers("FRONTDOOR1-1")  
+    DisableBarriers("FRONTDOOR1-2")	
+	
+	
+	------------------------------------------------
+	------------   MAP INTERACTION   ---------------
+	------------------------------------------------
 
+	-- kill uncessary CPs
+	KillObject("cp2")
+	KillObject("cp1")
+	SetProperty("cp11", "IsVisible", "1")
+	SetProperty("cp11", "Team", "2")
+	SetProperty("cp22", "Team", "1")		
+	SetProperty("cp22", "SpawnPath", "NEW")
+	SetProperty("cp22", "captureregion", "death")
+	SetProperty("cp11", "captureregion", "death")
+	SetProperty("CP4", "HUDIndexDisplay", 0)
+	KillObject("cp3")
+	KillObject("CP4")
+	KillObject("CP5")
+	--SetProperty("FDL-2", "IsLocked", 1)
+	--SetProperty("cp4", "IsVisible", 0)
 
-    SetProperty("Kam_Bldg_Podroom_Door33", "Islocked", 1)
-        SetProperty("Kam_Bldg_Podroom_Door32", "Islocked", 1)
-                SetProperty("Kam_Bldg_Podroom_Door34", "Islocked", 1)
-    SetProperty("Kam_Bldg_Podroom_Door35", "Islocked", 1)
-        SetProperty("Kam_Bldg_Podroom_Door27", "Islocked", 0)       
-            SetProperty("Kam_Bldg_Podroom_Door28", "Islocked", 1)       
-    SetProperty("Kam_Bldg_Podroom_Door36", "Islocked", 1)
-        SetProperty("Kam_Bldg_Podroom_Door20", "Islocked", 0)
-    UnblockPlanningGraphArcs("connection71")
-        
-   --Objective1
-    UnblockPlanningGraphArcs("connection85")
-        UnblockPlanningGraphArcs("connection48")
-            UnblockPlanningGraphArcs("connection63")
-                UnblockPlanningGraphArcs("connection59")
-                         UnblockPlanningGraphArcs("close")
-                         UnblockPlanningGraphArcs("open")
-                         DisableBarriers("frog")
-                         DisableBarriers("close")
-                         DisableBarriers("open")
-        
-    --blocking Locked Doors
-    UnblockPlanningGraphArcs("connection194");
-        UnblockPlanningGraphArcs("connection200");
-            UnblockPlanningGraphArcs("connection118");
-               DisableBarriers("FRONTDOOR2-3");
-                DisableBarriers("FRONTDOOR2-1");  
-                 DisableBarriers("FRONTDOOR2-2");  
-   
-    --Lower cloning facility
-    UnblockPlanningGraphArcs("connection10")
-        UnblockPlanningGraphArcs("connection159")
-            UnblockPlanningGraphArcs("connection31")
-               DisableBarriers("FRONTDOOR1-3")
-                DisableBarriers("FRONTDOOR1-1")  
-                 DisableBarriers("FRONTDOOR1-2")
-    
-    SetAIDamageThreshold("Comp1", 0 )
+	SetAIDamageThreshold("Comp1", 0 )
     SetAIDamageThreshold("Comp2", 0 )
     SetAIDamageThreshold("Comp3", 0 )
     SetAIDamageThreshold("Comp4", 0 )
     SetAIDamageThreshold("Comp5", 0 )
+  	SetAIDamageThreshold("Comp6", 0 )
+    SetAIDamageThreshold("Comp7", 0 )
+    SetAIDamageThreshold("Comp8", 0 )
+    SetAIDamageThreshold("Comp9", 0 )
+    SetAIDamageThreshold("Comp10", 0 )
 
-
-
-    
     UnblockPlanningGraphArcs("connection71")
-        
-   --Objective1
+
+	SetProperty("Kam_Bldg_Podroom_Door32", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door33", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door32", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door34", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door35", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door27", "Islocked", 0)       
+    SetProperty("Kam_Bldg_Podroom_Door28", "Islocked", 1)       
+    SetProperty("Kam_Bldg_Podroom_Door36", "Islocked", 1)
+    SetProperty("Kam_Bldg_Podroom_Door20", "Islocked", 0)
+    
+	UnblockPlanningGraphArcs("connection71")
+    
+	--Objective1
     UnblockPlanningGraphArcs("connection85")
-        UnblockPlanningGraphArcs("connection48")
-            UnblockPlanningGraphArcs("connection63")
-                UnblockPlanningGraphArcs("connection59")
-                    UnblockPlanningGraphArcs("close")
-                        UnblockPlanningGraphArcs("open")
-                            DisableBarriers("frog")
-                         DisableBarriers("close")
-                         DisableBarriers("open")
-        
+    UnblockPlanningGraphArcs("connection48")
+    UnblockPlanningGraphArcs("connection63")
+    UnblockPlanningGraphArcs("connection59")
+    UnblockPlanningGraphArcs("close")
+    UnblockPlanningGraphArcs("open")
+    
     --blocking Locked Doors
-    UnblockPlanningGraphArcs("connection194");
-        UnblockPlanningGraphArcs("connection200");
-            UnblockPlanningGraphArcs("connection118");
-               DisableBarriers("FRONTDOOR2-3");
-                DisableBarriers("FRONTDOOR2-1");  
-                 DisableBarriers("FRONTDOOR2-2");  
+    UnblockPlanningGraphArcs("connection194")
+    UnblockPlanningGraphArcs("connection200")
+    UnblockPlanningGraphArcs("connection118")
    
     --Lower cloning facility
     UnblockPlanningGraphArcs("connection10")
-        UnblockPlanningGraphArcs("connection159")
-            UnblockPlanningGraphArcs("connection31")
-               DisableBarriers("FRONTDOOR1-3")
-                DisableBarriers("FRONTDOOR1-1")  
-                 DisableBarriers("FRONTDOOR1-2")
+    UnblockPlanningGraphArcs("connection159")
+    UnblockPlanningGraphArcs("connection31")
+	
+	BlockPlanningGraphArcs("group1");
+	BlockPlanningGraphArcs("connection165")
+    BlockPlanningGraphArcs("connection162")
+    BlockPlanningGraphArcs("connection160")
+    BlockPlanningGraphArcs("connection225")
     
-   EnableSPHeroRules()
-   SoundEvent_SetupTeams( 1, 'rep', 2, 'cis' )
-        --This is the actual objective setup
-    ctf = ObjectiveOneFlagCTF:New{teamATT = 1, teamDEF = 2,
-                           textATT = "game.modes.1flag", textDEF = "game.modes.1flag2", 
-                           captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-                           flagIconScale = 3.0, homeRegion = "flag_home",
-                           captureRegionATT = "lag_capture2", captureRegionDEF = "lag_capture1",
-                           capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
-                           capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, hideCPs = true, multiplayerRules = true}
+	
+	------------------------------------------------
+	------------   INITIALIZE OBJECTIVE   ----------
+	------------------------------------------------
+    
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "cis", teamDEFName = "rep",
+								 flagName = "flag", homeRegion = "flag_home",
+							     attCaptureRegion = "lag_capture2", defCaptureRegion = "lag_capture1"}
+	
+	-- start objective
     ctf:Start()
+	
 
-  
+	------------------------------------------------
+	------------   MISC   --------------------------
+	------------------------------------------------
+
+    EnableSPHeroRules()
 end

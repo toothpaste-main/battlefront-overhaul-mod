@@ -1,4 +1,10 @@
 Logging LevelPack
-14:16:3707/12/24
+09:37:4307/14/24
+
+=== inshell.lvl ===
+Missing file explode3.texture
+    Reqd by ..\..\common\inshell.req
+Missing file thicksmoke3.texture
+    Reqd by ..\..\common\inshell.req
    0 Errors    0 Warnings
 

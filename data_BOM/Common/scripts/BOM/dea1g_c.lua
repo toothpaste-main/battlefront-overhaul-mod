@@ -375,8 +375,8 @@ function ScriptInit()
     SetLowReinforcementsVoiceOver(IMP, ALL, "imp_off_victory_im", .1, 1)
 
 	-- out of bounds warning
-    SetOutOfBoundsVoiceOver(1, "impleaving")
-    SetOutOfBoundsVoiceOver(2, "allleaving")
+	SetOutOfBoundsVoiceOver(ALL, "allleaving")
+    SetOutOfBoundsVoiceOver(IMP, "impleaving")
 
 
 	------------------------------------------------
@@ -384,9 +384,9 @@ function ScriptInit()
 	------------------------------------------------
     
 	-- open ambient streams
-	OpenAudioStream("sound\\global.lvl",  "gcw_music")
-    OpenAudioStream("sound\\dea.lvl",  "dea1")
-    OpenAudioStream("sound\\dea.lvl",  "dea1")
+	OpenAudioStream("sound\\global.lvl", "gcw_music")
+    OpenAudioStream("sound\\dea.lvl", "dea1")
+    OpenAudioStream("sound\\dea.lvl", "dea1")
 	
 	-- game over song
 	SetVictoryMusic(ALL, "all_dea_amb_victory")

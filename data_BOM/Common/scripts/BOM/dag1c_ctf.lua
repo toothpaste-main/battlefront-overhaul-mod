@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP constants
-ScriptCB_DoFile("bom_cmn") 
+-- load BBP assets
+ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomcw_ep3_marinejungle") 
 
 -- these variables do not change
@@ -246,7 +247,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 2		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 1		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("dag\\dag1.lvl", "dag1_ctf")
 	ReadDataFile("dag\\dag1.lvl", "dag1_cw") -- for gunship
 	
@@ -423,6 +424,14 @@ function ScriptPostLoad()
                 capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
                 icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
     
+	-- define flag geometry
+	setFlagGeometry{repFlagName = "ctf_flag1", cisFlagName = "ctf_flag2"}
+
+	-- create objective
+	ctf = createCTFObjective{teamATTName = "rep", teamDEFName = "cis",
+							 repHomeRegion = "flag1_home", repCaptureRegion = "flag2_home",
+							 cisHomeRegion = "flag2_home", cisCaptureRegion = "flag1_home"}
+	
 	-- start objective
 	ctf:Start()
 	

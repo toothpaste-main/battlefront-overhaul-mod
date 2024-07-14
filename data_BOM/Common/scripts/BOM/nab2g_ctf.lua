@@ -6,8 +6,9 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams") 
 
--- load BBP constants
+-- load BBP assets
 ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_urban")
 ScriptCB_DoFile("bomgcw_imp")
 
@@ -252,7 +253,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("NAB\\nab2.lvl","naboo2_CTF")
 	
 	-- ceiling and floor limit
@@ -423,25 +424,14 @@ function ScriptPostLoad()
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
-    
-	SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
 	
 	-- define flag geometry
-	SetProperty("flag1", "GeometryName", "com_icon_empire_flag")
-	SetProperty("flag1", "CarriedGeometryName", "com_icon_empire_flag_carried")
-	SetProperty("flag2", "GeometryName", "com_icon_alliance_flag")
-	SetProperty("flag2", "CarriedGeometryName", "com_icon_alliance_flag_carried")
-	SetClassProperty("com_item_flag_carried", "DroppedColorize", 1)
+	setFlagGeometry{allFlagName = "flag1", impFlagName = "flag2"}
 
-    -- create objective
-    ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
-						   textATT = "game.modes.CTF", textDEF = "game.modes.CTF2", 
-						   hideCPs = true, 
-						   multiplayerRules = true}
-    
-	-- add flags to the objective
-	ctf:AddFlag{name = "flag1", homeRegion = "FlagHome1", captureRegion = "FlagHome2"}
-    ctf:AddFlag{name = "flag2", homeRegion = "FlagHome2", captureRegion = "FlagHome1"}
+	-- create objective
+	ctf = createCTFObjective{teamATTName = "all", teamDEFName = "imp",
+							 allHomeRegion = "FlagHome1", allCaptureRegion = "FlagHome2",
+							 impHomeRegion = "FlagHome2", impCaptureRegion = "FlagHome1"}
 	
 	-- start objective
     ctf:Start()

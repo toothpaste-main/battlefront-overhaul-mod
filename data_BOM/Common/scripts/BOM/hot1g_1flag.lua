@@ -6,15 +6,16 @@
 ScriptCB_DoFile("setup_teams")
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 
--- load BBP constants
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn") 
+ScriptCB_DoFile("bom_ctf")
 ScriptCB_DoFile("bomgcw_all_snow_pilot")
 ScriptCB_DoFile("bomgcw_imp_atat_snow")
 
---  These variables do not change
+-- these variables do not change
 local ATT = 1
 local DEF = 2
---  Empire Attacking (attacker is always #1)
+-- empire attacking (attacker is always #1)
 local ALL = DEF
 local IMP = ATT
 
@@ -257,7 +258,7 @@ function ScriptInit()
 	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
 	local NUM_FISH_TYPES = 0		-- 1 fish
 	
-	-- load gamemode
+	-- load gamemode map layer
 	ReadDataFile("HOT\\hot1.lvl", "hoth_ctf")
 	
 	-- ceiling and floor limit
@@ -441,18 +442,12 @@ function ScriptPostLoad()
 
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
-	------------------------------------------------
+	------------------------------------------------       
 	
-	SoundEvent_SetupTeams(ALL, 'all', IMP, 'imp')
-
-	-- create objective
-    ctf = ObjectiveOneFlagCTF:New{teamATT = 1, teamDEF = 2,
-								  textATT = "game.modes.1flag", textDEF = "game.modes.1flag2", hideCPs = true, multiplayerRules = true, 
-								  captureLimit = 5, flag = "flag", flagIcon = "flag_icon", 
-								  flagIconScale = 3.0, homeRegion = "HomeRegion",
-								  captureRegionATT = "Team2Capture", captureRegionDEF = "Team1Capture",
-								  capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
-								  capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0}             
+	-- create objective		   
+	ctf = createOneFlagObjective{teamATTName = "imp", teamDEFName = "all",
+								 flagName = "flag", homeRegion = "HomeRegion",
+							     attCaptureRegion = "Team2Capture", defCaptureRegion = "Team1Capture"}
 	
 	-- start objective
     ctf:Start()
