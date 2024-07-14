@@ -1,10 +1,10 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain 
--- Version: v1.0
+-- Version: v1.1
 --
 -- Constants and functions related to both the 
--- CTF and 1-Flag game modes.
+-- 1-Flag and 2-Flag CTF game modes.
 --
 print("Loading bom_ctf.lua...")
 
