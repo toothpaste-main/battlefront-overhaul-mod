@@ -1,7 +1,7 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain 
--- Version: v1.1
+-- Version: v1.2
 --
 -- Constants and functions related to both the 
 -- 1-Flag and 2-Flag CTF game modes.
@@ -200,36 +200,36 @@ function setFlagGeometry(params)
 	setFlagNames(params)
 	
 	-- log when geometry set
-	local function printToLog(team)
-		print("Set flag geometry for: " .. team)
+	local function printToLog(flag, team)
+		print("Set flag geometry for: " .. flag .. " as " .. team)
 	end
 	
 	-- alliance
 	if flagNames.allFlagName then
 		SetProperty(flagNames.allFlagName, "GeometryName", ALL_GEO_NAME)
 		SetProperty(flagNames.allFlagName, "CarriedGeometryName", ALL_GEO_NAME_CARRIED)
-		printToLog("alliance")
+		printToLog(flagNames.allFlagName, "alliance")
 	end
 	
 	-- cis
 	if flagNames.cisFlagName then
 		SetProperty(flagNames.cisFlagName, "GeometryName", CIS_GEO_NAME)
 		SetProperty(flagNames.cisFlagName, "CarriedGeometryName", CIS_GEO_NAME_CARREID)
-		printToLog("cis")
+		printToLog(flagNames.cisFlagName, "cis")
 	end
 	
 	-- empire
 	if flagNames.impFlagName then
 		SetProperty(flagNames.impFlagName, "GeometryName", IMP_GEO_NAME)
 		SetProperty(flagNames.impFlagName, "CarriedGeometryName", IMP_GEO_NAME_CARRIED)
-		printToLog("empire")
+		printToLog(flagNames.impFlagName, "empire")
 	end
 	
 	-- republic
 	if flagNames.repFlagName then
 		SetProperty(flagNames.repFlagName, "GeometryName", REP_GEO_NAME)
 		SetProperty(flagNames.repFlagName, "CarriedGeometryName", REP_GEO_NAME_CARREID)
-		printToLog("republic")
+		printToLog(flagNames.repFlagName, "republic")
 	end
 	
 	-- set flag visibility when dropped
@@ -308,8 +308,8 @@ function createCTFObjective(params)
 	setCaptureRegions(params)
 	
 	-- log when flag is added
-	local function printToLog(team)
-		print("Added flag to CTF objective: " .. team)
+	local function printToLog(flag, team)
+		print("Added flag " .. flag .. " to CTF objective as " .. team)
 	end
 	
 	-- add alliance flag
@@ -318,7 +318,7 @@ function createCTFObjective(params)
 					homeRegion = params.allHomeRegion, captureRegion = captureRegions.allCaptureRegion,
 					capRegionMarker = CAP_REG_MRK, capRegionMarkerScale = CAP_REG_MRK_SCL, 
 					icon = ICON, mapIcon = FLAG_ICON, mapIconScale = FLAG_ICON_SCL}
-		printToLog("alliance")
+		printToLog(flagNames.allFlagName, "alliance")
 	end
     
 	-- add cis flag
@@ -327,7 +327,7 @@ function createCTFObjective(params)
 					homeRegion = params.cisHomeRegion, captureRegion = captureRegions.cisCaptureRegion,
 					capRegionMarker = CAP_REG_MRK, capRegionMarkerScale = CAP_REG_MRK_SCL, 
 					icon = ICON, mapIcon = FLAG_ICON, mapIconScale = FLAG_ICON_SCL}
-		printToLog("cis")
+		printToLog(flagNames.cisFlagName, "cis")
 	end
 	
 	-- add empire flag
@@ -336,7 +336,7 @@ function createCTFObjective(params)
 					homeRegion = params.impHomeRegion, captureRegion = captureRegions.impCaptureRegion,
 					capRegionMarker = CAP_REG_MRK, capRegionMarkerScale = CAP_REG_MRK_SCL, 
 					icon = ICON, mapIcon = FLAG_ICON, mapIconScale = FLAG_ICON_SCL}
-		printToLog("empire")
+		printToLog(flagNames.impFlagName, "empire")
 	end
 	
 	-- add republic flag
@@ -345,7 +345,7 @@ function createCTFObjective(params)
 					homeRegion = params.repHomeRegion, captureRegion = captureRegions.repCaptureRegion,
 					capRegionMarker = CAP_REG_MRK, capRegionMarkerScale = CAP_REG_MRK_SCL, 
 					icon = ICON, mapIcon = FLAG_ICON, mapIconScale = FLAG_ICON_SCL}
-		printToLog("republic")
+		printToLog(flagNames.repFlagName, "republic")
 	end
 	
 	return ctf
