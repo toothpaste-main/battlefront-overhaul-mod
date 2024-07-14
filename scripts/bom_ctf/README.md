@@ -12,7 +12,7 @@ The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creati
 - 35 parameters set -> 6 parameters set
 
 > [!NOTE]
-> Logging is implemented that checks if all the necessary variables have been passed, and when functions are called.
+> Logging is implemented for when functions complete successfully. If required variables are missing, errors will be thrown that inform you of what was missed.
 
 ## To install:
 1. Move `bom_ctf.lau` to `data_ABC\Common\Scripts\`, where "data_ABC is your project 
