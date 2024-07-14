@@ -8,7 +8,7 @@ The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creati
 
 ### 2-Flag CTF Simplicity
 
-- 3 function calls -> 2 function calls
+- 9 function calls -> 2 function calls
 - 35 parameters set -> 6 parameters set
 
 > [!NOTE]
