@@ -14,17 +14,9 @@
 
 -- load the gametype script
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
-ScriptCB_DoFile("setup_teams")
 
 -- load BBP assets
 ScriptCB_DoFile("bom_ctf")
-
--- these variables do not change
-local ATT = 1
-local DEF = 2
--- republic attacking (attacker is always #1)
-local REP = ATT
-local CIS = DEF
 
 
 ---------------------------------------------------------------------------
@@ -59,11 +51,4 @@ function ScriptPostLoad()
 	
 	-- start objective
     ctf:Start()
-	
-	
-	------------------------------------------------
-	------------   MISC   --------------------------
-	------------------------------------------------
-    
-	EnableSPHeroRules()
 end
