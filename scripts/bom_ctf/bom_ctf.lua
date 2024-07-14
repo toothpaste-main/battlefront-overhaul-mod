@@ -3,8 +3,8 @@
 -- Author: ToothpasteMain 
 -- Version: v1.0
 --
--- Constants related to both the CTF and 1-Flag
--- game modes.
+-- Constants and functions related to both the 
+-- CTF and 1-Flag game modes.
 --
 print("Loading bom_ctf.lua...")
 
@@ -40,6 +40,7 @@ local TEXT_DEF_1FLAG = "game.modes.1flag2"
 -- capture limit
 local CAP_LIMIT_1FLAG = 5
 
+-- misc
 local HIDE_CPS_1FLAG = true
 local MULTIPLAYER_RULES_1FLAG = true
 
@@ -54,6 +55,7 @@ local TEXT_DEF_CTF = "game.modes.ctf2"
 -- caputure limit
 local CAP_LIMIT_CTF = 5
 
+-- misc
 local HIDE_CPS_CTF = true
 local MULTIPLAYER_RULES_CTF = true
 
@@ -104,9 +106,9 @@ function setCaptureRegions(params)
 	if params.impCaptureRegion then captureRegions.impCaptureRegion = params.impCaptureRegion end
 	if params.repCaptureRegion then captureRegions.repCaptureRegion = params.repCaptureRegion end
 	
-	-- check for enough names
+	-- check for enough capture regions
 	do			
-		-- count how many flag names were provided
+		-- count how many capture regions were provided
 		local flagCount = 0
 		for _ in pairs(captureRegions) do flagCount = flagCount + 1 end
 		
@@ -170,9 +172,9 @@ function setHomeRegions(params)
 	if params.impHomeRegion then homeRegions.impHomeRegion = params.impHomeRegion end
 	if params.repHomeRegion then homeRegions.repHomeRegion = params.repHomeRegion end
 	
-	-- check for enough names
+	-- check for enough home regions
 	do			
-		-- count how many flag names were provided
+		-- count how many home regions were provided
 		local flagCount = 0
 		for _ in pairs(homeRegions) do flagCount = flagCount + 1 end
 		
@@ -307,7 +309,7 @@ function createCTFObjective(params)
 	
 	-- log when flag is added
 	local function printToLog(team)
-		print("Added flag to the CTF objective: " .. team)
+		print("Added flag to CTF objective: " .. team)
 	end
 	
 	-- add alliance flag
