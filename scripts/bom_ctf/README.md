@@ -1,4 +1,4 @@
-# Reusable CTF Script
+# Battlefront Overhaul Mod: CTF Script
 
 The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creating CTF game modes. Templates are provided for using the script in both 1-flag and 2-flag CTF. 
 
