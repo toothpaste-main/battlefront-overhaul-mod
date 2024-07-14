@@ -374,6 +374,7 @@ function createOneFlagObjective(params)
 							      textATT = TEXT_ATT_1FLAG, textDEF = TEXT_DEF_1FLAG,
 								  flag = oneFlag.flagName, homeRegion = oneFlag.homeRegion,
 								  captureRegionATT = oneFlag.attCaptureRegion, captureRegionDEF = oneFlag.defCaptureRegion,
+								  --capRegionWorldATT = "1flag_effect2", capRegionWorldDEF = "1flag_effect1", seed on tat3g_1flag
 								  capRegionMarkerATT = CAP_REG_MRK_ATT, capRegionMarkerDEF = CAP_REG_MRK_DEF,
 								  capRegionMarkerScaleATT = CAP_REG_MRK_ATT_SCL, capRegionMarkerScaleDEF = CAP_REG_MRK_DEF_SCL,
 								  flagIcon = FLAG_ICON, flagIconScale = FLAG_ICON_SCL, 
