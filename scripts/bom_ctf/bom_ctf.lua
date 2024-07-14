@@ -1,10 +1,13 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain 
--- Version: v1.2
+-- Version: v1.3
 --
 -- Constants and functions related to both the 
--- 1-Flag and 2-Flag CTF game modes.
+-- 1-Flag and 2-Flag CTF game modes. The
+-- function order matters otherwise you will
+-- get runtime errors. I know, alphabetical
+-- would be easier for debugging. Use ctrl+F.
 --
 print("Loading bom_ctf.lua...")
 
@@ -88,35 +91,128 @@ local REP_GEO_NAME_CARREID = "com_icon_republic_flag_carried"
 
 
 ---------------------------------------------------------------------------
--- FUNCTION:    setCaptureRegions
--- PURPOSE:     Saves names of capture regions to local memory
--- INPUT:		params = {allCaptureRegion = "", cisCaptureRegion = "", 
---						  impCaptureRegion = "", repCaptureRegion = ""} 
+-- FUNCTION:    setTeamNumbers
+-- PURPOSE:     Saves team numbers to local memory
+-- INPUT:		params = {teamATT = "", teamDEF = ""} 
 -- OUTPUT:
--- NOTES:       There is an expected number of capture regions provided set
---				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
---				an error is thrown. That is, unless the capture regions
---				have been previously saved.
+-- NOTES:       It is expected two team numbers are provided. If the they
+-- 				are not provided or are previously saved, then they will be
+--				set to default values.
 ---------------------------------------------------------------------------
-local captureRegions = {}
-function setCaptureRegions(params)
-	-- alliance, cis, empire, republic
-	if params.allCaptureRegion then captureRegions.allCaptureRegion = params.allCaptureRegion end
-	if params.cisCaptureRegion then captureRegions.cisCaptureRegion = params.cisCaptureRegion end
-	if params.impCaptureRegion then captureRegions.impCaptureRegion = params.impCaptureRegion end
-	if params.repCaptureRegion then captureRegions.repCaptureRegion = params.repCaptureRegion end
+local teamNumbers = {}
+function setTeamNumbers(params)
 	
-	-- check for enough capture regions
+	-- constants of life
+	local ATT = 1 -- attacker is always #1
+	local DEF = 2
+	
+	-- check if enough team numbers are provided or previously set
 	do			
-		-- count how many capture regions were provided
-		local flagCount = 0
-		for _ in pairs(captureRegions) do flagCount = flagCount + 1 end
+		-- count how many team numbers known
+		local teamCount = 0
+		for _ in pairs(teamNumbers) do teamCount = teamCount + 1 end
+		if params.teamATT then teamCount = teamCount + 1 end
+		if params.teamATT then teamCount = teamCount + 1 end
 		
-		-- check number of flag names
-		if flagCount ~= NUM_FLAGS_CTF then
-			error("Expected " .. NUM_FLAGS_CTF .. " capture regions, got " .. flagCount)
+		-- check number of team numbers
+		if teamCount < NUM_FLAGS_CTF then
+			-- print instead of error because announcer is not required
+			print("")
+			print("bom_ctf.lua > setTeamNumbers(params)")
+			print("Not enough team numbers are provided or previously known in CTF setup. Expected " .. NUM_FLAGS_CTF .. ", got " .. teamCount)
+			print("Defaulting to ATT = " .. ATT .. " and DEF = " .. DEF)
+			print("")
 		end
 	end
+	
+	-- set team numbers
+	teamNumbers.teamATT = params.teamATT or ATT
+	teamNumbers.teamDEF = params.teamDEF or DEF
+end
+
+
+---------------------------------------------------------------------------
+-- FUNCTION:    setTeamNames
+-- PURPOSE:     Saves team names to local memory
+-- INPUT:		params = {teamATTName = "", teamDEFName = ""} 
+-- OUTPUT:
+-- NOTES:       There is an expected number of team names provided set by
+--				NUM_FLAGS_CTF. If the they are not provided or are 
+--				previously saved, then an error is thrown.
+---------------------------------------------------------------------------
+local teamNames = {}
+function setTeamNames(params) 
+	-- att, def
+	if params.teamATTName then teamNames.teamATTName = params.teamATTName end
+	if params.teamDEFName then teamNames.teamDEFName = params.teamDEFName end
+	
+	-- check if enough team name are provided or previously set
+	do			
+		-- count how many team names are known
+		local teamCount = 0
+		for _ in pairs(teamNames) do teamCount = teamCount + 1 end
+
+		-- check number of team names
+		if teamCount < NUM_FLAGS_CTF then
+			error("Not enough team names have been provided. Expected " .. NUM_FLAGS_CTF .. ", got " .. teamCount)
+		end
+	end
+end
+
+
+---------------------------------------------------------------------------
+-- FUNCTION:    setAnnouncers
+-- PURPOSE:     Saves team names to local memory and assigns team 
+--				announcers
+-- INPUT:		params = {teamATT = "", teamATT = "", 
+--						  teamATTName = "", teamDEFName = "",
+--						  overrideTeamNames = boolean} 
+-- OUTPUT:
+-- NOTES:       If not enough team names are provided, then an error is
+--				thrown. Acceptable team names are 'all', 'cis', 'imp', and 
+--				'rep'. If you wish to use a custom team, then set 
+--				overrideTeamNames to True. Calls setTeamNumbers(params) and
+--				setTeamNames(params).
+---------------------------------------------------------------------------
+function setAnnouncers(params)
+
+	-- set team numbers
+	setTeamNumbers(params)
+
+	-- set team names
+	setTeamNames(params)
+	
+	-- check if team names are known teams
+	do
+		local TEAM_NAMES = {"all", "cis", "imp", "rep"}
+	
+		-- this function check if a team name is a known team
+		local function checkName(name)	
+			-- courtesy of ChatGPT-4o
+			for _, defaultName in pairs(TEAM_NAMES) do
+				if name == defaultName then
+					return true
+				end
+			end
+			if not params.overrideTeamNames then
+				error("Unexpected team name " .. name .. ". If you want to use custom teams, then set overrideTeamNames to True")
+			end
+			return false
+		end
+		
+		-- log custom team name
+		local function customTeam(name)
+			Print("Overriding team name for team " .. name)
+		end
+	
+		-- check if team is known or custom team is being used
+		if not checkName(teamNames.teamATTName) then customTeam(teamNames.teamATTName) end
+		if not checkName(teamNames.teamDEFName) then customTeam(teamNames.teamDEFName) end
+	end
+
+	-- set announcers
+	SoundEvent_SetupTeams(teamNumbers.teamATT, teamNames.teamATTName, 
+						  teamNumbers.teamDEF, teamNames.teamDEFName)
 end
 
 
@@ -148,40 +244,6 @@ function setFlagNames(params)
 		-- check number of flag names
 		if flagCount ~= NUM_FLAGS_CTF then
 			error("Expected " .. NUM_FLAGS_CTF .. " flag names, got " .. flagCount)
-		end
-	end
-end
-
-
----------------------------------------------------------------------------
--- FUNCTION:    setHomeRegions
--- PURPOSE:     Saves names of home regions to local memory
--- INPUT:		params = {allHomeRegion = "", cisHomeRegion = "", 
---						  impHomeRegion = "", repHomeRegion = ""} 
--- OUTPUT:
--- NOTES:       There is an expected number of capture regions provided set
---				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
---				an error is thrown. That is, unless the capture regions
---				have been previously saved.
----------------------------------------------------------------------------
-local homeRegions = {}
-function setHomeRegions(params)
-	-- alliance, cis, empire, republic
-	if params.allHomeRegion then homeRegions.allHomeRegion = params.allHomeRegion end
-	if params.cisHomeRegion then homeRegions.cisHomeRegion = params.cisHomeRegion end
-	if params.impHomeRegion then homeRegions.impHomeRegion = params.impHomeRegion end
-	if params.repHomeRegion then homeRegions.repHomeRegion = params.repHomeRegion end
-	
-	-- check for enough home regions
-	do			
-		-- count how many home regions were provided
-		local flagCount = 0
-		for _ in pairs(homeRegions) do flagCount = flagCount + 1 end
-		
-		-- check number of flag names
-		if flagCount ~= NUM_FLAGS_CTF then
-			-- print instead of error because home regions are not required
-			print("Expected " .. NUM_FLAGS_CTF .. " home regions, got " .. flagCount .. " (this is does not mean there is an error)")
 		end
 	end
 end
@@ -238,6 +300,73 @@ end
 
 
 ---------------------------------------------------------------------------
+-- FUNCTION:    setHomeRegions
+-- PURPOSE:     Saves names of home regions to local memory
+-- INPUT:		params = {allHomeRegion = "", cisHomeRegion = "", 
+--						  impHomeRegion = "", repHomeRegion = ""} 
+-- OUTPUT:
+-- NOTES:       There is an expected number of capture regions provided set
+--				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
+--				an error is thrown. That is, unless the capture regions
+--				have been previously saved.
+---------------------------------------------------------------------------
+local homeRegions = {}
+function setHomeRegions(params)
+	-- alliance, cis, empire, republic
+	if params.allHomeRegion then homeRegions.allHomeRegion = params.allHomeRegion end
+	if params.cisHomeRegion then homeRegions.cisHomeRegion = params.cisHomeRegion end
+	if params.impHomeRegion then homeRegions.impHomeRegion = params.impHomeRegion end
+	if params.repHomeRegion then homeRegions.repHomeRegion = params.repHomeRegion end
+	
+	-- check for enough home regions
+	do			
+		-- count how many home regions were provided
+		local flagCount = 0
+		for _ in pairs(homeRegions) do flagCount = flagCount + 1 end
+		
+		-- check number of flag names
+		if flagCount ~= NUM_FLAGS_CTF then
+			-- print instead of error because home regions are not required
+			print("Expected " .. NUM_FLAGS_CTF .. " home regions, got " .. flagCount .. " (this is does not mean there is an error)")
+		end
+	end
+end
+
+
+---------------------------------------------------------------------------
+-- FUNCTION:    setCaptureRegions
+-- PURPOSE:     Saves names of capture regions to local memory
+-- INPUT:		params = {allCaptureRegion = "", cisCaptureRegion = "", 
+--						  impCaptureRegion = "", repCaptureRegion = ""} 
+-- OUTPUT:
+-- NOTES:       There is an expected number of capture regions provided set
+--				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
+--				an error is thrown. That is, unless the capture regions
+--				have been previously saved.
+---------------------------------------------------------------------------
+local captureRegions = {}
+function setCaptureRegions(params)
+	-- alliance, cis, empire, republic
+	if params.allCaptureRegion then captureRegions.allCaptureRegion = params.allCaptureRegion end
+	if params.cisCaptureRegion then captureRegions.cisCaptureRegion = params.cisCaptureRegion end
+	if params.impCaptureRegion then captureRegions.impCaptureRegion = params.impCaptureRegion end
+	if params.repCaptureRegion then captureRegions.repCaptureRegion = params.repCaptureRegion end
+	
+	-- check for enough capture regions
+	do			
+		-- count how many capture regions were provided
+		local flagCount = 0
+		for _ in pairs(captureRegions) do flagCount = flagCount + 1 end
+		
+		-- check number of flag names
+		if flagCount ~= NUM_FLAGS_CTF then
+			error("Expected " .. NUM_FLAGS_CTF .. " capture regions, got " .. flagCount)
+		end
+	end
+end
+
+
+---------------------------------------------------------------------------
 -- FUNCTION:    setOneFlagProperties
 -- PURPOSE:     Saves 1-flag properties to memory
 -- INPUT:		params = {flagName = "", homeRegion = "", 
@@ -266,15 +395,18 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    createCTFObjective
 -- PURPOSE:     Create CTF objective and add flags to the objective
--- INPUT:		params = {allFlagName = "", cisFlagName = "", 
+-- INPUT:		params = {teamATT = "",	teamDEF = "",
+--						  teamATTName = "", teamDEFName = ""
+---						  allFlagName = "", cisFlagName = "", 
 --						  impFlagName = "", repFlagName = "",
 --						  allHomeRegion = "", cisHomeRegion = "",
 --						  impHomeRegion = "", repHomeRegion = "",
 --						  allCaptureRegion = "", cisCaptureRegion = "",
 -- 						  impCaptureRegion = "", repCaptureRegion = ""}
 -- OUTPUT:		ObjectiveCTF
--- NOTES:       Calls setFlagNames(params), setHomeRegions(params), and
---				setCaptureRegions(params) in that order.
+-- NOTES:       Calls setFlagNames(params), setHomeRegions(params),
+--				setCaptureRegions(params), and setAnnouncer(params) in that 
+--				order.
 ---------------------------------------------------------------------------
 function createCTFObjective(params)
 
@@ -283,8 +415,7 @@ function createCTFObjective(params)
 	------------------------------------------------
 	
 	-- team numbers
-	local ATT = params.teamATT or 1 -- attacker is always #1
-	local DEF = params.teamDEF or 2
+	setTeamNumbers(params)
 	
 	-- create objective
 	local ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
@@ -348,6 +479,13 @@ function createCTFObjective(params)
 		printToLog(flagNames.repFlagName, "republic")
 	end
 	
+	
+	------------------------------------------------
+	------------   SETUP ANNOUNCER   ---------------
+	------------------------------------------------
+	
+	setAnnouncers(params)
+	
 	return ctf
 end
 
@@ -355,16 +493,17 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    createOneFlagObjective
 -- PURPOSE:     Create 1-flag objective
--- INPUT:		params = {flagName = "", homeRegion = "", 
+-- INPUT:		params = {teamATT = "", teamDEF = "",
+--						  teamATTName = "", teamDEFName = "",
+--						  flagName = "", homeRegion = "", 
 --						  attCaptureRegion = "", defCaptureRegion = ""}
 -- OUTPUT:		ObjectiveOneFlagCTF
--- NOTES:       Calls setFlagNames(params), setHomeRegions(params), and
---				setCaptureRegions(params) in that order.
+-- NOTES:       Calls setTeamNumbers(params), setOneFlagProperties(params),
+--				and setAnnouncers(params) in that order.
 ---------------------------------------------------------------------------
 function createOneFlagObjective(params)
 	-- team numbers
-	local ATT = params.teamATT or 1 -- attacker is always #1
-	local DEF = params.teamDEF or 2
+	setTeamNumbers(params)
 	
 	-- save 1flag properties
 	setOneFlagProperties(params)
@@ -382,6 +521,9 @@ function createOneFlagObjective(params)
 									    hideCPs = HIDE_CPS_1FLAG,
 									    multiplayerRules = MULTIPLAYER_RULES_1FLAG}
 	print("Created: ObjectiveOneFlagCTF")
+	
+	-- setup announcers
+	setAnnouncers(params)
 	
 	return ctf
 end

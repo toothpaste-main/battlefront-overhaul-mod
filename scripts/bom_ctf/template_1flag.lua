@@ -5,7 +5,7 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain
--- Version: v1.0
+-- Version: v1.1
 --
 -- This is an example template for the 1-flag CTF game mode using the 
 -- bom_ctf.lau script
@@ -15,7 +15,7 @@
 -- load the gametype script
 ScriptCB_DoFile("ObjectiveOneFlagCTF")
 
--- load BBP assets
+-- load BOM assets
 ScriptCB_DoFile("bom_ctf")
 
 
@@ -46,7 +46,8 @@ function ScriptPostLoad()
 	------------------------------------------------
 
 	-- create objective		   
-	ctf = createOneFlagObjective{flagName = "flag", homeRegion = "flagHome",
+	ctf = createOneFlagObjective{teamATTName = "all", teamDEFName = "imp",
+								 flagName = "flag", homeRegion = "flagHome",
 							     attCaptureRegion = "attCapture", defCaptureRegion = "defCapture"}
 	
 	-- start objective

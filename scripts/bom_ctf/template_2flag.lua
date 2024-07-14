@@ -5,7 +5,7 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain
--- Version: v1.0
+-- Version: v1.1
 --
 -- This is an example template for the 2-flag CTF game mode using the 
 -- bom_ctf.lau script
@@ -44,14 +44,15 @@ function ScriptPostLoad()
 	------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
-	
+
 	-- define flag geometry
 	setFlagGeometry{repFlagName = "flag1", cisFlagName = "flag2"}
 
 	-- create objective
-	ctf = createCTFObjective{repHomeRegion = "flag1Home", repCaptureRegion = "flag2Home",
+	ctf = createCTFObjective{teamATTName = "cis", teamDEFName = "rep",
+							 repHomeRegion = "flag1Home", repCaptureRegion = "flag2Home",
 							 cisHomeRegion = "flag2Home", cisCaptureRegion = "flag1Home"}
-				
+	
 	-- start objective
     ctf:Start()
 end
