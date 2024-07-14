@@ -14,8 +14,8 @@ Project goals:
 Planned releases:
 - 6 July 2024: v1.0-alpha
 - 12 July 2024: v2.0-alpha
-- 23 August 2024: v1.0-beta
-- October 2024: v1.0 release
+- 23 August 2024: v2.1-alpha
+- October 2024: v1.0-beta
 
 ## Examples
 
