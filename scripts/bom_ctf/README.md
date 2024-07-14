@@ -1,6 +1,6 @@
 # Reusable CTF Script
 
-The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creating CTF game modes and templates for using the script in making 1-flag and 2-flag CTF. 
+The [`bom_ctf.lua`](bom_ctf.lua) script contains simplified functions for creating CTF game modes. Templates are provided for using the script in both 1-flag and 2-flag CTF. 
 
 ### 1-Flag CTF Simplicity
 
