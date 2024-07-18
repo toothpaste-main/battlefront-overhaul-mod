@@ -12,20 +12,26 @@ Project goals:
 - Improve sound effects
 
 Planned releases:
-- 6 July 2024: v1.0-alpha
-- 12 July 2024: v2.0-alpha
-- 23 August 2024: v2.1-alpha
+- ~~6 July 2024: v1.0-alpha~~
+- ~~12 July 2024: v2.0-alpha~~
+- ~~14 July 2024: v2.1-alpha~~
+- 23 August 2024: v3.0-alpha
 - October 2024: v1.0-beta
 
 ## Examples
 
 Improved vs original AI barriers on Coruscant:
 
-![coruscant improved ai barriers](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/cor1_barriers.jpg?raw=true)
+
+Reskinned units in some maps and modes:
+
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_snow.jpg)  |  ![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/imp_inf_armytrooper.jpg)
+:-------------------------:|:-------------------------:
 
 Restructured Mygeeto and updated the minimap:
 
-![mygeeto map changes](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
+![](https://github.com/toothpaste-main/battlefront-overhaul-mod/blob/main/gallery/myg1_map.jpg?raw=true)
 
 ## Acknowledgements
 
