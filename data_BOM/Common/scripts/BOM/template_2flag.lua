@@ -11,7 +11,6 @@
 -- bom_ctf.lau script
 --
 
-
 -- load the gametype script
 ScriptCB_DoFile("ObjectiveCTF")
 

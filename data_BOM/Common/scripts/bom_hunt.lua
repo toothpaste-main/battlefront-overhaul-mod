@@ -2,10 +2,13 @@
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMaine
 --
--- Constants related to the hunt game mode.
+-- Constants and functions related to the hunt
+-- game mode.
 --
 print("Loading bom_hunt.lua...")
 
+-- load dependencies
+ScriptCB_DoFile("bom_deathmatch")
 
 ------------------------------------------------
 ------------   POINTS PER KILL  ----------------
@@ -38,7 +41,7 @@ NAB2_PPK_DEF = 1 -- naboo inhabitants
 
 -- endor
 END1_MAX_EWK_UNITS = 32
-END1_MAX_REP_UNITS = 32
+END1_MAX_IMP_UNITS = 32
 
 -- hoth
 HOT_MAX_ALL_UNITS = 32
@@ -54,6 +57,7 @@ TAT2_MAX_TUS_UNITS = 32
 
 -- naboo
 NAB2_MAX_UNITS = 32
+NAB2_NUM_GUNGANS = NAB2_MAX_UNITS / 2
 NAB2_MAX_SPECIAL = 2
 NAB2_MIN_SPECIAL = 0
 
@@ -68,7 +72,7 @@ CIS_OFFICER_CLASS		= "cis_inf_magnaguard_hunt"
 CIS_SPECIAL_CLASS		= "cis_inf_droideka_hunt"
 
 -- empire
-REP_SNIPER_CLASS		= "REP_inf_sniper"
+IMP_SNIPER_CLASS		= "imp_inf_sniper"
 
 -- ewoks
 EWK_SOLDIER_CLASS		= "ewk_inf_trooper"
@@ -122,3 +126,46 @@ EWK_HEALTH = 60 -- pistol dmg is 50
 -- wampas
 
 -- wookiees
+
+
+------------------------------------------------
+------------   OBJECTIVE PROPERTIES   ----------
+------------------------------------------------
+
+-- message text for player (hunt)
+local TEXT_ATT_HUNT = "game.modes.hunt"
+local TEXT_DEF_HUNT = "game.modes.hunt2"
+
+-- endor
+TEXT_ATT_END1 = "level.end1.objectives.hunt"
+
+-- kashyyyk
+TEXT_ATT_KAS2 = "level.kas2.hunt.ATT"
+TEXT_DEF_KAS2 = "level.kas2.hunt.DEF"
+
+local MULTIPLAYER_RULES_HUNT = true
+
+
+---------------------------------------------------------------------------
+-- FUNCTION:    createHuntObjective
+-- PURPOSE:     Create hunt objective
+-- INPUT:		params = {teamATT, teamDEF,
+--						  textATT, textDEF,
+--						  pointsPerKillATT, pointsPerKillDEF,
+--						  delayStart}
+-- OUTPUT:		ObjectiveTDM
+-- NOTES:       The function is purely a mask to 
+--				`createDeathmatchObjective()` and is functionally the same.
+---------------------------------------------------------------------------
+function createHuntObjective(params)	
+	-- message text params
+	local textATT_ = params.textATT or TEXT_ATT_HUNT
+	local textDEF_ = params.textDEF or TEXT_DEF_HUNT
+	
+	params.multiplayerRules = MULTIPLAYER_RULES_HUNT
+
+	-- create objective
+	local hunt = createDeathmatchObjective(params)
+	
+	return hunt
+end

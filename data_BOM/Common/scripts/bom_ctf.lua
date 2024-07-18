@@ -1,16 +1,23 @@
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain 
--- Version: v1.3
+-- Version: v2.0
 --
 -- Constants and functions related to both the 
--- 1-Flag and 2-Flag CTF game modes. The
--- function order matters otherwise you will
--- get runtime errors. I know, alphabetical
--- would be easier for debugging. Use ctrl+F.
+-- 1-Flag and 2-Flag CTF game modes. All
+-- parameters are assumed to be strings unless
+-- stated otherwise.
 --
 print("Loading bom_ctf.lua...")
 
+-- load dependencies
+ScriptCB_DoFile("bom_constants")
+ScriptCB_DoFile("bom_gamemode")
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------   CONSTANTS   ---------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
 ------------   OBJECTIVE PROPERTIES   ----------
@@ -62,9 +69,6 @@ local CAP_LIMIT_CTF = 5
 local HIDE_CPS_CTF = true
 local MULTIPLAYER_RULES_CTF = true
 
--- there are two flags in CTF (used in error checking)
-local NUM_FLAGS_CTF = 2
-
 
 ------------------------------------------------
 ------------   FLAG GEOMETRY   -----------------
@@ -90,55 +94,18 @@ local REP_GEO_NAME = "com_icon_republic_flag"
 local REP_GEO_NAME_CARREID = "com_icon_republic_flag_carried"
 
 
----------------------------------------------------------------------------
--- FUNCTION:    setTeamNumbers
--- PURPOSE:     Saves team numbers to local memory
--- INPUT:		params = {teamATT = "", teamDEF = ""} 
--- OUTPUT:
--- NOTES:       It is expected two team numbers are provided. If the they
--- 				are not provided or are previously saved, then they will be
---				set to default values.
----------------------------------------------------------------------------
-local teamNumbers = {}
-function setTeamNumbers(params)
-	
-	-- constants of life
-	local ATT = 1 -- attacker is always #1
-	local DEF = 2
-	
-	-- check if enough team numbers are provided or previously set
-	do			
-		-- count how many team numbers known
-		local teamCount = 0
-		for _ in pairs(teamNumbers) do teamCount = teamCount + 1 end
-		if params.teamATT then teamCount = teamCount + 1 end
-		if params.teamATT then teamCount = teamCount + 1 end
-		
-		-- check number of team numbers
-		if teamCount < NUM_FLAGS_CTF then
-			-- print instead of error because announcer is not required
-			print("")
-			print("bom_ctf.lua > setTeamNumbers(params)")
-			print("Not enough team numbers are provided or previously known in CTF setup. Expected " .. NUM_FLAGS_CTF .. ", got " .. teamCount)
-			print("Defaulting to ATT = " .. ATT .. " and DEF = " .. DEF)
-			print("")
-		end
-	end
-	
-	-- set team numbers
-	teamNumbers.teamATT = params.teamATT or ATT
-	teamNumbers.teamDEF = params.teamDEF or DEF
-end
-
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------   2-FLAG OBJECTIVE   --------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------
 -- FUNCTION:    setTeamNames
 -- PURPOSE:     Saves team names to local memory
--- INPUT:		params = {teamATTName = "", teamDEFName = ""} 
+-- INPUT:		params = {teamATTName, teamDEFName} 
 -- OUTPUT:
 -- NOTES:       There is an expected number of team names provided set by
---				NUM_FLAGS_CTF. If the they are not provided or are 
---				previously saved, then an error is thrown.
+--				NUM_FLAGS_CTF in bom_constants.lua. If the they are not 
+--				provided or are previously saved, then an error is thrown.
 ---------------------------------------------------------------------------
 local teamNames = {}
 function setTeamNames(params) 
@@ -153,8 +120,8 @@ function setTeamNames(params)
 		for _ in pairs(teamNames) do teamCount = teamCount + 1 end
 
 		-- check number of team names
-		if teamCount < NUM_FLAGS_CTF then
-			error("Not enough team names have been provided. Expected " .. NUM_FLAGS_CTF .. ", got " .. teamCount)
+		if teamCount < getNumFlagsCTF() then
+			error("Not enough team names have been provided. Expected " .. getNumFlagsCTF() .. ", got " .. teamCount)
 		end
 	end
 end
@@ -164,15 +131,14 @@ end
 -- FUNCTION:    setAnnouncers
 -- PURPOSE:     Saves team names to local memory and assigns team 
 --				announcers
--- INPUT:		params = {teamATT = "", teamATT = "", 
---						  teamATTName = "", teamDEFName = "",
+-- INPUT:		params = {teamATT teamATT, 
+--						  teamATTName, teamDEFName,
 --						  overrideTeamNames = boolean} 
 -- OUTPUT:
 -- NOTES:       If not enough team names are provided, then an error is
---				thrown. Acceptable team names are 'all', 'cis', 'imp', and 
---				'rep'. If you wish to use a custom team, then set 
---				overrideTeamNames to True. Calls setTeamNumbers(params) and
---				setTeamNames(params).
+--				thrown. Acceptable team names are defined by 
+--				TEAM_NAMES_SHORT in bom_constants.lua. If you wish to use a
+--				custom team, then set overrideTeamNames to true.
 ---------------------------------------------------------------------------
 function setAnnouncers(params)
 
@@ -184,48 +150,48 @@ function setAnnouncers(params)
 	
 	-- check if team names are known teams
 	do
-		local TEAM_NAMES = {"all", "cis", "imp", "rep"}
+		local TEAM_NAMES = getTeamNamesShort()
 	
-		-- this function check if a team name is a known team
-		local function checkName(name)	
+		-- this function checks if a team name is a known team
+		local function checkTeam(team)	
 			-- courtesy of ChatGPT-4o
 			for _, defaultName in pairs(TEAM_NAMES) do
-				if name == defaultName then
+				if team == defaultName then
 					return true
 				end
 			end
 			if not params.overrideTeamNames then
-				error("Unexpected team name " .. name .. ". If you want to use custom teams, then set overrideTeamNames to True")
+				error("Unexpected team name " .. team .. ". If you want to use custom teams, then set overrideTeamNames to True")
 			end
 			return false
 		end
 		
 		-- log custom team name
-		local function customTeam(name)
-			Print("Overriding team name for team " .. name)
+		local function customTeam(team)
+			Print("Overriding team name for team " .. team)
 		end
 	
 		-- check if team is known or custom team is being used
-		if not checkName(teamNames.teamATTName) then customTeam(teamNames.teamATTName) end
-		if not checkName(teamNames.teamDEFName) then customTeam(teamNames.teamDEFName) end
+		if not checkTeam(teamNames.teamATTName) then customTeam(teamNames.teamATTName) end
+		if not checkTeam(teamNames.teamDEFName) then customTeam(teamNames.teamDEFName) end
 	end
 
 	-- set announcers
-	SoundEvent_SetupTeams(teamNumbers.teamATT, teamNames.teamATTName, 
-						  teamNumbers.teamDEF, teamNames.teamDEFName)
+	SoundEvent_SetupTeams(getTeamNumbers().teamATT, teamNames.teamATTName, 
+						  getTeamNumbers().teamDEF, teamNames.teamDEFName)
 end
 
 
 ---------------------------------------------------------------------------
 -- FUNCTION:    setFlagNames
 -- PURPOSE:     Saves flag names to local memory
--- INPUT:		params = {allFlagName = "", cisFlagName = "", 
---						  impFlagName = "", repFlagName = ""} 
+-- INPUT:		params = {allFlagName, cisFlagName, 
+--						  impFlagName, repFlagName} 
 -- OUTPUT:
 -- NOTES:       There is an expected number of flag names provided set by
---				NUM_FLAGS_CTF. If the expected quantity is not met, then an 
---				error is thrown. That is, unless the flag names have been 
---				previously saved.
+--				NUM_FLAGS_CTF in bom_constants.lua. If the expected 
+--				quantity is not met, then an error is thrown. That is, 
+--				unless the flag names have been previously saved.
 ---------------------------------------------------------------------------
 local flagNames = {}
 function setFlagNames(params)
@@ -242,8 +208,8 @@ function setFlagNames(params)
 		for _ in pairs(flagNames) do flagCount = flagCount + 1 end
 		
 		-- check number of flag names
-		if flagCount ~= NUM_FLAGS_CTF then
-			error("Expected " .. NUM_FLAGS_CTF .. " flag names, got " .. flagCount)
+		if flagCount ~= getNumFlagsCTF() then
+			error("Expected " .. getNumFlagsCTF() .. " flag names, got " .. flagCount)
 		end
 	end
 end
@@ -252,10 +218,10 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    setFlagGeometry
 -- PURPOSE:     Set CTF flag gemoetry
--- INPUT:		params = {allFlagName = "", impFlagName = "", 
---						  repFlagName = "", cisFlagName = ""} 
+-- INPUT:		params = {allFlagName, impFlagName, 
+--						  repFlagName, cisFlagName} 
 -- OUTPUT:
--- NOTES:       Calls setFlagNames(params)
+-- NOTES:       
 ---------------------------------------------------------------------------
 function setFlagGeometry(params)
 	-- save flag names
@@ -302,13 +268,13 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    setHomeRegions
 -- PURPOSE:     Saves names of home regions to local memory
--- INPUT:		params = {allHomeRegion = "", cisHomeRegion = "", 
---						  impHomeRegion = "", repHomeRegion = ""} 
+-- INPUT:		params = {allHomeRegion, cisHomeRegion, 
+--						  impHomeRegion, repHomeRegion} 
 -- OUTPUT:
 -- NOTES:       There is an expected number of capture regions provided set
---				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
---				an error is thrown. That is, unless the capture regions
---				have been previously saved.
+--				by NUM_FLAGS_CTF in bom_constants.lua. If the expected 
+--				quantity is not met, then an error is thrown. That is, 
+--				unless the capture regions have been previously saved.
 ---------------------------------------------------------------------------
 local homeRegions = {}
 function setHomeRegions(params)
@@ -325,9 +291,10 @@ function setHomeRegions(params)
 		for _ in pairs(homeRegions) do flagCount = flagCount + 1 end
 		
 		-- check number of flag names
-		if flagCount ~= NUM_FLAGS_CTF then
-			-- print instead of error because home regions are not required
-			print("Expected " .. NUM_FLAGS_CTF .. " home regions, got " .. flagCount .. " (this is does not mean there is an error)")
+		if flagCount ~= getNumFlagsCTF() then
+			print()
+			print("WARNING: Expected " .. getNumFlagsCTF() .. " home regions, got " .. flagCount)
+			print()
 		end
 	end
 end
@@ -336,13 +303,13 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    setCaptureRegions
 -- PURPOSE:     Saves names of capture regions to local memory
--- INPUT:		params = {allCaptureRegion = "", cisCaptureRegion = "", 
---						  impCaptureRegion = "", repCaptureRegion = ""} 
+-- INPUT:		params = {allCaptureRegion, cisCaptureRegion, 
+--						  impCaptureRegion, repCaptureRegion} 
 -- OUTPUT:
 -- NOTES:       There is an expected number of capture regions provided set
---				by NUM_FLAGS_CTF. If the expected quantity is not met, then 
---				an error is thrown. That is, unless the capture regions
---				have been previously saved.
+--				by NUM_FLAGS_CTF in bom_constants.lua. If the expected 
+--				quantity is not met, then an error is thrown. That is, 
+--				unless the capture regions have been previously saved.
 ---------------------------------------------------------------------------
 local captureRegions = {}
 function setCaptureRegions(params)
@@ -359,56 +326,30 @@ function setCaptureRegions(params)
 		for _ in pairs(captureRegions) do flagCount = flagCount + 1 end
 		
 		-- check number of flag names
-		if flagCount ~= NUM_FLAGS_CTF then
-			error("Expected " .. NUM_FLAGS_CTF .. " capture regions, got " .. flagCount)
+		if flagCount ~= getNumFlagsCTF() then
+			error("Expected " .. getNumFlagsCTF() .. " capture regions, got " .. flagCount)
 		end
 	end
 end
 
-
----------------------------------------------------------------------------
--- FUNCTION:    setOneFlagProperties
--- PURPOSE:     Saves 1-flag properties to memory
--- INPUT:		params = {flagName = "", homeRegion = "", 
---						  attCaptureRegion = "", defCaptureRegion = ""} 
--- OUTPUT:
--- NOTES:       All properties are expected to be provied. If a property
--- 				is not provided, then an error is thrown. That is, unless
---				the property has been previously saved.
----------------------------------------------------------------------------
-local oneFlag = {}
-function setOneFlagProperties(params)
-	-- flagName, homeRegion, attCaptureRegion, defCaptureRegion
-	if params.flagName then oneFlag.flagName = params.flagName end
-	if params.homeRegion then oneFlag.homeRegion = params.homeRegion end
-	if params.attCaptureRegion then oneFlag.attCaptureRegion = params.attCaptureRegion end
-	if params.defCaptureRegion then oneFlag.defCaptureRegion = params.defCaptureRegion end
-	
-	-- verify all properties set
-	if not oneFlag.flagName then error("Expected flag name, got " .. oneFlag.flagName) end
-	if not oneFlag.homeRegion then error("Expected homer region, got " .. oneFlag.homeRegion) end
-	if not oneFlag.attCaptureRegion then error("Expected att capture region, got " .. oneFlag.attCaptureRegion) end
-	if not oneFlag.defCaptureRegion then error("Expected def capture region, got " .. oneFlag.defCaptureRegion) end
-end
-
-
 ---------------------------------------------------------------------------
 -- FUNCTION:    createCTFObjective
 -- PURPOSE:     Create CTF objective and add flags to the objective
--- INPUT:		params = {teamATT = "",	teamDEF = "",
---						  teamATTName = "", teamDEFName = ""
----						  allFlagName = "", cisFlagName = "", 
---						  impFlagName = "", repFlagName = "",
---						  allHomeRegion = "", cisHomeRegion = "",
---						  impHomeRegion = "", repHomeRegion = "",
---						  allCaptureRegion = "", cisCaptureRegion = "",
--- 						  impCaptureRegion = "", repCaptureRegion = ""}
+-- INPUT:		params = {teamATT,	teamDEF,
+--						  teamATTName, teamDEFName,
+---						  allFlagName, cisFlagName, 
+--						  impFlagName, repFlagName,
+--						  allHomeRegion, cisHomeRegion,
+--						  impHomeRegion, repHomeRegion,
+--						  allCaptureRegion, cisCaptureRegion,
+-- 						  impCaptureRegion, repCaptureRegion}
 -- OUTPUT:		ObjectiveCTF
--- NOTES:       Calls setFlagNames(params), setHomeRegions(params),
---				setCaptureRegions(params), and setAnnouncer(params) in that 
---				order.
+-- NOTES:       
 ---------------------------------------------------------------------------
 function createCTFObjective(params)
+	-- check if objective module is loaded
+	assert(ObjectiveCTF, "ObjectiveCTF has not been loaded!")
+	
 
 	------------------------------------------------
 	------------   CREATE OBJECTIVE   --------------
@@ -418,7 +359,7 @@ function createCTFObjective(params)
 	setTeamNumbers(params)
 	
 	-- create objective
-	local ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, 
+	local ctf = ObjectiveCTF:New{teamATT = getTeamNumbers().teamATT, teamDEF = getTeamNumbers().teamDEF, 
 								 textATT = TEXT_ATT_CTF, textDEF = TEXT_DEF_CTF, 
 							     captureLimit = CAP_LIMIT_CTF, 
 								 hideCPs = HIDE_CPS_CTF, 
@@ -490,18 +431,50 @@ function createCTFObjective(params)
 end
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------   1-FLAG OBJECTIVE   --------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+-- FUNCTION:    setOneFlagProperties
+-- PURPOSE:     Saves 1-flag properties to memory
+-- INPUT:		params = {flagName, homeRegion, 
+--						  attCaptureRegion defCaptureRegion} 
+-- OUTPUT:
+-- NOTES:       All properties are expected to be provied. If a property
+-- 				is not provided, then an error is thrown. That is, unless
+--				the property has been previously saved.
+---------------------------------------------------------------------------
+local oneFlag = {}
+function setOneFlagProperties(params)
+	-- flagName, homeRegion, attCaptureRegion, defCaptureRegion
+	if params.flagName then oneFlag.flagName = params.flagName end
+	if params.homeRegion then oneFlag.homeRegion = params.homeRegion end
+	if params.attCaptureRegion then oneFlag.attCaptureRegion = params.attCaptureRegion end
+	if params.defCaptureRegion then oneFlag.defCaptureRegion = params.defCaptureRegion end
+	
+	-- verify all properties set
+	if not oneFlag.flagName then error("Expected flag name, got " .. oneFlag.flagName) end
+	if not oneFlag.homeRegion then error("Expected homer region, got " .. oneFlag.homeRegion) end
+	if not oneFlag.attCaptureRegion then error("Expected att capture region, got " .. oneFlag.attCaptureRegion) end
+	if not oneFlag.defCaptureRegion then error("Expected def capture region, got " .. oneFlag.defCaptureRegion) end
+end
+
+
 ---------------------------------------------------------------------------
 -- FUNCTION:    createOneFlagObjective
 -- PURPOSE:     Create 1-flag objective
--- INPUT:		params = {teamATT = "", teamDEF = "",
---						  teamATTName = "", teamDEFName = "",
---						  flagName = "", homeRegion = "", 
---						  attCaptureRegion = "", defCaptureRegion = ""}
+-- INPUT:		params = {teamATT, teamDEF,
+--						  teamATTName, teamDEFName,
+--						  flagName, homeRegion, 
+--						  attCaptureRegion, defCaptureRegion}
 -- OUTPUT:		ObjectiveOneFlagCTF
--- NOTES:       Calls setTeamNumbers(params), setOneFlagProperties(params),
---				and setAnnouncers(params) in that order.
+-- NOTES:       
 ---------------------------------------------------------------------------
 function createOneFlagObjective(params)
+	-- check if objective module is loaded
+	assert(ObjectiveOneFlagCTF, "ObjectiveOneFlagCTF has not been loaded!")
+
 	-- team numbers
 	setTeamNumbers(params)
 	
@@ -509,11 +482,11 @@ function createOneFlagObjective(params)
 	setOneFlagProperties(params)
 	
 	-- create objective
-	local ctf = ObjectiveOneFlagCTF:New{teamATT = ATT, teamDEF = DEF,
+	local ctf = ObjectiveOneFlagCTF:New{teamATT = getTeamNumbers().teamATT, teamDEF = getTeamNumbers().teamDEF,
 									    textATT = TEXT_ATT_1FLAG, textDEF = TEXT_DEF_1FLAG,
 									    flag = oneFlag.flagName, homeRegion = oneFlag.homeRegion,
 									    captureRegionATT = oneFlag.attCaptureRegion, captureRegionDEF = oneFlag.defCaptureRegion,
-									    --capRegionWorldATT = "1flag_effect2", capRegionWorldDEF = "1flag_effect1", seed on tat3g_1flag
+									    --capRegionWorldATT = "1flag_effect2", capRegionWorldDEF = "1flag_effect1", seen on tat3g_1flag
 									    capRegionMarkerATT = CAP_REG_MRK_ATT, capRegionMarkerDEF = CAP_REG_MRK_DEF,
 									    capRegionMarkerScaleATT = CAP_REG_MRK_ATT_SCL, capRegionMarkerScaleDEF = CAP_REG_MRK_DEF_SCL,
 									    flagIcon = FLAG_ICON, flagIconScale = FLAG_ICON_SCL, 

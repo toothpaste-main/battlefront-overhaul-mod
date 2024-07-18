@@ -29,7 +29,12 @@ ucft
         "PlayMovieWithTransition"
 		
 		"bom_cmn"
+		"bom_constants"
+		"bom_conquest"
 		"bom_ctf"
+		"bom_deathmatch"
+		"bom_gamemode"
+		"bom_memorypool"
 		"bom_hunt"
 		
 		"bomcw_ep3"

@@ -5,9 +5,10 @@
 -- load the gametype script
 ScriptCB_DoFile("ObjectiveTDM")
 
--- load BOM constants
-ScriptCB_DoFile("bom_cmn") 
+-- load BOM assets
+ScriptCB_DoFile("bom_cmn")
 ScriptCB_DoFile("bom_hunt")
+ScriptCB_DoFile("bom_memorypool")
 
 -- these variables do not change
 local ATT = 1
@@ -49,85 +50,26 @@ function ScriptInit()
 	-- crashes when loading.
 	--
 	
-	-- constants
-	local NUM_AIMER = 96		-- it's easier this way
-	local NUM_ANIM = 512
-	local NUM_CLOTH = 32		-- it's easier this way
-	local NUM_CMD_FLY = 0
-	local NUM_CMD_WLK = 0
-	local NUM_FLAGS = 0
-	local NUM_FLYER = 0
-	local NUM_HINTS = 1024
-	local NUM_HOVER = 0
-	local NUM_JEDI = 0
-	local NUM_LGHT = 32
-	local NUM_MINE = 0
-	local NUM_MUSC = 0
-	local NUM_OBST = 1024
-	local NUM_SND_SPA = 6
-	local NUM_SND_STC = 95
-	local NUM_SND_STM = 4
-	local NUM_TENT = 0
-	local NUM_TREE = 768
-	local NUM_TUR = 3
-	local NUM_TUR_PORT = SNIPER_TURRETS * MAX_SNIPER
-	local NUM_UNITS = 96		-- it's easier this way
-	local NUM_WEAP = 256		-- more if locals and vehicles!
-	local WALKER0 = 0
-	local WALKER1 = 0
-	local WALKER2 = 0
-	local WALKER3 = 0
+	setMemoryPoolSize{	
+		-- map
+		obstacles = 768,
+		redOmniLights = 32,
+		treeGridStack = 768,
 	
-	-- walkers
-	ClearWalkers()
-	SetMemoryPoolSize("EntityWalker", -NUM_CMD_WLK)
-	AddWalkerType(0, WALKER0)	-- droidekas (special case: 0 leg pairs)
-	AddWalkerType(1, WALKER1)	-- 1x2 (1 pair of legs)
-	AddWalkerType(2, WALKER2)	-- 2x2 (2 pairs of legs)
-	AddWalkerType(3, WALKER3)	-- 3x2 (3 pairs of legs)
-	
-	-- memory pool
-    SetMemoryPoolSize("Aimer", NUM_AIMER)
-    SetMemoryPoolSize("AmmoCounter", NUM_WEAP)
-	SetMemoryPoolSize("BaseHint", NUM_HINTS)					-- number of hint nodes
-	SetMemoryPoolSize("CommandFlyer", NUM_CMD_FLY)				-- number of gunships
-	SetMemoryPoolSize("CommandWalker", NUM_CMD_WLK)				-- number of ATTEs or ATATs
-    SetMemoryPoolSize("EnergyBar", NUM_WEAP)
-    SetMemoryPoolSize("EntityCloth", NUM_CLOTH)					-- 1 per clone marine
-	SetMemoryPoolSize("EntityDroideka", WALKER0)
-	SetMemoryPoolSize("EntityFlyer", NUM_FLYER)					-- to account for rocket upgrade (incrase for ATST)
-    SetMemoryPoolSize("EntityHover", NUM_HOVER)					-- hover tanks/speeders
-    SetMemoryPoolSize("EntityLight", NUM_LGHT)
-	SetMemoryPoolSize("EntityMine", NUM_MINE)
-	SetMemoryPoolSize("EntityPortableTurret", NUM_TUR_PORT)
-	SetMemoryPoolSize("EntitySoundStatic", NUM_SND_STC)	
-    SetMemoryPoolSize("EntitySoundStream", NUM_SND_STM)
-    SetMemoryPoolSize("FlagItem", NUM_FLAGS)					-- ctf
-    SetMemoryPoolSize("MountedTurret", NUM_TUR)
-    SetMemoryPoolSize("Music", NUM_MUSC)						-- applicable to campaigns
-    SetMemoryPoolSize("Navigator", NUM_UNITS)
-    SetMemoryPoolSize("Obstacle", NUM_OBST)						-- number of AI barriers
-    SetMemoryPoolSize("PathFollower", NUM_UNITS)
-    SetMemoryPoolSize("PathNode", 256)							-- supposedly hard coded
-	SetMemoryPoolSize("SoldierAnimation", NUM_ANIM)
-    SetMemoryPoolSize("SoundSpaceRegion", NUM_SND_SPA)
-    SetMemoryPoolSize("TentacleSimulator", NUM_TENT)			-- 4 per wookiee
-    SetMemoryPoolSize("TreeGridStack", NUM_TREE)				-- related to collisions
-	SetMemoryPoolSize("UnitAgent", NUM_UNITS)
-	SetMemoryPoolSize("UnitController", NUM_UNITS)
-    SetMemoryPoolSize("Weapon", NUM_WEAP)						-- total weapon (units, vehicles, etc.)
-	
-	-- jedi
-	SetMemoryPoolSize("Combo", NUM_JEDI*4)						-- should be ~ 2x number of jedi classes
-    SetMemoryPoolSize("Combo::State", NUM_JEDI*4*12)			-- should be ~12x #Combo
-    SetMemoryPoolSize("Combo::Transition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
-    SetMemoryPoolSize("Combo::Condition", NUM_JEDI*4*12*2)		-- should be a bit bigger than #Combo::State
-    SetMemoryPoolSize("Combo::Attack", NUM_JEDI*4*12)			-- should be ~8-12x #Combo
-    SetMemoryPoolSize("Combo::DamageSample", NUM_JEDI*4*12*12)	-- should be ~8-12x #Combo::Attack
-    SetMemoryPoolSize("Combo::Deflect", NUM_JEDI*4) 			-- should be ~1x #combo
-	
-	-- misc
-	SetMemoryPoolSize("ActiveRegion", 4)
+		-- sounds
+		soundStream = 4,
+		soundSpace = 2,
+		
+		-- units
+		totalUnits = END1_MAX_EWK_UNITS + END1_MAX_IMP_UNITS,
+		
+		-- vehicles
+		turrets = 3,
+		
+		-- weapons
+		mines = 0,
+		portableTurrets = SNIPER_TURRETS * END1_MAX_IMP_UNITS,
+	}
 	
 	
 	------------------------------------------------
@@ -405,17 +347,6 @@ function ScriptPostLoad()
 	------------------------------------------------
 
 	-- create objective
-	hunt = ObjectiveTDM:New{teamATT = ATT, teamDEF = DEF,
-						pointsPerKillATT = END1_PPK_ATT, pointsPerKillDEF = END1_PPK_DEF,
-						textATT = "level.end1.objectives.hunt", textDEF = "game.modes.hunt2", 
-						multiplayerRules = true}	
-	
-	-- set AI goal
-	hunt.OnStart = function(self)
-    	AddAIGoal(ATT, "Deathmatch", 1000)
-    	AddAIGoal(DEF, "Deathmatch", 1000)
-    end
-	
-	-- start objective
-	hunt:Start()
+	createHuntObjective{pointsPerKillATT = END1_PPK_ATT, pointsPerKillDEF = END1_PPK_DEF,
+						textATT = TEXT_ATT_END1}
 end
