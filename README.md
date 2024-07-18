@@ -37,7 +37,7 @@ Here is our timeline from Alpha to full release, and the items which will determ
 
 ### Beta:
 
-**Oct '24 - TBD**
+**Oct '24 - Aut '25**
 
 - [ ] Refine weapon and class balancing
 - [ ] Continue fixing stock map bugs
@@ -52,7 +52,7 @@ Here is our timeline from Alpha to full release, and the items which will determ
 
 ### v1.0 Full release:
 
-**TBD**
+**Autumn 2025**
 
 - [ ] New maps
 - [ ] Continued weapon, class, and map balancing
