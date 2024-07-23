@@ -14,7 +14,7 @@ TransmitRange       = 300.0
 
 WEAPONSECTION = 1
 WeaponName         = "imp_weap_inf_sonic_blaster"
-WeaponAmmo         = 5
+WeaponAmmo         = 10
 
 WEAPONSECTION = 2
 WeaponName         = "imp_weap_inf_mortar_launcher"

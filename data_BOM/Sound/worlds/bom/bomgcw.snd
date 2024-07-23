@@ -136,3 +136,18 @@ SoundProperties()
 		Sample("bf2_2017_dlt-19d_1", 0.2); // muted
     }
 }
+
+// engineer
+
+// officer
+SoundProperties()
+{
+    Name("bom_imp_weap_inf_sonicblaster_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_ec-17_1", 0.8); // more satisfying
+		Sample("bf2_2017_ec-17_1", 0.2); // muted
+    }
+}

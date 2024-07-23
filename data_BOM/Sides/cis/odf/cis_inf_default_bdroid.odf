@@ -7,7 +7,7 @@ UnitType            = "trooper"
 
 WEAPONSECTION = 1
 WeaponName     	= "cis_weap_inf_rifle"
-WeaponAmmo     	= 5
+WeaponAmmo     	= 4
 
 WEAPONSECTION = 2
 WeaponName     	= "cis_weap_inf_pistol"

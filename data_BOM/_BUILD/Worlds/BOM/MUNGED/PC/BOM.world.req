@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"bom"
+	}
+	REQN
+	{
+		"terrain"
+		"bom"
+	}
+	REQN
+	{
+		"config"
+		"bom"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+}

@@ -1,5 +1,5 @@
 Logging LevelPack
-09:38:1107/14/24
+13:54:4507/23/24
 
 === rep_inf_ep3_engineer.lvl ===
 Missing file com_weap_inf_ord_hum_sm.class
@@ -218,6 +218,20 @@ Missing file reticule_rifle.texture
     Reqd by ..\common\munged\pc\com_weap_null.class.req
 
 === rep_inf_ep3_sniper.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_sniper_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_inf_autoturret_ord.class.req
+            ..\common\munged\pc\com_weap_award_sniper_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\rep_weap_inf_sniper_rifle.class.req
+            munged\pc\rep_weap_inf_autoturret_dispenser.class.req
+            munged\pc\rep_weap_award_sniper_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\rep_weap_inf_pistol.class.req
+            munged\pc\rep_weap_inf_thermaldetonator.class.req
+
+=== rep_inf_ep3_sniper_felucia.lvl ===
 Missing file com_weap_inf_ord_hum_sm.class
     Reqd by ..\common\munged\pc\com_weap_inf_sniper_rifle_ord.class.req
             ..\common\munged\pc\com_weap_inf_pistol_ord.class.req

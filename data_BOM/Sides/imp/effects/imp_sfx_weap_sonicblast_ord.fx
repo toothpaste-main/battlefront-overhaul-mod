@@ -32,8 +32,8 @@ ParticleEmitter("Distortion")
 		InheritVelocityFactor(0.0000,0.0000);
 		Size(0, 0.5000, 0.5000);
 		Red(0, 240.0000, 240.0000);
-		Green(0, 255.0000, 255.0000);
-		Blue(0, 240.0000, 240.0000);
+		Green(0, 240.0000, 240.0000);
+		Blue(0, 255.0000, 255.0000);
 		Alpha(0, 0.0000, 0.0000);
 		StartRotation(0, 0.0000, 360.0000);
 		RotationVelocity(0, 0.0000, 0.0000);
@@ -70,7 +70,7 @@ ParticleEmitter("Distortion")
 		Type("PARTICLE");
 		Texture("com_sfx_waterfoam1");
 	}
-	ParticleEmitter("GreenSmoke")
+	ParticleEmitter("BlueSmoke")
 	{
 		MaxParticles(-1.0000,-1.0000);
 		StartDelay(0.0000,0.0000);
@@ -103,7 +103,8 @@ ParticleEmitter("Distortion")
 			VelocityScale(5.0000,5.0000);
 			InheritVelocityFactor(0.0000,0.0000);
 			Size(0, 0.0100, 0.0600);
-			Hue(0, 55.0000, 75.0000);
+			Hue(0, 140.0000, 140.0000);
+			//Hue(0, 55.0000, 75.0000);
 			Saturation(0, 100.0000, 150.0000);
 			Value(0, 100.0000, 150.0000);
 			Alpha(0, 0.0000, 0.0000);
@@ -174,7 +175,8 @@ ParticleEmitter("Distortion")
 				VelocityScale(4.0000,4.0000);
 				InheritVelocityFactor(0.0000,0.0000);
 				Size(0, 0.0500, 0.0500);
-				Hue(0, 55.0000, 75.0000);
+				Hue(0, 140.0000, 140.0000);
+				//Hue(0, 55.0000, 75.0000);
 				Saturation(0, 85.0000, 125.0000);
 				Value(0, 50.0000, 100.0000);
 				Alpha(0, 0.0000, 0.0000);
@@ -244,7 +246,8 @@ ParticleEmitter("Distortion")
 					VelocityScale(4.0000,4.0000);
 					InheritVelocityFactor(0.0000,0.0000);
 					Size(0, 0.1000, 0.1000);
-					Hue(0, 55.0000, 75.0000);
+					Hue(0, 140.0000, 140.0000);
+					//Hue(0, 55.0000, 75.0000);
 					Saturation(0, 85.0000, 125.0000);
 					Value(0, 150.0000, 200.0000);
 					Alpha(0, 0.0000, 0.0000);
