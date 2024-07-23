@@ -6,10 +6,15 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP assets
+-- load mission helper
+ScriptCB_DoFile("import")
+local memorypool = import("memorypool")
+local missionProperties = import("mission_properties")
+local TeamConfig = import("TeamConfig")
+local objCTF  = import("objective_ctf_helper")
+
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn")
-ScriptCB_DoFile("bom_ctf")
-ScriptCB_DoFile("bom_memorypool")
 ScriptCB_DoFile("bomgcw_all_jungle")
 ScriptCB_DoFile("bomgcw_imp_army") 
 
@@ -53,7 +58,7 @@ function ScriptInit()
 	-- crashes when loading.
 	--
 	
-	setMemoryPoolSize{
+	memorypool:init{
 		-- map
 		redOmniLights = 32,
 		
@@ -188,6 +193,28 @@ function ScriptInit()
     SetHeroClass(ALL, ALL_HERO)    
     SetHeroClass(IMP, IMP_HERO)
 	
+	TeamConfig:init{
+		teamNameATT = "all", teamNameDEF = "imp",
+	}
+	
+	
+	------------------------------------------------
+	------------   MISSION PROPERTIES   ------------
+	------------------------------------------------
+	
+	-- load game type map layer
+	ReadDataFile("KAS\\kas2.lvl", "kas2_tdm") -- _ctf doesn't work for some reason
+	
+	-- set mission properties
+	missionProperties:init{
+	-- map properties
+		-- ceiling and floor limit
+		mapCeiling = 70,
+		
+		-- birdies and fishies
+		numBirdTypes = 1,
+		numFishTypes = 1,
+	}
     
 	------------------------------------------------
 	------------   LEVEL PROPERTIES   --------------
@@ -203,7 +230,7 @@ function ScriptInit()
 	local NUM_FISH_TYPES = 1		-- 1 fish
 	
 	-- load gamemode map layer
-	ReadDataFile("KAS\\kas2.lvl", "kas2_tdm") -- _ctf doesn't work for some reason
+	
 	
 	-- ceiling and floor limit
 	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
@@ -396,17 +423,14 @@ function ScriptPostLoad()
     ------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
-	
-	-- define flag geometry
-	setFlagGeometry{allFlagName = "flag2", impFlagName = "flag1"}
 
-	-- create objective
-	ctf = createCTFObjective{teamATTName = "all", teamDEFName = "imp",
-							 allHomeRegion = "flag1_home", allCaptureRegion = "flag2_home",
-							 impHomeRegion = "flag2_home", impCaptureRegion = "flag1_home"}
-	
-	-- start objective
-    ctf:Start()
+	-- create and start objective	
+	objCTF:initCTF{
+		teamNameATT = "all", teamNameDEF = "imp",
+		flagNameATT = "flag2", flagNameDEF = "flag1",
+		homeRegionATT = "flag1_home", homeRegionDEF = "flag2_home",
+		captureRegionATT = "flag2_home", captureRegionDEF = "flag1_home",
+	}
     
 	
 	------------------------------------------------

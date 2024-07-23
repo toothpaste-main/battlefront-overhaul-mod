@@ -1,21 +1,20 @@
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
-
 --
 -- Battlefront Overhaul Mod
 -- Author: ToothpasteMain
 -- Version: v1.0
 --
 -- This is an example template for the conquest game mode using the 
--- bom_conquest.lau script
+-- objective_conquest_helper.lau script
 --
 
 -- load the gametype script
 ScriptCB_DoFile("ObjectiveConquest")
 
--- load BOM assets
-ScriptCB_DoFile("bom_conquest")
+-- mission helper
+ScriptCB_DoFile("objective_conquest_helper")
 
 
 ---------------------------------------------------------------------------
@@ -35,32 +34,6 @@ end
 
 -- PostLoad, this is all done after all loading, etc.
 function ScriptPostLoad()
- 
-	------------------------------------------------
-	------------   INITIALIZE OBJECTIVE   ----------
-	------------------------------------------------
-	
 	-- create and start objective	
 	createConquestObjective{cps = {"cp1", "cp2", "cp3", "cp4", "cp5", "cp6"}}
-end
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------
-------------------------   DELAYED START   -----------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------
-
-
--- PostLoad, this is all done after all loading, etc.
-function ScriptPostLoad()
- 
-	------------------------------------------------
-	------------   INITIALIZE OBJECTIVE   ----------
-	------------------------------------------------
-	
-	-- create objective	
-	conquest = createConquestObjective{cps = {"cp1", "cp2", "cp3", "cp4", "cp5", "cp6"}, 
-									   delayedStart = true}
-	
-	-- start objective
-	conquest:Start()
 end

@@ -1,14 +1,4 @@
 Logging LevelPack
-01:18:4707/08/24
-
-=== shell.lvl ===
-Missing file shell_vo.str
-    Reqd by shell.req
-Missing file shell_music.str
-    Reqd by shell.req
-Missing file shell_ui.str
-    Reqd by shell.req
-Missing file shell_ui.config
-    Reqd by shell.req
+02:33:4807/18/24
    0 Errors    0 Warnings
 

@@ -1,27 +1,34 @@
---
--- Battlefront Overhaul Mod
--- Author: ToothpasteMain 
--- Version: v1.0
---
--- Memory pool setup for common settings.
--- Additional memory pool sizes must be called
--- separately. Generally over estiamtes values
--- for simplicity. Users are encouraged to set
--- their own memory pools if memory limits are
--- a concern. The "num" prefix has been
--- omitted from most parameters for clarity.
---
--- SetMemoryPoolSize() comments are written by
--- or inspired from ryanhank
---
-print("Loading bom_memorypool.lua...")
+--[[
+	Battlefront Mission Helper
+	Module name: memorypool
+	Description: Memory pool setup for common settings
+	Author: ToothpasteMain
+	Version: v1.0
+	Date: 2024-07-22
+	Dependencies: constants
+	Notes: Additional memory pool sizes must be called separately. 
+		   Generally over estiamtes values for simplicity. Users are 
+		   encouraged to set their own memory pools if memory limits are 
+		   concern. The "num" prefix has been omitted from most parameters 
+		   for clarity.
+		   
+		   SetMemoryPoolSize() comments are written by or inspired from
+		   ryanhank.
+--]]
+local memorypool = {
+	name = "memorypool",
+	version = 1.0,
+	
+	initialized = false,
+}
 
 -- load dependencies
-ScriptCB_DoFile("bom_constants")
-
+ScriptCB_DoFile("import")
+local constants = import("constants")
 
 -- weapons should be last for optimal memory pool estimates
 local isWeaponPoolSet = false
+
 
 ---------------------------------------------------------------------------
 -- FUNCTION:    sumItems
@@ -73,7 +80,7 @@ local TURRETS_PER_COMMAND_WALKER = 3
 -- default values
 local DEFAULT_MEMORY_POOL_SIZES = {
 	-- jedi
-	jedi = getMaxPlayableTeams(),
+	jedi = constants.getMaxPlayableTeams(),
 	
 	-- map
 	asteroids = 0,
@@ -92,7 +99,7 @@ local DEFAULT_MEMORY_POOL_SIZES = {
 	-- units
 	totalAIVehicles = 0,
 	totalUnits = 72, -- 2*32 unit teams and headroom for 8 locals
-	cloths = getMaxPlayableTeams(), -- to account for heroes
+	cloths = constants.getMaxPlayableTeams(), -- to account for heroes
 	tentacles = 0,
 	gungans = 0,
 	wookiees = 0,
@@ -152,7 +159,7 @@ local DEFAULT_MEMORY_POOL_SIZES = {
 -- OUTPUT:		validParams
 -- NOTES:
 ---------------------------------------------------------------------------
-function validateParameters(params)
+local function validateParameters(params)
 	local validParams = {}
 
 	-- validate keys and save value
@@ -207,7 +214,7 @@ end
 -- OUTPUT:
 -- NOTES:
 ---------------------------------------------------------------------------
-function setJediMemoryPoolSize(jedi)
+function memorypool.setJediMemoryPoolSize(jedi)
 	-- calculate memory pool size
 	local combo = jedi*COMBO_FACTOR
 	local comboState = combo*COMBO_STATE_FACTOR
@@ -241,13 +248,13 @@ end
 -- OUTPUT:
 -- NOTES:
 ---------------------------------------------------------------------------
-function setMapMemoryPool(params)
+function memorypool.setMapMemoryPool(params)
 	-- set memory pool
 	SetMemoryPoolSize("Asteroid", params.asteroids) -- amount of asteroids used to fill asteroid paths and regions
 	SetMemoryPoolSize("BaseHint", params.hints) -- one per hint node placed on the map
 	SetMemoryPoolSize("EntityLight", params.lights) -- one per light ODF used on the map
 	SetMemoryPoolSize("Obstacle", params.obstacles) -- one per AI barrier placed on the map
-	SetMemoryPoolSize("PathNode", getMaxPathNodes()) -- one per path node placed on the map (hard limit by game)
+	SetMemoryPoolSize("PathNode", constants.getMaxPathNodes()) -- one per path node placed on the map (hard limit by game)
 	SetMemoryPoolSize("RedOmniLight", params.redOmniLights) -- one per red omni light ODF used on the map
 	SetMemoryPoolSize("TreeGridStack", params.treeGridStack) -- on per unit, object, etc. that is collidable
 end
@@ -265,7 +272,7 @@ end
 -- OUTPUT:
 -- NOTES:
 ---------------------------------------------------------------------------
-function setSoundMemoryPoolSize(params)
+function memorypool.setSoundMemoryPoolSize(params)
 	-- set memory pool
 	SetMemoryPoolSize("EntitySoundStatic", params.soundStatic)	
     SetMemoryPoolSize("EntitySoundStream", params.soundStream)
@@ -335,7 +342,7 @@ end
 -- OUTPUT:
 -- NOTES:       Total units across all teams including locals.
 ---------------------------------------------------------------------------
-function setUnitMemoryPoolSize(params)
+function memorypool.setUnitMemoryPoolSize(params)
 	-- AI memory pool
 	setAIMemoryPoolSize(params.totalUnits, params.totalAIVehicles)
 	
@@ -461,7 +468,7 @@ end
 --				called before `setWeaponMemoryPoolSize()`, otherwise, 
 --				weapon estimates may be inaccurate.
 ---------------------------------------------------------------------------
-function setVehicleMemoryPoolSize(params)
+function memorypool.setVehicleMemoryPoolSize(params)
 	-- check if weapon pool has already been set
 	assert(not isWeaponsSet, "setWeaponMemoryPoolSize() was called before setVehicleMemoryPoolSize()")
 	
@@ -533,31 +540,31 @@ end
 --				maximum allowed values for units and vehicles by the game.
 --				`vehicles` is a table with the sum of each vehicle type.
 ---------------------------------------------------------------------------
-function setWeaponMemoryPoolSize(totalUnits, totalAIVehicles, totalVehicles, vehicles, params)		
+function memorypool.setWeaponMemoryPoolSize(totalUnits, totalAIVehicles, totalVehicles, vehicles, params)		
 	-- localize totalVehicleWeapons
 	local totalVehicleWeapons = 0
 	
 	-- total flyer weapons
 	totalVehicleWeapons = sumItems(totalVehicleWeapons, 
-								   getMaxVehicleWeaponsPerSeat(), 
+								   constants.getMaxVehicleWeaponsPerSeat(), 
 								   vehicles.totalFlyers)
 	-- total hover weapons
 	totalVehicleWeapons = sumItems(totalVehicleWeapons, 
-								   getMaxVehicleWeaponsPerSeat(), 
+								   constants.getMaxVehicleWeaponsPerSeat(), 
 								   vehicles.totalHovers)
 	
 	-- total turret weapons
 	totalVehicleWeapons = sumItems(totalVehicleWeapons, 
-								   getMaxVehicleWeaponsPerSeat(), 
+								   constants.getMaxVehicleWeaponsPerSeat(), 
 								   vehicles.totalTurrets)
 	
 	-- total walker weapons
 	totalVehicleWeapons = sumItems(totalVehicleWeapons, 
-								   getMaxVehicleWeaponsPerSeat(), 
+								   constants.getMaxVehicleWeaponsPerSeat(), 
 								   vehicles.totalWalkers)
 
 	-- total unit weapons
-	local totalUnitWeapons = totalUnits * getMaxWeaponsPerUnit()
+	local totalUnitWeapons = totalUnits * constants.getMaxWeaponsPerUnit()
 
 	-- sum weapons
 	local totalWeapons = totalUnitWeapons + totalVehicleWeapons
@@ -592,9 +599,9 @@ end
 -- NOTES:       Automatically determines the game mode base on what has
 --				been loaded into memory.
 ---------------------------------------------------------------------------
-function setGameModeMemoryPoolSize()	
+function memorypool.setGameModeMemoryPoolSize()	
 	local function objectiveDetected(objective)
-		print("bom_memorypool.lua detected objective: " .. objective)
+		print("memorypool.lua detected objective: " .. objective)
 	end
 	
 	-- flags for ctf
@@ -609,14 +616,14 @@ function setGameModeMemoryPoolSize()
 	if ObjectiveOneFlagCTF then
 		objectiveDetected("ObjectiveOneFlagCTF")
 		
-		flags = getNumFlags1Flag()
+		flags = constants.getNumFlagsOneFlag()
 	end
 	
 	-- 2-flag CTF
 	if ObjectiveCTF then
 		objectiveDetected("ObjectiveCTF")
 		
-		flags = getNumFlagsCTF()
+		flags = constants.getNumFlagsCTF()
 	end
 	
 	-- team deathmatch / hunt
@@ -636,54 +643,66 @@ end
 ---------------------------------------------------------------------------
 -- FUNCTION:    setMemoryPoolSize
 -- PURPOSE:     Set the memory pool size
--- INPUT:		params{jedi,
+-- INPUT:		params{
+--					jedi,
 --				-- map
---					   hints, obstacles, 
---					   lights, redOmniLights,
---					   treeGridStack,
+--					hints, obstacles, 
+--					lights, redOmniLights,
+--					treeGridStack,
 -- 				-- sounds
---					   music, soundSpace,
---					   soundStatic, soundStream,
+--					music, soundSpace,
+--					soundStatic, soundStream,
 --				-- units
---					   totalUnits, totalAIVehicles,
---					   soldierAnimations, 
---					   cloths, tentacles, 
---					   gungans, wookiees,
+--					totalUnits, totalAIVehicles,
+--					soldierAnimations, 
+--					cloths, tentacles, 
+--					gungans, wookiees,
 --				-- vehicles
---					   flyers, commandFlyers,
---					   hovers, commandHovers,
---					   turrets, additionalVehicleTurrets,
---					   droidekas, onePair, twoPair, threePair, 
---					   commandWalkers,
+--					flyers, commandFlyers,
+--					hovers, commandHovers,
+--					turrets, additionalVehicleTurrets,
+--					droidekas, onePair, twoPair, threePair, 
+--					commandWalkers,
 --				-- weapons
---					   mines, portableTurrets,
---					   towCables} 
+--					mines, portableTurrets,
+--					towCables
+--				} 
 -- OUTPUT:
 -- NOTES:       All parameters are optional. Default values will be used if 
 --				nothing is passed.
 ---------------------------------------------------------------------------
-function setMemoryPoolSize(params)
+function memorypool:init(params)
+	assert(not self.initialized, "ERROR: " .. self.name .. " has already been initialized!")
+
 	-- game mode
-	setGameModeMemoryPoolSize()
+	self.setGameModeMemoryPoolSize()
 
 	-- validate parameters and apply defaults to missing ones
 	local validParams = validateParameters(params)
 
 	-- jedi
-	setJediMemoryPoolSize(validParams.jedi)
+	self.setJediMemoryPoolSize(validParams.jedi)
 	
 	-- map
-	setMapMemoryPool(validParams)
+	self.setMapMemoryPool(validParams)
 	
 	-- sounds
-	setSoundMemoryPoolSize(validParams)
+	self.setSoundMemoryPoolSize(validParams)
 	
 	-- units
-	setUnitMemoryPoolSize(validParams)
+	self.setUnitMemoryPoolSize(validParams)
 	
 	-- vehicles
-	local totalVehicles, vehicles = setVehicleMemoryPoolSize(validParams)
+	local totalVehicles, vehicles = self.setVehicleMemoryPoolSize(validParams)
 	
 	-- weapons
-	setWeaponMemoryPoolSize(validParams.totalUnits, validParams.totalAIVehicles, totalVehicles, vehicles, validParams)	
+	self.setWeaponMemoryPoolSize(validParams.totalUnits, validParams.totalAIVehicles, totalVehicles, vehicles, validParams)	
+
+	self.initialized = true
+end
+
+
+-- import function
+function get_memorypool()
+	return memorypool
 end

@@ -28,14 +28,22 @@ ucft
         "Ambush"
         "PlayMovieWithTransition"
 		
+		"import"
+		"table_utils"
+		"constants"
+		
+		"memorypool"
+		"mission_properties"
+		"TeamConfig"
+		
+		
+		"objective_helper"
+		"objective_ctf_helper"
+		"objective_conquest_helper"
+		"objective_hunt_helper"
+		"objective_tdm_helper"
+		
 		"bom_cmn"
-		"bom_constants"
-		"bom_conquest"
-		"bom_ctf"
-		"bom_deathmatch"
-		"bom_gamemode"
-		"bom_memorypool"
-		"bom_hunt"
 		
 		"bomcw_ep3"
 		"bomcw_ep3_jungle"

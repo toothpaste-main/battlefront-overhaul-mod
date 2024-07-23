@@ -1,14 +1,26 @@
---
--- Battlefront Overhaul Mod
--- Author: ToothpasteMaine
---
--- Constants and functions related to the hunt
--- game mode.
---
-print("Loading bom_hunt.lua...")
+--[[
+	Battlefront Mission Helper
+	Module name: objective_hunt_helper
+	Description: Helper module for hunt set up
+	Author: ToothpasteMain
+	Version: v1.0
+	Date: 2024-07-21
+	Dependencies: constants, objective_tdm_helper
+	Notes: All parameters are assumed to be strings unless stated 
+		   otherwise.
+--]]
+local objective_hunt_helper = {
+	name = "objective_hunt_helper",
+	version = 1.0,
+	
+	initialized = false,
+}
 
 -- load dependencies
-ScriptCB_DoFile("bom_deathmatch")
+ScriptCB_DoFile("import")
+local constants = import("constants")
+local objectiveTDMHelper = import("objective_tdm_helper")
+
 
 ------------------------------------------------
 ------------   POINTS PER KILL  ----------------
@@ -132,10 +144,6 @@ EWK_HEALTH = 60 -- pistol dmg is 50
 ------------   OBJECTIVE PROPERTIES   ----------
 ------------------------------------------------
 
--- message text for player (hunt)
-local TEXT_ATT_HUNT = "game.modes.hunt"
-local TEXT_DEF_HUNT = "game.modes.hunt2"
-
 -- endor
 TEXT_ATT_END1 = "level.end1.objectives.hunt"
 
@@ -143,29 +151,41 @@ TEXT_ATT_END1 = "level.end1.objectives.hunt"
 TEXT_ATT_KAS2 = "level.kas2.hunt.ATT"
 TEXT_DEF_KAS2 = "level.kas2.hunt.DEF"
 
-local MULTIPLAYER_RULES_HUNT = true
+local MULTIPLAYER_RULES = true
 
 
 ---------------------------------------------------------------------------
--- FUNCTION:    createHuntObjective
+-- FUNCTION:    initHunt
 -- PURPOSE:     Create hunt objective
 -- INPUT:		params = {teamATT, teamDEF,
 --						  textATT, textDEF,
 --						  pointsPerKillATT, pointsPerKillDEF,
+--						  goalWeightATT, goalWeightDEF,
+--						  multiplayerRules,
 --						  delayStart}
 -- OUTPUT:		ObjectiveTDM
 -- NOTES:       The function is purely a mask to 
 --				`createDeathmatchObjective()` and is functionally the same.
 ---------------------------------------------------------------------------
-function createHuntObjective(params)	
-	-- message text params
-	local textATT_ = params.textATT or TEXT_ATT_HUNT
-	local textDEF_ = params.textDEF or TEXT_DEF_HUNT
+function objective_hunt_helper:initHunt(params)	
+	assert(not self.initialized, "ERROR: " .. self.name .. " has already been initialized!")
+
+	-- objective text params
+	params.textATT = params.textATT or constants.getTextATT("hunt")
+	params.textDEF = params.textDEF or constants.getTextDEF("hunt")
 	
-	params.multiplayerRules = MULTIPLAYER_RULES_HUNT
+	-- multiplayer rules params
+	params.multiplayerRules = params.multiplayerRules or MULTIPLAYER_RULES
 
 	-- create objective
-	local hunt = createDeathmatchObjective(params)
+	self.objective = objectiveTDMHelper:createDeathmatchObjective(params)
 	
-	return hunt
+	self.initialized = true
+	return self.objective
+end
+
+
+-- import function
+function get_objective_hunt_helper()
+	return objective_hunt_helper
 end

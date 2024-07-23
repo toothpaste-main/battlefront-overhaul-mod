@@ -6,10 +6,15 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams") 
 
+-- load mission helper
+ScriptCB_DoFile("import")
+local memorypool = import("memorypool")
+local missionProperties = import("mission_properties")
+local TeamConfig = import("TeamConfig")
+local objCTF  = import("objective_ctf_helper")
+
 -- load BOM assets
 ScriptCB_DoFile("bom_cmn")
-ScriptCB_DoFile("bom_ctf")
-ScriptCB_DoFile("bom_memorypool")
 ScriptCB_DoFile("bomgcw_all_snow")
 ScriptCB_DoFile("bomgcw_imp_atat_snow")
 
@@ -53,7 +58,7 @@ function ScriptInit()
 	-- crashes when loading.
 	--
 	
-	setMemoryPoolSize{
+	memorypool:init{
 		-- map
 		hints = 1280,
 		obstacles = 1024,
@@ -188,111 +193,24 @@ function ScriptInit()
     SetHeroClass(ALL, ALL_HERO)    
     SetHeroClass(IMP, IMP_HERO)
 	
-
+	TeamConfig:init{
+		teamNameATT = "all", teamNameDEF = "imp",
+	}
+	
+	
 	------------------------------------------------
-	------------   LEVEL PROPERTIES   --------------
+	------------   MISSION PROPERTIES   ------------
 	------------------------------------------------
 	
-	-- constants
-	local MAP_CEILING = 25
-	local MAP_CEILING_AI = MAP_CEILING
-	local MAP_FLOOR = 0
-	local MAP_FLOOR_AI = MAP_FLOOR
-	local MIN_FLOCK_HEIGHT = -1
-	local NUM_BIRD_TYPES = 0		-- 1 to 2 birds, -1 dragons
-	local NUM_FISH_TYPES = 0		-- 1 fish
-	
-	-- load gamemode map layer
+	-- load game type map layer
 	ReadDataFile("myg\\myg1.lvl", "myg1_ctf")
 	
-	-- ceiling and floor limit
-	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
-	SetMaxPlayerFlyHeight(MAP_CEILING)		-- player
-	SetMinFlyHeight(MAP_FLOOR_AI)			-- AI
-	SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
-	
-	-- birdies
-	if MIN_FLOCK_HEIGHT > 0 then SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT) end
-    SetNumBirdTypes(NUM_BIRD_TYPES)
-	if NUM_BIRD_TYPES < 0 then SetBirdType(0.0, 10.0, "dragon") end
-	if NUM_BIRD_TYPES >= 1 then SetBirdType(0, 1.0, "bird") end
-	if NUM_BIRD_TYPES >= 2 then SetBirdType(0, 1.5, "bird2") end
-
-    -- fishies
-    SetNumFishTypes(NUM_FISH_TYPES)
-    if NUM_FISH_TYPES >= 1 then SetFishType(0, 0.8, "fish") end
-	
-	-- misc
-	--SetMapNorthAngle(0)
-	--SetWorldExtents(0.0)
-	
-	
-	------------------------------------------------
-	------------   AI RULES   ----------------------
-	------------------------------------------------
-	
-	-- constants
-	local AUTO_BLNC = false		-- redistributes more AI onto losing team
-	local BLND_JET = 1			-- allow AI to jet jump outside of hints
-	local DENSE_ENV = "false"
-	local DIFF_PLAYER = 0		-- default = 0, +/- to change skill of player's team
-	local DIFF_ENEMY = 0		-- default = 0, +/- to change skill of enemy's team
-	local GRND_FLYER = 0		-- make AI flyers aware of the ground
-	local SNIPE_ATT = 196		-- snipe distance from "attack" hints
-	local SNIPE_DEF = 196		-- snipe distance from "defend" hints
-	local SNIPE_DIST = 128		-- snipe distance when on foot
-	local STAY_TUR = 0			-- force AI to stay in turrets
-	local URBAN_ENV = "true"
-	local VIEW_MULTIPLIER = -1	-- -1 for default
-	
-	-- difficulty
-	if AUTO_BLNC then EnableAIAutoBalance() end 
-	SetAIDifficulty(DIFF_PLAYER, DIFF_ENEMY)
-	
-	-- behavior
-	--SetTeamAggressiveness(TEAM_NUM, 1.0)
-	
-	-- spawn delay
-	SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
-	
-	-- dense environment
-	-- IF TRUE: decrease AI engagement distance
-	-- IF FALSE: default AI engagement distance
-	SetDenseEnvironment(DENSE_ENV)
-	if VIEW_MULTIPLIER > 0 then SetAIViewMultiplier(VIEW_MULTIPLIER) end
-	
-	-- urban environtment
-	-- IF TRUE: AI vehicles strafe less
-	-- IF FALSE: AI vehicles strafe
-	SetUrbanEnvironment(URBAN_ENV)
-	
-	-- sniping distance
-	AISnipeSuitabilityDist(SNIPE_DIST)
-	SetAttackerSnipeRange(SNIPE_ATT)
-	SetDefenderSnipeRange(SNIPE_DEF)
-	
-	-- misc
-	SetAllowBlindJetJumps(BLND_JET)
-	SetGroundFlyerMap(GRND_FLYER)
-	SetStayInTurrets(STAY_TUR)
-
-
-	------------------------------------------------
-	------------   LEVEL ANNOUNCER   ---------------
-	------------------------------------------------
-    
-	-- announcer slow
-	voiceSlow = OpenAudioStream("sound\\global.lvl", "all_unit_vo_slow")
-    AudioStreamAppendSegments("sound\\global.lvl", "imp_unit_vo_slow", voiceSlow)
-    AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
-	
-	-- announcer quick
-	voiceQuick = OpenAudioStream("sound\\global.lvl", "all_unit_vo_quick")
-    AudioStreamAppendSegments("sound\\global.lvl", "imp_unit_vo_quick", voiceQuick)
-	
-	-- out of bounds warning
-	SetOutOfBoundsVoiceOver(ALL, "allleaving")
-    SetOutOfBoundsVoiceOver(IMP, "impleaving")
+	-- set mission properties
+	missionProperties:init{
+	-- ai properties
+		-- view distance
+		urbanEnvironment = true,	
+	}
 	
 	
 	------------------------------------------------
@@ -317,16 +235,6 @@ function ScriptInit()
 	SetDefeatMusic (ALL, "all_myg_amb_defeat")
 	SetVictoryMusic(IMP, "imp_myg_amb_victory")
 	SetDefeatMusic (IMP, "imp_myg_amb_defeat")
-
-	-- misc sound effects
-	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
-    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
-    SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
-    SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
-	SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
-    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
-	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
-    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
 
 
 	------------------------------------------------
@@ -370,16 +278,13 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
 
-	-- define flag geometry
-	setFlagGeometry{allFlagName = "flag1", impFlagName = "flag2"}
-
-	-- create objective
-	ctf = createCTFObjective{teamATTName = "all", teamDEFName = "imp",
-							 allHomeRegion = "flag1_home", allCaptureRegion = "flag2_home",
-							 impHomeRegion = "flag2_home", impCaptureRegion = "flag1_home"}
-				
-	-- start objective
-    ctf:Start()
+	-- create and start objective	
+	objCTF:initCTF{
+		teamNameATT = "all", teamNameDEF = "imp",
+		flagNameATT = "flag1", flagNameDEF = "flag2",
+		homeRegionATT = "flag1_home", homeRegionDEF = "flag2_home",
+		captureRegionATT = "flag2_home", captureRegionDEF = "flag1_home",
+	}
     
 	
 	------------------------------------------------

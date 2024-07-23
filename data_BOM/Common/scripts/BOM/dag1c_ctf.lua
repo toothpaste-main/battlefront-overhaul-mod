@@ -6,10 +6,15 @@
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams")
 
--- load BBP assets
+-- load mission helper
+ScriptCB_DoFile("import")
+local memorypool = import("memorypool")
+local missionProperties = import("mission_properties")
+local TeamConfig = import("TeamConfig")
+local objCTF  = import("objective_ctf_helper")
+
+-- load BOM assets
 ScriptCB_DoFile("bom_cmn")
-ScriptCB_DoFile("bom_ctf")
-ScriptCB_DoFile("bom_memorypool")
 ScriptCB_DoFile("bomcw_ep3_marinejungle") 
 
 -- these variables do not change
@@ -52,7 +57,7 @@ function ScriptInit()
 	-- crashes when loading.
 	--
 	
-	setMemoryPoolSize{
+	memorypool:init{
 		-- map
 		hints = 1280,
 		obstacles = 1024,
@@ -178,119 +183,34 @@ function ScriptInit()
 	-- heroes
     SetHeroClass(REP, REP_HERO)
 	SetHeroClass(CIS, CIS_HERO)
-
-
+	
+	TeamConfig:init{
+		teamNameATT = "rep", teamNameDEF = "cis",
+	}
+	
+	
 	------------------------------------------------
-	------------   LEVEL PROPERTIES   --------------
+	------------   MISSION PROPERTIES   ------------
 	------------------------------------------------
 	
-	-- constants
-	local MAP_CEILING = 20
-	local MAP_CEILING_AI = MAP_CEILING
-	local MAP_FLOOR = 0
-	local MAP_FLOOR_AI = MAP_FLOOR
-	local MIN_FLOCK_HEIGHT = 90.0
-	local NUM_BIRD_TYPES = 2		-- 1 to 2 birds, -1 dragons
-	local NUM_FISH_TYPES = 1		-- 1 fish
-	
-	-- load gamemode map layer
+	-- load game type map layer
 	ReadDataFile("dag\\dag1.lvl", "dag1_ctf")
 	ReadDataFile("dag\\dag1.lvl", "dag1_cw") -- for gunship
 	
-	-- ceiling and floor limit
-	SetMaxFlyHeight(MAP_CEILING_AI)			-- AI
-	SetMaxPlayerFlyHeight(MAP_CEILING)		-- player
-	SetMinFlyHeight(MAP_FLOOR_AI)			-- AI
-	SetMinPlayerFlyHeight(MAP_FLOOR)		-- player
-	
-	-- birdies
-	if MIN_FLOCK_HEIGHT > 0 then SetBirdFlockMinHeight(MIN_FLOCK_HEIGHT) end
-    SetNumBirdTypes(NUM_BIRD_TYPES)
-	if NUM_BIRD_TYPES < 0 then SetBirdType(0.0, 10.0, "dragon") end
-	if NUM_BIRD_TYPES >= 1 then SetBirdType(0, 1.0, "bird") end
-	if NUM_BIRD_TYPES >= 2 then SetBirdType(0, 1.5, "bird2") end
-
-    -- fishies
-    SetNumFishTypes(NUM_FISH_TYPES)
-    if NUM_FISH_TYPES >= 1 then SetFishType(0, 0.8, "fish") end
-	
-	-- misc
-	--SetMapNorthAngle(0)
-	--SetWorldExtents(0.0)
-	
-	
-	------------------------------------------------
-	------------   AI RULES   ----------------------
-	------------------------------------------------
-	
-	-- constants
-	local AUTO_BLNC = false		-- redistributes more AI onto losing team
-	local BLND_JET = 1			-- allow AI to jet jump outside of hints
-	local DENSE_ENV = "true"
-	local DIFF_PLAYER = 0		-- default = 0, +/- to change skill of player's team
-	local DIFF_ENEMY = 0		-- default = 0, +/- to change skill of enemy's team
-	local GRND_FLYER = 0		-- make AI flyers aware of the ground
-	local SNIPE_ATT = 196		-- snipe distance from "attack" hints
-	local SNIPE_DEF = 196		-- snipe distance from "defend" hints
-	local SNIPE_DIST = 128		-- snipe distance when on foot
-	local STAY_TUR = 0			-- force AI to stay in turrets
-	local URBAN_ENV = "false"
-	local VIEW_MULTIPLIER = -1	-- -1 for default
-	
-	-- difficulty
-	if AUTO_BLNC then EnableAIAutoBalance() end 
-	SetAIDifficulty(DIFF_PLAYER, DIFF_ENEMY)
-	
-	-- behavior
-	--SetTeamAggressiveness(TEAM_NUM, 1.0)
-	
-	-- spawn delay
-	SetSpawnDelay(AI_WAVE_SPAWN_DELAY, PERCENTAGE_AI_RESPAWNED)
-	
-	-- dense environment
-	-- IF TRUE: decrease AI engagement distance
-	-- IF FALSE: default AI engagement distance
-	SetDenseEnvironment(DENSE_ENV)
-	if VIEW_MULTIPLIER > 0 then SetAIViewMultiplier(VIEW_MULTIPLIER) end
-	
-	-- urban environtment
-	-- IF TRUE: AI vehicles strafe less
-	-- IF FALSE: AI vehicles strafe
-	SetUrbanEnvironment(URBAN_ENV)
-	
-	-- sniping distance
-	AISnipeSuitabilityDist(SNIPE_DIST)
-	SetAttackerSnipeRange(SNIPE_ATT)
-	SetDefenderSnipeRange(SNIPE_DEF)
-	
-	-- misc
-	SetAllowBlindJetJumps(BLND_JET)
-	SetGroundFlyerMap(GRND_FLYER)
-	SetStayInTurrets(STAY_TUR)
-
-
-	------------------------------------------------
-	------------   LEVEL ANNOUNCER   ---------------
-	------------------------------------------------
-    
-	-- announcer slow
-    voiceSlow = OpenAudioStream("sound\\global.lvl", "rep_unit_vo_slow")
-    AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_slow", voiceSlow)
-    AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
-    
-	-- announcer quick
-    voiceQuick = OpenAudioStream("sound\\global.lvl", "rep_unit_vo_quick")
-    AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_quick", voiceQuick)
-    
-    -- winning/losing announcement
-    SetBleedingVoiceOver(REP, REP, "rep_off_com_report_us_overwhelmed", 1)
-    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing", 1)
-    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing", 1)
-    SetBleedingVoiceOver(CIS, CIS, "cis_off_com_report_us_overwhelmed", 1)
-	
-	-- out of bounds warning
-    SetOutOfBoundsVoiceOver(REP, "repleaving")
-    SetOutOfBoundsVoiceOver(CIS, "cisleaving")	
+	-- set mission properties
+	missionProperties:init{
+	-- map properties
+		-- ceiling and floor limit
+		mapCeiling = 20,
+		
+		-- birdies and fishies
+		numBirdTypes = 2,
+		numFishTypes = 1,
+		
+	-- ai properties
+		-- view distance
+		denseEnvironment = true,	
+	}
 
 
 	------------------------------------------------
@@ -315,16 +235,6 @@ function ScriptInit()
     SetDefeatMusic (REP, "rep_dag_amb_defeat")
     SetVictoryMusic(CIS, "cis_dag_amb_victory")
     SetDefeatMusic (CIS, "cis_dag_amb_defeat")
-	
-    -- misc sound effects
-	if NUM_BIRD_TYPES >= 1 then SetSoundEffect("BirdScatter", "birdsFlySeq1") end
-    SetSoundEffect("SpawnDisplayBack", "shell_menu_exit")
-    SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
-    SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
-	SetSoundEffect("SpawnDisplayUnitChange", "shell_select_unit")
-    SetSoundEffect("SpawnDisplayUnitAccept", "shell_menu_enter")
-	SetSoundEffect("ScopeDisplayZoomIn", "binocularzoomin")
-    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
 
 
 	------------------------------------------------
@@ -345,41 +255,13 @@ function ScriptPostLoad()
 	------------   INITIALIZE OBJECTIVE   ----------
 	------------------------------------------------
 
-	SoundEvent_SetupTeams(REP, 'rep', CIS, 'cis')
-	
-	-- define flag geometry
-	SetProperty("flag1", "GeometryName", "com_icon_cis_flag")
-	SetProperty("flag1", "CarriedGeometryName", "com_icon_cis_flag_carried")
-	SetProperty("flag2", "GeometryName", "com_icon_republic_flag")
-	SetProperty("flag2", "CarriedGeometryName", "com_icon_republic_flag_carried")
-	SetClassProperty("com_item_flag_carried", "DroppedColorize", 1)
-
-    -- create objective
-    ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF,
-						   captureLimit = 5,
-						   textATT = "game.modes.CTF", 
-						   textDEF = "game.modes.CTF2", 
-						   hideCPs = true, 
-						   multiplayerRules = true}
-    
-	-- add flags to the objective
-	ctf:AddFlag{name = "ctf_flag1", homeRegion = "flag1_home", captureRegion = "flag2_home",
-                capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-    ctf:AddFlag{name = "ctf_flag2", homeRegion = "flag2_home", captureRegion = "flag1_home",
-                capRegionMarker = "hud_objective_icon_circle", capRegionMarkerScale = 3.0, 
-                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
-    
-	-- define flag geometry
-	setFlagGeometry{repFlagName = "ctf_flag1", cisFlagName = "ctf_flag2"}
-
-	-- create objective
-	ctf = createCTFObjective{teamATTName = "rep", teamDEFName = "cis",
-							 repHomeRegion = "flag1_home", repCaptureRegion = "flag2_home",
-							 cisHomeRegion = "flag2_home", cisCaptureRegion = "flag1_home"}
-	
-	-- start objective
-	ctf:Start()
+	-- create and start objective	
+	objCTF:initCTF{
+		teamNameATT = "rep", teamNameDEF = "cis",
+		flagNameATT = "ctf_flag1", flagNameDEF = "ctf_flag2",
+		homeRegionATT = "flag1_home", homeRegionDEF = "flag2_home",
+		captureRegionATT = "flag2_home", captureRegionDEF = "flag1_home",
+	}
 	
 	
 	------------------------------------------------
