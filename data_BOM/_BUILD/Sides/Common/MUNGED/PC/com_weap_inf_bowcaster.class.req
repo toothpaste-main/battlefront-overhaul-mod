@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"weapon_scope2"
+	}
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_chargeup"
+	}
+}

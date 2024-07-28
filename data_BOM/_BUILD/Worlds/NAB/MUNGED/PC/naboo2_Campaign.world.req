@@ -1,0 +1,34 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"naboo2_campaign"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"com_bldg_invisible_controlzone"
+		"com_item_vehicle_spawn"
+		"tur_bldg_recoilless_nab_auto"
+		"tur_weap_built_gunturret"
+		"tan4_prop_console"
+	}
+}

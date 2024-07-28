@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_fusioncutter"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"rep_weap_inf_fusioncutter"
+		"rep_1st_weap_inf_fusioncutter"
+	}
+}

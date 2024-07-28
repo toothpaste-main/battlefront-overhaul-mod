@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_vehicle_exp"
+		"com_sfx_chunktrail"
+	}
+	REQN
+	{
+		"model"
+		"com_mediumchunk1"
+	}
+}

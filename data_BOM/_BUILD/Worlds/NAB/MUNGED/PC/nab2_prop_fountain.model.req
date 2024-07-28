@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"nab2_prop_fountain2"
+		"nab2_bldg_arch1"
+		"nab2_prop_fountain"
+		"cubemap"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"dag1_prop_moss_3"
+		"dag1_prop_moss_1"
+		"dag1_prop_rock_1"
+		"dag1_prop_treebark_02"
+		"dag1_prop_rock_moss_1"
+		"dag1_prop_rock_moss"
+	}
+}

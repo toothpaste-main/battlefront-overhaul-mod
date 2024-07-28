@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default"
+		"imp_weap_inf_shotgun"
+		"imp_weap_inf_fusioncutter"
+		"imp_weap_inf_detpack"
+		"imp_weap_inf_powerup_dispenser"
+		"imp_weap_award_shotgun"
+	}
+}

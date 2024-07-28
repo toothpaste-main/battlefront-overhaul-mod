@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"uta1_bldg_supporter"
+	}
+	REQN
+	{
+		"class"
+		"uta1_bldg_tower_flicker"
+	}
+}

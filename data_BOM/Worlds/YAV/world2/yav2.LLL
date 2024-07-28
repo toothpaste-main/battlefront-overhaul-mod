@@ -1,0 +1,22 @@
+Version(1);
+NextID(1);
+
+Group("Last Loaded")
+{
+	Layer("Buildings01");
+	Layer("Design001");
+	Layer("invisocube");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("Buildings01");
+	Layer("Design001");
+	Layer("invisocube");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("Buildings01");
+	Layer("Design001");
+	Layer("invisocube");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+}
+

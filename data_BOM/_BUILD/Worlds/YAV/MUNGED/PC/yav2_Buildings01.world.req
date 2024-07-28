@@ -1,0 +1,51 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"yav2_buildings01"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"yav2_bldg_medium"
+		"yav2_bldg_window_ruin_16"
+		"yav_bldg_ruins_column1"
+		"yav2_bldg_arch"
+		"yav_prop_leaftree2"
+		"com_item_healthrecharge"
+		"yav2_bldg_wall"
+		"com_item_powerup_health100"
+		"yav_bldg_column"
+		"yav_prop_log"
+		"yav2_bldg_steps"
+		"yav2_bldg_arch_stairs"
+		"yav2_bldg_temple"
+		"com_item_weaponrecharge"
+		"yav2_bldg_floor"
+		"yav2_bldg_column"
+		"yav2_bldg_arena_straight_2"
+		"yav2_bldg_arena_straight_1"
+		"yav2_bldg_wall_ruin_24"
+		"yav2_bldg_big"
+		"yav_prop_stump"
+		"yav2_bldg_door_ruin_8"
+		"yav_bldg_ruins_column2"
+	}
+}

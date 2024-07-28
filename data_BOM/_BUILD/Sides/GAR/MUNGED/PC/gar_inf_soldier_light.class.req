@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"gar_inf_default_soldier"
+		"gar_weap_inf_pistol"
+		"gar_weap_award_pistol"
+	}
+	REQN
+	{
+		"model"
+		"gar_inf_nabooguard_yellow"
+		"gar_inf_nabooguard_red"
+		"gar_inf_nabooguard_blue"
+		"gar_inf_nabooguard_low1"
+	}
+}

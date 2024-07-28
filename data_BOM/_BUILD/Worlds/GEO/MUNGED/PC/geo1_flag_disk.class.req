@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_icon_disk"
+	}
+	REQN
+	{
+		"class"
+		"flaglight"
+	}
+}

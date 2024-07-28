@@ -1,0 +1,26 @@
+[GameObjectClass]
+ClassParent         = "all_inf_default_engineer"
+
+
+[Properties]
+GeometryName   		= "all_inf_bothanspy"
+GeometryLowRes  	= "all_inf_bothanspy_low1"
+FirstPerson     	= "all\allbothn;all_1st_bothanspy"
+
+AnimationName		= "bothanspy"
+
+
+//******************************************************
+//***************   SOUND   ****************
+//******************************************************
+
+VOUnitType              = 3
+
+VOSound = "all1_inf_pc_com_hostile      SpottedVO"                               
+VOSound = "all1_inf_pc_com_bacta      NeedMedicVO"                               
+VOSound = "all1_inf_pc_com_mechanic      NeedRepairVO"                           
+VOSound = "all1_inf_pc_com_ammo      NeedAmmoVO"                                 
+VOSound = "all1_inf_pc_com_transport      NeedPickupVO"                          
+VOSound = "all1_inf_pc_com_backup      NeedBackupVO"                             
+VOSound = "all1_inf_pc_com_clear_area      AttackPositionVO"                     
+VOSound = "all1_inf_pc_com_defend     DefendPositionVO"                          

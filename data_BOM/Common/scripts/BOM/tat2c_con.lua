@@ -1,0 +1,287 @@
+--
+-- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
+--
+
+-- load the gametype script
+ScriptCB_DoFile("ObjectiveConquest")
+ScriptCB_DoFile("setup_teams") 
+
+-- load mission helper
+ScriptCB_DoFile("import")
+local memorypool = import("memorypool")
+local missionProperties = import("mission_properties")
+local TeamConfig = import("TeamConfig")
+local objConquest  = import("objective_conquest_helper")
+
+-- load BOM assets
+ScriptCB_DoFile("bom_cmn")
+ScriptCB_DoFile("bomcw_ep3") 
+	
+-- these variables do not change
+local ATT = 1
+local DEF = 2
+-- republic attacking (attacker is always #1)
+local REP = ATT
+local CIS = DEF
+
+-- jawas
+local JAW = 3
+local JAW_UNITS = 6
+
+
+---------------------------------------------------------------------------
+-- FUNCTION:    ScriptInit
+-- PURPOSE:     This function is only run once
+-- INPUT:
+-- OUTPUT:
+-- NOTES:       The name, 'ScriptInit' is a chosen convention, and each
+--              mission script must contain a version of this function, as
+--              it is called from C to start the mission.
+---------------------------------------------------------------------------
+function ScriptInit()
+
+    ------------------------------------------------
+	-- Digners, these two lines *MUST* be first.--
+	------------------------------------------------
+
+	-- allocate PS2 memory
+	if(ScriptCB_GetPlatform() == "PS2") then
+        StealArtistHeap(1024*1024)	-- steal 1MB from art heap
+    end
+	SetPS2ModelMemory(PS2_MEMORY)
+
+    ReadDataFile("ingame.lvl")
+	
+	
+	------------------------------------------------
+	------------   MEMORY POOL   -------------------
+	------------------------------------------------
+	--
+	-- This happens first and foremost to avoid
+	-- crashes when loading.
+	--
+	
+	memorypool:init{
+		-- map
+		hints = 512,
+		obstacles = 768,
+		redOmniLights = 32,
+		
+		-- sounds 
+		soundStream = 2,
+		soundSpace = 1,
+		
+		-- units
+		cloths = MAX_OFFICER + MAX_SNIPER,
+		
+		-- vehicles
+		turrets = 14,
+		droidekas = MAX_SPECIAL,
+		
+		-- weapons
+		mines = 2 * ASSAULT_MINES * MAX_ASSAULT,
+		portableTurrets = 2 * SNIPER_TURRETS * MAX_SNIPER,
+	}
+	
+	
+	------------------------------------------------
+	------------   DLC SOUNDS   --------------------
+	------------------------------------------------
+	--
+	-- This happens first to avoid conflicts with 
+	-- vanilla sounds.
+	--
+	
+	-- global
+	ReadDataFile("dc:sound\\bom.lvl;bom_cmn")
+
+	-- era
+	ReadDataFile("dc:sound\\bom.lvl;bomcw")
+    
+	
+	------------------------------------------------
+	------------   VANILLA SOUNDS   ----------------
+	------------------------------------------------
+	
+
+    ReadDataFile("sound\\tat.lvl;tat2cw")
+	
+	
+	------------------------------------------------
+	------------   UNIT TYPES   --------------------
+	------------------------------------------------
+	
+	-- rebels
+	local REP_HERO = "rep_hero_obiwan"
+	
+	-- empire
+	local CIS_HERO = "cis_hero_darthmaul"
+	
+    
+	-----------------------------------------------
+	------------   LOAD VANILLA ASSETS   -----------
+	------------------------------------------------
+	
+	-- republic
+	ReadDataFile("SIDE\\rep.lvl",
+				 REP_HERO)
+	
+	-- cis
+	ReadDataFile("SIDE\\cis.lvl",
+				 CIS_HERO)
+	
+	-- jawas
+    ReadDataFile("SIDE\\des.lvl",
+                 "tat_inf_jawa")
+
+	-- turrets
+	ReadDataFile("SIDE\\tur.lvl",
+				 "tur_bldg_tat_barge",	
+				 "tur_bldg_laser")	
+
+
+	------------------------------------------------
+	------------   LOAD DLC ASSETS   ---------------
+	------------------------------------------------
+	
+	-- republic
+	ReadDataFile("dc:SIDE\\rep.lvl",
+				 REP_SOLDIER_CLASS,
+				 REP_ASSAULT_CLASS,
+				 REP_SNIPER_CLASS, 
+				 REP_ENGINEER_CLASS,
+				 REP_OFFICER_CLASS,
+				 REP_SPECIAL_CLASS)
+
+    -- cis
+	ReadDataFile("dc:SIDE\\cis.lvl",
+				 CIS_SOLDIER_CLASS,
+				 CIS_ASSAULT_CLASS,
+				 CIS_SNIPER_CLASS,
+				 CIS_ENGINEER_CLASS,
+				 CIS_OFFICER_CLASS,
+				 CIS_SPECIAL_CLASS)
+ 
+ 
+	------------------------------------------------
+	------------   SETUP TEAMS   -------------------
+	------------------------------------------------
+	
+    SetupTeams{
+		-- republic
+        rep = {
+            team = REP,
+            units = MAX_UNITS,
+            reinforcements = DEFAULT_REINFORCEMENTS,
+            soldier		= {REP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
+            assault		= {REP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
+			sniper		= {REP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
+            engineer	= {REP_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
+            officer		= {REP_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
+            special		= {REP_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
+        },
+		-- cis
+        cis = {
+            team = CIS,
+            units = MAX_UNITS,
+            reinforcements = DEFAULT_REINFORCEMENTS,
+            soldier		= {CIS_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
+            assault		= {CIS_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
+			sniper		= {CIS_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
+            engineer	= {CIS_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
+            officer		= {CIS_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
+            special		= {CIS_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
+        }
+    }
+    
+	-- heroes
+    SetHeroClass(REP, REP_HERO)
+	SetHeroClass(CIS, CIS_HERO)
+	
+	TeamConfig:init{
+		teamNameATT = "rep", teamNameDEF = "cis",
+	}
+
+	-- setup jawas
+	SetTeamName(JAW, "Jawas")
+	SetUnitCount(JAW, JAW_UNITS)
+	AddUnitClass(JAW, "tat_inf_jawa", JAW_UNITS)
+	
+	-- jawas friends with everyone
+	AddAIGoal(JAW, "deathmatch", 100)
+	SetTeamAsFriend(JAW, ATT)
+	SetTeamAsFriend(JAW, DEF) 
+	SetTeamAsFriend(ATT, JAW)
+	SetTeamAsFriend(DEF, JAW)
+
+	
+	------------------------------------------------
+	------------   MISSION PROPERTIES   ------------
+	------------------------------------------------
+	
+	-- load game type map layer
+	ReadDataFile("TAT\\tat2.lvl", "tat2_con")
+	
+	-- set mission properties
+	missionProperties:init{
+	-- map properties
+		-- ceiling and floor limit
+		mapCeiling = 40,	
+	}
+	
+	
+	------------------------------------------------
+	------------   LEVEL SOUNDS   ------------------
+	------------------------------------------------
+
+	-- open ambient streams
+    OpenAudioStream("sound\\global.lvl", "cw_music")
+    OpenAudioStream("sound\\tat.lvl", "tat2")
+    OpenAudioStream("sound\\tat.lvl", "tat2")
+
+    -- music
+    SetAmbientMusic(REP, 1.0, "rep_tat_amb_start", 0,1)
+    SetAmbientMusic(REP, 0.8, "rep_tat_amb_middle", 1,1)
+    SetAmbientMusic(REP, 0.2,"rep_tat_amb_end", 2,1)
+    SetAmbientMusic(CIS, 1.0, "cis_tat_amb_start", 0,1)
+    SetAmbientMusic(CIS, 0.8, "cis_tat_amb_middle", 1,1)
+    SetAmbientMusic(CIS, 0.2,"cis_tat_amb_end", 2,1)
+
+	-- game over song
+    SetVictoryMusic(REP, "rep_tat_amb_victory")
+    SetDefeatMusic (REP, "rep_tat_amb_defeat")
+    SetVictoryMusic(CIS, "cis_tat_amb_victory")
+    SetDefeatMusic (CIS, "cis_tat_amb_defeat")
+
+
+    ------------------------------------------------
+	------------   CAMERA SHOTS   ------------------
+	------------------------------------------------
+	
+	AddCameraShot(0.974338, -0.222180, 0.035172, 0.008020, -82.664650, 23.668301, 43.955681)
+	AddCameraShot(0.390197, -0.089729, -0.893040, -0.205362, 23.563562, 12.914885, -101.465561)
+	AddCameraShot(0.169759, 0.002225, -0.985398, 0.012916, 126.972809, 4.039628, -22.020613)
+	AddCameraShot(0.677453, -0.041535, 0.733016, 0.044942, 97.517807, 4.039628, 36.853477)
+	AddCameraShot(0.866029, -0.156506, 0.467299, 0.084449, 7.685640, 7.130688, -10.895234)
+end
+
+
+-- PostLoad, this is all done after all loading, etc.
+function ScriptPostLoad()
+    
+	------------------------------------------------
+	------------   INITIALIZE OBJECTIVE   ----------
+	------------------------------------------------
+
+    -- create and start objective	
+	objConquest:initConquest{
+		cps = {"cp1", "cp2", "cp3", "cp6", "cp7", "cp8"}
+	}
+	
+	
+	------------------------------------------------
+	------------   MISC   --------------------------
+	------------------------------------------------
+
+	EnableSPHeroRules()  
+end

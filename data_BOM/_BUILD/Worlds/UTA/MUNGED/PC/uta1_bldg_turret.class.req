@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"uta1_bldg_turret"
+		"uta1_bldg_turret_destroyed"
+	}
+	REQN
+	{
+		"class"
+		"uta1_bldg_turret_exp"
+		"uta_weap_turret_cannon"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_vehicleflame"
+		"com_sfx_smokeplume"
+	}
+}

@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_detpack_ord"
+		"imp_weap_inf_detpack_exp"
+		"imp_weap_inf_detpack_destroyed_exp"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_detpack"
+	}
+}

@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_level10_c_lowrez"
+		"uta1_bldg_level10_stripe"
+		"uta1_bldg_level10_floor"
+		"uta1_bldg_level10_d_lowrez"
+		"uta1_prop_deskandchair_lowrez"
+		"uta1_bldg_level10_e_lowrez"
+		"uta1_bldg_level10_c"
+		"uta1_bldg_grate01"
+		"uta1_bldg_level10_floor_bump"
+		"uta1_bldg_level10_e"
+		"uta1_bldg_level10_d"
+		"uta1_prop_deskandchair"
+	}
+}

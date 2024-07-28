@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_bldg_greatspire_trim"
+		"geo_bldg_war_room_floor"
+		"geo_bldg_rafters"
+		"geo_bldg_spire_transition"
+		"geo_bldg_war_room02"
+	}
+}

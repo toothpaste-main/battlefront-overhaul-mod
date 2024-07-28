@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"tan4_bldg_engine_c"
+	}
+	REQN
+	{
+		"config"
+		"all_halo"
+	}
+}

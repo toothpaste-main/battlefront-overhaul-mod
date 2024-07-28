@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"nab2_prop_fountain"
+	}
+	REQN
+	{
+		"config"
+		"fountain_halo"
+		"nab_sfx_fountain"
+	}
+}

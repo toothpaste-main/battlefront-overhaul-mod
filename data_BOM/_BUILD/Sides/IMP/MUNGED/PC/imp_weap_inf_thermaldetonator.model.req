@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_weap_inf_grenadethermal"
+		"imp_weap_inf_thermaldetonator"
+	}
+}

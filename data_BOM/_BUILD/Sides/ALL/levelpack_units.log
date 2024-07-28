@@ -1,0 +1,76 @@
+Logging LevelPack
+14:50:4707/25/24
+
+=== all_inf_rifleman_desert.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\all_weap_inf_rifle.class.req
+            munged\pc\all_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\all_weap_inf_pistol.class.req
+            munged\pc\all_weap_inf_thermaldetonator.class.req
+            munged\pc\all_weap_award_pistol.class.req
+
+=== all_inf_rifleman_fleet.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\all_weap_inf_rifle.class.req
+            munged\pc\all_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\all_weap_inf_pistol.class.req
+            munged\pc\all_weap_inf_thermaldetonator.class.req
+            munged\pc\all_weap_award_pistol.class.req
+Missing file helmet_envmap.texture
+    Reqd by munged\pc\all_inf_tantive4trooper.model.req
+
+=== all_inf_rifleman_jungle.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\all_weap_inf_rifle.class.req
+            munged\pc\all_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\all_weap_inf_pistol.class.req
+            munged\pc\all_weap_inf_thermaldetonator.class.req
+            munged\pc\all_weap_award_pistol.class.req
+
+=== all_inf_rifleman_snow.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\all_weap_inf_rifle.class.req
+            munged\pc\all_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\all_weap_inf_pistol.class.req
+            munged\pc\all_weap_inf_thermaldetonator.class.req
+            munged\pc\all_weap_award_pistol.class.req
+
+=== all_inf_rifleman_urban.lvl ===
+Missing file com_weap_inf_ord_hum_sm.class
+    Reqd by ..\common\munged\pc\com_weap_inf_rifle_ord.class.req
+            ..\common\munged\pc\com_weap_inf_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_pistol_ord.class.req
+            ..\common\munged\pc\com_weap_award_rifle_ord.class.req
+Missing file com_weap_inf_equip_med.class
+    Reqd by munged\pc\all_weap_inf_rifle.class.req
+            munged\pc\all_weap_award_rifle.class.req
+Missing file com_weap_inf_equip_sm.class
+    Reqd by munged\pc\all_weap_inf_pistol.class.req
+            munged\pc\all_weap_inf_thermaldetonator.class.req
+            munged\pc\all_weap_award_pistol.class.req
+   0 Errors    0 Warnings
+

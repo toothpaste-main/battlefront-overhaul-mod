@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_engineer"
+		"imp_inf_armytroopr_cape"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_armytrooper"
+		"imp_inf_armytrooper_low1"
+	}
+}

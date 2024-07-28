@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"yav_bldg_controlroom"
+	}
+	REQN
+	{
+		"class"
+		"whitelight"
+	}
+}

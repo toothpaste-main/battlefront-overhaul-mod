@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_award_pistol"
+		"cis_weap_award_pistol_ord"
+		"com_weap_inf_equip_sm"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_pistol"
+		"cis_1st_weap_inf_pistol"
+	}
+}

@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_laser_orange"
+	}
+	REQN
+	{
+		"class"
+		"nab_weap_hover_gianspeeder_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_explosion_sm"
+	}
+}

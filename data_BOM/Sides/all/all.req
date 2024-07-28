@@ -1,0 +1,28 @@
+ucft
+{
+	REQN
+	{
+		"lvl"
+		"all_inf_engineer_bothan"
+		"all_inf_engineer_pilot"
+		"all_inf_officer_desert"
+		"all_inf_officer_jungle"
+		"all_inf_officer_snow"
+		"all_inf_officer_urban"
+		"all_inf_rifleman_desert"
+		"all_inf_rifleman_fleet"
+		"all_inf_rifleman_jungle"
+		"all_inf_rifleman_snow"
+		"all_inf_rifleman_urban"
+		"all_inf_rocketeer_fleet"
+		"all_inf_rocketeer_jungle"
+		"all_inf_rocketeer_snow"
+		"all_inf_sniper_desert"
+        "all_inf_sniper_fleet"
+        "all_inf_sniper_jungle"
+        "all_inf_sniper_snow"
+		"all_inf_sniper_urban"
+		"all_inf_wookiee"
+		"all_inf_wookiee_snow"
+	}
+}

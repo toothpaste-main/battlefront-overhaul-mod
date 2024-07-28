@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_repeater"
+		"cis_weap_inf_repeater_hunt_ord"
+	}
+}

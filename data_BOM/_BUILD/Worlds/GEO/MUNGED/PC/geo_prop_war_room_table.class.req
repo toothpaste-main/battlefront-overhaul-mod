@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_prop_war_room_table"
+	}
+	REQN
+	{
+		"class"
+		"geolight"
+		"geo_prop_godray"
+	}
+}

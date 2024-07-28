@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_laser_blue"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_rifle_ord"
+	}
+}

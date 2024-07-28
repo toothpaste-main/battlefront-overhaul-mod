@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_prop_splash"
+	}
+	REQN
+	{
+		"config"
+		"geo_sfx_explosion"
+	}
+}

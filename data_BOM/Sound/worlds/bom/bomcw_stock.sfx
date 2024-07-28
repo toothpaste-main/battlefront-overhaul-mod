@@ -1,0 +1,6 @@
+// All Pistols - Energy depleted and recharge also used by vehicles and timebomb
+..\..\cw\effects\wpn_rep_pistol_fire.wav				-resample pc 44100
+..\..\global\effects\wpn_energyDepleted.wav				-resample pc 22050
+
+// Droid Star Fighter sfx for Commando Pistol
+..\..\cw\effects\wpn_drdFghtr_blaster_fire.wav			-resample pc 44100

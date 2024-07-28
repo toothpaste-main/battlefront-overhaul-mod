@@ -1,0 +1,29 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"myg1"
+	}
+	REQN
+	{
+		"terrain"
+		"myg1"
+	}
+	REQN
+	{
+		"config"
+		"myg1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"myg1_bldg_sky_mountains"
+	}
+}

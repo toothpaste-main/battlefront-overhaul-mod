@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"animbank"
+		"tan4_prop_blastdoor"
+	}
+	REQN
+	{
+		"anim"
+		"open"
+	}
+	REQN
+	{
+		"model"
+		"tan4_prop_blastdoor"
+	}
+}

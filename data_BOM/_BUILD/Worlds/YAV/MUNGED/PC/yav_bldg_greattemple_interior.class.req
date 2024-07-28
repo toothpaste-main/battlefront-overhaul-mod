@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"yav_bldg_greattemple_interior"
+	}
+	REQN
+	{
+		"class"
+		"whitelight"
+	}
+}

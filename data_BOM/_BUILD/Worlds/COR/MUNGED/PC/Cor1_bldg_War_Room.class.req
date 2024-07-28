@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"cor1_bldg_war_room"
+	}
+	REQN
+	{
+		"class"
+		"cor1_light_war_room_1"
+	}
+}

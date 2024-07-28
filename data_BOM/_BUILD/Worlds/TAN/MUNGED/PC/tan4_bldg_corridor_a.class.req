@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"tan4_bldg_corridor_a"
+	}
+	REQN
+	{
+		"config"
+		"prop_corridorsmoke"
+	}
+}

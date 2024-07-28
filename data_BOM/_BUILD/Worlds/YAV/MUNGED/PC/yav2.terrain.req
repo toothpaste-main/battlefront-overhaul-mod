@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"yav2_main_1"
+		"yav2_bldg_stone"
+		"yav2_bldg_rubble"
+		"yav2_bldg_floor"
+		"yav_detail_1"
+	}
+}

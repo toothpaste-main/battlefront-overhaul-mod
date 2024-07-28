@@ -1,0 +1,18 @@
+ucft
+{
+    REQN
+    {
+        "class"
+        "cis_inf_magnaguard"
+    }
+	REQN
+    {
+        "model"
+        "hud_poison"
+    }
+    REQN
+    {
+        "texture"
+        "hud_poison"
+    }
+}

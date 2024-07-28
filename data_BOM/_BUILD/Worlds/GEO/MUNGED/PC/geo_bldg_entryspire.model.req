@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_bldg_greatspire"
+		"geo_bldg_greatspire_inside"
+	}
+}

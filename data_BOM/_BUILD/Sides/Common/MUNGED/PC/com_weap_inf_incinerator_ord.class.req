@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_ord"
+		"com_sfx_weap_incinerate_ord"
+		"com_sfx_inf_damage_disintergrate"
+	}
+}

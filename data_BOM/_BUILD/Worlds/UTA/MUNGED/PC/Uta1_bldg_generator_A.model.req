@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_generator"
+		"uta1_prop_chain"
+		"uta1_bldg_generator_bump"
+		"uta1_env_sky"
+	}
+}

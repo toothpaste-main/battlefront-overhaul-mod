@@ -1,0 +1,18 @@
+ucft
+{
+	REQN
+	{
+		"str"
+		"align=2048"
+	}
+	REQN
+	{
+		"lvl"
+		"bom_cmn"
+		
+		"bomcw"
+		"bomgcw"
+		
+		"bom_hunt"
+	}	
+ }

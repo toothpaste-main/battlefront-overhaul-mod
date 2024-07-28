@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_rocket_launcher_ord"
+		"bom_com_weap_inf_rocketlauncher_hum"
+		"all_weap_inf_rocket_launcher_exp"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_missile"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_rockettrail_gold"
+	}
+}

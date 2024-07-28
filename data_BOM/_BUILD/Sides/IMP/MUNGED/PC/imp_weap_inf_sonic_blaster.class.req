@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_pistol"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_sonic_blaster"
+		"imp_weap_inf_sonic_blaster_hidden"
+		"imp_weap_inf_sonic_blaster_ord"
+	}
+	REQN
+	{
+		"model"
+		"imp_weap_inf_pistol"
+	}
+}

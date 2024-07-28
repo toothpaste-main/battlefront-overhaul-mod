@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"naboo_main_grass2_lowrez"
+		"nab2_bldg_b03_detail02_lowrez"
+		"nab2_bldg_arch1_brick_tile_lowres"
+		"nab2_bldg_arch1_lowres"
+		"nab2_bldg_arch1_brick_tile"
+		"naboo2_main_4"
+		"nab2_bldg_b03_detail02"
+		"nab2_bldg_arch1"
+	}
+}

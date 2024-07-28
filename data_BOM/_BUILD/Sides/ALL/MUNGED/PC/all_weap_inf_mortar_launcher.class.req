@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_mortar_launcher"
+		"com_weap_inf_equip_lg"
+		"all_weap_inf_mortar_launcher_ord"
+		"all_weap_inf_mortar_launcher_ord1"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_torpedo"
+		"com_1st_weap_inf_torpedo"
+	}
+}

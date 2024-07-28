@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_bldg_rafters_lowrez"
+		"geo_bldg_wrecked_02_lowrez"
+		"geo_bldg_wrecked_lowrez"
+		"geo_bldg_wrecked"
+		"geo_bldg_technounion_lowrez"
+		"geo_bldg_wrecked_02"
+		"geo_bldg_rafters"
+		"geo_bldg_technounion"
+	}
+}

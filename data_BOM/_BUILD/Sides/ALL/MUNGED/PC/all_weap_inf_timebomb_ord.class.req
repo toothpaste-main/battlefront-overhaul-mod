@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_timebomb_ord"
+		"all_weap_inf_timebomb_exp"
+		"all_weap_inf_timebomb_destroyed_exp"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_seismic_mine"
+	}
+}

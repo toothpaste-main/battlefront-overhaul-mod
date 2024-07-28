@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_veh_beam"
+		"cis_weap_walk_spider_beam_ord"
+	}
+}

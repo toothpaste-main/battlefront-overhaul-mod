@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"myg1_icon_crystal"
+	}
+	REQN
+	{
+		"class"
+		"flaglight"
+	}
+}

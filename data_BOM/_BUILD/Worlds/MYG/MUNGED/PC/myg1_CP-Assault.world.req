@@ -1,0 +1,35 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"myg1_cp-assault"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"com_bldg_invisible_controlzone"
+		"com_item_vehicle_spawn"
+		"tur_bldg_recoilless_myg_auto"
+		"myg1_prop_energy_collector_shield"
+		"myg1_prop_shield_generator"
+		"myg1_bldg_energy_collector_core"
+	}
+}

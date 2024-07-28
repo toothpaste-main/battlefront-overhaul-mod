@@ -1,0 +1,30 @@
+ucft
+{
+    REQN
+    {
+        "lvl"
+		
+		"rep_inf_ep2_rifleman"
+		"rep_inf_ep2_sniper"
+		"rep_inf_ep2_engineer"
+		"rep_inf_ep2_officer"
+		"rep_inf_ep2_jettrooper"
+		
+		"rep_inf_ep3_engineer"
+		"rep_inf_ep3_engineer_pilot"
+		"rep_inf_ep3_jettrooper"
+		"rep_inf_ep3_marine"
+		"rep_inf_ep3_officer_arctrooper"
+		"rep_inf_ep3_officer_marine"
+		"rep_inf_ep3_pilot"		
+		"rep_inf_ep3_rifleman"
+		"rep_inf_ep3_rifleman_marine"
+		"rep_inf_ep3_rifleman_shiny"
+		"rep_inf_ep3_rocketeer"
+		"rep_inf_ep3_rocketeer_marine"
+        "rep_inf_ep3_rocketeer_shiny"
+		"rep_inf_ep3_sniper"
+		"rep_inf_ep3_sniper_shiny"
+		"rep_inf_ep3_sniper_jungle"
+    }
+}

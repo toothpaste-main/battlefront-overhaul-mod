@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tan4_bldg_confroom_03"
+		"tan4_bldg_front_deck02"
+		"tan4_bldg_corridor"
+		"hallway_envmap"
+	}
+}

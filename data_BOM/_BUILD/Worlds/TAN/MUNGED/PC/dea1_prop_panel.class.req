@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"dea1_prop_panel"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_rechargedroid_exp"
+		"dea1_light_panel_green"
+	}
+}

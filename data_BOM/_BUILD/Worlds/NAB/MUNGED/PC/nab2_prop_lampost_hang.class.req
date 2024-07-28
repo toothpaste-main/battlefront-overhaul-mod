@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"nab2_prop_lampost_hang"
+	}
+	REQN
+	{
+		"config"
+		"light_hang"
+	}
+}

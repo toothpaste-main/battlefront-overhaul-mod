@@ -1,0 +1,38 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"cor1_campaign"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"cor1_prop_library_door"
+		"cor1_prop_librarystack_dest"
+		"com_bldg_untakeable_controlzone"
+		"cor1_prop_door_1"
+		"com_bldg_invisible_controlzone"
+		"cor1_prop_librarystack"
+		"cor1_prop_gunship"
+		"tur_weap_built_gunturret"
+		"cor1_item_holocron"
+	}
+}

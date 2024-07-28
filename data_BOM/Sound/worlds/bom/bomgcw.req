@@ -1,0 +1,15 @@
+ucft
+{
+	REQN
+	{
+		"bnk"
+		"align=2048"
+		"bomgcw"
+		//"bomgcw_stock"
+	}
+	REQN
+	{
+		"config"
+		"bomgcw"
+	}
+ }

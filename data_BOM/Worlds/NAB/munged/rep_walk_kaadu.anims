@@ -1,0 +1,13 @@
+ucft
+{
+	ANIM
+	{
+		"death01"
+		"idle"
+		"idle_to_leftfoot"
+		"leftfoot_to_idle"
+		"rightfoot_to_idle"
+		"turnl"
+		"turnr"
+	}
+}

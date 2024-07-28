@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_autoturret"
+		"all_weap_inf_autoturret_ord"
+	}
+}

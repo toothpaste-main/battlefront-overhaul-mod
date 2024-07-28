@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"animbank"
+		"bdroid"
+		"bdroidlz"
+	}
+	REQN
+	{
+		"class"
+		"cis_inf_default"
+		"cis_weap_inf_rifle_heat"
+	}
+	REQN
+	{
+		"model"
+		"cis_inf_bdroid"
+		"cis_inf_bdroid_low1"
+	}
+}

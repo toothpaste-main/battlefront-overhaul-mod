@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_sm"
+		"com_sfx_explosion_xs"
+	}
+}

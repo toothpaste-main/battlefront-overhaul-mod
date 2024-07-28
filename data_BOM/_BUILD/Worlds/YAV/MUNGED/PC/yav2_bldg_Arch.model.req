@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"yav2_bldg_steps"
+		"yav2_bldg_wall01_lowrez"
+		"yav2_bldg_floor"
+		"yav2_bldg_stone"
+		"yav2_bldg_wall01"
+		"yav2_bldg_door"
+	}
+}

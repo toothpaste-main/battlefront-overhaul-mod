@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_rifle"
+		"tat_weap_inf_tuskenrifle_ord"
+	}
+	REQN
+	{
+		"model"
+		"tat_weap_tuskrifle"
+	}
+}

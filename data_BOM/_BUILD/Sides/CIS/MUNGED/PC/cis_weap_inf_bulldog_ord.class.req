@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_bulldog_ord"
+		"cis_weap_inf_bulldog_exp"
+		"cis_weap_inf_bulldog_ordnance"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_missile"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_exhaust_xwing"
+	}
+}

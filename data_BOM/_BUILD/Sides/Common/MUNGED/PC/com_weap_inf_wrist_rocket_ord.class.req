@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_md"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

@@ -1,0 +1,34 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"uta1_props"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"uta1_bldg_windmill"
+		"uta1_bldg_hanger_light_small"
+		"uta1_bldg_windmill_blades"
+		"uta1_prop_crate_stack"
+		"uta1_prop_deskandchair"
+		"uta1_bldg_hanger_light"
+	}
+}

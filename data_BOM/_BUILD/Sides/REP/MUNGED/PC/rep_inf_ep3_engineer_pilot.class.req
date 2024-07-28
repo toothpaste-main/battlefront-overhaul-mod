@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default_engineer"
+		"rep_weap_inf_shotgun_shorty"
+		"rep_weap_award_shotgun_shorty"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_ep3spacepilot"
+		"rep_inf_ep3spacepilot_low1"
+	}
+}

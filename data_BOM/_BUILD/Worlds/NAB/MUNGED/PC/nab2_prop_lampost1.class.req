@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"nab2_prop_lampost1"
+	}
+	REQN
+	{
+		"class"
+		"nab2_prop_lamp_cloth"
+		"nab2_prop_lamp_cloth2"
+	}
+}

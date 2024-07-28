@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default"
+		"cis_weap_inf_sniper_rifle"
+		"cis_weap_inf_pistol"
+		"cis_weap_inf_thermaldetonator"
+		"cis_weap_inf_autoturret_dispenser"
+		"cis_weap_award_sniper_rifle"
+		"cis_weap_award_pistol"
+	}
+}

@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"fogcloud"
+		"blur"
+		"hdr"
+		"motionblur"
+		"scopeblur"
+		"godray"
+	}
+	REQN
+	{
+		"texture"
+		"brownmist"
+		"fx_godray"
+	}
+}

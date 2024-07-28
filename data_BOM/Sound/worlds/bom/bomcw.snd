@@ -1,0 +1,197 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Level Global -----
+// flyer sfx
+// turbulence
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- REP Foley -----
+// rep_inf_soldiier foley
+// trooper movement stone
+// soldier movement stone
+// footsteps run walk
+// jump land roll squat
+// binoculars
+// No wade
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Rep Units -----
+
+// common
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("rep_weap_pistol_fire0", 0.5);
+		Sample("rep_weap_pistol_fire1", 0.5);
+    }
+}
+
+// pistol sounds because it is missing in space
+SoundProperties()
+{
+    Name("rep_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("wpn_rep_pistol_fire", 1.0);
+    }
+}
+
+// rifleman
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("rep_weap_rifle_fire", 1.0);
+    }
+}
+
+// rocketeer
+
+// sniper
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+        Sample("rep_weap_sniperrifle_fire0_a", 1.0);
+    }
+}
+
+// engineer
+
+// officer
+SoundProperties()
+{
+    Name("bom_rep_weap_inf_chaingun");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+		Sample("rep_weap_chaingun_fire0", 0.5);
+		Sample("rep_weap_chaingun_fire1", 0.5);
+    }
+}
+
+// specialist
+// droid fighter sounds for clone commando pistol
+SoundProperties()
+{
+    Name("bom_rep_weap_commandopistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("wpn_drdFghtr_blaster_fire", 1.0);
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Rep Vehicles -----
+// rep_fly_jedifighter
+// weapons, engine, power, explosion
+
+// rep_fly_gunship
+// weapons, engine, power, explosion
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- CIS Foley -----
+// cis_inf_droid foley
+// soldier movement stone
+// footsteps run walk
+// jump land roll squat
+// binoculars
+// wade is none
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- CIS Units -----
+
+// common
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0); // this sfx is quiet
+    SampleList()
+    {
+        Sample("cis_weap_pistol_fire0", 0.5);
+		Sample("cis_weap_pistol_fire1", 0.5);
+    }
+}
+
+// rifleman
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("cis_weap_rifle_fire0", 0.5);
+		Sample("cis_weap_rifle_fire1", 0.5);
+    }
+}
+
+// rocketeer
+
+// sniper
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+        Sample("cis_weap_sniperrifle_fire0", 0.5);
+		Sample("cis_weap_sniperrifle_fire1", 0.5);
+    }
+}
+
+// engineer
+
+// officer
+SoundProperties()
+{
+    Name("bom_cis_weap_inf_wristblaster_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+        Sample("cis_weap_wristblaster_fire0", 0.5);
+		Sample("cis_weap_wristblaster_fire1", 0.5);
+    }
+}
+
+// specialist
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- CIS Vehicles -----
+// cis_fly_droidfighter
+// weapons, engine, power, explosion

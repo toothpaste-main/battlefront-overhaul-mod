@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"colorcontrol"
+		"hdr"
+		"blur"
+		"shadow"
+		"motionblur"
+	}
+}

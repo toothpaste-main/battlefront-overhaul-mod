@@ -1,0 +1,13 @@
+[GameObjectClass]
+ClassParent             = "com_inf_default"
+
+
+[Properties]
+//******************************************************
+//***************   SOUND   ****************
+//******************************************************
+
+HurtSound               = "all_inf_com_chatter_wound"
+DeathSound              = "all_inf_com_chatter_death"
+DamageRegionSound       = "allmalechoke"
+FoleyFXClass            = "all_inf_soldier"

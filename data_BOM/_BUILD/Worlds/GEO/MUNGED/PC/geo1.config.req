@@ -1,0 +1,40 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_sky"
+		"geo1"
+	}
+	REQN
+	{
+		"model"
+		"geo_sky_dome"
+		"geo_sky_dome_rim"
+		"geo_sky_dome_arena"
+		"geo_sky_spire"
+		"geo_sky_dome_2"
+		"geo_sky_explosions"
+		"rep_fly_assault_dome"
+		"rep_fly_gunship_dome"
+		"cis_fly_droidfighter_dome"
+		"cis_fly_techounion_dome"
+	}
+	REQN
+	{
+		"config"
+		"spa_sfx_skydomeexplosions"
+		"hp_sky_1"
+		"hp_sky_4"
+		"hp_sky_5"
+		"hp_sky_7"
+		"hp_sky_8"
+		"hp_sky_9"
+		"hp_sky_10"
+		"hp_sky_11"
+		"hp_sky_12"
+		"hp_sky_14"
+		"hp_sky_15"
+	}
+}

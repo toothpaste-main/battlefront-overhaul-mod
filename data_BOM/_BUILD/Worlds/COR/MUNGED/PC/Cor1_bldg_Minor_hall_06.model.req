@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_youngling_room01_lowrez"
+		"cor1_bldg_minorhall02_lowrez"
+		"cor1_bldg_minorhall03_lowrez"
+		"cor1_bldg_minorhall04_lowrez"
+		"cor1_bldg_youngling_room01"
+		"cor1_bldg_minorhall01"
+		"cor1_bldg_minorhall04"
+		"cor1_bldg_minorhall03"
+		"cor1_bldg_minorhall02"
+	}
+}

@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_smoke2"
+	}
+	REQN
+	{
+		"model"
+		"com_sfx_lightningball1"
+		"com_sfx_lightningball2"
+		"com_sfx_lightningball3"
+	}
+}

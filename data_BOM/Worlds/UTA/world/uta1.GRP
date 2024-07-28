@@ -1,0 +1,21 @@
+Version(1);
+NextID(1);
+
+Group("[Base]", 0, 8)
+{
+	Layer("[Base]", 0);
+	Layer("SoundRegions", 3);
+	Layer("Vehicles", 1);
+	Layer("Campaign", 2);
+	Layer("Pens", 4);
+	Layer("props", 5);
+	Layer("Conquest", 6);
+	Layer("Light_RG", 7);
+	Layer("SoundSpaces", 8);
+	Layer("Droids", 9);
+	Layer("CTF2flag", 10);
+	Layer("1flag", 11);
+	Layer("TDM", 12);
+	Layer("Rumbles", 13);
+}
+

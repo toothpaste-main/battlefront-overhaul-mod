@@ -1,0 +1,153 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- Level Global -----
+// flyer sfx
+// turbulence
+SoundProperties()
+{
+    Name("bom_com_weap_inf_rocketlauncher_hum");
+    Group("weapons");
+    Inherit("ordnance_template");
+	PitchDev(0.05);
+	MinDistance(30.0);
+    MuteDistance(800.0);
+    MaxDistance(800.0);
+    SampleList()
+    {
+		Sample("com_weap_rocketlauncher_hum2", 0.33);
+		Sample("com_weap_rocketlauncher_hum3", 0.33);
+		Sample("com_weap_rocketlauncher_hum4", 0.33);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- ALL Units -----
+
+// common
+SoundProperties()
+{
+    Name("bom_all_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_dl-44_0", 0.5);
+		Sample("bf2_2017_dl-44_1", 0.5);
+    }
+}
+
+// rifleman
+SoundProperties()
+{
+    Name("bom_all_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_a280_0", 0.8);	// traditional
+		Sample("bf2_2017_a280_1", 0.2); // sounds like a square wave
+    }
+}
+
+SoundProperties()
+{
+    Name("bom_all_weap_award_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_a280c_0", 0.8);
+		Sample("bf2_2017_a280c_1", 0.2);
+    }
+}
+
+// rocketeer
+
+// sniper
+SoundProperties()
+{
+    Name("bom_all_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(1.0);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+		Sample("bf2_2017_dlt-20a_0", 0.6); 
+		Sample("bf2_2017_dlt-20a_1", 0.35); // slightly different than 0
+		Sample("bf2_2017_dlt-20a_2", 0.05); // very different
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ----- IMP Units -----
+
+// common
+SoundProperties()
+{
+    Name("bom_imp_weap_inf_pistol_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_ec-17_0", 1.0);
+    }
+}
+
+// rifleman
+SoundProperties()
+{
+    Name("bom_imp_weap_inf_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_e-11_0", 1.0);
+    }
+}
+SoundProperties()
+{
+    Name("bom_imp_weap_award_rifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_e-11_1", 1.0);
+    }
+}
+
+// rocketeer
+
+// sniper
+SoundProperties()
+{
+    Name("bom_imp_weap_inf_sniperrifle_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+	Gain(0.8);
+	MinDistance(10.0);
+    MuteDistance(600.0);
+    MaxDistance(600.0);
+    SampleList()
+    {
+		Sample("bf2_2017_dlt-19d_0", 0.8); // more satisfying
+		Sample("bf2_2017_dlt-19d_1", 0.2); // muted
+    }
+}
+
+// engineer
+
+// officer
+SoundProperties()
+{
+    Name("bom_imp_weap_inf_sonicblaster_fire");
+    Group("weapons");
+    Inherit("weapon_template");
+    SampleList()
+    {
+		Sample("bf2_2017_ec-17_1", 0.8); // more satisfying
+		Sample("bf2_2017_ec-17_1", 0.2); // muted
+    }
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_waterfoam1"
+	}
+	REQN
+	{
+		"model"
+		"geo_blast_ring"
+	}
+}

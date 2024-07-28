@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_default_officer"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_officer_gray"
+		"imp_inf_officer_gray_low1"
+	}
+}

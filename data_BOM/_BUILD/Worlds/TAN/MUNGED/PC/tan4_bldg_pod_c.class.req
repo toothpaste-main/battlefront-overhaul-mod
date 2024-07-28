@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"tan4_bldg_pod_c"
+	}
+	REQN
+	{
+		"class"
+		"flicker_white_light"
+	}
+}

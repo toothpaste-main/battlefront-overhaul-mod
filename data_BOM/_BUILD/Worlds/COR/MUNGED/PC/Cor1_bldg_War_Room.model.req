@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_warroom_panelscreen"
+		"cor1_bldg_warroom01"
+		"cor1_bldg_security_roomdoor"
+		"cor1_bldg_serverroomd"
+		"cor1_bldg_warroom03"
+		"cor1_bldg_warroom05"
+		"cor1_bldg_warroom02"
+		"cor1_bldg_warroom04"
+	}
+}

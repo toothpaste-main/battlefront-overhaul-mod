@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"yav_bldg_aquaduct"
+		"yav_bldg_aquaduct_bump"
+		"yav_main_6"
+		"yav2_bldg_wall03"
+		"yav2_bldg_wall03_bump"
+		"yav_waterfall_02"
+		"yav2_bldg_wall_big_door"
+		"yav2_bldg_wall_big_door_bump"
+		"yav2_bldg_wall02"
+		"yav2_bldg_wall02_bump"
+		"yav2_bldg_wall_tall_door"
+		"yav2_bldg_wall_tall_door_bump"
+		"yav2_bldg_floor"
+		"yav2_bldg_floor_bump"
+		"yav2_bldg_steps"
+		"yav2_bldg_steps_bump"
+	}
+}

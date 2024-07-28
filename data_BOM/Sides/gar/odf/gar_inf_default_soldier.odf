@@ -1,0 +1,56 @@
+[GameObjectClass]
+ClassParent     	= "com_inf_default"
+
+
+[Properties]
+UnitType        	= "trooper"
+
+
+//******************************************************
+//***************   SOUND   ****************
+//******************************************************
+
+HurtSound               = "gar_inf_com_chatter_wound"
+DeathSound              = "gar_inf_com_chatter_death"
+FoleyFXClass            = "rep_inf_soldier"
+
+VOSound = "all_command_follow      SC_Follow"
+VOSound = "all_command_stopFollow      SC_StopFollow"
+VOSound = "all_command_stopVehicle      SC_VehicleWaitUp"
+VOSound = "all_command_getIn      SC_GetIn"
+VOSound = "all_command_getOut      SC_GetOut"
+VOSound = "all_response_follow      SC_FollowResponse"
+VOSound = "all_response_stopFollow      SC_StopFollowResponse"
+VOSound = "all_response_stopVehicle      SC_VehicleWaitUpResponse"
+VOSound = "all_response_getIn      SC_GetInResponse"
+VOSound = "all_response_getOut      SC_GetOutResponse"
+
+VOSound = "all2_inf_chatter_AcquiredTarget_Above_VOUnitNum41      AcquiredTarget +Above +VOUnitNum41"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum42      AcquiredTarget +VOUnitNum42"
+VOSound = "all2_inf_chatter_AcquiredTarget_left      AcquiredTarget +left"
+VOSound = "all2_inf_chatter_AcquiredTarget_right      AcquiredTarget +right"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum43      AcquiredTarget +VOUnitNum43"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum191      AcquiredTarget +VOUnitNum191"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum192      AcquiredTarget +VOUnitNum192"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum193      AcquiredTarget +VOUnitNum193"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum194      AcquiredTarget +VOUnitNum194"
+VOSound = "all2_inf_chatter_NotShootingCriticalHit_VOUnitNum49      NotShootingCriticalHit +VOUnitNum49"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum49      AcquiredTarget +VOUnitNum49"
+VOSound = "all2_inf_chatter_NotShootingCriticalHit_VOUnitNum50      NotShootingCriticalHit +VOUnitNum50"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum50      AcquiredTarget +VOUnitNum50"
+VOSound = "all2_inf_chatter_NotShootingCriticalHit_VOUnitNum51      NotShootingCriticalHit +VOUnitNum51"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum51      AcquiredTarget +VOUnitNum51"
+VOSound = "all2_inf_chatter_AcquiredTarget_VOUnitNum52      AcquiredTarget +VOUnitNum52"
+VOSound = "all2_inf_chatter_NearbyEnemySlaughter      NearbyEnemySlaughter"
+VOSound = "all2_inf_chatter_NearbyFriendlySlaughter      NearbyFriendlySlaughter"
+VOSound = "all2_inf_chatter_KillingSpree4      KillingSpree4"
+VOSound = "all2_inf_chatter_KillingSpree8      KillingSpree8"
+VOSound = "all2_inf_chatter_HeadshotKill      HeadshotKill"
+VOSound = "all2_inf_chatter_Grenade      Grenade"
+VOSound = "all2_inf_chatter_MissileIncoming      MissileIncoming"
+VOSound = "all2_inf_chatter_AcquiredTarget_IsSniper_VOUnitNum44      AcquiredTarget +IsSniper +VOUnitNum44"
+VOSound = "all2_inf_chatter_FriendlyFire      FriendlyFire"
+VOSound = "all2_inf_chatter_RebelsShootDeadBody      RebelsShootDeadBody"
+VOSound = "all2_inf_chatter_GivePowerup      GivePowerup"
+VOSound = "all2_inf_chatter_AcquiredTarget_IsTurret      AcquiredTarget +IsTurret"
+VOSound = "all2_inf_chatter_PathFollowWait      PathFollowWait"

@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"naboo2_commondesign"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_item_weaponrecharge"
+		"tur_bldg_laser"
+		"com_item_healthrecharge"
+	}
+}

@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_hover_gian_speeder_glass"
+		"rep_hover_gian_speeder"
+		"rep_hover_gian_speeder_lowrez"
+	}
+}

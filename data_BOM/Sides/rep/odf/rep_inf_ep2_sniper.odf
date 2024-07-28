@@ -1,0 +1,8 @@
+[GameObjectClass]
+ClassParent         = "rep_inf_default_sniper"
+
+
+[Properties]
+GeometryName        = "rep_inf_trooper"
+GeometryLowRes      = "rep_inf_trooper_low1"
+FirstPerson         = "REP\reptroop;rep_1st_trooper"

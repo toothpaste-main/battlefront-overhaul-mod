@@ -1,0 +1,942 @@
+Version(10);
+PathCount(6);
+
+Path("cp2_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(10)
+	{
+		Node()
+		{
+			Position(-82.414406, 0.000000, -133.046555);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.229180, -0.008654, -0.973333, -0.004951);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-79.988136, 0.000000, -129.204865);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.857728, -0.000000, 0.514102, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-87.549416, 0.000000, -139.252258);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.723718, -0.000000, 0.690096, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-79.214287, 0.000000, -135.800095);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.997816, -0.024006, 0.061201, -0.006314);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-77.154663, 0.000000, -138.182693);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.207487, -0.000000, -0.978238, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-52.963177, 0.000000, -139.787582);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.597853, -0.000000, -0.801606, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-46.427475, 0.477547, -141.999557);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-42.001171, 0.000000, -139.932480);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.836549, -0.000000, -0.547894, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-50.409172, 0.000000, -133.261459);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.876809, -0.000000, -0.480839, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-45.734440, 0.000000, -135.442093);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.531775, -0.156887, -0.827776, -0.085958);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cp5_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(7)
+	{
+		Node()
+		{
+			Position(-140.339279, 0.000000, 15.741966);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.766037, -0.000000, -0.642796, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-136.431503, 0.000000, 16.387831);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.853616, -0.000000, -0.520900, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-141.795532, 0.000000, 20.611464);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.286822, -0.000000, -0.957984, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-142.184174, 0.000000, 23.098602);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.818562, -0.000000, 0.574417, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-138.209061, 0.000000, 30.791658);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.086912, -0.005407, -0.996077, 0.015716);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-129.162582, 0.000000, 36.011490);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.069969, -0.000000, -0.997548, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-125.525696, 0.000000, 30.660334);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.531754, -0.000000, 0.846899, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cp4_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(10)
+	{
+		Node()
+		{
+			Position(38.714905, 6.648490, 35.705338);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.873009, -0.000000, -0.487710, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(35.457359, 6.651878, 31.462145);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.613719, -0.000000, -0.789526, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(39.476929, 5.278278, 25.790274);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.680881, -0.000000, -0.732394, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(38.070911, 5.627870, 21.458918);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.390463, -0.000000, -0.920617, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(34.675175, 4.631327, 7.161141);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.961069, -0.000000, -0.276309, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(30.581594, 4.663923, 0.706919);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.847307, -0.000000, -0.531104, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(24.625137, 0.000000, 27.236773);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.988836, -0.000000, -0.149004, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(14.826293, 4.203115, 42.881683);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.453717, -0.000000, -0.891146, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(9.386446, 4.441329, 40.082973);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.314046, -0.000000, -0.949408, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(4.923196, 4.502533, 47.670719);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.933499, -0.028165, -0.355779, -0.034761);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cp1_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(18)
+	{
+		Node()
+		{
+			Position(-12.533102, 1.086212, -272.721924);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.629341, 0.000000, -0.777129, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-15.809560, 1.086212, -286.321228);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.939328, 0.000000, -0.343021, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-23.064611, 1.086212, -287.550781);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-28.121521, 1.086212, -285.453247);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-32.151031, 1.086212, -285.559509);
+			Knot(0.000000);
+			Data(2);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-40.810127, 1.086212, -291.737793);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-51.496300, 4.382431, -287.694977);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-51.237122, 0.000000, -275.745850);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-63.919163, 5.187904, -272.184113);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-78.234459, 4.589722, -275.914490);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-77.286766, 3.056000, -288.292175);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-85.618301, 3.031693, -292.562988);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-97.753799, 1.086212, -294.224487);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-108.259789, 1.086212, -302.130127);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-113.641510, 1.086212, -300.686707);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-119.976677, 1.086212, -295.305237);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-121.877785, 1.086212, -281.319855);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.682285, 0.000000, 0.731086, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-120.693832, 1.086212, -269.683838);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cp3_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(8)
+	{
+		Node()
+		{
+			Position(-82.754639, 5.633207, -29.209608);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.881559, -0.000000, -0.472073, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-90.139793, 5.536516, -31.516117);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.589831, -0.000000, 0.807527, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-87.749771, 5.759542, -34.802853);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.993949, -0.000000, 0.109841, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-85.554337, 5.627034, -38.792664);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.070486, -0.014908, -0.997239, -0.018025);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-76.950813, 5.648642, -34.489185);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.352729, -0.000000, -0.935726, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-78.239853, 5.498700, -42.236614);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.770328, -0.000000, 0.637649, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-73.935822, 5.698892, -44.372471);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.999190, -0.000000, 0.040256, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-71.687881, 0.000000, -37.402073);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.189822, -0.000000, -0.981818, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cp6_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	Layer(10);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(10)
+	{
+		Node()
+		{
+			Position(-185.148132, 0.000000, 102.273514);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.497562, -0.000000, -0.867428, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-168.140015, 0.000000, 93.899384);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.872721, -0.000000, 0.488220, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-163.461502, 0.000000, 112.340195);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.497562, -0.000000, -0.867428, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-147.759186, 0.000000, 118.102074);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.110604, -0.000000, -0.993865, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-138.153900, 0.000000, 123.247345);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.362398, -0.000000, -0.932023, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-163.020660, 1.180729, 146.107895);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.197722, -0.000000, -0.980258, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-172.423035, 1.152336, 143.836426);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.109079, -0.000000, -0.994033, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-178.568741, 0.968559, 139.149414);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.265973, -0.000000, -0.963980, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-187.337677, 1.183632, 132.467819);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.644712, -0.000000, 0.764426, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-178.178879, 1.125443, 128.966171);
+			Knot(0.000000);
+			Data(1);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.557163, -0.000000, 0.830403, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+

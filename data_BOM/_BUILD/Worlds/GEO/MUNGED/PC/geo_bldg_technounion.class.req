@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"animbank"
+		"geo_bldg_technounion"
+	}
+	REQN
+	{
+		"anim"
+		"idle"
+		"destroy"
+	}
+	REQN
+	{
+		"model"
+		"geo_bldg_technounion"
+		"geo_bldg_technounion_hulk"
+	}
+	REQN
+	{
+		"class"
+		"geo_bldg_technounion_exp"
+	}
+	REQN
+	{
+		"config"
+		"super_explosion"
+	}
+}

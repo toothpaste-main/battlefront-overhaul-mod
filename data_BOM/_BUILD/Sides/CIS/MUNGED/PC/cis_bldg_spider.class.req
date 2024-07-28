@@ -1,0 +1,45 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"spider_icon"
+		"hud_cis_spiderwalker_icon"
+	}
+	REQN
+	{
+		"animbank"
+		"cis_walk_spider"
+	}
+	REQN
+	{
+		"config"
+		"deathdustcloud_brown"
+		"com_sfx_vehiclespark"
+		"com_sfx_vehiclesmoke"
+		"com_sfx_vehicleflame"
+		"com_sfx_walkerstomp"
+		"dirtspray"
+	}
+	REQN
+	{
+		"class"
+		"cis_walk_spider_exp"
+		"small_explosion"
+		"med_explosion"
+		"cis_weap_hover_stap_cannon"
+		"cis_weap_walk_spider_beam"
+	}
+	REQN
+	{
+		"model"
+		"cis_walk_spider"
+		"spider_chunk1"
+		"spider_chunk2"
+		"spider_chunk3"
+		"spider_chunk4"
+		"spider_chunk5"
+		"spider_chunk6"
+	}
+}

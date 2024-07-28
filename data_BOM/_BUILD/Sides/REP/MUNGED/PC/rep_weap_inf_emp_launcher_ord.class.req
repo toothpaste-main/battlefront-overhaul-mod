@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_rocket_launcher_ord"
+		"rep_weap_inf_emp_launcher_exp"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_rockettrail_blue"
+	}
+}

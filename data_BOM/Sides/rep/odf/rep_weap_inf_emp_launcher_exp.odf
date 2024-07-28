@@ -1,0 +1,17 @@
+[ExplosionClass]
+ClassParent 		= "com_weap_inf_rocket_launcher_exp"
+
+
+[Properties]
+Effect 		= "com_sfx_weap_emp_exp_sm"
+
+LightColor      = "92 136 250 100"
+LightRadius 	= "10.0"
+LightDuration 	= "1.0"
+
+Damage 		= "320.0"
+
+DamageRadiusInner = "0.75"
+DamageRadiusOuter = "2.0"
+
+

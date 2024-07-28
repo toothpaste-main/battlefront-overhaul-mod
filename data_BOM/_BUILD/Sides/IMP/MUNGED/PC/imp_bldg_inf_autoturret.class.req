@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_bldg_inf_autoturret"
+		"imp_bldg_inf_autoturret_exp"
+		"imp_weap_inf_autoturret"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_dropturret"
+	}
+}

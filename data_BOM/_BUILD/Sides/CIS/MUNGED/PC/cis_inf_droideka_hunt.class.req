@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_default_droideka"
+	}
+	REQN
+	{
+		"model"
+		"cis_walk_droideka"
+		"cis_droideka_idle_low1"
+		"cis_droideka_roll_low1"
+	}
+}

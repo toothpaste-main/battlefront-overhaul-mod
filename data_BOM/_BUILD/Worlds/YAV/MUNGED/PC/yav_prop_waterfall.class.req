@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"yav_prop_waterfall"
+	}
+	REQN
+	{
+		"config"
+		"waterfall_bottom_side"
+		"waterfall_bottom_center"
+	}
+}

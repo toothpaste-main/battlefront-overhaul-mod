@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_buff"
+		"rep_weap_inf_buff_defense_ord"
+	}
+}

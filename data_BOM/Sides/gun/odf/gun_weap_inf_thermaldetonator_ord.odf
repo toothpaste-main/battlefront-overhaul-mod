@@ -1,0 +1,24 @@
+[OrdnanceClass]
+ClassParent 		= "com_weap_inf_thermaldetonator_ord"
+
+[Properties]
+GeometryName 		= "gun_weap_inf_grenadethermal_ord"
+ExplosionExpire		= "gun_weap_inf_thermaldetonator_exp"
+OrdnanceEffect		= "thermal_detonator" // Dev note: might not do anything
+TrailEffect			= "com_sfx_weap_grenade_blue"
+ImpactEffect		= "com_sfx_explosion_lg"
+
+LightColor              = "92 136 250 100"
+LightRadius             = "5.0"
+
+ImpactEffectWater 	= "com_sfx_watersplash_sm"
+
+StickDroid          = 1
+
+LifeSpan 			= "0.9"
+Velocity 			= "25.0"
+Gravity				= "1.5"
+Rebound				= "0.35"
+Friction			= "1.25"
+
+

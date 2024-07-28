@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default"
+		"rep_weap_inf_pistol"
+		"rep_weap_inf_fusioncutter"
+		"rep_weap_inf_timebomb"
+		"rep_weap_award_pistol"
+	}
+}

@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"animbank"
+		"bothanspy"
+	}
+	REQN
+	{
+		"class"
+		"all_inf_default_engineer"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_bothanspy"
+		"all_inf_bothanspy_low1"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"weapon_scope3"
+	}
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+}

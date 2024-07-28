@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_scroll"
+		"uta1_bldg_towerwall01_lowrez"
+		"uta1_bldg_generator_lowrez"
+		"uta1_bldg_tower_lowrez"
+		"uta1_bldg_generator"
+		"uta1_bldg_towerwall01"
+		"uta1_bldg_metalfloor01"
+		"uta1_bldg_tower"
+	}
+}

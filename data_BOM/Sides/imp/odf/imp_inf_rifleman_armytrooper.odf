@@ -1,0 +1,10 @@
+[GameObjectClass]
+ClassParent         = "imp_inf_default_rifleman"
+
+
+[Properties]
+GeometryName        = "imp_inf_armytrooper"
+GeometryLowRes      = "imp_inf_armytrooper_low1"
+FirstPerson         = "IMP\impoff;imp_1st_officer"
+
+ClothODF			= "imp_inf_armytroopr_cape"

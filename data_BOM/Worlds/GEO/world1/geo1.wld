@@ -1,0 +1,1557 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(-0.102, -0.045, -0.908, 0.403);
+	Position(-142.520, 5.221, 42.198);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(1000.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(-119.200, -44.626, -7.836,  0.628, 0.223, -0.703, 0.249);
+}
+LightName("geo1.LGT");
+TerrainName("geo1.ter");
+SkyName("geo1.sky");
+ScriptName("DummyScript.dll");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-2038518);
+
+Object("geo_bldg_stonespire_50", "geo_bldg_stonespire_6", 27701484)
+{
+	ChildRotation(0.858, -0.000, -0.514, -0.000);
+	ChildPosition(-212.058, -32.999, -331.451);
+	SeqNo(27701484);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker", "geo_bldg_bunker", 43173301)
+{
+	ChildRotation(0.943, 0.000, -0.333, 0.000);
+	ChildPosition(54.000, -63.000, -291.000);
+	SeqNo(43173301);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_splash1", "geo_prop_splash", 67273010)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(18.000, -63.223, -243.000);
+	SeqNo(67273010);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("com_item_healthrecharge_unbuilt1", "com_item_healthrecharge_unbuilt", 88638744)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(26.394, -63.313, -30.086);
+	SeqNo(88638744);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("geo_prop_boulder_5", "geo_prop_boulder_1", 138923353)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(41.718, -64.256, -199.826);
+	SeqNo(138923353);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_splash4", "geo_prop_splash", 146013334)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-49.000, -64.411, 1.000);
+	SeqNo(146013334);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_34", "geo_bldg_stonespire_6", 172968931)
+{
+	ChildRotation(0.262, -0.000, -0.965, -0.000);
+	ChildPosition(18.000, -76.000, 603.000);
+	SeqNo(172968931);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_55", "geo_bldg_stonespire_8", 187631668)
+{
+	ChildRotation(1.000, -0.000, 0.010, -0.000);
+	ChildPosition(-372.233, -24.165, -289.347);
+	SeqNo(187631668);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_7", "geo_prop_boulder_1", 221421903)
+{
+	ChildRotation(0.980, 0.148, -0.134, -0.020);
+	ChildPosition(8.976, -65.006, 18.681);
+	SeqNo(221421903);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker14", "geo_prop_rock_bunker", 284822438)
+{
+	ChildRotation(0.909, -0.092, 0.406, 0.007);
+	ChildPosition(135.575, -60.230, -288.764);
+	SeqNo(284822438);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_hangar", "geo_bldg_hangar", 293312795)
+{
+	ChildRotation(0.354, 0.000, -0.935, 0.000);
+	ChildPosition(161.729, -62.423, 47.408);
+	SeqNo(293312795);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_technounion_hull1", "geo_bldg_technounion_hull", 310051209)
+{
+	ChildRotation(0.867, 0.000, 0.499, -0.000);
+	ChildPosition(-137.284, -51.657, 49.810);
+	SeqNo(310051209);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_49", "geo_bldg_stonespire_6", 315029096)
+{
+	ChildRotation(-0.354, -0.000, -0.935, -0.000);
+	ChildPosition(96.681, -56.252, -407.056);
+	SeqNo(315029096);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_33", "geo_bldg_stonespire_6", 321709616)
+{
+	ChildRotation(-0.393, -0.000, -0.920, -0.000);
+	ChildPosition(261.000, -43.000, 509.000);
+	SeqNo(321709616);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_8", "geo_bldg_stonespire_8", 346122414)
+{
+	ChildRotation(0.574, 0.000, 0.819, 0.000);
+	ChildPosition(-350.000, -46.208, -112.000);
+	SeqNo(346122414);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_12", "geo_prop_boulder_1", 348265389)
+{
+	ChildRotation(0.527, -0.000, -0.850, -0.000);
+	ChildPosition(-116.000, -61.000, -46.000);
+	SeqNo(348265389);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_27", "geo_bldg_stonespire_1", 382842191)
+{
+	ChildRotation(0.831, -0.000, -0.556, -0.000);
+	ChildPosition(-412.000, -92.000, 285.000);
+	SeqNo(382842191);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_53", "geo_bldg_stonespire_7", 388789894)
+{
+	ChildRotation(0.838, -0.000, 0.545, -0.000);
+	ChildPosition(-452.621, -25.691, -240.695);
+	SeqNo(388789894);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_5", "geo_bldg_bunker_1", 401699744)
+{
+	ChildRotation(0.611, -0.000, 0.792, -0.000);
+	ChildPosition(107.495, -38.991, -166.956);
+	SeqNo(401699744);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_56", "geo_bldg_stonespire_8", 432153827)
+{
+	ChildRotation(0.998, -0.000, -0.070, -0.000);
+	ChildPosition(501.365, -39.011, -296.681);
+	SeqNo(432153827);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_51", "geo_bldg_stonespire_1", 447000281)
+{
+	ChildRotation(0.239, -0.000, -0.971, -0.000);
+	ChildPosition(-280.101, -67.190, -295.043);
+	SeqNo(447000281);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_2", "geo_bldg_stonespire_2", 455912757)
+{
+	ChildRotation(1.000, -0.000, 0.010, -0.000);
+	ChildPosition(28.212, -18.852, -417.898);
+	SeqNo(455912757);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("tur_bldg_geoturret4", "tur_bldg_geoturret", 464007685)
+{
+	ChildRotation(0.401, 0.027, -0.915, 0.013);
+	ChildPosition(221.220, -39.333, -112.000);
+	SeqNo(464007685);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_1_outside", "geo_bldg_bunker_1_outside", 495537630)
+{
+	ChildRotation(-0.021, -0.000, -1.000, -0.000);
+	ChildPosition(-84.108, -62.706, -269.784);
+	SeqNo(495537630);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_stones_table", "geo_prop_stones_table", 656913820)
+{
+	ChildRotation(0.896, 0.000, 0.445, -0.000);
+	ChildPosition(-136.849, -58.235, -3.472);
+	SeqNo(656913820);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_57", "geo_bldg_stonespire_1", 696320980)
+{
+	ChildRotation(0.978, -0.000, -0.208, -0.000);
+	ChildPosition(518.196, -79.415, -113.752);
+	SeqNo(696320980);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_16", "geo_bldg_stonespire_8", 851647368)
+{
+	ChildRotation(0.921, -0.000, 0.389, -0.000);
+	ChildPosition(296.000, -57.000, -33.000);
+	SeqNo(851647368);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent9", "geo_prop_geonosian_vent", 897304302)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(128.238, -38.949, -183.918);
+	SeqNo(897304302);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker13", "geo_prop_rock_bunker", 906569906)
+{
+	ChildRotation(0.787, -0.000, -0.617, -0.000);
+	ChildPosition(-118.137, -61.786, -202.845);
+	SeqNo(906569906);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_6", "geo_bldg_stonespire_6", 958359410)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(262.000, -42.099, -230.000);
+	SeqNo(958359410);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker8", "geo_prop_rock_bunker", 980738444)
+{
+	ChildRotation(0.971, -0.068, -0.230, 0.016);
+	ChildPosition(-28.804, -64.090, -218.056);
+	SeqNo(980738444);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_4", "geo_prop_boulder_1", 994573849)
+{
+	ChildRotation(0.498, 0.045, -0.863, -0.078);
+	ChildPosition(49.112, -64.184, -228.113);
+	SeqNo(994573849);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker15", "geo_prop_rock_bunker", 1044437470)
+{
+	ChildRotation(0.999, -0.001, 0.030, 0.030);
+	ChildPosition(133.922, -60.483, -289.376);
+	SeqNo(1044437470);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker10", "geo_bldg_bunker", 1105605843)
+{
+	ChildRotation(0.998, -0.060, 0.000, 0.000);
+	ChildPosition(101.000, -66.414, -56.000);
+	SeqNo(1105605843);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_2_outside", "geo_bldg_bunker_2_outside", 1138640170)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(36.999, -62.316, -50.999);
+	SeqNo(1138640170);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_22", "geo_bldg_stonespire_6", 1200104926)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(204.620, -88.553, -26.232);
+	SeqNo(1200104926);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker8", "geo_bldg_bunker", 1253856549)
+{
+	ChildRotation(0.995, 0.000, -0.100, 0.000);
+	ChildPosition(55.121, -71.714, -157.721);
+	SeqNo(1253856549);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("cis_ambient_veh", "com_item_vehicle_spawn", 1261125582)
+{
+	ChildRotation(-0.122, -0.000, -0.993, -0.000);
+	ChildPosition(-138.666, -57.020, 11.235);
+	SeqNo(1261125582);
+	Team(0);
+	NetworkId(-1);
+	Label("cis_ambient_veh");
+	ControlZone("");
+	SpawnCount("1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassNeutral("cis_walk_spider");
+	ClassAllATK("");
+	ClassCISATK("");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("");
+	ClassRepDEF("");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("tur_bldg_geoturret1", "tur_bldg_geoturret", 1287504410)
+{
+	ChildRotation(0.039, 0.020, -0.999, 0.001);
+	ChildPosition(13.444, -62.795, -110.810);
+	SeqNo(1287504410);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker6", "geo_prop_rock_bunker", 1346930283)
+{
+	ChildRotation(0.011, 0.000, -1.000, 0.000);
+	ChildPosition(39.818, -63.584, -12.303);
+	SeqNo(1346930283);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_48", "geo_bldg_stonespire_7", 1362732646)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(170.000, -61.000, -306.000);
+	SeqNo(1362732646);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("tur_bldg_geoturret6", "tur_bldg_geoturret", 1414825475)
+{
+	ChildRotation(-0.029, -0.000, -1.000, -0.000);
+	ChildPosition(-141.724, -56.346, 22.457);
+	SeqNo(1414825475);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_1", "geo_bldg_stonespire_1", 1416922793)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(150.864, -54.539, -392.150);
+	SeqNo(1416922793);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker9", "geo_bldg_bunker", 1456386991)
+{
+	ChildRotation(-0.061, 0.000, -0.998, 0.000);
+	ChildPosition(-13.614, -68.429, 13.548);
+	SeqNo(1456386991);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_32", "geo_bldg_stonespire_8", 1550674091)
+{
+	ChildRotation(0.915, -0.000, -0.403, -0.000);
+	ChildPosition(412.000, -84.000, 417.000);
+	SeqNo(1550674091);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_46", "geo_bldg_stonespire_7", 1553551233)
+{
+	ChildRotation(0.455, -0.000, -0.890, -0.000);
+	ChildPosition(181.000, -60.000, 275.000);
+	SeqNo(1553551233);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_24", "geo_bldg_stonespire_5", 1559414108)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-142.121, -74.090, -285.231);
+	SeqNo(1559414108);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_1", "geo_bldg_bunker_1", 1569030342)
+{
+	ChildRotation(-0.021, -0.000, -1.000, -0.000);
+	ChildPosition(-84.108, -62.706, -269.784);
+	SeqNo(1569030342);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_8", "geo_prop_boulder_1", 1608732719)
+{
+	ChildRotation(0.950, -0.000, 0.311, -0.000);
+	ChildPosition(143.000, -39.981, -149.000);
+	SeqNo(1608732719);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_15", "geo_bldg_stonespire_5", 1610289339)
+{
+	ChildRotation(-0.316, 0.000, -0.949, 0.000);
+	ChildPosition(-139.360, -31.469, -361.091);
+	SeqNo(1610289339);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_30", "geo_bldg_stonespire_8", 1641012895)
+{
+	ChildRotation(0.179, -0.000, -0.984, -0.000);
+	ChildPosition(173.000, -94.000, 751.000);
+	SeqNo(1641012895);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_19", "geo_bldg_stonespire_6", 1665906944)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-48.727, -58.576, 244.194);
+	SeqNo(1665906944);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent4", "geo_prop_geonosian_vent", 1666207034)
+{
+	ChildRotation(0.563, -0.000, -0.826, -0.000);
+	ChildPosition(-135.000, -59.000, -33.000);
+	SeqNo(1666207034);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_cave", "geo_prop_cave", 1690211420)
+{
+	ChildRotation(0.687, 0.000, -0.727, 0.000);
+	ChildPosition(-20.748, -67.615, -73.281);
+	SeqNo(1690211420);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_35", "geo_bldg_stonespire_1", 1757730088)
+{
+	ChildRotation(0.739, -0.000, -0.674, -0.000);
+	ChildPosition(-102.000, -87.000, 475.000);
+	SeqNo(1757730088);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_11", "geo_prop_boulder_1", 1840564099)
+{
+	ChildRotation(0.073, 0.096, -0.969, -0.216);
+	ChildPosition(201.430, -38.660, -174.798);
+	SeqNo(1840564099);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker4", "geo_prop_rock_bunker", 1903176231)
+{
+	ChildRotation(0.981, 0.000, 0.195, 0.000);
+	ChildPosition(8.419, -62.580, 64.967);
+	SeqNo(1903176231);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_a1", "geo_prop_geonosian_lair_a", 1907790248)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-50.927, -23.010, -363.153);
+	SeqNo(1907790248);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_28", "geo_bldg_stonespire_1", 1919179495)
+{
+	ChildRotation(0.883, -0.000, 0.469, -0.000);
+	ChildPosition(-343.000, -121.000, 241.000);
+	SeqNo(1919179495);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker3", "geo_prop_rock_bunker", 1948954568)
+{
+	ChildRotation(0.292, -0.000, -0.956, -0.000);
+	ChildPosition(-70.630, -62.700, -252.498);
+	SeqNo(1948954568);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_splash3", "geo_prop_splash", 1992337247)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(80.000, -63.493, -14.000);
+	SeqNo(1992337247);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("com_bldg_invisible_controlzone", "com_bldg_invisible_controlzone", 1997296458)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(51.741, -61.000, 170.843);
+	SeqNo(1997296458);
+	Team(5);
+	NetworkId(-1);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("geo_spawnpath");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
+}
+
+Object("geo_prop_stones_table1", "geo_prop_stones_table", 2005415823)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-141.744, -57.033, 22.859);
+	SeqNo(2005415823);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_59", "geo_bldg_stonespire_6", 2025704314)
+{
+	ChildRotation(0.999, 0.000, 0.035, -0.000);
+	ChildPosition(329.494, -24.755, -405.814);
+	SeqNo(2025704314);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker11", "geo_bldg_bunker", 2026510834)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(232.113, -44.051, -105.535);
+	SeqNo(2026510834);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("tur_bldg_geoturret2", "tur_bldg_geoturret", 2052215733)
+{
+	ChildRotation(0.419, -0.017, -0.907, 0.036);
+	ChildPosition(91.120, -62.982, -62.048);
+	SeqNo(2052215733);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("tur_bldg_geoturret3", "tur_bldg_geoturret", 2117772783)
+{
+	ChildRotation(0.358, 0.015, -0.933, 0.016);
+	ChildPosition(142.278, -63.105, 0.626);
+	SeqNo(2117772783);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_2", "geo_prop_boulder_1", 2119903231)
+{
+	ChildRotation(-0.398, 0.000, -0.917, 0.000);
+	ChildPosition(58.106, -62.580, -103.278);
+	SeqNo(2119903231);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_2", "geo_bldg_bunker_1", 2139797651)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(21.089, -62.480, 84.972);
+	SeqNo(2139797651);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("cp_team3", "com_bldg_invisible_controlzone", -2079473877)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(27.109, -74.688, -121.178);
+	SeqNo(-2079473877);
+	Team(3);
+	NetworkId(-1);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
+}
+
+Object("geo_prop_rock_bunker7", "geo_prop_rock_bunker", -2051239249)
+{
+	ChildRotation(-0.030, 0.002, -0.996, 0.080);
+	ChildPosition(-12.195, -64.095, -218.936);
+	SeqNo(-2051239249);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_9", "geo_prop_boulder_1", -2030593845)
+{
+	ChildRotation(0.825, -0.000, -0.566, -0.000);
+	ChildPosition(175.505, -39.705, -146.543);
+	SeqNo(-2030593845);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_42", "geo_bldg_stonespire_2", -1920511409)
+{
+	ChildRotation(0.798, -0.000, -0.602, -0.000);
+	ChildPosition(375.000, -46.000, -194.000);
+	SeqNo(-1920511409);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker2", "geo_prop_rock_bunker", -1912223417)
+{
+	ChildRotation(0.991, 0.000, -0.134, 0.000);
+	ChildPosition(-12.000, -62.474, -190.000);
+	SeqNo(-1912223417);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_58", "geo_bldg_stonespire_1", -1829087516)
+{
+	ChildRotation(-0.208, -0.000, -0.978, -0.000);
+	ChildPosition(510.375, -65.238, -258.325);
+	SeqNo(-1829087516);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker12", "geo_bldg_bunker", -1822485132)
+{
+	ChildRotation(0.387, -0.000, -0.922, -0.000);
+	ChildPosition(-101.550, -62.927, -176.130);
+	SeqNo(-1822485132);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_31", "geo_bldg_stonespire_8", -1794563654)
+{
+	ChildRotation(0.606, -0.000, 0.795, -0.000);
+	ChildPosition(-37.000, -88.000, 639.000);
+	SeqNo(-1794563654);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_52", "geo_bldg_stonespire_1", -1739973038)
+{
+	ChildRotation(0.949, -0.000, -0.314, -0.000);
+	ChildPosition(-356.599, -48.794, -411.949);
+	SeqNo(-1739973038);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_26", "geo_bldg_stonespire_1", -1700498939)
+{
+	ChildRotation(-0.258, -0.000, -0.966, -0.000);
+	ChildPosition(-351.000, -129.000, 428.000);
+	SeqNo(-1700498939);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_21", "geo_bldg_stonespire_5", -1672066816)
+{
+	ChildRotation(0.372, 0.000, -0.928, 0.000);
+	ChildPosition(-1.701, -88.549, -106.881);
+	SeqNo(-1672066816);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_1_outside1", "geo_bldg_bunker_1_outside", -1658459031)
+{
+	ChildRotation(0.611, -0.000, 0.792, -0.000);
+	ChildPosition(107.495, -38.991, -166.956);
+	SeqNo(-1658459031);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_45", "geo_bldg_stonespire_7", -1603526117)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-80.000, -48.000, 274.000);
+	SeqNo(-1603526117);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_40", "geo_bldg_stonespire_6", -1597489862)
+{
+	ChildRotation(0.781, -0.000, 0.625, -0.000);
+	ChildPosition(-198.000, -78.000, 164.000);
+	SeqNo(-1597489862);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_splash2", "geo_prop_splash", -1585319730)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(43.000, -62.580, -159.000);
+	SeqNo(-1585319730);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_54", "geo_bldg_stonespire_6", -1531089189)
+{
+	ChildRotation(0.952, -0.000, -0.305, -0.000);
+	ChildPosition(-533.727, -19.303, -204.491);
+	SeqNo(-1531089189);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_7", "geo_bldg_stonespire_7", -1481821851)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-170.544, -54.223, -200.483);
+	SeqNo(-1481821851);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_37", "geo_bldg_stonespire_6", -1461649037)
+{
+	ChildRotation(0.469, -0.000, -0.883, -0.000);
+	ChildPosition(342.000, -56.000, 186.000);
+	SeqNo(-1461649037);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_47", "geo_bldg_stonespire_7", -1447813509)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(145.000, -67.000, 80.000);
+	SeqNo(-1447813509);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_36", "geo_bldg_stonespire_6", -1427032474)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(259.000, -43.000, 60.000);
+	SeqNo(-1427032474);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_ridge", "geo_bldg_bunker_ridge", -1421857274)
+{
+	ChildRotation(0.711, -0.000, 0.703, -0.000);
+	ChildPosition(106.099, -39.284, -166.956);
+	SeqNo(-1421857274);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_4", "geo_bldg_bunker_2", -1406927398)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(36.997, -62.318, -50.992);
+	SeqNo(-1406927398);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker1", "geo_prop_rock_bunker", -1376223033)
+{
+	ChildRotation(0.906, 0.066, -0.418, 0.025);
+	ChildPosition(-2.079, -63.690, -247.908);
+	SeqNo(-1376223033);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent11", "geo_prop_geonosian_vent", -1366564406)
+{
+	ChildRotation(-0.279, -0.000, -0.960, -0.000);
+	ChildPosition(-109.005, -62.450, -205.042);
+	SeqNo(-1366564406);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_13", "geo_prop_boulder_1", -1346871118)
+{
+	ChildRotation(0.988, -0.055, 0.135, 0.056);
+	ChildPosition(97.041, -45.056, -153.197);
+	SeqNo(-1346871118);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("rep_ambient_cp", "com_bldg_invisible_controlzone", -1338687823)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-138.000, -55.143, -82.000);
+	SeqNo(-1338687823);
+	Team(6);
+	NetworkId(-1);
+	Label("rep_ambient_cp");
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("rep_ambient_spawnpath");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
+}
+
+Object("geo_prop_rock_bunker9", "geo_prop_rock_bunker", -1302167392)
+{
+	ChildRotation(0.628, 0.078, -0.772, 0.063);
+	ChildPosition(26.570, -63.826, 29.803);
+	SeqNo(-1302167392);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker12", "geo_prop_rock_bunker", -1301315980)
+{
+	ChildRotation(0.096, -0.000, -0.995, -0.000);
+	ChildPosition(-108.853, -62.700, -204.049);
+	SeqNo(-1301315980);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent2", "geo_prop_geonosian_vent", -1285573063)
+{
+	ChildRotation(1.000, -0.000, -0.020, -0.000);
+	ChildPosition(111.000, -61.844, -293.000);
+	SeqNo(-1285573063);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_44", "geo_bldg_stonespire_6", -1273570133)
+{
+	ChildRotation(0.842, -0.000, -0.539, -0.000);
+	ChildPosition(105.000, -27.000, -555.000);
+	SeqNo(-1273570133);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_a", "geo_prop_geonosian_lair_a", -1187239189)
+{
+	ChildRotation(0.997, 0.000, 0.080, 0.000);
+	ChildPosition(-12.482, -30.918, -367.209);
+	SeqNo(-1187239189);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker10", "geo_prop_rock_bunker", -1174118240)
+{
+	ChildRotation(0.241, 0.000, -0.970, 0.000);
+	ChildPosition(120.053, -62.580, -58.085);
+	SeqNo(-1174118240);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_38", "geo_bldg_stonespire_1", -1148210698)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(457.000, -52.000, -176.000);
+	SeqNo(-1148210698);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent12", "geo_prop_geonosian_vent", -1044975445)
+{
+	ChildRotation(0.199, -0.000, -0.980, -0.000);
+	ChildPosition(-127.000, -58.000, 12.000);
+	SeqNo(-1044975445);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker11", "geo_prop_rock_bunker", -983879991)
+{
+	ChildRotation(0.713, -0.000, -0.701, -0.000);
+	ChildPosition(133.480, -38.940, -166.087);
+	SeqNo(-983879991);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_17", "geo_bldg_stonespire_5", -975289604)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-35.440, -62.060, 137.599);
+	SeqNo(-975289604);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_25", "geo_bldg_stonespire_1", -910251072)
+{
+	ChildRotation(0.909, -0.000, 0.417, -0.000);
+	ChildPosition(-291.000, -36.000, 58.000);
+	SeqNo(-910251072);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_a2", "geo_prop_geonosian_lair_a", -819024017)
+{
+	ChildRotation(0.992, 0.000, 0.129, 0.000);
+	ChildPosition(-87.904, -36.873, -331.704);
+	SeqNo(-819024017);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_cave1", "geo_prop_cave", -742137060)
+{
+	ChildRotation(0.549, 0.000, 0.836, 0.000);
+	ChildPosition(69.486, -68.446, -105.312);
+	SeqNo(-742137060);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_10", "geo_bldg_stonespire_5", -729114746)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(264.874, -41.891, 123.071);
+	SeqNo(-729114746);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_14", "geo_prop_boulder_1", -702216370)
+{
+	ChildRotation(-0.131, -0.000, -0.991, -0.000);
+	ChildPosition(106.361, -40.391, -152.392);
+	SeqNo(-702216370);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_3", "geo_prop_boulder_1", -598350141)
+{
+	ChildRotation(-0.068, 0.016, -0.981, -0.181);
+	ChildPosition(66.611, -63.915, -220.023);
+	SeqNo(-598350141);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_5", "geo_bldg_stonespire_5", -596869435)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-102.860, -18.317, -357.154);
+	SeqNo(-596869435);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_41", "geo_bldg_stonespire_2", -552848601)
+{
+	ChildRotation(0.107, -0.000, -0.994, -0.000);
+	ChildPosition(61.000, -85.000, 316.000);
+	SeqNo(-552848601);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_43", "geo_bldg_stonespire_8", -505538435)
+{
+	ChildRotation(0.967, 0.000, 0.253, -0.000);
+	ChildPosition(-78.000, -49.000, -555.000);
+	SeqNo(-505538435);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_12", "geo_bldg_stonespire_6", -501063096)
+{
+	ChildRotation(0.180, 0.000, -0.984, 0.000);
+	ChildPosition(330.780, -39.214, -102.213);
+	SeqNo(-501063096);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_vent10", "geo_prop_geonosian_vent", -486078645)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(163.850, -38.642, -149.963);
+	SeqNo(-486078645);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_18", "geo_bldg_stonespire_6", -479933625)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(125.455, -62.936, 149.704);
+	SeqNo(-479933625);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("cis_ambient_cp", "com_bldg_invisible_controlzone", -441684448)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-149.000, -55.090, 68.000);
+	SeqNo(-441684448);
+	Team(7);
+	NetworkId(-1);
+	Label("cis_ambient_cp");
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("cis_ambient_spawnpath");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
+}
+
+Object("geo_bldg_stonespire_11", "geo_bldg_stonespire_1", -435716593)
+{
+	ChildRotation(0.029, 0.000, -1.000, 0.000);
+	ChildPosition(48.774, -63.421, 136.099);
+	SeqNo(-435716593);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_a3", "geo_prop_geonosian_lair_a", -403250067)
+{
+	ChildRotation(0.982, 0.000, -0.189, 0.000);
+	ChildPosition(140.879, -33.043, -323.901);
+	SeqNo(-403250067);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_29", "geo_bldg_stonespire_8", -397504526)
+{
+	ChildRotation(0.970, 0.000, 0.244, -0.000);
+	ChildPosition(-210.000, -78.000, 367.000);
+	SeqNo(-397504526);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_hangar_outside", "geo_bldg_hangar_outside", -290868212)
+{
+	ChildRotation(0.354, 0.000, -0.935, 0.000);
+	ChildPosition(161.729, -62.423, 47.408);
+	SeqNo(-290868212);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_b1", "geo_prop_geonosian_lair_b", -265841283)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(31.077, -43.158, -368.485);
+	SeqNo(-265841283);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_technounion_hull", "geo_bldg_technounion_hull", -262162607)
+{
+	ChildRotation(0.952, 0.000, -0.305, 0.000);
+	ChildPosition(-16.649, -58.404, -165.482);
+	SeqNo(-262162607);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_23", "geo_bldg_stonespire_5", -236359496)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(175.618, -56.000, -122.622);
+	SeqNo(-236359496);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker13", "geo_bldg_bunker", -218334812)
+{
+	ChildRotation(0.639, -0.000, -0.769, -0.000);
+	ChildPosition(-93.447, -72.000, -160.007);
+	SeqNo(-218334812);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_geonosian_lair_b", "geo_prop_geonosian_lair_b", -209118453)
+{
+	ChildRotation(0.925, 0.000, -0.380, 0.000);
+	ChildPosition(103.791, -24.845, -352.852);
+	SeqNo(-209118453);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_39", "geo_bldg_stonespire_2", -203839555)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-290.000, -75.000, 252.000);
+	SeqNo(-203839555);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("tur_bldg_geoturret5", "tur_bldg_geoturret", -194227368)
+{
+	ChildRotation(0.772, -0.000, 0.635, -0.000);
+	ChildPosition(-91.341, -58.745, -174.686);
+	SeqNo(-194227368);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker_1_outside2", "geo_bldg_bunker_1_outside", -173460843)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(21.089, -62.480, 84.972);
+	SeqNo(-173460843);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_boulder_1", "geo_prop_boulder_1", -155070466)
+{
+	ChildRotation(0.668, 0.059, 0.736, 0.095);
+	ChildPosition(-53.804, -65.162, -191.913);
+	SeqNo(-155070466);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_60", "geo_bldg_stonespire_6", -125197539)
+{
+	ChildRotation(0.768, -0.000, -0.641, -0.000);
+	ChildPosition(286.950, -12.556, -407.580);
+	SeqNo(-125197539);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_stonespire_9", "geo_bldg_stonespire_6", -116431610)
+{
+	ChildRotation(0.998, 0.000, -0.060, 0.000);
+	ChildPosition(-102.566, -63.319, 97.982);
+	SeqNo(-116431610);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("dag1_prop_destroyed_gunship", "dag1_prop_destroyed_gunship", -116275411)
+{
+	ChildRotation(0.994, -0.000, 0.110, -0.000);
+	ChildPosition(-144.941, -58.815, -46.491);
+	SeqNo(-116275411);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_rock_bunker", "geo_prop_rock_bunker", -115552865)
+{
+	ChildRotation(0.888, 0.000, 0.460, 0.000);
+	ChildPosition(33.000, -64.901, -258.000);
+	SeqNo(-115552865);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_bldg_bunker7", "geo_bldg_bunker", -91088614)
+{
+	ChildRotation(0.964, 0.000, -0.267, 0.000);
+	ChildPosition(-133.178, -59.388, -74.364);
+	SeqNo(-91088614);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("geo_prop_splash", "geo_prop_splash", -81271564)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(135.000, -39.187, -161.000);
+	SeqNo(-81271564);
+	Team(0);
+	NetworkId(-1);
+}

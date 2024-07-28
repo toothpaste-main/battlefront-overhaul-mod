@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_inf_default_officer"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_vanguardsnow"
+		"all_inf_vanguardsnow_low1"
+	}
+}

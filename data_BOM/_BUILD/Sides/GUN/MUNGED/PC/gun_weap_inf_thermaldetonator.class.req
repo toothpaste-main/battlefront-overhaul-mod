@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_thermaldetonator"
+		"gun_weap_inf_thermaldetonator_ord"
+	}
+	REQN
+	{
+		"model"
+		"gun_weap_inf_grenadethermal"
+	}
+}

@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_spiderwalker_lowrez"
+		"cis_spiderwalker"
+		"cis_spiderwalker_bump"
+	}
+}

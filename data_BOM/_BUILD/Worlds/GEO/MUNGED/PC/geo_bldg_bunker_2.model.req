@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_bldg_bunker_details_2"
+		"geo_bldg_bunker_light"
+		"geo_bldg_bunker_1"
+		"geo_bldg_bunker_floor"
+		"geo_bldg_bunker_details"
+	}
+}

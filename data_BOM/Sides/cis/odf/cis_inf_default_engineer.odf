@@ -1,0 +1,30 @@
+[GameObjectClass]
+ClassParent     	= "cis_inf_default"
+
+
+[Properties]
+UnitType            = "pilot"
+
+ImmuneToMines   = "1"
+
+WEAPONSECTION = 1
+WeaponName     	= "cis_weap_inf_shotgun"
+WeaponAmmo     	= 8
+
+WEAPONSECTION = 2
+WeaponName     	= "cis_weap_inf_fusioncutter"
+WeaponAmmo     	= 0
+
+WEAPONSECTION = 3
+WeaponName     	= "cis_weap_inf_detpack"
+WeaponAmmo     	= 3
+WeaponChannel  	= 1
+
+WEAPONSECTION = 4
+WeaponName     	= "cis_weap_inf_powerup_dispenser"
+WeaponAmmo     	= 2
+WeaponChannel  	= 1
+
+WEAPONSECTION = 5
+WeaponName     	= "cis_weap_award_shotgun"
+WeaponAmmo     	= 6

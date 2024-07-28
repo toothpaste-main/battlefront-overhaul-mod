@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_outside_01"
+		"cor1_bldg_security_roomdoor"
+		"cor1_bldg_warroom05"
+		"cor1_bldg_serverroomd"
+		"cor1_bldg_councilchamber01"
+		"cor1_bldg_younglingfloor"
+		"cor1_bldg_warroom02"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"tan4_bldg_engine_b"
+	}
+	REQN
+	{
+		"class"
+		"flicker_white_light_barracks"
+	}
+}
