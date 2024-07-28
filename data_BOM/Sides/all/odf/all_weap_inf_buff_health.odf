@@ -1,7 +1,0 @@
-[WeaponClass]
-ClassParent         = "com_weap_inf_buff"
-
-
-[Properties]
-OrdnanceName        = "all_weap_inf_buff_health_ord"
-HUDTag              = "hud_health_regen"

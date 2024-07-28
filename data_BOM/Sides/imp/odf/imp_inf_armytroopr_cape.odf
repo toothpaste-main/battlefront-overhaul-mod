@@ -1,5 +1,0 @@
-[GameObjectClass]       
-ClassLabel          = "cloth"
-
-[Properties]
-attachedmesh    	= "imp_inf_armytrooper"

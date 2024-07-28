@@ -1,9 +1,0 @@
-[GameObjectClass]		
-
-ClassLabel		=	"water"
-GeometryName	=	"yav_water.msh"
-
-
-[Properties]		
-
-GeometryName	=	"yav_water"

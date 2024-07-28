@@ -45,6 +45,7 @@ ucft
 		
 		"bom_cmn"
 		
+		"bomcw_ep2"
 		"bomcw_ep3"
 		"bomcw_ep3_jungle"
 		"bomcw_ep3_marine"
@@ -106,6 +107,7 @@ ucft
 		"geo1c_c"
 		"geo1c_con"
 		"geo1c_ctf"
+		"geo1c_hunt"
 
 		"hot1g_con"
 		"hot1g_1flag"

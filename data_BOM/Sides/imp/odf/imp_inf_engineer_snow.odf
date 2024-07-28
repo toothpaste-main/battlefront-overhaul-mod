@@ -1,8 +1,0 @@
-[GameObjectClass]
-ClassParent         = "imp_inf_default_engineer"
-
-
-[Properties]
-GeometryName        = "imp_inf_atatpilot"
-GeometryLowRes      = "imp_inf_atatpilot_low1"
-FirstPerson         = "IMP\impsntr;imp_1st_snowtrooper"

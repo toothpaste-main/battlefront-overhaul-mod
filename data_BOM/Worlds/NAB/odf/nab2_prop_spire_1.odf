@@ -1,9 +1,0 @@
-[GameObjectClass]		
-
-ClassLabel		=	"prop"
-GeometryName	=	"nab2_prop_spire_1.msh"
-
-
-[Properties]		
-
-GeometryName	=	"nnab2_prop_spire_1"

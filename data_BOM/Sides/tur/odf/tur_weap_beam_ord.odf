@@ -1,9 +1,0 @@
-[OrdnanceClass]
-ClassParent 			= "com_weap_veh_beam_ord"
-
-[Properties]
-LaserTexture		= "com_sfx_laser_red"
-LaserGlowColor          = "254 6 18 100"
-
-Damage 							= "500.0"
-MaxDamage           = "1000.0"

@@ -1,6 +1,0 @@
-[OrdnanceClass]
-ClassParent 		= "com_weap_inf_thermaldetonator_ord"
-
-
-[Properties]
-ExplosionExpire		= "imp_weap_inf_thermaldetonator_exp"

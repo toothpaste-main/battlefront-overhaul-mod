@@ -1,6 +1,0 @@
-[GameObjectClass]       
-ClassLabel          = "cloth"
-
-[Properties]
-attachedmesh	= "com_icon_republic_flag"
-priority = 10.0

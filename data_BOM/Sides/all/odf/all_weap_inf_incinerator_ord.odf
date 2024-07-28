@@ -1,7 +1,0 @@
-[OrdnanceClass]
-ClassParent         = "com_weap_inf_incinerator_ord"
-
-[Properties]
-Explosion           =  "all_weap_inf_incinerator_exp"
-
-//SoundProperty   =   "all_weap_inf_incinerator_fire_loop"

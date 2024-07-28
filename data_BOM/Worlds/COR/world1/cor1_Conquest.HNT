@@ -1,9 +1,0 @@
-
-Hint("HintNode1346", "1")
-{
-	Position(63.537823, 15.499649, 32.464512);
-	Rotation(0.684801, -0.000000, -0.728730, -0.000000);
-	PrimaryStance(1);
-	SecondaryStance(24);
-	Mode(1);
-}

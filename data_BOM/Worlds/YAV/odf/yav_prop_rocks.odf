@@ -1,9 +1,0 @@
-[GameObjectClass]		
-
-ClassLabel		=	"prop"
-GeometryName	=	"yav_prop_rocks.msh"
-
-
-[Properties]		
-
-GeometryName	=	"yav_prop_rocks"

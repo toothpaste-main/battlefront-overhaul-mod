@@ -60,9 +60,10 @@ AddDownloadableContent("fel1", "fel1g_con", 4)
 AddDownloadableContent("fel1", "fel1g_1flag", 4)
 
 -- geo
---AddDownloadableContent("geo1","geo1c_c",4)
---AddDownloadableContent("geo1","geo1c_con",4)
---AddDownloadableContent("geo1","geo1c_ctf",4)
+--AddDownloadableContent("geo1", "geo1c_c", 4)
+AddDownloadableContent("geo1", "geo1c_con", 4)
+AddDownloadableContent("geo1", "geo1c_ctf", 4)
+AddDownloadableContent("geo1", "geo1c_hunt", 4)
 
 -- hot
 --AddDownloadableContent("hot1", "hot1g_c", 4)

@@ -1,7 +1,0 @@
-[OrdnanceClass]
-ClassParent     = "com_weap_veh_fly_chaingun_ord"
-
-[Properties]
-ExplosionName = "tur_weap_spa_chaingun_exp"
-
-MaxDamage = "400"

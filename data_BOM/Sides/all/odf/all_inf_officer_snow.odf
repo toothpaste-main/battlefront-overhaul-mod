@@ -1,8 +1,0 @@
-[GameObjectClass]
-ClassParent         = "all_inf_default_officer"
-
-
-[Properties]
-GeometryName        = "all_inf_vanguardsnow"
-GeometryLowRes      = "all_inf_vanguardsnow_low1"
-FirstPerson         = "all\allhthtr;all_1st_hothtrooper"
