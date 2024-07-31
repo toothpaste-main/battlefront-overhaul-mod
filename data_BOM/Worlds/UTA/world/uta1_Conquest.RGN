@@ -55,12 +55,12 @@ Region("CON_CP6Capture", 2)
 	Name("CON_CP6Capture");
 }
 
-Region("CON_CP7_capture", 2)
+Region("CON_CP7_capture", 0)
 {
 	Layer(6);
-	Position(-141.612747, 1.789536, -222.919373);
-	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	Size(2.361725, 6.934952, 15.713776);
+	Position(-132.889023, 1.789757, -218.945679);
+	Rotation(0.987263, 0.007624, 0.158674, 0.010317);
+	Size(12.000000, 10.000000, 12.000000);
 	Name("CON_CP7_capture");
 }
 

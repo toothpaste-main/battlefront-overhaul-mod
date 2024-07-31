@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.767, 0.409, 0.437, -0.232);
-	Position(1.256, 147.501, -78.074);
+	Rotation(0.234, 0.183, -0.752, 0.589);
+	Position(-64.162, 90.081, 28.825);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(128.998, 76.150, -95.989,  0.592, 0.474, 0.509, -0.407);
 }
 LightName("naboo2_Collision.LGT");
 ControllerManager("StandardCtrlMgr");
@@ -63,8 +63,8 @@ Object("com_inv_col_641", "com_inv_col_64", 311832076)
 
 Object("com_inv_col_32", "com_inv_col_32", 395773783)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(40.149, 9.758, -127.073);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(40.149, 10.905, -127.073);
 	SeqNo(395773783);
 	Team(0);
 	NetworkId(-1);
@@ -111,10 +111,10 @@ Object("com_inv_col_322", "com_inv_col_32", 684803041)
 	Layer(4);
 }
 
-Object("com_inv_col_323", "com_inv_col_32", 796580315)
+Object("gate_top", "com_inv_col_32", 796580315)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(15.901, 6.126, -99.189);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(15.901, 12.964, -99.189);
 	SeqNo(796580315);
 	Team(0);
 	NetworkId(-1);
@@ -136,6 +136,16 @@ Object("com_inv_col_643", "com_inv_col_64", 962519210)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(247.903, 1.975, -64.439);
 	SeqNo(962519210);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("gate1", "com_inv_col_8", 1018613787)
+{
+	ChildRotation(0.709, -0.000, -0.705, -0.000);
+	ChildPosition(2.025, 7.833, -99.394);
+	SeqNo(1018613787);
 	Team(0);
 	NetworkId(-1);
 	Layer(4);
@@ -211,6 +221,16 @@ Object("com_inv_col_328", "com_inv_col_32", 1330275286)
 	Layer(4);
 }
 
+Object("gate2", "com_inv_col_8", 1392953307)
+{
+	ChildRotation(0.716, -0.698, -0.000, -0.000);
+	ChildPosition(4.373, 15.354, -99.239);
+	SeqNo(1392953307);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
 Object("com_inv_col_329", "com_inv_col_32", 1503108732)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
@@ -223,8 +243,8 @@ Object("com_inv_col_329", "com_inv_col_32", 1503108732)
 
 Object("com_inv_col_3210", "com_inv_col_32", 1527001160)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(39.901, 9.975, -104.775);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(39.901, 12.952, -104.775);
 	SeqNo(1527001160);
 	Team(0);
 	NetworkId(-1);
@@ -246,6 +266,16 @@ Object("com_inv_col_3211", "com_inv_col_32", 1754475392)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(-124.100, 25.975, -92.439);
 	SeqNo(1754475392);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("gate3", "com_inv_col_8", 1899982709)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-0.443, 7.860, -99.428);
+	SeqNo(1899982709);
 	Team(0);
 	NetworkId(-1);
 	Layer(4);
@@ -326,16 +356,6 @@ Object("com_inv_col_3216", "com_inv_col_32", -2056313037)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(-0.271, 25.598, -104.267);
 	SeqNo(-2056313037);
-	Team(0);
-	NetworkId(-1);
-	Layer(4);
-}
-
-Object("com_inv_col_646", "com_inv_col_64", -2028230800)
-{
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(14.993, 8.953, -126.827);
-	SeqNo(-2028230800);
 	Team(0);
 	NetworkId(-1);
 	Layer(4);
@@ -553,8 +573,8 @@ Object("com_inv_col_6417", "com_inv_col_64", -250399564)
 
 Object("com_inv_col_3224", "com_inv_col_32", -213888574)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(39.846, 39.955, -113.954);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(39.846, 25.364, -113.954);
 	SeqNo(-213888574);
 	Team(0);
 	NetworkId(-1);

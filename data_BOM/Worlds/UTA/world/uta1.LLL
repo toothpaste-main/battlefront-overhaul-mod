@@ -70,5 +70,18 @@ Group("Last Loaded")
 	Layer("SoundSpaces");
 	Layer("TDM");
 	Layer("Vehicles");
+	Layer("1flag");
+	Layer("Campaign");
+	Layer("Conquest");
+	Layer("CTF2flag");
+	Layer("Droids");
+	Layer("Light_RG");
+	Layer("Pens");
+	Layer("props");
+	Layer("Rumbles");
+	Layer("SoundRegions");
+	Layer("SoundSpaces");
+	Layer("TDM");
+	Layer("Vehicles");
 }
 

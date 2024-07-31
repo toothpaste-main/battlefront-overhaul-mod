@@ -12,6 +12,7 @@ ucft
 		"imp_inf_default"
 		"imp_weap_inf_sonic_blaster"
 		"imp_weap_inf_mortar_launcher"
+		"imp_weap_inf_thermaldetonator"
 		"imp_weap_inf_buff_damage"
 	}
 }

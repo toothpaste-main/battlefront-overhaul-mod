@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.767, 0.409, 0.437, -0.232);
-	Position(1.256, 147.501, -78.074);
+	Rotation(0.234, 0.183, -0.752, 0.589);
+	Position(-64.162, 90.081, 28.825);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(128.998, 76.150, -95.989,  0.592, 0.474, 0.509, -0.407);
 }
 LightName("naboo2_Conquest.LGT");
 ControllerManager("StandardCtrlMgr");
@@ -474,15 +474,15 @@ Object("CP2", "com_bldg_controlzone", 358539506)
 	ValueBleed_Republic("10");
 	ValueBleed_Neutral("0");
 	ValueBleed_Locals("0");
-	Value_ATK_Alliance("30");
-	Value_ATK_CIS("30");
-	Value_ATK_Empire("30");
-	Value_ATK_Republic("30");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
 	Value_ATK_Locals("10");
-	Value_DEF_Alliance("50");
-	Value_DEF_CIS("50");
-	Value_DEF_Empire("50");
-	Value_DEF_Republic("50");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
 	Value_DEF_Locals("10");
 	VO_All_AllCapture("all_off_com_report_captured_commandpost");
 	VO_All_AllLost("all_off_com_report_lost_commandpost");
@@ -687,8 +687,8 @@ Object("com_item_vehicle_spawn7", "com_item_vehicle_spawn", -508470616)
 
 Object("GuardCP", "com_bldg_invisible_controlzone", -53856736)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(0.000, -35.000, -131.000);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-0.066, 3.474, -125.809);
 	SeqNo(-53856736);
 	Team(3);
 	NetworkId(-1);

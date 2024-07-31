@@ -1,0 +1,9 @@
+
+Hint("HintNode266", "8")
+{
+	Position(112.862160, 19.481113, 62.013138);
+	Rotation(0.613719, -0.000000, -0.789524, -0.000000);
+	PrimaryStance(3);
+	SecondaryStance(24);
+	Mode(2);
+}

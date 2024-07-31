@@ -23,6 +23,12 @@ local DEF = 2
 local REP = DEF
 local CIS = ATT
 
+-- ambient teams
+local GAR_AMBIENT = 6
+local GAR_AMBIENT_UNITS = 4
+local CIS_AMBIENT = 7
+local CIS_AMBIENT_UNITS = 4
+
     
 ---------------------------------------------------------------------------
 -- FUNCTION:    ScriptInit
@@ -159,6 +165,16 @@ function ScriptInit()
     TeamConfig:init{
 		teamNameATT = "cis", teamNameDEF = "all",
 	}
+	
+	-- naboo guard ambient team	
+	SetTeamName(GAR_AMBIENT, "gar")
+    SetUnitCount(GAR_AMBIENT, GAR_AMBIENT_UNITS)
+    AddUnitClass(GAR_AMBIENT, "gar_inf_soldier_light")
+	
+	-- cis ambient team
+	SetTeamName(CIS_AMBIENT, "cis")
+    SetUnitCount(CIS_AMBIENT, CIS_AMBIENT_UNITS)
+    AddUnitClass(CIS_AMBIENT, "cis_inf_bdroid_hunt")
 
 	
 	------------------------------------------------
@@ -291,4 +307,8 @@ function ScriptPostLoad()
 	objHunt:initHunt{
 		pointsPerKillATT = objHunt.NAB2_PPK_ATT, pointsPerKillDEF = objHunt.NAB2_PPK_DEF
 	}
+	
+	-- set ambient AI goal
+	AddAIGoal(GAR_AMBIENT, "Deathmatch", 100)
+	AddAIGoal(CIS_AMBIENT, "Deathmatch", 100)
 end

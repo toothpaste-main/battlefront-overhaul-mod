@@ -27,4 +27,4 @@ WeaponChannel      	= 1
 
 WEAPONSECTION 		= 5
 WeaponName        	= "rep_weap_award_shotgun"
-WeaponAmmo        	= 8
+WeaponAmmo        	= 6

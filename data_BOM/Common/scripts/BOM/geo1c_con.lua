@@ -315,10 +315,6 @@ function ScriptPostLoad()
 	SetProperty("cis_ambient_veh", "CurHealth", 1e+37)
 	SetProperty("cis_ambient_veh", "Team", CIS_AMBIENT) -- so only CIS use it (in case AI gets out and Clone takes over)
 	
-	-- set AI goal
-	AddAIGoal(REP_AMBIENT, "Deathmatch", 100)
-	AddAIGoal(CIS_AMBIENT, "Deathmatch", 100)
-	
 
     ------------------------------------------------
 	------------   INITIALIZE OBJECTIVE   ----------
@@ -332,6 +328,10 @@ function ScriptPostLoad()
 	
 	-- set AI goal
 	AddAIGoal(GEO, "Deathmatch", 100)
+	
+	-- set ambient AI goal
+	AddAIGoal(REP_AMBIENT, "Deathmatch", 100)
+	AddAIGoal(CIS_AMBIENT, "Deathmatch", 100)
 	
 	
 	------------------------------------------------

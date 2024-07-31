@@ -7,4 +7,9 @@ ucft
 		"com_weap_inf_sonic_blaster_hidden"
 		"imp_weap_inf_sonic_blaster_hidden_exp"
 	}
+	REQN
+	{
+		"config"
+		"imp_sfx_weap_emp_exp_sm"
+	}
 }

@@ -1,6 +1,7 @@
 [OrdnanceClass]
-ClassParent 		= "com_weap_inf_sonic_blaster_hidden"
+ClassParent = "com_weap_inf_sonic_blaster_hidden"
 
 
 [Properties]
-ExplosionName 		= "imp_weap_inf_sonic_blaster_hidden_exp"
+ExplosionName = "imp_weap_inf_sonic_blaster_hidden_exp"
+ImpactEffect = "imp_sfx_weap_emp_exp_sm"

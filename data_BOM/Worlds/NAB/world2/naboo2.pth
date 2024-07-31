@@ -1,5 +1,5 @@
 Version(10);
-PathCount(1);
+PathCount(3);
 
 Path("jungle1")
 {
@@ -20,7 +20,7 @@ Path("jungle1")
 		{
 			Position(-177.166473, 0.000000, 55.771721);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -33,7 +33,7 @@ Path("jungle1")
 		{
 			Position(-171.479401, 0.000000, 76.431541);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -46,7 +46,7 @@ Path("jungle1")
 		{
 			Position(-165.376373, 0.000000, 91.431625);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -59,7 +59,7 @@ Path("jungle1")
 		{
 			Position(-161.549652, 0.000000, 109.258217);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -72,7 +72,7 @@ Path("jungle1")
 		{
 			Position(-160.284668, 0.000000, 130.436386);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -85,7 +85,7 @@ Path("jungle1")
 		{
 			Position(-161.081757, 0.000000, 153.947601);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -98,7 +98,7 @@ Path("jungle1")
 		{
 			Position(-161.165070, 0.000000, 177.825027);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -111,7 +111,7 @@ Path("jungle1")
 		{
 			Position(-163.797760, 0.000000, 190.231796);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -124,7 +124,7 @@ Path("jungle1")
 		{
 			Position(-145.080505, 0.000000, 192.875198);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -137,7 +137,7 @@ Path("jungle1")
 		{
 			Position(-112.551910, 0.000000, 191.310745);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -150,7 +150,7 @@ Path("jungle1")
 		{
 			Position(-76.076462, 0.000000, 191.894348);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -163,7 +163,7 @@ Path("jungle1")
 		{
 			Position(-32.308731, 0.000000, 191.699051);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -176,7 +176,7 @@ Path("jungle1")
 		{
 			Position(14.404984, 0.000000, 191.397125);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -189,7 +189,7 @@ Path("jungle1")
 		{
 			Position(58.492508, 0.000000, 192.577820);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -202,7 +202,7 @@ Path("jungle1")
 		{
 			Position(89.892509, 0.000000, 196.457031);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -215,7 +215,7 @@ Path("jungle1")
 		{
 			Position(134.921722, 0.000000, 195.024628);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -228,7 +228,7 @@ Path("jungle1")
 		{
 			Position(134.973022, 0.000000, 158.696640);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -241,7 +241,7 @@ Path("jungle1")
 		{
 			Position(135.669739, 0.000000, 127.428276);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
@@ -254,10 +254,100 @@ Path("jungle1")
 		{
 			Position(135.811096, 0.000000, 75.339180);
 			Knot(0.000000);
-			Data(1);
+			Data(0);
 			Time(1.000000);
 			PauseTime(0.000000);
 			Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("gar_ambient_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(2)
+	{
+		Node()
+		{
+			Position(19.987982, 7.860000, -140.600952);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.764672, -0.000000, -0.644417, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(-19.691223, 8.095638, -141.597519);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.796069, -0.000000, 0.605206, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+	}
+
+}
+
+Path("cis_ambient_spawnpath")
+{
+	Data(0);
+	PathType(0);
+	PathSpeedType(0);
+	PathTime(0.000000);
+	OffsetPath(0);
+	SplineType("Hermite");
+
+	Properties(0)
+	{
+	}
+
+	Nodes(2)
+	{
+		Node()
+		{
+			Position(-14.765164, 7.860000, -107.591461);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(-0.277046, -0.000000, -0.960857, -0.000000);
+			Properties(0)
+			{
+			}
+		}
+
+		Node()
+		{
+			Position(14.866148, 7.860001, -107.779427);
+			Knot(0.000000);
+			Data(0);
+			Time(1.000000);
+			PauseTime(0.000000);
+			Rotation(0.209362, -0.000000, -0.977838, -0.000000);
 			Properties(0)
 			{
 			}

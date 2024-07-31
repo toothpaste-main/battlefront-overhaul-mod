@@ -21,7 +21,7 @@ Layer("SoundRegions", 3, 0)
 	Description("");
 }
 
-Layer("Collision", 4, 2)
+Layer("Collision", 4, 0)
 {
 	Description("");
 }
@@ -31,7 +31,7 @@ Layer("SoundEmitters", 5, 0)
 	Description("");
 }
 
-Layer("Campaign", 6, 0)
+Layer("Campaign", 6, 2)
 {
 	Description("");
 }
@@ -41,17 +41,17 @@ Layer("CommonDesign", 7, 0)
 	Description("");
 }
 
-Layer("CTF", 8, 0)
+Layer("CTF", 8, 2)
 {
 	Description("");
 }
 
-Layer("TDM", 9, 0)
+Layer("TDM", 9, 2)
 {
 	Description("");
 }
 
-Layer("1Flag", 10, 0)
+Layer("1Flag", 10, 2)
 {
 	Description("");
 }

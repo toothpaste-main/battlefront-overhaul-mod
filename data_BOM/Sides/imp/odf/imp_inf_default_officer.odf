@@ -21,6 +21,11 @@ WeaponName         = "imp_weap_inf_mortar_launcher"
 WeaponAmmo         = 5
 
 WEAPONSECTION = 3
+WeaponName         = "imp_weap_inf_thermaldetonator"
+WeaponAmmo         = 2
+WeaponChannel      = 1
+
+WEAPONSECTION = 4
 WeaponName         = "imp_weap_inf_buff_damage"
 WeaponAmmo         = 1
 WeaponChannel      = 1

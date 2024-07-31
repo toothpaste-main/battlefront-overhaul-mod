@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.767, 0.409, 0.437, -0.232);
-	Position(1.256, 147.501, -78.074);
+	Rotation(0.234, 0.183, -0.752, 0.589);
+	Position(-64.162, 90.081, 28.825);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(128.998, 76.150, -95.989,  0.592, 0.474, 0.509, -0.407);
 }
 LightName("naboo2.LGT");
 TerrainName("naboo2.ter");
@@ -462,6 +462,15 @@ Object("nab_prop_flowers6", "nab_prop_flowers", 243674953)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(41.901, 8.298, 20.561);
 	SeqNo(243674953);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("lamp340", "nab2_prop_lampost1", 250286752)
+{
+	ChildRotation(0.697, -0.000, -0.717, -0.000);
+	ChildPosition(-21.471, 7.860, -103.570);
+	SeqNo(250286752);
 	Team(0);
 	NetworkId(-1);
 }
@@ -1026,8 +1035,8 @@ Object("bench2", "nab2_prop_bench", 587029873)
 
 Object("lamp297", "nab2_prop_lampost1", 599475803)
 {
-	ChildRotation(0.707, 0.000, -0.707, 0.000);
-	ChildPosition(-96.042, 7.953, -104.481);
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-95.973, 7.953, -105.933);
 	SeqNo(599475803);
 	Team(0);
 	NetworkId(-1);
@@ -1511,6 +1520,15 @@ Object("vine54", "nab2_prop_vine1", 942548042)
 	NetworkId(-1);
 }
 
+Object("lamp337", "nab2_prop_lampost1", 942991201)
+{
+	ChildRotation(-0.166, -0.000, -0.986, -0.000);
+	ChildPosition(-78.729, 7.860, 72.449);
+	SeqNo(942991201);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("b32_14", "nab2_bldg_b_32", 952391982)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
@@ -1768,6 +1786,15 @@ Object("nab2_prop_w_planter16", "nab2_prop_w_planter", 1118627907)
 	ChildRotation(0.953, 0.000, 0.302, 0.000);
 	ChildPosition(-64.550, 18.041, 5.494);
 	SeqNo(1118627907);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("lamp338", "nab2_prop_lampost1", 1121765007)
+{
+	ChildRotation(-0.358, -0.000, -0.934, -0.000);
+	ChildPosition(-59.585, 7.860, 38.792);
+	SeqNo(1121765007);
 	Team(0);
 	NetworkId(-1);
 }
@@ -2251,8 +2278,8 @@ Object("nab2_prop_w_planter25", "nab2_prop_w_planter", 1490512633)
 
 Object("lamp333", "nab2_prop_lampost1", 1492868420)
 {
-	ChildRotation(0.987, 0.000, 0.159, 0.000);
-	ChildPosition(79.396, 8.000, 71.851);
+	ChildRotation(0.987, -0.000, 0.159, -0.000);
+	ChildPosition(78.682, 8.000, 72.167);
 	SeqNo(1492868420);
 	Team(0);
 	NetworkId(-1);
@@ -2414,7 +2441,7 @@ Object("nab2_bldg_b_036", "nab2_bldg_b_03", 1575450543)
 Object("b04_3", "nab2_bldg_b_04", 1611503749)
 {
 	ChildRotation(0.707, 0.000, -0.707, 0.000);
-	ChildPosition(-104.100, 7.935, -20.439);
+	ChildPosition(-104.100, 7.814, -20.439);
 	SeqNo(1611503749);
 	Team(0);
 	NetworkId(-1);
@@ -2638,8 +2665,8 @@ Object("nab_prop_flowers25", "nab_prop_flowers", 1735216660)
 
 Object("nab2_prop_pillar11", "nab2_prop_pillar", 1737837377)
 {
-	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(-155.136, 8.008, 79.847);
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-155.136, 8.008, 79.603);
 	SeqNo(1737837377);
 	Team(0);
 	NetworkId(-1);
@@ -2800,8 +2827,8 @@ Object("bench7", "nab2_prop_bench", 1822337946)
 
 Object("nab2_prop_w_planter36", "nab2_prop_w_planter", 1827499188)
 {
-	ChildRotation(0.707, 0.000, 0.707, 0.000);
-	ChildPosition(-143.810, 16.088, 35.849);
+	ChildRotation(0.708, -0.000, 0.707, -0.000);
+	ChildPosition(-144.833, 16.088, 35.849);
 	SeqNo(1827499188);
 	Team(0);
 	NetworkId(-1);
@@ -3034,8 +3061,8 @@ Object("nab2_prop_w_planter40", "nab2_prop_w_planter", 1946300821)
 
 Object("nab2_prop_w_planter41", "nab2_prop_w_planter", 1948854446)
 {
-	ChildRotation(0.708, 0.000, 0.706, 0.000);
-	ChildPosition(-143.814, 16.110, -3.833);
+	ChildRotation(0.709, -0.000, 0.706, -0.000);
+	ChildPosition(-144.102, 16.110, -3.833);
 	SeqNo(1948854446);
 	Team(0);
 	NetworkId(-1);
@@ -3055,6 +3082,15 @@ Object("nab2_prop_wall10", "nab2_prop_wall", 1960433570)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(43.901, 7.918, -144.440);
 	SeqNo(1960433570);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("lamp336", "nab2_prop_lampost1", 1962208698)
+{
+	ChildRotation(0.780, -0.000, 0.626, -0.000);
+	ChildPosition(19.306, 7.860, 15.804);
+	SeqNo(1962208698);
 	Team(0);
 	NetworkId(-1);
 }
@@ -3313,8 +3349,8 @@ Object("tall_575", "nab2_prop_leaftree_tall", 2130467174)
 
 Object("nab2_prop_fountain2", "nab2_prop_fountain", 2134279358)
 {
-	ChildRotation(0.924, 0.000, -0.383, 0.000);
-	ChildPosition(-104.100, 7.769, -80.439);
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-101.000, 7.805, -77.000);
 	SeqNo(2134279358);
 	Team(0);
 	NetworkId(-1);
@@ -3520,8 +3556,8 @@ Object("nab2_prop_w_planter49", "nab2_prop_w_planter", -1968590027)
 
 Object("tower34_10", "nab2_bldg_b_tower_34", -1963576847)
 {
-	ChildRotation(0.708, 0.000, 0.706, 0.000);
-	ChildPosition(-149.100, 7.910, -4.439);
+	ChildRotation(0.713, -0.000, 0.701, -0.000);
+	ChildPosition(-149.508, 7.840, -4.755);
 	SeqNo(-1963576847);
 	Team(0);
 	NetworkId(-1);
@@ -4123,8 +4159,8 @@ Object("lamp280", "nab2_prop_lampost1", -1583284921)
 
 Object("b04_27", "nab2_bldg_b_04", -1571583004)
 {
-	ChildRotation(0.707, 0.000, 0.707, 0.000);
-	ChildPosition(-162.100, 7.868, 67.392);
+	ChildRotation(0.709, -0.000, 0.705, -0.000);
+	ChildPosition(-162.100, 7.868, 67.089);
 	SeqNo(-1571583004);
 	Team(0);
 	NetworkId(-1);
@@ -4153,6 +4189,15 @@ Object("nab2_prop_wall16", "nab2_prop_wall", -1545827775)
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
 	ChildPosition(172.648, 7.715, -64.439);
 	SeqNo(-1545827775);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("lamp335", "nab2_prop_lampost1", -1533563327)
+{
+	ChildRotation(0.628, -0.000, 0.778, -0.000);
+	ChildPosition(-19.416, 7.860, 15.818);
+	SeqNo(-1533563327);
 	Team(0);
 	NetworkId(-1);
 }
@@ -4463,6 +4508,15 @@ Object("tall_594", "nab2_prop_leaftree_tall", -1263219593)
 	NetworkId(-1);
 }
 
+Object("bench10", "nab2_prop_bench", -1255255993)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-84.537, 7.860, -104.150);
+	SeqNo(-1255255993);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("nab2_prop_w_planter61", "nab2_prop_w_planter", -1249931985)
 {
 	ChildRotation(0.707, 0.000, 0.707, 0.000);
@@ -4627,8 +4681,8 @@ Object("lamp321", "nab2_prop_lampost1", -1108482383)
 
 Object("lamp334", "nab2_prop_lampost1", -1094840889)
 {
-	ChildRotation(0.939, 0.000, 0.343, 0.000);
-	ChildPosition(59.859, 7.860, 38.803);
+	ChildRotation(0.940, -0.000, 0.342, -0.000);
+	ChildPosition(59.599, 7.686, 39.126);
 	SeqNo(-1094840889);
 	Team(0);
 	NetworkId(-1);
@@ -4663,8 +4717,8 @@ Object("nab2_prop_pillar21", "nab2_prop_pillar", -1081100108)
 
 Object("tower34_9", "nab2_bldg_b_tower_34", -1069104090)
 {
-	ChildRotation(0.708, 0.000, 0.706, 0.000);
-	ChildPosition(-149.100, 7.894, 35.561);
+	ChildRotation(0.711, -0.000, 0.703, -0.000);
+	ChildPosition(-150.251, 7.856, 35.214);
 	SeqNo(-1069104090);
 	Team(0);
 	NetworkId(-1);
@@ -5049,6 +5103,15 @@ Object("vine35", "nab2_prop_vine1", -823203597)
 	NetworkId(-1);
 }
 
+Object("lamp339", "nab2_prop_lampost1", -820051607)
+{
+	ChildRotation(-0.385, -0.000, -0.923, -0.000);
+	ChildPosition(136.386, 7.860, 46.988);
+	SeqNo(-820051607);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("nab2_prop_w_planter70", "nab2_prop_w_planter", -811442507)
 {
 	ChildRotation(0.707, 0.000, -0.707, 0.000);
@@ -5074,6 +5137,82 @@ Object("nab2_prop_pillar23", "nab2_prop_pillar", -799007225)
 	SeqNo(-799007225);
 	Team(0);
 	NetworkId(-1);
+}
+
+Object("cp_gar_ambient", "com_bldg_invisible_controlzone", -792511990)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(3.958, 6.161, -143.346);
+	SeqNo(-792511990);
+	Team(6);
+	NetworkId(-1);
+	Label("cp_gar_ambient");
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("gar_ambient_spawnpath");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
 }
 
 Object("leaftree971", "nab2_prop_leaftree", -772794941)
@@ -5579,6 +5718,82 @@ Object("nab2_bldg_b_0311", "nab2_bldg_b_03", -419097378)
 	SeqNo(-419097378);
 	Team(0);
 	NetworkId(-1);
+}
+
+Object("cp_cis_ambient", "com_bldg_invisible_controlzone", -410406622)
+{
+	ChildRotation(1.000, -0.000, -0.000, -0.000);
+	ChildPosition(-2.125, 6.142, -143.197);
+	SeqNo(-410406622);
+	Team(7);
+	NetworkId(-1);
+	Label("cp_cis_ambient");
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("cis_ambient_spawnpath");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("0");
 }
 
 Object("lamp300", "nab2_prop_lampost1", -409173387)

@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.767, 0.409, 0.437, -0.232);
-	Position(1.256, 147.501, -78.074);
+	Rotation(0.234, 0.183, -0.752, 0.589);
+	Position(-64.162, 90.081, 28.825);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(128.998, 76.150, -95.989,  0.592, 0.474, 0.509, -0.407);
 }
 LightName("naboo2_1Flag.LGT");
 ControllerManager("StandardCtrlMgr");

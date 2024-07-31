@@ -23,7 +23,13 @@ local DEF = 2
 -- cis attacking (attacker is always #1)
 local REP = DEF
 local CIS = ATT
-    
+
+-- ambient teams
+local GAR_AMBIENT = 6
+local GAR_AMBIENT_UNITS = 4
+local CIS_AMBIENT = 7
+local CIS_AMBIENT_UNITS = 4
+
 
 ---------------------------------------------------------------------------
 -- FUNCTION:    ScriptInit
@@ -59,6 +65,7 @@ function ScriptInit()
 	
 	memorypool:init{
 		-- map
+		obstacles = 1024,
 		redOmniLights = 96,
 		
 		-- sounds
@@ -152,7 +159,12 @@ function ScriptInit()
 				 CIS_SNIPER_CLASS,
 				 CIS_ENGINEER_CLASS,
 				 CIS_OFFICER_CLASS,
-				 CIS_SPECIAL_CLASS)
+				 CIS_SPECIAL_CLASS,
+				 "cis_inf_bdroid_hunt")
+				 
+	-- naboo guard
+	ReadDataFile("dc:SIDE\\gar.lvl",
+				 "gar_inf_soldier_light")
  
  
 	------------------------------------------------
@@ -194,6 +206,16 @@ function ScriptInit()
 		teamNameATT = "cis", teamNameDEF = "rep",
 	}
 
+	-- naboo guard ambient team	
+	SetTeamName(GAR_AMBIENT, "gar")
+    SetUnitCount(GAR_AMBIENT, GAR_AMBIENT_UNITS)
+    AddUnitClass(GAR_AMBIENT, "gar_inf_soldier_light")
+	
+	-- cis ambient team
+	SetTeamName(CIS_AMBIENT, "cis")
+    SetUnitCount(CIS_AMBIENT, CIS_AMBIENT_UNITS)
+    AddUnitClass(CIS_AMBIENT, "cis_inf_bdroid_hunt")
+	
 	
 	------------------------------------------------
 	------------   MISSION PROPERTIES   ------------
@@ -282,7 +304,11 @@ function ScriptPostLoad()
     -- create and start objective	
 	objConquest:initConquest{
 		cps = {"CP1", "CP2", "CP3", "CP4", "CP5", "CP6"}
-	}   
+	}  
+	
+	-- set ambient AI goal
+	AddAIGoal(GAR_AMBIENT, "Deathmatch", 100)
+	AddAIGoal(CIS_AMBIENT, "Deathmatch", 100)
 	
 	
 	------------------------------------------------
