@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_lizardpen01"
+		"uta1_bldg_lizardpen_floor01_bump"
+		"uta1_bldg_lizardpen_floor01"
+		"uta1_bldg_metalfloor01"
+		"uta1_bldg_metalfloor01_bump"
+		"uta1_bldg_metalfloor01_lowrez"
+		"uta1_bldg_lizardpen_floor01_lowrez"
+		"uta1_bldg_metalfloor02_lowrez"
+		"uta1_bldg_lizardpen01_lowrez"
+		"uta1_bldg_roof01_lowrez"
+		"uta1_bldg_metalfloor02"
+		"uta1_bldg_metalfloor02_bump"
+		"uta1_bldg_roof01"
+	}
+}

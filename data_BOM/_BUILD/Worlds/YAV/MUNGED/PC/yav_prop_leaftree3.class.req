@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"yav_prop_leaftree3"
+	}
+	REQN
+	{
+		"class"
+		"yav_prop_leafpatch2"
+		"yav_prop_leafpatch"
+	}
+}

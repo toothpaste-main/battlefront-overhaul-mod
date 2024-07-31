@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_city_floor04"
+		"uta1_bldg_cliff"
+		"uta1_bldg_cliff_lowrez"
+		"uta1_bldg_city_floor03"
+		"uta1_bldg_rock_detail"
+	}
+}

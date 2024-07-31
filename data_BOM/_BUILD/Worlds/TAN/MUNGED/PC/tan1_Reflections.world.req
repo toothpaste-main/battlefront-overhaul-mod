@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"tan1_reflections"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+}

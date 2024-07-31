@@ -1,0 +1,35 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"yavin1_campaign"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"com_bldg_invisible_controlzone"
+		"com_bldg_major_controlzone"
+		"com_item_vehicle_spawn"
+		"com_item_healthrecharge"
+		"yav_prop_blastdoor"
+		"com_item_weaponrecharge"
+	}
+}

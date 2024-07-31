@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"myg1_prop_shield_generator2"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_rechargedroid_exp"
+	}
+}

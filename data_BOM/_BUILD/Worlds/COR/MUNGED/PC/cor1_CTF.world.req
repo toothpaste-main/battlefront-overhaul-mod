@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"cor1_ctf"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone_ctf"
+		"cor1_prop_non_librarystack"
+		"com_bldg_ctfbase"
+		"cor1_prop_librarystack"
+		"com_item_flag"
+	}
+}

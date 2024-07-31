@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"jed_temple_library_02"
+		"cor1_bldg_security_roomdoor"
+		"jed_temple_library_04"
+		"jed_temple_library_07"
+		"jed_temple_library_05"
+		"jed_temple_library_01"
+		"cor1_bldg_templefloor_c"
+		"jed_temple_library_09"
+		"jed_temple_library_06"
+	}
+}

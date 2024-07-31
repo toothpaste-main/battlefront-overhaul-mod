@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"myg1_con-vehiclespawns"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+}

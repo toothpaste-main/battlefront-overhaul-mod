@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tan4_bldg_pod_room04"
+		"tan4_bldg_pod_room02"
+		"tan4_bldg_engineroom_02"
+		"tan4_bldg_pod_room01"
+		"tan4_bldg_pod_room03"
+	}
+}

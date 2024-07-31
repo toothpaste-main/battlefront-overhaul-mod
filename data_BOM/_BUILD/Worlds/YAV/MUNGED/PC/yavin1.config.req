@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"sky_yavin"
+		"yavin1"
+	}
+	REQN
+	{
+		"model"
+		"yav_sky_dome"
+		"yav_sky_planet"
+		"yav_sky_dome_clouds"
+	}
+}

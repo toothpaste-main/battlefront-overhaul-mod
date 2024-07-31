@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"dag1_prop_x-wing"
+	}
+	REQN
+	{
+		"class"
+		"dag1_light_cavern"
+	}
+}

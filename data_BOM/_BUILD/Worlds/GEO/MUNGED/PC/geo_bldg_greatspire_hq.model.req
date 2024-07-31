@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_main_3_blend"
+		"geo_main_3_blend_bump"
+		"geo_bldg_spire_transition"
+		"geo_bldg_spire_transition_bump"
+		"geo_bldg_spire_02"
+		"geo_bldg_spire_02_bump"
+		"geo_bldg_spire_01"
+		"geo_bldg_spire_01_bump"
+	}
+}

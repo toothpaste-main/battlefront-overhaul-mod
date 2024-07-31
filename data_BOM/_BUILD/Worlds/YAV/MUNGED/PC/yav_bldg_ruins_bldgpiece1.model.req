@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"yav2_bldg_rubble"
+		"yav_prop_shrub2"
+		"yav2_bldg_wall01"
+		"yav2_bldg_wall03"
+	}
+}

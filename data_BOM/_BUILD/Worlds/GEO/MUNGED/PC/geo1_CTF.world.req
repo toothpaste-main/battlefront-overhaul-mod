@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"geo1_ctf"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone_ctf"
+		"com_item_vehicle_spawn"
+		"com_bldg_ctfbase"
+		"com_item_flag"
+	}
+}

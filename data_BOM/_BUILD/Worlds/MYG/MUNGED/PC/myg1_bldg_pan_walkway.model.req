@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"myg1_bldg_bridge"
+		"myg1_bldg_base_a"
+		"myg1_bldg_base_c"
+	}
+}

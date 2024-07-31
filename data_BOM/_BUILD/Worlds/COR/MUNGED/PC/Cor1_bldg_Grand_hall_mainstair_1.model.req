@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cor1_bldg_pillar"
+		"cor1_bldg_wall"
+		"cor1_bldg_wall_3"
+		"cor1_bldg_wall_2"
+		"cor1_bldg_carpet"
+	}
+}

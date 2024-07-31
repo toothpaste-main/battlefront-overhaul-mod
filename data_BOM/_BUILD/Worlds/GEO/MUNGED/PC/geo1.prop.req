@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_prop_flatrocks"
+		"geo_prop_flatrocks_2"
+		"editor_prop_bush"
+	}
+	REQN
+	{
+		"class"
+		"geo_prop_pebble"
+	}
+}

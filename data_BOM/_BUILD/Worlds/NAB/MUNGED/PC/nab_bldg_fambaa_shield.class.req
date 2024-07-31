@@ -1,0 +1,30 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_dest_icon"
+	}
+	REQN
+	{
+		"animbank"
+		"nab_walk_fambaa"
+	}
+	REQN
+	{
+		"anim"
+		"fambaa_idle"
+		"fambaa_death"
+	}
+	REQN
+	{
+		"model"
+		"nab1_walk_fambaa"
+	}
+	REQN
+	{
+		"class"
+		"nab_weap_bldg_fambaa_shield"
+	}
+}

@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"nab2_prop_glow"
+		"nab2_bldg_roof_01"
+		"nab2_bldg_detail01"
+		"nab2_bldg_window02"
+		"nab2_bldg_ceiling01"
+	}
+}

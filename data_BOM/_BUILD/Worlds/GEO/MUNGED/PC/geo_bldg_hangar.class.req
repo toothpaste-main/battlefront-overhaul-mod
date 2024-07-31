@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_bldg_hangar"
+	}
+	REQN
+	{
+		"class"
+		"geo_yellowgodray"
+	}
+	REQN
+	{
+		"config"
+		"halo_yellow"
+	}
+}

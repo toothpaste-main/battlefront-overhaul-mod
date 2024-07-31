@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"myg_sfx_collectorray"
+		"myg_sfx_collectorray2"
+	}
+	REQN
+	{
+		"texture"
+		"com_sfx_flashball3"
+		"com_sfx_flames1"
+	}
+}

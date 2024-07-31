@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_roof01_lowrez"
+		"uta1_bldg_building02_lowrez"
+		"uta1_bldg_macy02_lowrez"
+		"uta1_bldg_macy01_lowrez"
+		"uta1_bldg_building02"
+		"uta1_bldg_lizardpen_floor01"
+		"uta1_bldg_lizardpen_floor01_bump"
+		"uta1_bldg_building02_windowtest"
+		"uta1_bldg_macy02"
+		"uta1_bldg_macy01"
+		"uta1_bldg_roof01"
+	}
+}

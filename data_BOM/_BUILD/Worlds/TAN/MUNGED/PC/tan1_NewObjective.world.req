@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"tan1_newobjective"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"tan4_prop_console"
+		"com_bldg_invisible_controlzone"
+	}
+}

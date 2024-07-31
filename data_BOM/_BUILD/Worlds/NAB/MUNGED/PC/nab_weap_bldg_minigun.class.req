@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_weap_impact"
+	}
+	REQN
+	{
+		"class"
+		"nab_weap_bldg_minigun_ord"
+	}
+}

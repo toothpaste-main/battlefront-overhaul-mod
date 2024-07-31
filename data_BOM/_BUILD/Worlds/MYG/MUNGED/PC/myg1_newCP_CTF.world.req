@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"myg1_newcp_ctf"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone_ctf"
+		"com_item_vehicle_spawn"
+		"myg1_prop_tbuster"
+		"tur_bldg_recoilless_lg"
+		"myg1_bldg_stump_spiral"
+	}
+}

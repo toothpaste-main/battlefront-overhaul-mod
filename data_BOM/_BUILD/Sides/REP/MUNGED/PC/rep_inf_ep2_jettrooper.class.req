@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_default_jettrooper"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_jettrooper"
+		"rep_inf_jettrooper_low1"
+	}
+}

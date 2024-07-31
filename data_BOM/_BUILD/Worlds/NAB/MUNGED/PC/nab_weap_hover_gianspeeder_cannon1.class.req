@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_rifle"
+		"hud_weap_fullauto"
+	}
+	REQN
+	{
+		"class"
+		"nab_weap_hover_gianspeeder_cannon1_ord"
+		"vehicle_equip"
+	}
+}

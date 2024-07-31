@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"dag1_prop_yodahouse"
+	}
+	REQN
+	{
+		"class"
+		"dag1_light_cavern_1"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_chunksmolder"
+	}
+}

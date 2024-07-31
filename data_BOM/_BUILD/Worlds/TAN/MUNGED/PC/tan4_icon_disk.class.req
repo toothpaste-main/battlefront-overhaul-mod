@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"tan4_icon_disk"
+		"tan_icon_disk_carried"
+	}
+	REQN
+	{
+		"class"
+		"flaglight"
+	}
+}

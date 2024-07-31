@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"decal_explosion_scorch"
+		"decal_explosion_crack_bump"
+	}
+}

@@ -1,0 +1,30 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"uta1_droids"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_item_weaponrecharge"
+		"com_item_healthrecharge"
+	}
+}

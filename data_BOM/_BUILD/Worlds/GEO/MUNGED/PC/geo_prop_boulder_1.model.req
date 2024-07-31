@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geo_bldg_spire_01"
+		"geo_bldg_spire_01_blend"
+	}
+}

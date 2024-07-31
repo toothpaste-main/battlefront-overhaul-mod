@@ -1,0 +1,29 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"myg1_newcp_soundemitters"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_snd_amb_static"
+	}
+}

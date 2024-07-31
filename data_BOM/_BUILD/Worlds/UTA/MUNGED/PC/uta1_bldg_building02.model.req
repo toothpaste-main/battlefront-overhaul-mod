@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"uta1_bldg_overbridge02_lowrez"
+		"uta1_bldg_building02_lowrez"
+		"uta1_bldg_building02_02_lowrez"
+		"uta1_bldg_building02_windowtest"
+		"uta1_bldg_building02"
+		"uta1_bldg_trim01"
+		"uta1_bldg_overbridge02"
+		"uta1_bldg_building02_02"
+	}
+}

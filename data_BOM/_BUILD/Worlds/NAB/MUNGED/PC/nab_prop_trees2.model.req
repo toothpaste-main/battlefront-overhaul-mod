@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"nab_prop_trees2lores"
+		"nab_prop_trees2brnchlores"
+		"nab_prop_trees2brnch"
+		"nab_prop_trees"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"cor1_bldg_server_room"
+	}
+	REQN
+	{
+		"config"
+		"halo_yellow"
+	}
+}

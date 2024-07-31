@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"nab2_prop_leaftree_tall"
+	}
+	REQN
+	{
+		"class"
+		"nab2_prop_leafpatch_tall"
+	}
+}

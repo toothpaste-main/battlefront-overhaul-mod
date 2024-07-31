@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tan4_bldg_engineroom_04"
+		"tan4_bldg_techroom"
+		"tan4_bldg_engineroom_03"
+		"tan4_bldg_front_deck02"
+		"tan4_bldg_front_deck04"
+		"tan4_bldg_barracks_03"
+		"tan4_bldg_confroom_03"
+		"tan4_bldg_barracks_01"
+	}
+}

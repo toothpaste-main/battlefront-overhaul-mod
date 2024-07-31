@@ -1,0 +1,56 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"yavin1"
+	}
+	REQN
+	{
+		"terrain"
+		"yavin1"
+	}
+	REQN
+	{
+		"config"
+		"yavin1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"yav_prop_grass"
+		"yav_prop_log"
+		"yav_bldg_column"
+		"yav_bldg_stairway"
+		"yav_bldg_ruins_bldgpiece3"
+		"yav_bldg_ruins_column2"
+		"yav_prop_mist"
+		"yav_prop_grass_tall"
+		"com_inv_col_16"
+		"yav_bldg_aquaduct"
+		"yav_prop_treebillboard"
+		"yav_prop_stump"
+		"com_inv_col_64"
+		"yav_bldg_ruins_bldgpiece2"
+		"yav_bldg_ruins_wall1"
+		"yav_bldg_ruins_wall2"
+		"tur_bldg_laser"
+		"yav_bldg_greattemple_contents"
+		"yav_bldg_minitemple"
+		"yav_prop_godraycluster"
+		"yav_bldg_greattemple_interior"
+		"yav_prop_waterfall"
+		"yav_bldg_ruins_column1"
+		"yav_bldg_greattemple"
+		"yav_bldg_ruins_reflectionpool"
+		"yav_bldg_ruins_bldgpiece1"
+		"yav_bldg_controlroom"
+		"yav_bldg_bazaar"
+	}
+}

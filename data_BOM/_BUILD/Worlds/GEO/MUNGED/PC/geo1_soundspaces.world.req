@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"geo1_soundspaces"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+}

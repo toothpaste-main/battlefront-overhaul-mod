@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"nab2_bldg_detail01_lowrez"
+		"nab2_bldg_brick03_lowrez"
+		"nab2_bldg_roof_01_lowrez"
+		"nab2_bldg_detail01"
+		"nab2_bldg_brick03"
+		"nab2_bldg_roof_01"
+	}
+}

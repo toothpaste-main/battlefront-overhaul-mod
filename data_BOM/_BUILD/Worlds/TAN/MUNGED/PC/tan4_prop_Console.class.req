@@ -1,0 +1,29 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rechargedroid_icon"
+	}
+	REQN
+	{
+		"class"
+		"com_holo_build"
+		"tan4_prop_console_exp"
+	}
+	REQN
+	{
+		"model"
+		"tan4_prop_console"
+		"tan4_prop_console_dest"
+	}
+	REQN
+	{
+		"config"
+		"tan_sfx_console_damage1"
+		"post_hum"
+		"tan_sfx_console_damage2"
+		"tan_sfx_console_damage3"
+	}
+}

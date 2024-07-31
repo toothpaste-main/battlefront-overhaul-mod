@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"uta1_ctf2flag"
+	}
+	REQN
+	{
+		"terrain"
+		""
+	}
+	REQN
+	{
+		"config"
+		""
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone_ctf"
+		"uta1_prop_deskandchair"
+		"com_bldg_ctfbase"
+		"com_item_flag"
+	}
+}

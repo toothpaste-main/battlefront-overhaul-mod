@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"cor1"
+	}
+	REQN
+	{
+		"terrain"
+		"cor1"
+	}
+	REQN
+	{
+		"config"
+		"cor1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"cor1_prop_chair_1"
+		"com_inv_col_64"
+		"com_inv_col_8"
+		"com_inv_col_32"
+		"com_inv_col_16"
+	}
+}
