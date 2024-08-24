@@ -10,7 +10,7 @@ ScriptCB_DoFile("import")
 local memorypool = import("memorypool")
 local missionProperties = import("mission_properties")
 local TeamConfig = import("TeamConfig")
-local objHunt  = import("objective_hunt_helper")
+local objHunt = import("objective_hunt_helper")
 
 -- load BOM assets
 ScriptCB_DoFile("bom_cmn")

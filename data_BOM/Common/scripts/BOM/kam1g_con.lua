@@ -11,12 +11,10 @@ ScriptCB_DoFile("import")
 local memorypool = import("memorypool")
 local missionProperties = import("mission_properties")
 local TeamConfig = import("TeamConfig")
-local objConquest  = import("objective_conquest_helper")
+local objConquest = import("objective_conquest_helper")
 
 -- load BOM assets
 ScriptCB_DoFile("bom_cmn")
-ScriptCB_DoFile("bomgcw_all_fleeturban")
-ScriptCB_DoFile("bomgcw_imp_pilot")
 
 -- these variables do not change
 local ATT = 1
@@ -129,70 +127,21 @@ function ScriptInit()
 	-- turrets
 	ReadDataFile("SIDE\\tur.lvl",
 				 "tur_weap_built_gunturret")	
-
-
-	------------------------------------------------
-	------------   LOAD DLC ASSETS   ---------------
-	------------------------------------------------
-
-	-- alliance
-	ReadDataFile("dc:SIDE\\all.lvl",
-				 ALL_SOLDIER_CLASS,
-				 ALL_ASSAULT_CLASS,
-				 ALL_SNIPER_CLASS,
-				 ALL_ENGINEER_CLASS,
-				 ALL_OFFICER_CLASS,
-				 ALL_SPECIAL_CLASS)
-				 
-	-- empire
-	ReadDataFile("dc:SIDE\\imp.lvl",
-				 IMP_SOLDIER_CLASS,
-				 IMP_SNIPER_CLASS,
-				 IMP_ASSAULT_CLASS,
-				 IMP_ENGINEER_CLASS,
-				 IMP_OFFICER_CLASS,
-				 IMP_SPECIAL_CLASS)
 				 
 	
 	------------------------------------------------
 	------------   SETUP TEAMS   -------------------
 	------------------------------------------------
 
-    SetupTeams{
-		-- alliance
-		all = {
-            team = ALL,
-            units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
-            soldier		= {ALL_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
-            assault		= {ALL_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
-            sniper		= {ALL_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
-			engineer	= {ALL_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
-            officer		= {ALL_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
-            special		= {ALL_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
-        },
-		-- empire
-        imp = {
-            team = IMP,
-            units = MAX_UNITS,
-            reinforcements = DEFAULT_REINFORCEMENTS,
-            soldier  	= {IMP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
-            assault  	= {IMP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
-            sniper   	= {IMP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
-			engineer 	= {IMP_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
-            officer 	= {IMP_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
-            special 	= {IMP_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
-        }
-    }
+    -- setup teams
+	TeamConfig:init{
+		teamNameATT = "all", teamNameDEF = "imp",
+		teamATTConfigID = "fleet_urban", teamDEFConfigID = "basic_pilot",
+	}
 	
 	-- heroes
     SetHeroClass(ALL, ALL_HERO)    
     SetHeroClass(IMP, IMP_HERO)
-
-	TeamConfig:init{
-		teamNameATT = "all", teamNameDEF = "imp",
-	}
-	
 	
 	------------------------------------------------
 	------------   MISSION PROPERTIES   ------------

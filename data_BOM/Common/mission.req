@@ -31,10 +31,16 @@ ucft
 		"import"
 		"table_utils"
 		"constants"
+		"logger"
 		
 		"memorypool"
 		"mission_properties"
+		
 		"TeamConfig"
+		"all_config"
+		"cis_config"
+		"imp_config"
+		"rep_config"
 		
 		
 		"objective_helper"
@@ -44,6 +50,8 @@ ucft
 		"objective_tdm_helper"
 		
 		"bom_cmn"
+		"bom_common"
+		
 		
 		"bomcw_ep2"
 		"bomcw_ep3"

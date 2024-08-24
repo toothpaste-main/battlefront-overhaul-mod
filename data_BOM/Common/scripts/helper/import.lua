@@ -4,18 +4,28 @@
 	Description: Implentation of `require()` function
 	Authord: ToothpasteMain
 	Version: v1.0
-	Date: 2024-07-22
-	Dependencies: 
+	Date: 2024-08-03
+	Dependencies: logger
 	Notes: This module could function for many purposes, but for
 		   convention, it should be strictly used to indicate the use of
 		   `require`.
 --]]
-print("Loading import.lua...")
+print("[INFO]: Loading import.lua...")
+
+-- load logger
+local logger = ""
+local function loadLogger()
+	ScriptCB_DoFile("logger")
+	logger = get_logger()
+end
+assert(pcall(loadLogger) and logger, "[CRITICAL]: import.lua failed to load logger.lua")
+logger:success("import.lua loaded logger.lua")
 
 local versionRegistry = {
 	-- utils
 	table_utils = 1.0,
 	constants = 1.0,
+	logger = 1.0,
 
 	-- battlefront mission helper
 	memorypool = 1.0,
@@ -28,18 +38,25 @@ local versionRegistry = {
 	objective_conquest_helper = 1.0,
 	objective_hunt_helper = 1.0,
 	objective_tdm_helper = 1.0,
+	
+	-- battlefront overhaul mod
+	bom_common = 1.0,
+	all_config = 1.0,
+	cis_config = 1.0,
+	imp_config = 1.0,
+	rep_config = 1.0,
 }
 
 local loadedModules = {}
 function import(moduleName)
 	-- check if name is a string
-	assert(type(moduleName) == "string", "ERROR: Expected string, got " .. type(moduleName))
+	assert(type(moduleName) == "string", logger:error("Expected string, got " .. type(moduleName)))
 
-	print("Loading " .. moduleName .. ".lua...")
+	logger:info("Loading " .. moduleName .. ".lua...")
 	
 	-- check if module is already loaded
 	if loadedModules[moduleName] then
-		print("Already loaded " .. moduleName .. ".lua.")
+		logger:notice("Already loaded " .. moduleName .. ".lua")
 		return loadedModules[moduleName]
 	end
 	
@@ -50,14 +67,14 @@ function import(moduleName)
 	local getFunctionName = "get_" .. moduleName
 	
 	-- check if function exists
-	assert(_G[getFunctionName], "ERROR: Get-function " .. getFunctionName .. "() does not exist!")
+	assert(_G[getFunctionName], logger:error("Get-function " .. getFunctionName .. "() does not exist"))
 	
 	-- load module instance
 	local moduleInstance = _G[getFunctionName]()
 	
 	-- check if version matches records
 	if versionRegistry[moduleName] ~= moduleInstance.version then
-		print("WARNING: " .. moduleName .. " is out of date or version could not be found in registry.")
+		logger:warning(moduleName .. " is out of date or version could not be found in registry")
 	end
 	
 	-- save module istance if imported again
@@ -66,8 +83,14 @@ function import(moduleName)
 	-- clean up clobal namespace
 	_G[getFunctionName] = nil
 	
-	print("Loaded " .. moduleName .. ".lua.")
+	logger:success("Loaded " .. moduleName .. ".lua")
 	return moduleInstance
 end
 
-print("Loaded import.lua.")
+-- used to load config files
+function fetch(moduleName)
+	return import(moduleName)
+end
+
+
+logger.info("Loaded import.lua")

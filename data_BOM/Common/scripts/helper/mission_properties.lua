@@ -4,8 +4,8 @@
 	Description: Helper module for map and AI properties
 	Author: ToothpasteMain
 	Version: v1.0
-	Date: 2024-07-22
-	Dependencies: tableUtils, team_properties
+	Date: 2024-08-03
+	Dependencies: tableUtils, logger, TeamConfig
 	Notes: All parameters are assumed to be numbers unless stated 
 		   otherwise.
 --]]
@@ -20,6 +20,7 @@ local mission_properties = {
 ScriptCB_DoFile("import")
 constants = import("constants")
 local tableUtils = import("table_utils")
+local logger = import("logger")
 local TeamConfig = import("TeamConfig")
 
 
@@ -89,15 +90,15 @@ local function validateParameters(params)
 	-- validate keys and save value
 	for k, v in pairs(params) do	
 		-- is valid key
-		assert(DEFAULT_MISSION_PROPERTIES[k] ~= nil, "ERROR: Unexpected key, got " .. k)
+		assert(DEFAULT_MISSION_PROPERTIES[k] ~= nil, logger:error("Unexpected key, got " .. k))
 		
 		-- value is a boolean
 		if tableUtils.isValueInTable(NUMERICAL_BOOLEANS, k) or tableUtils.isValueInTable(STRING_BOOLEANS, k) then
-			assert(type(v) == "boolean", "ERROR: Expected boolean for " .. k .. ", got " .. type(v))
+			assert(type(v) == "boolean", logger:error("Expected boolean for " .. k .. ", got " .. type(v)))
 			
 		-- value is a number
 		else
-			assert(type(v) == "number", "ERROR: Expected number, got " .. type(v) .. " for " .. k)
+			assert(type(v) == "number", logger:error("Expected number, got " .. type(v) .. " for " .. k))
 		end
 		
 		-- save value
@@ -108,7 +109,7 @@ local function validateParameters(params)
 	for k, defaultValue in pairs(DEFAULT_MISSION_PROPERTIES) do
 		if validParams[k] == nil then
 			-- notify of default
-			print("WARNING: Expected value for key " .. k .. ", got nil. Defaulting " .. k .. " to " .. tostring(defaultValue))
+			logger:notice("Expected value for key " .. k .. ", got nil. Defaulting " .. k .. " to " .. tostring(defaultValue))
 			
 			-- apply default value
 			validParams[k] = defaultValue
@@ -134,10 +135,7 @@ local function validateParameters(params)
 	end
 	
 	-- world extents limit
-	do
-		local err = "ERROR: Maximum world extents must be less than " .. constants.getMaxWorldExtents() .. ", got " .. validParams.worldExtents
-		assert(validParams.worldExtents < constants.getMaxWorldExtents(), err)
-	end
+	assert(validParams.worldExtents < constants.getMaxWorldExtents(), logger:error("Maximum world extents must be less than " .. constants.getMaxWorldExtents() .. ", got " .. validParams.worldExtents))
 	
 	-- map ceiling and floor pairing
 	if validParams.mapCeilingAI == -1 then

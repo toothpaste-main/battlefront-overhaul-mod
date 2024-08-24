@@ -11,11 +11,10 @@ ScriptCB_DoFile("import")
 local memorypool = import("memorypool")
 local missionProperties = import("mission_properties")
 local TeamConfig = import("TeamConfig")
-local objCTF  = import("objective_ctf_helper")
+local objCTF = import("objective_ctf_helper")
 
 -- load BOM assets
-ScriptCB_DoFile("bom_cmn") 
-ScriptCB_DoFile("bomcw_ep3_shiny") 
+ScriptCB_DoFile("bom_cmn")
 
 -- these variables do not change
 local ATT = 1
@@ -127,70 +126,22 @@ function ScriptInit()
 		
 	-- turrets
 	ReadDataFile("SIDE\\tur.lvl",
-				 "tur_weap_built_gunturret")	
-
-    
-	------------------------------------------------
-	------------   LOAD DLC ASSETS   ---------------
-	------------------------------------------------
-	
-	-- republic
-	ReadDataFile("dc:SIDE\\rep.lvl",
-				 REP_SOLDIER_CLASS,
-				 REP_ASSAULT_CLASS,
-				 REP_SNIPER_CLASS, 
-				 REP_ENGINEER_CLASS,
-				 REP_OFFICER_CLASS,
-				 REP_SPECIAL_CLASS)
-
-    -- cis
-	ReadDataFile("dc:SIDE\\cis.lvl",
-				 CIS_SOLDIER_CLASS,
-				 CIS_ASSAULT_CLASS,
-				 CIS_SNIPER_CLASS,
-				 CIS_ENGINEER_CLASS,
-				 CIS_OFFICER_CLASS,
-				 CIS_SPECIAL_CLASS)
+				 "tur_weap_built_gunturret")
  
  
 	------------------------------------------------
 	------------   SETUP TEAMS   -------------------
 	------------------------------------------------
 	
-    SetupTeams{
-		-- republic
-        rep = {
-            team = REP,
-            units = MAX_UNITS,
-            reinforcements = -1,
-            soldier		= {REP_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
-            assault		= {REP_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
-			sniper		= {REP_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
-            engineer	= {REP_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
-            officer		= {REP_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
-            special		= {REP_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
-        },
-		-- cis
-        cis = {
-            team = CIS,
-            units = MAX_UNITS,
-            reinforcements = -1,
-            soldier		= {CIS_SOLDIER_CLASS, MIN_SOLDIER, MAX_SOLDIER},
-            assault		= {CIS_ASSAULT_CLASS, MIN_ASSAULT, MAX_ASSAULT},
-			sniper		= {CIS_SNIPER_CLASS, MIN_SNIPER, MAX_SNIPER},
-            engineer	= {CIS_ENGINEER_CLASS, MIN_ENGINEER, MAX_ENGINEER},
-            officer		= {CIS_OFFICER_CLASS, MIN_OFFICER, MAX_OFFICER},
-            special		= {CIS_SPECIAL_CLASS, MIN_SPECIAL, MAX_SPECIAL},
-        }
-    }
+    -- setup teams
+	TeamConfig:init{
+		teamNameATT = "cis", teamNameDEF = "rep",
+		teamATTConfigID = "basic", teamDEFConfigID = "basic_shiny",
+	}
     
 	-- heroes
     SetHeroClass(REP, REP_HERO)
 	SetHeroClass(CIS, CIS_HERO)
-	
-	TeamConfig:init{
-		teamNameATT = "cis", teamNameDEF = "rep",
-	}
 	
 	
 	------------------------------------------------

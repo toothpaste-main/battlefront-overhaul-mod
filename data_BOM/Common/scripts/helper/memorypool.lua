@@ -4,8 +4,8 @@
 	Description: Memory pool setup for common settings
 	Author: ToothpasteMain
 	Version: v1.0
-	Date: 2024-07-22
-	Dependencies: constants
+	Date: 2024-08-03
+	Dependencies: constants, logger
 	Notes: Additional memory pool sizes must be called separately. 
 		   Generally over estiamtes values for simplicity. Users are 
 		   encouraged to set their own memory pools if memory limits are 
@@ -25,6 +25,7 @@ local memorypool = {
 -- load dependencies
 ScriptCB_DoFile("import")
 local constants = import("constants")
+local logger = import("logger")
 
 -- weapons should be last for optimal memory pool estimates
 local isWeaponPoolSet = false
@@ -165,10 +166,10 @@ local function validateParameters(params)
 	-- validate keys and save value
 	for k, v in pairs(params) do
 		-- is valid key
-		assert(DEFAULT_MEMORY_POOL_SIZES[k], "Unexpected key, got " .. k)
+		assert(DEFAULT_MEMORY_POOL_SIZES[k], logger:error("Unexpected key, got " .. k))
 		
 		-- value is a number
-		assert(type(v) == "number", "Expected number, got " .. type(v) .. " for " .. k)
+		assert(type(v) == "number", logger:error("Expected number, got " .. type(v) .. " for " .. k))
 		
 		-- if cloths, add the default value to account for heroes
 		if k == "cloths" then validParams[k] = v + DEFAULT_MEMORY_POOL_SIZES.cloths
@@ -184,7 +185,7 @@ local function validateParameters(params)
 	for k, defaultValue in pairs(DEFAULT_MEMORY_POOL_SIZES) do
 		if not validParams[k] then
 			-- notify of default
-			print("WARNING: Expected value for key " .. k .. ", got nil. Defaulting " .. k .. " to " .. defaultValue)
+			logger:notice("Expected value for key " .. k .. ", got nil. Defaulting " .. k .. " to " .. defaultValue)
 			
 			-- apply default value
 			validParams[k] = defaultValue
@@ -193,7 +194,7 @@ local function validateParameters(params)
 	
 	-- special case for soldier animations
 	if params.SoldierAnimations then
-		assert(type(params.soldierAnimations) == "number" , "Expected number, got " .. type(params.soldierAnimations) .. " for soldierAnimations")
+		assert(type(params.soldierAnimations) == "number" , logger:error("Expected number, got " .. type(params.soldierAnimations) .. " for soldierAnimations"))
 		validParams.soldierAnimations = params.soldierAnimations
 	else
 		-- soldier animations is a function of the total units
@@ -447,7 +448,7 @@ local function setTurretMemoryPoolSize(turrets, additionalVehicleTurrets,
 	logMsg = logMsg .. hovers .. " hovers, " .. turrets .. " turrets, " .. walkers
 	logMsg = logMsg .. " walkers, and " .. additionalVehicleTurrets
 	logMsg = logMsg .. " additional vehicle turrets were added to the memory pool"
-	print(logMsg)
+	logger:info(logMsg)
 	
 	return totalTurrets
 end
@@ -470,7 +471,7 @@ end
 ---------------------------------------------------------------------------
 function memorypool.setVehicleMemoryPoolSize(params)
 	-- check if weapon pool has already been set
-	assert(not isWeaponsSet, "setWeaponMemoryPoolSize() was called before setVehicleMemoryPoolSize()")
+	assert(not isWeaponsSet, logger:error("setWeaponMemoryPoolSize() was called before setVehicleMemoryPoolSize()"))
 	
 	
 	------------------------------------------------
@@ -581,7 +582,7 @@ function memorypool.setWeaponMemoryPoolSize(totalUnits, totalAIVehicles, totalVe
 	
 	local logMsg = "Estimated " .. totalWeapons .. " weapons from " .. totalUnits .. " units and "
 	logMsg = logMsg .. totalVehicles .. " vehicles were added to the memory pool"
-	print(logMsg)
+	logger:info(logMsg)
 	
 	isWeaponPoolSet = true
 end
@@ -601,7 +602,7 @@ end
 ---------------------------------------------------------------------------
 function memorypool.setGameModeMemoryPoolSize()	
 	local function objectiveDetected(objective)
-		print("memorypool.lua detected objective: " .. objective)
+		logger:info("memorypool.lua detected objective: " .. objective)
 	end
 	
 	-- flags for ctf
@@ -672,7 +673,7 @@ end
 --				nothing is passed.
 ---------------------------------------------------------------------------
 function memorypool:init(params)
-	assert(not self.initialized, "ERROR: " .. self.name .. " has already been initialized!")
+	assert(not self.initialized, logger:error(self.name .. " has already been initialized"))
 
 	-- game mode
 	self.setGameModeMemoryPoolSize()

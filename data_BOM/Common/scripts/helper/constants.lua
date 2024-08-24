@@ -4,7 +4,7 @@
 	Description: Constants and limitations of Star Wars: Battlefront II (2005)
 	Author: ToothpasteMain
 	Version: v1.0
-	Date: 2024-07-20
+	Date: 2024-08-08
 	Dependencies: tableUtils
 	Notes:
 --]]
@@ -29,7 +29,7 @@ local FLAG_GEOMETRY = {
 	["imp"] = "com_icon_imperial_flag",
 	["rep"] = "com_icon_republic_flag",
 }
-function constants.getFlagGeometry(team) return tableUtils.elementOrTable(FLAG_GEOMETRY, team) end
+function constants.getFlagGeometry(team) return tableUtils.copyTable(tableUtils.elementOrTable(FLAG_GEOMETRY, team)) end
 
 -- flag geometry when carried
 local FLAG_GEOMETRY_CARRIED = {
@@ -38,7 +38,7 @@ local FLAG_GEOMETRY_CARRIED = {
 	["imp"] = "com_icon_imperial_flag_carried",
 	["rep"] = "com_icon_republic_flag_carried",
 }
-function constants.getFlagGeometryCarried(team) return tableUtils.elementOrTable(FLAG_GEOMETRY_CARRIED, team) end
+function constants.getFlagGeometryCarried(team) return tableUtils.copyTable(tableUtils.elementOrTable(FLAG_GEOMETRY_CARRIED, team)) end
 
 
 ------------------------------------------------
@@ -67,7 +67,7 @@ local TEAM_NAMES_SHORT = {
 	"wam", 
 	"wok",
 }
-function constants.getTeamNamesShort() return TEAM_NAMES_SHORT end
+function constants.getTeamNamesShort() return tableUtils.copyTable(TEAM_NAMES_SHORT) end
 
 -- stock team names
 local TEAM_NAMES_LONG = {
@@ -85,7 +85,7 @@ local TEAM_NAMES_LONG = {
 	"wampa", 
 	"wookiee",
 }
-function constants.getTeamNamesLong() return TEAM_NAMES_LONG end
+function constants.getTeamNamesLong() return tableUtils.copyTable(TEAM_NAMES_LONG) end
 
 -- combine short and long names into pairs
 function constants.getTeamNamesShortToLong() return tableUtils.combineTables(TEAM_NAMES_SHORT, TEAM_NAMES_LONG) end
@@ -125,7 +125,7 @@ local TEXT_ATT = {
 	hunt = "game.modes.hunt",
 	tdm = "game.modes.tdm",
 }
-function constants.getTextATT(objective) return tableUtils.elementOrTable(TEXT_ATT, objective) end
+function constants.getTextATT(objective) return tableUtils.copyTable(tableUtils.elementOrTable(TEXT_ATT, objective)) end
 
 -- def
 local TEXT_DEF = {
@@ -135,7 +135,7 @@ local TEXT_DEF = {
 	hunt = "game.modes.hunt2",
 	tdm = "game.modes.tdm2",
 }
-function constants.getTextDEF(objective) return tableUtils.elementOrTable(TEXT_DEF, objective) end
+function constants.getTextDEF(objective) return tableUtils.copyTable(tableUtils.elementOrTable(TEXT_DEF, objective)) end
 
 ------------------------------------------------
 ------------   BF2 LIMITATIONS   ---------------
