@@ -1,5 +1,8 @@
 # Battlefront Overhaul Mod
 
+> [!IMPORTANT]
+> This project has be postponed until further notice (as of 26 September 2024) due to time limitations of the developer. Modders: feel free to fork (but please give credit)
+
 ## Overview
 
 ### Our mission:
@@ -14,8 +17,8 @@ The final goal is to update the look of the game with preexisting assets so that
 - ~~6 July 2024: v1.0-alpha~~
 - ~~12 July 2024: v2.0-alpha~~
 - ~~14 July 2024: v2.1-alpha~~
-- 23 August 2024: v3.0-alpha
-- October 2024: v1.0-beta
+- ~~23 August 2024: v3.0-alpha~~
+- TBD: v1.0-beta
 
 ## Project timeline
 
