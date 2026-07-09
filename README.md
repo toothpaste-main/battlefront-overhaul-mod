@@ -1,7 +1,7 @@
 # Battlefront Overhaul Mod
 
 > [!IMPORTANT]
-> This project has be postponed until further notice (as of 26 September 2024) due to time limitations of the developer. Modders: feel free to fork (but please give credit)
+> This project will resume from its postponement, which began on 26 September 2024, starting in August 2026. Signed 8 July 2026.
 
 ## Overview
 
@@ -18,7 +18,10 @@ The final goal is to update the look of the game with preexisting assets so that
 - ~~12 July 2024: v2.0-alpha~~
 - ~~14 July 2024: v2.1-alpha~~
 - ~~23 August 2024: v3.0-alpha~~
-- TBD: v1.0-beta
+- 7 August 2026: v3.1-alpha
+- 28 August 2026: v3.2-alpha
+- November 2026: v1.0-beta
+- Summer 2027: v1.0
 
 ## Project timeline
 
@@ -26,7 +29,7 @@ Here is our timeline from Alpha to full release, and the items which will determ
 
 ### Alpha:
 
-**Dec '23 - Oct '24**
+**Dec '23 - Oct '26**
 
 - [ ] Develop a new package for writing missions
 - [x] Introduce new sound effects
@@ -40,7 +43,7 @@ Here is our timeline from Alpha to full release, and the items which will determ
 
 ### Beta:
 
-**Oct '24 - Aut '25**
+**Nov '26 - Spr '27**
 
 - [ ] Refine weapon and class balancing
 - [ ] Continue fixing stock map bugs
@@ -55,7 +58,7 @@ Here is our timeline from Alpha to full release, and the items which will determ
 
 ### v1.0 Full release:
 
-**Autumn 2025**
+**Summer 2027**
 
 - [ ] New maps
 - [ ] Continued weapon, class, and map balancing
