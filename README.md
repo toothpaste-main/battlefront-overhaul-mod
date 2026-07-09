@@ -9,7 +9,7 @@
 
 The goal of this project is *not* to create a new game. We strive to rebalance units and fix bugs in the stock maps.
 
-The second goal is to completely rewrite all of the stock mission files in a way that is easy to read and make quick edits to. The [source code](https://github.com/toothpaste-main/battlefront-overhaul-mod/tree/main/data_BOM/Common/scripts/BOM) for many of them are available now!
+The secondary objective of this project is to completely rewrite all of the stock mission files in a way that is easy to read and make quick edits to. The [source code](https://github.com/toothpaste-main/battlefront-overhaul-mod/tree/main/data_BOM/Common/scripts/BOM) for many of them are available now!
 
 The final goal is to update the look of the game with preexisting assets so that it is more aligned with the canon. In the end, the game should still feel and play the same. 
 
@@ -24,9 +24,7 @@ The final goal is to update the look of the game with preexisting assets so that
 
 ### Upcoming release: v3.1-alpha
 
-In this update, we plan to adopt the new Imperial Army troops in a number of maps and modes where it canonically makes sense. Currently, you can use them in CTF on Coruscant and Dagobah. These units are functionally equivalent to Stormtroopers, and are only visually different.
-
-Lastly, you will see a number of fixes to bugs introduced in v3.0-alpha.
+In this update, we plan to adopt the new Imperial Army troops in a number of maps and modes where it canonically makes sense. Currently, you can use them in CTF on Coruscant and Dagobah. These units are functionally equivalent to Stormtroopers, and are only visually different. There will also be a number of fixes to bugs introduced in v3.0-alpha.
 
 ## Project timeline
 
