@@ -9,7 +9,7 @@
 
 The goal of this project is *not* to create a new game. We strive to rebalance units and fix bugs in the stock maps.
 
-The Second goal is to completely rewrite all of the stock mission files in a way that is easy to read and make quick edits to. The [source code](https://github.com/toothpaste-main/battlefront-overhaul-mod/tree/main/data_BOM/Common/scripts/BOM) for many of them are available now!
+The second goal is to completely rewrite all of the stock mission files in a way that is easy to read and make quick edits to. The [source code](https://github.com/toothpaste-main/battlefront-overhaul-mod/tree/main/data_BOM/Common/scripts/BOM) for many of them are available now!
 
 The final goal is to update the look of the game with preexisting assets so that it is more aligned with the canon. In the end, the game should still feel and play the same. 
 
