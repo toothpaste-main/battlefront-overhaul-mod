@@ -18,8 +18,7 @@ The final goal is to update the look of the game with preexisting assets so that
 - ~~12 July 2024: v2.0-alpha~~
 - ~~14 July 2024: v2.1-alpha~~
 - ~~23 August 2024: v3.0-alpha~~
-- 7 August 2026: v3.1-alpha
-- 28 August 2026: v3.2-alpha
+- 21 August 2026: v3.1-alpha
 - November 2026: v1.0-beta
 - Summer 2027: v1.0
 
