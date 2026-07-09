@@ -22,7 +22,7 @@ The final goal is to update the look of the game with preexisting assets so that
 - November 2026: v1.0-beta
 - Summer 2027: v1.0
 
-### Upcoming update v3.1-alpha
+### Upcoming release: v3.1-alpha
 
 In this update, we plan to adopt the new Imperial Army troops in a number of maps and modes where it canonically makes sense. Currently, you can use them in CTF on Coruscant and Dagobah. These units are functionally equivalent to Stormtroopers, and are only visually different.
 
